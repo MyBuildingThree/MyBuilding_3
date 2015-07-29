@@ -1,0 +1,19 @@
+//
+//  mybuilding.pch
+//  mybuilding
+//
+//  Created by 汪洋 on 15/7/29.
+//  Copyright (c) 2015年 wy. All rights reserved.
+//
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "AFNetworking.h"
+#endif
+#define serverAddress "http://10.1.5.104:8080/server"

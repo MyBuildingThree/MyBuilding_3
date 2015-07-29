@@ -34,6 +34,16 @@
 		D3E37A621B68BAA20073D401 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E37A4C1B68BAA20073D401 /* UIProgressView+AFNetworking.m */; };
 		D3E37A631B68BAA20073D401 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E37A4E1B68BAA20073D401 /* UIRefreshControl+AFNetworking.m */; };
 		D3E37A641B68BAA20073D401 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E37A501B68BAA20073D401 /* UIWebView+AFNetworking.m */; };
+		D3E37A661B68C1690073D401 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E37A651B68C1680073D401 /* Foundation.framework */; };
+		D3E37A681B68C1740073D401 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E37A671B68C1740073D401 /* UIKit.framework */; };
+		D3E37A6A1B68C1860073D401 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E37A691B68C1860073D401 /* CoreGraphics.framework */; };
+		D3E37A6C1B68C1930073D401 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E37A6B1B68C1930073D401 /* MobileCoreServices.framework */; };
+		D3E37A6E1B68C19D0073D401 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E37A6D1B68C19D0073D401 /* SystemConfiguration.framework */; };
+		D3E37A701B68C1A80073D401 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E37A6F1B68C1A80073D401 /* Security.framework */; };
+		D3E37A721B68C1B60073D401 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E37A711B68C1B60073D401 /* CoreLocation.framework */; };
+		D3E37A751B68C2B20073D401 /* AFAppDotNetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E37A741B68C2B20073D401 /* AFAppDotNetAPIClient.m */; };
+		D3E37A791B68D15D0073D401 /* SendRequst.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E37A781B68D15D0073D401 /* SendRequst.m */; };
+		D3E37A7D1B68D1BA0073D401 /* TestNetWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E37A7C1B68D1BA0073D401 /* TestNetWorking.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +112,20 @@
 		D3E37A4E1B68BAA20073D401 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		D3E37A4F1B68BAA20073D401 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		D3E37A501B68BAA20073D401 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		D3E37A651B68C1680073D401 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D3E37A671B68C1740073D401 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D3E37A691B68C1860073D401 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D3E37A6B1B68C1930073D401 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		D3E37A6D1B68C19D0073D401 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D3E37A6F1B68C1A80073D401 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		D3E37A711B68C1B60073D401 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D3E37A731B68C2B20073D401 /* AFAppDotNetAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFAppDotNetAPIClient.h; sourceTree = "<group>"; };
+		D3E37A741B68C2B20073D401 /* AFAppDotNetAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFAppDotNetAPIClient.m; sourceTree = "<group>"; };
+		D3E37A761B68C3250073D401 /* mybuilding.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mybuilding.pch; sourceTree = "<group>"; };
+		D3E37A771B68D15D0073D401 /* SendRequst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendRequst.h; sourceTree = "<group>"; };
+		D3E37A781B68D15D0073D401 /* SendRequst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendRequst.m; sourceTree = "<group>"; };
+		D3E37A7B1B68D1BA0073D401 /* TestNetWorking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestNetWorking.h; sourceTree = "<group>"; };
+		D3E37A7C1B68D1BA0073D401 /* TestNetWorking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNetWorking.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +133,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3E37A721B68C1B60073D401 /* CoreLocation.framework in Frameworks */,
+				D3E37A701B68C1A80073D401 /* Security.framework in Frameworks */,
+				D3E37A6E1B68C19D0073D401 /* SystemConfiguration.framework in Frameworks */,
+				D3E37A6C1B68C1930073D401 /* MobileCoreServices.framework in Frameworks */,
+				D3E37A6A1B68C1860073D401 /* CoreGraphics.framework in Frameworks */,
+				D3E37A681B68C1740073D401 /* UIKit.framework in Frameworks */,
+				D3E37A661B68C1690073D401 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +156,13 @@
 		D3E379E71B686C9E0073D401 = {
 			isa = PBXGroup;
 			children = (
+				D3E37A711B68C1B60073D401 /* CoreLocation.framework */,
+				D3E37A6F1B68C1A80073D401 /* Security.framework */,
+				D3E37A6D1B68C19D0073D401 /* SystemConfiguration.framework */,
+				D3E37A6B1B68C1930073D401 /* MobileCoreServices.framework */,
+				D3E37A691B68C1860073D401 /* CoreGraphics.framework */,
+				D3E37A671B68C1740073D401 /* UIKit.framework */,
+				D3E37A651B68C1680073D401 /* Foundation.framework */,
 				D3E379F21B686C9E0073D401 /* mybuilding */,
 				D3E37A0C1B686C9E0073D401 /* mybuildingTests */,
 				D3E379F11B686C9E0073D401 /* Products */,
@@ -143,6 +181,7 @@
 		D3E379F21B686C9E0073D401 /* mybuilding */ = {
 			isa = PBXGroup;
 			children = (
+				D3E37A7A1B68D19E0073D401 /* Model */,
 				D3E37A231B68BAA20073D401 /* NetWork */,
 				D3E379F71B686C9E0073D401 /* AppDelegate.h */,
 				D3E379F81B686C9E0073D401 /* AppDelegate.m */,
@@ -161,6 +200,7 @@
 			children = (
 				D3E379F41B686C9E0073D401 /* Info.plist */,
 				D3E379F51B686C9E0073D401 /* main.m */,
+				D3E37A761B68C3250073D401 /* mybuilding.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -185,6 +225,10 @@
 		D3E37A231B68BAA20073D401 /* NetWork */ = {
 			isa = PBXGroup;
 			children = (
+				D3E37A771B68D15D0073D401 /* SendRequst.h */,
+				D3E37A781B68D15D0073D401 /* SendRequst.m */,
+				D3E37A731B68C2B20073D401 /* AFAppDotNetAPIClient.h */,
+				D3E37A741B68C2B20073D401 /* AFAppDotNetAPIClient.m */,
 				D3E37A241B68BAA20073D401 /* AFNetworking */,
 				D3E37A381B68BAA20073D401 /* Connection */,
 				D3E37A3F1B68BAA20073D401 /* UIKit+AFNetworking */,
@@ -253,6 +297,15 @@
 				D3E37A501B68BAA20073D401 /* UIWebView+AFNetworking.m */,
 			);
 			path = "UIKit+AFNetworking";
+			sourceTree = "<group>";
+		};
+		D3E37A7A1B68D19E0073D401 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D3E37A7B1B68D1BA0073D401 /* TestNetWorking.h */,
+				D3E37A7C1B68D1BA0073D401 /* TestNetWorking.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,10 +424,13 @@
 				D3E37A611B68BAA20073D401 /* UIImageView+AFNetworking.m in Sources */,
 				D3E37A531B68BAA20073D401 /* AFHTTPSessionManager.m in Sources */,
 				D3E37A571B68BAA20073D401 /* AFURLRequestSerialization.m in Sources */,
+				D3E37A791B68D15D0073D401 /* SendRequst.m in Sources */,
 				D3E37A5F1B68BAA20073D401 /* UIAlertView+AFNetworking.m in Sources */,
+				D3E37A751B68C2B20073D401 /* AFAppDotNetAPIClient.m in Sources */,
 				D3E37A641B68BAA20073D401 /* UIWebView+AFNetworking.m in Sources */,
 				D3E37A5E1B68BAA20073D401 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				D3E37A591B68BAA20073D401 /* AFURLSessionManager.m in Sources */,
+				D3E37A7D1B68D1BA0073D401 /* TestNetWorking.m in Sources */,
 				D3E37A631B68BAA20073D401 /* UIRefreshControl+AFNetworking.m in Sources */,
 				D3E379F91B686C9E0073D401 /* AppDelegate.m in Sources */,
 				D3E379F61B686C9E0073D401 /* main.m in Sources */,
@@ -446,6 +502,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/mybuilding/mybuilding.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -489,6 +547,8 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/mybuilding/mybuilding.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
