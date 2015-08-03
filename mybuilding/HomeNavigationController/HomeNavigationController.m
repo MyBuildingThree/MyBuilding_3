@@ -10,6 +10,7 @@
 #import "MyBuildingTabBarController.h"
 //#import "PopoverView.h"
 //#import "ADCampaignViewController.h"
+#import "LoginVC.h"
 
 
 
@@ -163,8 +164,8 @@
  *
  *  @param btn 点击的按钮
  */
-//- (void)btnClick:(UIButton *)btn
-//{
+- (void)btnClick:(UIButton *)btn
+{
 //    if ([btn.titleLabel.text isEqualToString:@"更多功能"])
 //    {
 //        CGPoint point = CGPointMake(btn.frame.origin.x + btn.frame.size.width/2, btn.frame.origin.y+20 + btn.frame.size.height);
@@ -180,7 +181,13 @@
 //            }
 //        };
 //    }
-//}
+    if ([btn.titleLabel.text isEqualToString:@"搜索"])
+    {
+        [self presentViewController:[[LoginVC alloc]init] animated:YES completion:^{
+            
+        }];
+    }
+}
 
 
 - (void)didReceiveMemoryWarning {

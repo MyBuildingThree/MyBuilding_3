@@ -104,7 +104,7 @@
 + (void)dealSuccessWithreRponseObject:(id)responseObject
                               success:(void (^)(id responseDic)) success
                               failure:(void(^)(NSError *error)) failure{
-    NSLog(@"responseObject=========%@",responseObject);
+//    NSLog(@"responseObject=========%@",responseObject);
     if ([responseObject[@"status"][@"statusCode"] intValue] == 200) {
         if(success){
             success(responseObject);

@@ -16,7 +16,7 @@
 /**
  *  初始化方法,其中titles与controllers的count必须一致
  */
-- (instancetype)initWithTitles:(NSMutableArray*)/*NSString*/titles controllers:(NSMutableArray*)/*RKController*/controllers size:(CGSize)size;
+- (instancetype)initWithTitles:(NSMutableArray*)/*NSString*/titles controllers:(NSMutableArray*)/*RKPageController*/controllers size:(CGSize)size;
 
 @property(nonatomic, strong) UIView* view;
 
