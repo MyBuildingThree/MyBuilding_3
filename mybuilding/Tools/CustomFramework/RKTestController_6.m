@@ -7,23 +7,53 @@
 //
 
 #import "RKTestController_6.h"
+#import "ProjectApi.h"
+#import "ProjectModel.h"
+#import "ProjectTableViewCell.h"
+
+@interface RKTestController_6()
+@property(nonatomic,strong)NSMutableArray *modelArr;
+@end
 
 @implementation RKTestController_6
+-(void)setUp{
+    [super setUp];
+    [self loadList];
+}
+
+-(NSMutableArray *)modelArr{
+    if(!_modelArr){
+        _modelArr = [NSMutableArray array];
+    }
+    return _modelArr;
+}
+
+-(void)loadList{
+    [ProjectApi GetPiProjectSeachWithBlock:^(NSMutableArray *posts, NSError *error) {
+        if(!error){
+            self.modelArr = posts;
+            [self.tableView reloadData];
+        }
+    } startIndex:0 keywords:@"" noNetWork:nil];
+}
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return self.modelArr.count;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 100;
+    ProjectModel *model = self.modelArr[indexPath.row];
+    return [ProjectTableViewCell carculateCellHeightWithModel:model];
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell* cell=[tableView dequeueReusableCellWithIdentifier:@"cell"];
+    NSString *CellIdentifier = [NSString stringWithFormat:@"ProjectTableViewCell"];
+    ProjectTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (!cell) {
-        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        cell=[[ProjectTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    cell.textLabel.text = @"666666666666";
-    
+    ProjectModel *model = self.modelArr[indexPath.row];
+    cell.model = model;
     return cell;
 }
 @end
