@@ -52,7 +52,7 @@
     //定制底栏
     [self customTabbar];
     //底栏上添加按钮
-    [self addButtons];
+    //[self addButtons];
 }
 
 /**
@@ -66,6 +66,61 @@
     [self.tabBar addSubview:self.bgImageView];
 }
 
+
+-(void)addBtnTitle:(NSArray *)titleStrArray andBtnImage:(NSArray *)imageStrArray BtnSelectedStr:(NSArray *)selectedImageStrArray
+{
+    for (int i = 0; i<4; i++)
+    {
+        UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(self.bgImageView.frame.size.width*0.25*i, 0, self.bgImageView.frame.size.width*0.25, self.bgImageView.frame.size.height)];
+        btn.tag = 10+i;
+        if (i == 0)
+        {
+            btn.selected = YES;
+            self.selectedBtn = btn;
+        }
+        
+        [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+        //没有图片的情况
+        if (imageStrArray == nil)
+        {
+            [btn setTitle:titleStrArray[i] forState:UIControlStateNormal];
+            [btn setTitle:titleStrArray[i] forState:UIControlStateSelected];
+        }
+        else
+        {
+            [btn setImage:[UIImage imageNamed:imageStrArray[i]] forState:UIControlStateNormal];
+            [btn setImage:[UIImage imageNamed:selectedImageStrArray[i]] forState:UIControlStateSelected];
+            UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 29, btn.bounds.size.width, 20)];
+            label.text = titleStrArray[i];
+            [btn addSubview:label];
+        }
+                
+//        switch (i) {
+//            case 0:
+//                btn.selected = YES;
+//                btn.imageEdgeInsets = IMAGEEDGE(@"主菜单01a", 0.0, 0.0);
+//                self.selectedBtn = btn;
+//                break;
+//            case 1:
+//                btn.imageEdgeInsets = IMAGEEDGE(@"主菜单02a", 0.0, 0.0);
+//                self.selectedBtn = btn;
+//                break;
+//            case 2:
+//                btn.imageEdgeInsets = IMAGEEDGE(@"主菜单03a", 0.0, 0.0);
+//                self.selectedBtn = btn;
+//                break;
+//            case 3:
+//                btn.imageEdgeInsets = IMAGEEDGE(@"主菜单04a", 0.0, 0.0);
+//                self.selectedBtn = btn;
+//                break;
+//            default:
+//                break;
+//        }
+        
+        [self.bgImageView addSubview:btn];
+    }
+
+}
 /**
  *  底栏上添加按钮
  */
