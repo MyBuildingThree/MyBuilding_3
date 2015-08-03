@@ -12,14 +12,18 @@
 
 @interface RKScrollViewPageController ()<UIScrollViewDelegate>
 @property(nonatomic, strong) NSMutableArray* controllers;
+
+@property(nonatomic) CGSize pageViewSize;
+
 @end
 #define kScreenBounds [[UIScreen mainScreen] bounds]
 
 @implementation RKScrollViewPageController
 
-- (instancetype)initWithControllers:(NSMutableArray *)controllers{
+- (instancetype)initWithControllers:(NSMutableArray *)controllers pageViewSize:(CGSize)pageViewSize{
     if (self = [super init]) {
         self.controllers = controllers;
+        self.pageViewSize = pageViewSize;
         [self setUpViews];
     }
     return self;
@@ -42,16 +46,17 @@
     
     CGFloat width = self.scrollView.width;
     CGPoint targetPoint = CGPointMake(width*currentIndex, 0);
-    [self.scrollView setContentOffset:targetPoint animated:YES];
+    [self.scrollView setContentOffset:targetPoint];
 }
 
 - (UIScrollView *)scrollView{
     if (!_scrollView) {
-        UIScrollView* scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 300)];
+        UIScrollView* scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.pageViewSize.width, self.pageViewSize.height)];
         scrollView.backgroundColor = [[UIColor alloc] initWithRed:.5 green:.5 blue:.5 alpha:.5];
         scrollView.pagingEnabled = YES;
         scrollView.clipsToBounds = YES;
         scrollView.directionalLockEnabled = YES;
+        scrollView.alwaysBounceHorizontal = YES;
         scrollView.delegate = self;
         
         NSInteger const count = self.controllers.count;
@@ -90,4 +95,8 @@
         [self.delegate scrollViewPageController:self changeIndex:self.currentIndex];
     }
 }
+
+//- (void)setCurrentIndex:(NSInteger)currentIndex needDelegate:(BOOL)needDelegate{
+//    self.currentIndex = currentIndex;
+//}
 @end

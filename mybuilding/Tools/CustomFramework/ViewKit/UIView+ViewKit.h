@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ *  UIView的分类，集成各种常用及麻烦的方法进行封装
+ */
 @interface UIView (ViewKit)
 
 @property(nonatomic, readonly) CGFloat minX;//最左的x值

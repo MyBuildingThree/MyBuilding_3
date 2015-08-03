@@ -14,8 +14,9 @@
 #import "RKTestController_4.h"
 #import "RKTestController_5.h"
 #import "RKTestController_6.h"
-
-@interface MainViewController ()
+#import "UIView+ViewKit.h"
+#import "MainContactController.h"
+@interface MainViewController ()<RKStageViewPageControllerDelegate>
 @property(nonatomic, strong) RKStageViewPageController* pageController;
 @end
 
@@ -23,21 +24,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor], NSForegroundColorAttributeName,[UIFont boldSystemFontOfSize:19], NSFontAttributeName,nil]];
-    
+    self.view.backgroundColor = [UIColor whiteColor];
     RKTestController_1* vc1 = [[RKTestController_1 alloc] init];
     RKTestController_2* vc2 = [[RKTestController_2 alloc] init];
 
     RKTestController_3* vc3 = [[RKTestController_3 alloc] init];
-    RKTestController_4* vc4 = [[RKTestController_4 alloc] init];
+    MainContactController* vc4 = [[MainContactController alloc] init];
     RKTestController_5* vc5 = [[RKTestController_5 alloc] init];
     RKTestController_6* vc6 = [[RKTestController_6 alloc] init];
 
-    NSArray* ary = @[vc1,vc2,vc3,vc4,vc5,vc6];
+    vc1.view.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
     
-    self.pageController = [[RKStageViewPageController alloc] initWithTitles:@[@"1",@"2",@"3",@"4",@"5",@"6"] controllers:ary];
+    NSMutableArray* titles = [@[@"推荐",@"项目",@"企业",@"人脉",@"产品",@"需求"] mutableCopy];
+    NSMutableArray* controllers = [@[vc1,vc2,vc3,vc4,vc5,vc6] mutableCopy];
+    
+    self.pageController = [[RKStageViewPageController alloc] initWithTitles:titles controllers:controllers size:CGSizeMake(kScreenWidth, kScreenHeight - 64 - 49)];
+    self.pageController.delegate = self;
+    [self.pageController.view setMinY:0];
     [self.view addSubview:self.pageController.view];
 }
 
+- (void)stageViewPageControllerAssistBtnClicked{
+    NSLog(@"22");
+}
 @end

@@ -9,6 +9,7 @@
 #import "RKStageChooseView.h"
 #import "RKShadowView.h"
 #import "RKStageAndNumberView.h"
+#import "UIView+ViewKit.h"
 @interface RKStageChooseView ()
 @property(nonatomic,strong)NSArray* stages;
 @property(nonatomic,strong)NSArray* numbers;
@@ -22,11 +23,13 @@
 @property(nonatomic)BOOL underLineIsWhole;
 @property(nonatomic,strong)UIColor* normalColor;
 @property(nonatomic,strong)UIColor* highlightColor;
+
+@property(nonatomic, strong) UIButton* assistBtn;
 @end
 
-#define kChooseViewHeight 46
+#define kChooseViewHeight 30
 #define kChooseViewWidth kScreenWidth
-#define StageFont [UIFont systemFontOfSize:16]
+#define StageFont [UIFont systemFontOfSize:15]
 
 @implementation RKStageChooseView
 +(RKStageChooseView*)stageChooseViewWithStages:(NSArray*)stages numbers:(NSArray*)numbers delegate:(id<RKStageChooseViewDelegate>)delegate underLineIsWhole:(BOOL)underLineIsWhole normalColor:(UIColor*)normalColor highlightColor:(UIColor*)highlightColor{
@@ -41,6 +44,10 @@
     return stageChooseView;
 }
 
++ (CGFloat)height{
+    return kChooseViewHeight;
+}
+
 -(void)changeNumbers:(NSArray *)numbers{
     [self.labels enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         [(RKStageAndNumberView*)obj changeNumber:[numbers[idx] integerValue]];
@@ -49,10 +56,10 @@
 
 -(UIView *)seperatorLine{
     if (!_seperatorLine) {
-        _seperatorLine=[RKShadowView seperatorLineInThemeView];
-        CGRect frame=_seperatorLine.frame;
-        frame.origin.y=CGRectGetHeight(self.frame);
-        _seperatorLine.frame=frame;
+        _seperatorLine=[RKShadowView seperatorLine];
+        CGRect frame = _seperatorLine.frame;
+        frame.origin.y = CGRectGetHeight(self.frame)-1;
+        _seperatorLine.frame = frame;
     }
     return _seperatorLine;
 }
@@ -69,18 +76,21 @@
         CGFloat height=3;
         CGFloat y=CGRectGetHeight(self.frame)-height;
         _underLineView=[[UIView alloc]initWithFrame:CGRectMake(0, y, 0, height)];
-        _underLineView.backgroundColor=BlueColor;
+        _underLineView.backgroundColor=self.highlightColor;
     }
     return _underLineView;
 }
 
 -(void)setUp{
-    self.backgroundColor=AllBackMiddleGrayColor;
+    self.backgroundColor=RGBCOLOR(248, 248, 248);
     NSInteger count=self.stages.count;
+    
+    CGFloat const widthWithoutAssistBtn = kChooseViewWidth - self.assistBtn.width;
+    
     for (int i=0; i<count; i++) {
         RKStageAndNumberView* singleStageLabel=[self getSingleStageLabelWithText:self.stages[i] sequence:i];
         
-        CGFloat width=kChooseViewWidth/count;
+        CGFloat width=widthWithoutAssistBtn/count;
         CGFloat x=width*(0.5+i);
         CGFloat y=kChooseViewHeight*0.5;
         singleStageLabel.center=CGPointMake(x, y);
@@ -88,6 +98,7 @@
         [self addSubview:singleStageLabel];
         [self.labels addObject:singleStageLabel];
     }
+    [self addSubview:self.assistBtn];
     [self addSubview:self.seperatorLine];
     [self addSubview:self.underLineView];
     [self stageLabelClickedWithSequence:0];
@@ -164,6 +175,25 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     UITouch* touch = [touches anyObject] ;
     CGPoint point = [touch locationInView:self];
-    [self stageLabelClickedWithSequence:point.x / (kChooseViewWidth/self.stages.count)];
+    CGFloat const widthWithoutAssistBtn = kChooseViewWidth - self.assistBtn.width;
+    [self stageLabelClickedWithSequence:point.x / (widthWithoutAssistBtn/self.stages.count)];
+}
+
+- (void)assistBtnClicked{
+    if ([self.delegate respondsToSelector:@selector(stageChooseViewAssistBtnClicked)]) {
+        [self.delegate stageChooseViewAssistBtnClicked];
+    }
+}
+
+- (UIButton *)assistBtn{
+    if (!_assistBtn) {
+        UIButton* btn = [UIButton buttonWithType:UIButtonTypeSystem];
+        btn.frame = CGRectMake(kScreenWidth-20, 0, 20, 20);
+        [btn setTitle:@"艹" forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(assistBtnClicked) forControlEvents:UIControlEventTouchUpInside];
+        
+        _assistBtn = btn;
+    }
+    return _assistBtn;
 }
 @end

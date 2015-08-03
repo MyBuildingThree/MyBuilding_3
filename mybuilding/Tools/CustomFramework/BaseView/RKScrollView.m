@@ -9,10 +9,16 @@
 #import "RKScrollView.h"
 
 @implementation RKScrollView
-@dynamic delegate;
+//@dynamic delegate;
+//@synthesize contentOffset = _contentOffset;
+
 - (void)willMoveToSuperview:(UIView *)newSuperview{
     if ([self.delegate respondsToSelector:@selector(willMoveToSuperview:)]) {
         [self.delegate willMoveToSuperview:newSuperview];
     }
+}
+
+- (void)setContentOffset:(CGPoint)contentOffset{
+    [super setContentOffset:contentOffset];
 }
 @end

@@ -12,6 +12,10 @@
 @optional
 - (void)stageBtnClickedWithNumber:(NSInteger)stageNumber;
 - (BOOL)shouldChangeStageToNumber:(NSInteger)stageNumber;
+/**
+ *  右箭头按钮被点击
+ */
+- (void)stageChooseViewAssistBtnClicked;
 @end
 
 @interface RKStageChooseView : UIView
@@ -22,4 +26,9 @@
 -(void)stageLabelClickedWithSequence:(NSInteger)sequence needResponseDelegate:(BOOL)needResponseDelegate;
 
 -(void)changeNumbers:(NSArray*)numbers;
+
+/**
+ *  自身的高度
+ */
++ (CGFloat)height;
 @end

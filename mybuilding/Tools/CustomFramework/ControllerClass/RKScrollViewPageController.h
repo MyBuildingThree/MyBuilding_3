@@ -28,7 +28,7 @@
 
 @interface RKScrollViewPageController : NSObject
 
-- (instancetype)initWithControllers:(NSMutableArray*)/*RKController*/controllers;
+- (instancetype)initWithControllers:(NSMutableArray*)/*RKController*/controllers pageViewSize:(CGSize)pageViewSize;
 
 @property(nonatomic, strong)UIScrollView* scrollView;
 
@@ -37,6 +37,12 @@
  *  set:设置currentIndex同时会将页面切换至对应的视图位置
  */
 @property(nonatomic) NSInteger currentIndex;
+
+/**
+ *  设置currentIndex同时会将页面切换至对应的视图位置
+ *  needDelegate设置是否触发委托
+ */
+//- (void)setCurrentIndex:(NSInteger)currentIndex needDelegate:(BOOL)needDelegate;
 
 @property(nonatomic, weak) id<RKScrollViewPageControllerDelegate> delegate;
 @end

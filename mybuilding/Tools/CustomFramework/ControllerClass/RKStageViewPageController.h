@@ -8,13 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-@interface RKStageViewPageController : NSObject
+@protocol RKStageViewPageControllerDelegate <NSObject>
+- (void)stageViewPageControllerAssistBtnClicked;
+@end
 
+@interface RKStageViewPageController : NSObject
 /**
  *  初始化方法,其中titles与controllers的count必须一致
  */
-- (instancetype)initWithTitles:(NSMutableArray*)/*NSString*/titles controllers:(NSMutableArray*)/*RKController*/controllers;
+- (instancetype)initWithTitles:(NSMutableArray*)/*NSString*/titles controllers:(NSMutableArray*)/*RKController*/controllers size:(CGSize)size;
 
 @property(nonatomic, strong) UIView* view;
+
+@property(nonatomic, weak) id<RKStageViewPageControllerDelegate> delegate;
 
 @end
