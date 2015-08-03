@@ -514,6 +514,8 @@
 		D3E379F21B686C9E0073D401 /* mybuilding */ = {
 			isa = PBXGroup;
 			children = (
+				5D713DBE1B6EFC6F00523446 /* HomeNavigationController */,
+				5D713DC11B6EFC6F00523446 /* MyBuildingTabBarController */,
 				D3E37A7A1B68D19E0073D401 /* Model */,
 				D3E37A231B68BAA20073D401 /* NetWork */,
 				D3DF124F1B6B3D7700DFEE8F /* Tools */,
@@ -813,6 +815,8 @@
 				D3DF12CE1B6B7DA000DFEE8F /* MKAnnotationView+WebCache.m in Sources */,
 				D3E379F61B686C9E0073D401 /* main.m in Sources */,
 				D3E37A5B1B68BAA20073D401 /* networkConnect.m in Sources */,
+				5D713DC41B6EFC6F00523446 /* HomeNavigationController.m in Sources */,
+				5D713DC51B6EFC6F00523446 /* MyBuildingTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
