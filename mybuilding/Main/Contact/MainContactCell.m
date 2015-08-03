@@ -10,6 +10,8 @@
 #import "UIImageView+ViewKit.h"
 #import "UIView+ViewKit.h"
 #import "RKShadowView.h"
+#import "PersonModel.h"
+
 @implementation MainContactCell
 @synthesize model = _model;
 
@@ -45,7 +47,12 @@
     return self;
 }
 
-- (void)setModel:(id)model{
+- (void)setModel:(PersonModel*)model{
     _model = model;
+    
+    [self.mainImageView sd_setImageWithURL:model.a_avatarUrl placeholderImage:nil];
+    self.mainLabel.text = model.a_name;
+    self.subLabel_1.text = model.a_companyName;
+    self.subLabel_2.text = model.a_duties;
 }
 @end

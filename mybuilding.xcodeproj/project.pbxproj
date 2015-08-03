@@ -44,6 +44,8 @@
 		5B5CA1B21B6F713600CC3896 /* ProjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CA1AE1B6F713600CC3896 /* ProjectModel.m */; };
 		5B5CA1B51B6F716900CC3896 /* ProjectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CA1B41B6F716900CC3896 /* ProjectTableViewCell.m */; };
 		5B5CA1B91B6F718000CC3896 /* ManageString.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CA1B81B6F718000CC3896 /* ManageString.m */; };
+		5B5CA1C11B6F82CC00CC3896 /* PersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CA1C01B6F82CC00CC3896 /* PersonModel.m */; };
+		5B5CA1C41B6F82E000CC3896 /* PersonApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CA1C31B6F82E000CC3896 /* PersonApi.m */; };
 		D355958E1B6EFD8B00E4577B /* HomeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D355958A1B6EFD8B00E4577B /* HomeNavigationController.m */; };
 		D355958F1B6EFD8B00E4577B /* MyBuildingTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D355958D1B6EFD8B00E4577B /* MyBuildingTabBarController.m */; };
 		D35595961B6EFF2000E4577B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D35595951B6EFF2000E4577B /* MainViewController.m */; };
@@ -226,6 +228,10 @@
 		5B5CA1B41B6F716900CC3896 /* ProjectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectTableViewCell.m; sourceTree = "<group>"; };
 		5B5CA1B71B6F718000CC3896 /* ManageString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageString.h; sourceTree = "<group>"; };
 		5B5CA1B81B6F718000CC3896 /* ManageString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageString.m; sourceTree = "<group>"; };
+		5B5CA1BF1B6F82CC00CC3896 /* PersonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonModel.h; sourceTree = "<group>"; };
+		5B5CA1C01B6F82CC00CC3896 /* PersonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonModel.m; sourceTree = "<group>"; };
+		5B5CA1C21B6F82E000CC3896 /* PersonApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonApi.h; sourceTree = "<group>"; };
+		5B5CA1C31B6F82E000CC3896 /* PersonApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonApi.m; sourceTree = "<group>"; };
 		D35595891B6EFD8B00E4577B /* HomeNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeNavigationController.h; sourceTree = "<group>"; };
 		D355958A1B6EFD8B00E4577B /* HomeNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeNavigationController.m; sourceTree = "<group>"; };
 		D355958C1B6EFD8B00E4577B /* MyBuildingTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBuildingTabBarController.h; sourceTree = "<group>"; };
@@ -632,6 +638,17 @@
 				5B5CA1B81B6F718000CC3896 /* ManageString.m */,
 			);
 			path = ManageString;
+			sourceTree = "<group>";
+		};
+		5B5CA1BE1B6F82CC00CC3896 /* PersonModel */ = {
+			isa = PBXGroup;
+			children = (
+				5B5CA1BF1B6F82CC00CC3896 /* PersonModel.h */,
+				5B5CA1C01B6F82CC00CC3896 /* PersonModel.m */,
+				5B5CA1C21B6F82E000CC3896 /* PersonApi.h */,
+				5B5CA1C31B6F82E000CC3896 /* PersonApi.m */,
+			);
+			path = PersonModel;
 			sourceTree = "<group>";
 		};
 		D35595881B6EFD8B00E4577B /* HomeNavigationController */ = {
@@ -1055,6 +1072,7 @@
 		D3E37A7A1B68D19E0073D401 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5B5CA1BE1B6F82CC00CC3896 /* PersonModel */,
 				5B5CA1A51B6F713600CC3896 /* LoginModel */,
 				5B5CA1AA1B6F713600CC3896 /* ProjectModel */,
 			);
@@ -1172,6 +1190,7 @@
 				D3E37A521B68BAA20073D401 /* AFHTTPRequestOperationManager.m in Sources */,
 				D3DF12DA1B6B7DA000DFEE8F /* UIImage+WebP.m in Sources */,
 				5B5CA19A1B6F70ED00CC3896 /* RKTestController_7.m in Sources */,
+				5B5CA1C41B6F82E000CC3896 /* PersonApi.m in Sources */,
 				D3DF12611B6B412800DFEE8F /* FMDatabase.m in Sources */,
 				D3DF129E1B6B614400DFEE8F /* MJRefreshAutoGifFooter.m in Sources */,
 				D3E37A541B68BAA20073D401 /* AFNetworkReachabilityManager.m in Sources */,
@@ -1225,6 +1244,7 @@
 				5B5CA1901B6F70ED00CC3896 /* RKStageViewPageController.m in Sources */,
 				D3E37A791B68D15D0073D401 /* SendRequst.m in Sources */,
 				D3DF12DB1B6B7DA000DFEE8F /* UIImageView+HighlightedWebCache.m in Sources */,
+				5B5CA1C11B6F82CC00CC3896 /* PersonModel.m in Sources */,
 				5B5CA1A31B6F70ED00CC3896 /* UIImageView+ViewKit.m in Sources */,
 				5B5CA1A01B6F70ED00CC3896 /* SearchBarTableViewController.m in Sources */,
 				D3DF12A21B6B614400DFEE8F /* MJRefreshBackNormalFooter.m in Sources */,
