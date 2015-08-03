@@ -35,10 +35,10 @@
 }
 
 - (void)setUpRefreshWithNeedHeaderRefresh:(BOOL)needHeaderRefresh needFooterRefresh:(BOOL)needFooterRefresh{
-    if (needHeaderRefresh) [self.tableView addHeaderWithTarget:self action:@selector(headerRereshing)];
+//    if (needHeaderRefresh) [self.tableView addHeaderWithTarget:self action:@selector(headerRereshing)];
     
     
-    if (needFooterRefresh) [self.tableView addFooterWithTarget:self action:@selector(footerRereshing)];
+//    if (needFooterRefresh) [self.tableView addFooterWithTarget:self action:@selector(footerRereshing)];
 }
 
 - (void)headerRereshing{
@@ -60,8 +60,8 @@
     if ([self.delegate respondsToSelector:@selector(controllerEndLoading)]) {
         [self.delegate controllerEndLoading];
     }
-    [self.tableView headerEndRefreshing];
-    [self.tableView footerEndRefreshing];
+//    [self.tableView headerEndRefreshing];
+//    [self.tableView footerEndRefreshing];
     [self stopLoadingView];
 }
 

@@ -7,7 +7,7 @@
 //
 
 #import "ChatBaseViewController.h"
-#import "HomePageViewController.h"
+//#import "HomePageViewController.h"
 #import "AppDelegate.h"
 #import "SearchBarTableViewController.h"
 #import "MJRefresh.h"
@@ -165,21 +165,21 @@
     [self.navigationController.view.layer addAnimation:transition forKey:nil];
 }
 
--(void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-    //恢复tabBar
-    AppDelegate* app=[AppDelegate instance];
-    HomePageViewController* homeVC=(HomePageViewController*)app.window.rootViewController;
-    [homeVC homePageTabBarRestore];
-}
-
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    //隐藏tabBar
-    AppDelegate* app=[AppDelegate instance];
-    HomePageViewController* homeVC=(HomePageViewController*)app.window.rootViewController;
-    [homeVC homePageTabBarHide];
-}
+//-(void)viewWillDisappear:(BOOL)animated{
+//    [super viewWillDisappear:animated];
+//    //恢复tabBar
+//    AppDelegate* app=[AppDelegate instance];
+//    HomePageViewController* homeVC=(HomePageViewController*)app.window.rootViewController;
+//    [homeVC homePageTabBarRestore];
+//}
+//
+//-(void)viewWillAppear:(BOOL)animated{
+//    [super viewWillAppear:animated];
+//    //隐藏tabBar
+//    AppDelegate* app=[AppDelegate instance];
+//    HomePageViewController* homeVC=(HomePageViewController*)app.window.rootViewController;
+//    [homeVC homePageTabBarHide];
+//}
 
 //搜索框tableView
 -(void)reloadSearchBarTableViewData{
@@ -499,8 +499,8 @@
 }
 
 - (void)setUpRefreshWithNeedHeaderRefresh:(BOOL)needHeaderRefresh needFooterRefresh:(BOOL)needFooterRefresh{
-    if (needHeaderRefresh) [self.tableView addHeaderWithTarget:self action:@selector(headerRereshing)];
-    if (needFooterRefresh) [self.tableView addFooterWithTarget:self action:@selector(footerRereshing)];
+//    if (needHeaderRefresh) [self.tableView addHeaderWithTarget:self action:@selector(headerRereshing)];
+//    if (needFooterRefresh) [self.tableView addFooterWithTarget:self action:@selector(footerRereshing)];
 }
 
 - (void)headerRereshing{
@@ -512,10 +512,10 @@
 }
 
 - (void)endHeaderRefreshing{
-    [self.tableView headerEndRefreshing];
+//    [self.tableView headerEndRefreshing];
 }
 
 - (void)endFooterRefreshing{
-    [self.tableView footerEndRefreshing];
+//    [self.tableView footerEndRefreshing];
 }
 @end
