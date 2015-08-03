@@ -22,7 +22,4 @@
  */
 + (MyBuildingTabBarController *)sharedTabbarController;
 
-
--(void)addBtnTitle:(NSArray *)titleStrArray andBtnImage:(NSArray *)imageStrArray BtnSelectedStr:(NSArray *)selectedImageStrArray;
-
 @end
