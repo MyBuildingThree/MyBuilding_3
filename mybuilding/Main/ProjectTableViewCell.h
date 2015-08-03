@@ -22,6 +22,7 @@
 @property(nonatomic,strong)UIView *bottomView;
 @property(nonatomic,strong)UIImageView *cutLine1;
 @property(nonatomic,strong)UIImageView *cutLine2;
+@property(nonatomic,strong)UILabel *time;
 @property(nonatomic,strong)ProjectModel *model;
 +(CGFloat)carculateCellHeightWithModel:(ProjectModel *)cellModel;
 @end
