@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
-	<string>$(EXECUTABLE_NAME)</string>
+	<string>mybuilding</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.shenji.299.mybuilding</string>
 	<key>CFBundleInfoDictionaryVersion</key>
