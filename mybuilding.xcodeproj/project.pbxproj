@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D713DC41B6EFC6F00523446 /* HomeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D713DC01B6EFC6F00523446 /* HomeNavigationController.m */; };
+		5D713DC51B6EFC6F00523446 /* MyBuildingTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D713DC31B6EFC6F00523446 /* MyBuildingTabBarController.m */; };
 		D3E379F61B686C9E0073D401 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E379F51B686C9E0073D401 /* main.m */; };
 		D3E379F91B686C9E0073D401 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E379F81B686C9E0073D401 /* AppDelegate.m */; };
 		D3E379FC1B686C9E0073D401 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E379FB1B686C9E0073D401 /* ViewController.m */; };
@@ -57,6 +59,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5D713DBF1B6EFC6F00523446 /* HomeNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeNavigationController.h; sourceTree = "<group>"; };
+		5D713DC01B6EFC6F00523446 /* HomeNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeNavigationController.m; sourceTree = "<group>"; };
+		5D713DC21B6EFC6F00523446 /* MyBuildingTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBuildingTabBarController.h; sourceTree = "<group>"; };
+		5D713DC31B6EFC6F00523446 /* MyBuildingTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBuildingTabBarController.m; sourceTree = "<group>"; };
 		D3E379F01B686C9E0073D401 /* mybuilding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mybuilding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3E379F41B686C9E0073D401 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3E379F51B686C9E0073D401 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -153,6 +159,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D713DBE1B6EFC6F00523446 /* HomeNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				5D713DBF1B6EFC6F00523446 /* HomeNavigationController.h */,
+				5D713DC01B6EFC6F00523446 /* HomeNavigationController.m */,
+			);
+			path = HomeNavigationController;
+			sourceTree = "<group>";
+		};
+		5D713DC11B6EFC6F00523446 /* MyBuildingTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				5D713DC21B6EFC6F00523446 /* MyBuildingTabBarController.h */,
+				5D713DC31B6EFC6F00523446 /* MyBuildingTabBarController.m */,
+			);
+			path = MyBuildingTabBarController;
+			sourceTree = "<group>";
+		};
 		D3E379E71B686C9E0073D401 = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +205,8 @@
 		D3E379F21B686C9E0073D401 /* mybuilding */ = {
 			isa = PBXGroup;
 			children = (
+				5D713DBE1B6EFC6F00523446 /* HomeNavigationController */,
+				5D713DC11B6EFC6F00523446 /* MyBuildingTabBarController */,
 				D3E37A7A1B68D19E0073D401 /* Model */,
 				D3E37A231B68BAA20073D401 /* NetWork */,
 				D3E379F71B686C9E0073D401 /* AppDelegate.h */,
@@ -435,6 +461,8 @@
 				D3E379F91B686C9E0073D401 /* AppDelegate.m in Sources */,
 				D3E379F61B686C9E0073D401 /* main.m in Sources */,
 				D3E37A5B1B68BAA20073D401 /* networkConnect.m in Sources */,
+				5D713DC41B6EFC6F00523446 /* HomeNavigationController.m in Sources */,
+				5D713DC51B6EFC6F00523446 /* MyBuildingTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
