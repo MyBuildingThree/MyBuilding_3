@@ -16,7 +16,7 @@
 /**
  *  登录接口 post
  *
- *  @param block     回调给页面的数据LoginModel
+ *  @param block     回调给页面的数据 LoginModel
  *  @param dic       传递给服务器的数据
  *                   deviceType = 05;登录设备，05表示手机端
  *                   downloadType = 02;ios设备登录证书区分，01是99正式，02是299证书

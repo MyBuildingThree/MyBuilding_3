@@ -53,6 +53,7 @@
 		D35596221B6F3C2F00E4577B /* ProjectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D35596211B6F3C2F00E4577B /* ProjectTableViewCell.m */; };
 		D35596261B6F3DBC00E4577B /* ProjectApi.m in Sources */ = {isa = PBXBuildFile; fileRef = D35596251B6F3DBC00E4577B /* ProjectApi.m */; };
 		D35596291B6F3DC900E4577B /* ProjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D35596281B6F3DC900E4577B /* ProjectModel.m */; };
+		D355962D1B6F4E2600E4577B /* ManageString.m in Sources */ = {isa = PBXBuildFile; fileRef = D355962C1B6F4E2600E4577B /* ManageString.m */; };
 		D3DF12541B6B3E1F00DFEE8F /* GetImagePath.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF12531B6B3E1F00DFEE8F /* GetImagePath.m */; };
 		D3DF12611B6B412800DFEE8F /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF12581B6B412800DFEE8F /* FMDatabase.m */; };
 		D3DF12621B6B412800DFEE8F /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF125A1B6B412800DFEE8F /* FMResultSet.m */; };
@@ -227,6 +228,8 @@
 		D35596251B6F3DBC00E4577B /* ProjectApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectApi.m; sourceTree = "<group>"; };
 		D35596271B6F3DC900E4577B /* ProjectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectModel.h; sourceTree = "<group>"; };
 		D35596281B6F3DC900E4577B /* ProjectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectModel.m; sourceTree = "<group>"; };
+		D355962B1B6F4E2600E4577B /* ManageString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageString.h; sourceTree = "<group>"; };
+		D355962C1B6F4E2600E4577B /* ManageString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageString.m; sourceTree = "<group>"; };
 		D3DF12521B6B3E1F00DFEE8F /* GetImagePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetImagePath.h; sourceTree = "<group>"; };
 		D3DF12531B6B3E1F00DFEE8F /* GetImagePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetImagePath.m; sourceTree = "<group>"; };
 		D3DF12561B6B412800DFEE8F /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
@@ -616,9 +619,19 @@
 			path = ProjectModel;
 			sourceTree = "<group>";
 		};
+		D355962A1B6F4E1200E4577B /* ManageString */ = {
+			isa = PBXGroup;
+			children = (
+				D355962B1B6F4E2600E4577B /* ManageString.h */,
+				D355962C1B6F4E2600E4577B /* ManageString.m */,
+			);
+			path = ManageString;
+			sourceTree = "<group>";
+		};
 		D3DF124F1B6B3D7700DFEE8F /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				D355962A1B6F4E1200E4577B /* ManageString */,
 				D35595C71B6F323700E4577B /* CustomFramework */,
 				D35595BF1B6F2D0800E4577B /* ImageUrlPath */,
 				D3DF12DE1B6B7DF300DFEE8F /* MD5 */,
@@ -1091,6 +1104,7 @@
 				D3E379FC1B686C9E0073D401 /* ViewController.m in Sources */,
 				D3E37A521B68BAA20073D401 /* AFHTTPRequestOperationManager.m in Sources */,
 				D3DF12DA1B6B7DA000DFEE8F /* UIImage+WebP.m in Sources */,
+				D355962D1B6F4E2600E4577B /* ManageString.m in Sources */,
 				D3DF12611B6B412800DFEE8F /* FMDatabase.m in Sources */,
 				D35596061B6F323700E4577B /* RKBaseTableView.m in Sources */,
 				D3DF129E1B6B614400DFEE8F /* MJRefreshAutoGifFooter.m in Sources */,
