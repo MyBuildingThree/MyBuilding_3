@@ -8,9 +8,16 @@
 
 #import "AppDelegate.h"
 #import "LoginSqlite.h"
+#import "MyBuildingTabBarController.h"
+#import "MainViewController.h"
+#import "FocusViewController.h"
+#import "FellowsViewController.h"
+#import "MineViewController.h"
+#import "HomeNavigationController.h"
 
 @interface AppDelegate ()
-
+-(void)openSQL;
+-(void)initTabbar;
 @end
 
 @implementation AppDelegate
@@ -18,7 +25,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [LoginSqlite opensql];
+    [self openSQL];
+    [self initTabbar];
     return YES;
 }
 
@@ -44,4 +52,34 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+/**
+ *  打开本地数据库
+ */
+-(void)openSQL{
+    [LoginSqlite opensql];
+}
+
+/**
+ *  初始化tabbar
+ */
+-(void)initTabbar{
+    MyBuildingTabBarController *tab = [MyBuildingTabBarController sharedTabbarController];
+    
+    MainViewController *main = [[MainViewController alloc] init];
+    HomeNavigationController *mainNav = [[HomeNavigationController alloc] initWithRootViewController:main];
+    
+    FocusViewController *focus = [[FocusViewController alloc] init];
+    HomeNavigationController *focusNav = [[HomeNavigationController alloc] initWithRootViewController:focus];
+    
+    FellowsViewController *fellows = [[FellowsViewController alloc] init];
+    HomeNavigationController *fellowsNav = [[HomeNavigationController alloc] initWithRootViewController:fellows];
+    
+    MineViewController *mine = [[MineViewController alloc] init];
+    HomeNavigationController *mineNav = [[HomeNavigationController alloc] initWithRootViewController:mine];
+    
+    tab.viewControllers = @[mainNav,focusNav,fellowsNav,mineNav];
+    
+    self.window.rootViewController = tab;
+    [self.window makeKeyAndVisible];
+}
 @end
