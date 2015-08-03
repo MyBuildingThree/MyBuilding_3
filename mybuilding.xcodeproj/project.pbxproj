@@ -54,8 +54,9 @@
 		D355959F1B6EFF5600E4577B /* FellowsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D355959D1B6EFF5600E4577B /* FellowsViewController.m */; };
 		D35595A21B6EFF6200E4577B /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D35595A11B6EFF6200E4577B /* MineViewController.m */; };
 		D35595A31B6EFF6200E4577B /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D35595A11B6EFF6200E4577B /* MineViewController.m */; };
-		D35595C51B6F31AD00E4577B /* loading.png in Resources */ = {isa = PBXBuildFile; fileRef = D35595C31B6F31AD00E4577B /* loading.png */; };
-		D35595C61B6F31AD00E4577B /* loading@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D35595C41B6F31AD00E4577B /* loading@2x.png */; };
+		D3A1745E1B6F835B00BC6DA1 /* CompanyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A1745D1B6F835B00BC6DA1 /* CompanyTableViewCell.m */; };
+		D3A174621B6F842A00BC6DA1 /* CompanyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A174611B6F842A00BC6DA1 /* CompanyModel.m */; };
+		D3A174651B6F843700BC6DA1 /* CompanyApi.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A174641B6F843700BC6DA1 /* CompanyApi.m */; };
 		D3DF12541B6B3E1F00DFEE8F /* GetImagePath.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF12531B6B3E1F00DFEE8F /* GetImagePath.m */; };
 		D3DF12611B6B412800DFEE8F /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF12581B6B412800DFEE8F /* FMDatabase.m */; };
 		D3DF12621B6B412800DFEE8F /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF125A1B6B412800DFEE8F /* FMResultSet.m */; };
@@ -238,8 +239,12 @@
 		D355959D1B6EFF5600E4577B /* FellowsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FellowsViewController.m; sourceTree = "<group>"; };
 		D35595A01B6EFF6200E4577B /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		D35595A11B6EFF6200E4577B /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
-		D35595C31B6F31AD00E4577B /* loading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading.png; sourceTree = "<group>"; };
-		D35595C41B6F31AD00E4577B /* loading@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading@2x.png"; sourceTree = "<group>"; };
+		D3A1745C1B6F835B00BC6DA1 /* CompanyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyTableViewCell.h; sourceTree = "<group>"; };
+		D3A1745D1B6F835B00BC6DA1 /* CompanyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyTableViewCell.m; sourceTree = "<group>"; };
+		D3A174601B6F842A00BC6DA1 /* CompanyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyModel.h; sourceTree = "<group>"; };
+		D3A174611B6F842A00BC6DA1 /* CompanyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyModel.m; sourceTree = "<group>"; };
+		D3A174631B6F843700BC6DA1 /* CompanyApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyApi.h; sourceTree = "<group>"; };
+		D3A174641B6F843700BC6DA1 /* CompanyApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyApi.m; sourceTree = "<group>"; };
 		D3DF12521B6B3E1F00DFEE8F /* GetImagePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetImagePath.h; sourceTree = "<group>"; };
 		D3DF12531B6B3E1F00DFEE8F /* GetImagePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetImagePath.m; sourceTree = "<group>"; };
 		D3DF12561B6B412800DFEE8F /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
@@ -427,6 +432,8 @@
 		5B5CA12D1B6F3A1100CC3896 /* Company */ = {
 			isa = PBXGroup;
 			children = (
+				D3A1745C1B6F835B00BC6DA1 /* CompanyTableViewCell.h */,
+				D3A1745D1B6F835B00BC6DA1 /* CompanyTableViewCell.m */,
 			);
 			path = Company;
 			sourceTree = "<group>";
@@ -694,6 +701,17 @@
 			path = Mine;
 			sourceTree = "<group>";
 		};
+		D3A1745F1B6F841500BC6DA1 /* CompanyModel */ = {
+			isa = PBXGroup;
+			children = (
+				D3A174601B6F842A00BC6DA1 /* CompanyModel.h */,
+				D3A174611B6F842A00BC6DA1 /* CompanyModel.m */,
+				D3A174631B6F843700BC6DA1 /* CompanyApi.h */,
+				D3A174641B6F843700BC6DA1 /* CompanyApi.m */,
+			);
+			path = CompanyModel;
+			sourceTree = "<group>";
+		};
 		D3DF124F1B6B3D7700DFEE8F /* Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -713,8 +731,6 @@
 		D3DF12501B6B3D9400DFEE8F /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				D35595C31B6F31AD00E4577B /* loading.png */,
-				D35595C41B6F31AD00E4577B /* loading@2x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -1055,6 +1071,7 @@
 		D3E37A7A1B68D19E0073D401 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D3A1745F1B6F841500BC6DA1 /* CompanyModel */,
 				5B5CA1A51B6F713600CC3896 /* LoginModel */,
 				5B5CA1AA1B6F713600CC3896 /* ProjectModel */,
 			);
@@ -1142,10 +1159,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D35595C51B6F31AD00E4577B /* loading.png in Resources */,
 				D3E379FF1B686C9E0073D401 /* Main.storyboard in Resources */,
 				D3E37A041B686C9E0073D401 /* LaunchScreen.xib in Resources */,
-				D35595C61B6F31AD00E4577B /* loading@2x.png in Resources */,
 				D3DF12A71B6B614400DFEE8F /* MJRefresh.bundle in Resources */,
 				D3E37A011B686C9E0073D401 /* Images.xcassets in Resources */,
 			);
@@ -1166,6 +1181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3E37A511B68BAA20073D401 /* AFHTTPRequestOperation.m in Sources */,
+				D3A1745E1B6F835B00BC6DA1 /* CompanyTableViewCell.m in Sources */,
 				5B5CA18B1B6F70ED00CC3896 /* RKScrollView.m in Sources */,
 				D3E379FC1B686C9E0073D401 /* ViewController.m in Sources */,
 				5B5CA1381B6F3ED100CC3896 /* MainContactController.m in Sources */,
@@ -1197,6 +1213,7 @@
 				D3DF12D71B6B7DA000DFEE8F /* UIButton+WebCache.m in Sources */,
 				5B5CA19C1B6F70ED00CC3896 /* ChatToolBar.m in Sources */,
 				5B5CA19B1B6F70ED00CC3896 /* ChatMoreSelectView.m in Sources */,
+				D3A174621B6F842A00BC6DA1 /* CompanyModel.m in Sources */,
 				D3DF126B1B6B438D00DFEE8F /* LoginSqlite.m in Sources */,
 				D3E37A621B68BAA20073D401 /* UIProgressView+AFNetworking.m in Sources */,
 				D3E37A561B68BAA20073D401 /* AFURLConnectionOperation.m in Sources */,
@@ -1259,6 +1276,7 @@
 				5B5CA1961B6F70ED00CC3896 /* RKTestController_3.m in Sources */,
 				5B5CA1891B6F70ED00CC3896 /* RKBaseTableView.m in Sources */,
 				D3DF12D91B6B7DA000DFEE8F /* UIImage+MultiFormat.m in Sources */,
+				D3A174651B6F843700BC6DA1 /* CompanyApi.m in Sources */,
 				D3E379F91B686C9E0073D401 /* AppDelegate.m in Sources */,
 				5B5CA1451B6F70A600CC3896 /* ImageUrlPath.m in Sources */,
 				D3DF12E11B6B7DF300DFEE8F /* MD5.m in Sources */,
