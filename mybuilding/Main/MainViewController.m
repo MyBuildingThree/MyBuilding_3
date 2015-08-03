@@ -7,6 +7,9 @@
 //
 
 #import "MainViewController.h"
+#import "LoginApi.h"
+#import "MD5.h"
+#import "LoginModel.h"
 
 @interface MainViewController ()
 
@@ -18,6 +21,23 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor], NSForegroundColorAttributeName,[UIFont boldSystemFontOfSize:19], NSFontAttributeName,nil]];
+    
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
+    [dic setValue:@"wy0001" forKey:@"userNameOrCellPhone"];
+    [dic setValue:[MD5 md5HexDigest:@"111111"] forKey:@"password"];
+    [dic setValue:@"05" forKey:@"deviceType"];
+    [dic setValue:@"" forKey:@"token"];
+    [dic setValue:@"02" forKey:@"downloadType"];
+    [LoginApi LoginWithBlock:^(LoginModel *loginModel, NSError *error) {
+        if(!error){
+            NSLog(@"%@",loginModel.a_userAvatarUrl);
+            UIImageView *image = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+            [image sd_setImageWithURL:loginModel.a_userAvatarUrl placeholderImage:[GetImagePath getImagePath:@"loading"]];
+            [self.view addSubview:image];
+        }
+    } dic:dic noNetWork:^{
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

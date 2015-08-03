@@ -19,5 +19,8 @@
 #import "SDImageCache.h"
 #import "UIImageView+WebCache.h"
 #import "UIButton+WebCache.h"
+#import "ImageUrlPath.h"
 #endif
 #define serverAddress "http://10.1.5.104:8080/server"
+//图片参数
+#define image(imgId,type,width,height,iscut) [NSString stringWithFormat:@"%s/image/show?imageId=%@&type=%@&width=%@&height=%@&cut=%@",serverAddress,imgId,type,width,height,iscut]

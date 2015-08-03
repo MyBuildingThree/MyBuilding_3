@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "TestNetWorking.h"
 
 @interface ViewController ()
 
@@ -18,11 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [TestNetWorking GetMobileBannerImages:^(NSMutableArray *posts, NSError *error) {
-        
-    } noNetWork:^{
-        NSLog(@"asdfasdfasdfasdf");
-    }];
 }
 
 - (void)didReceiveMemoryWarning {

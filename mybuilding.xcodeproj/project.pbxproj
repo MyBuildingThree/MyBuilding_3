@@ -17,6 +17,13 @@
 		D355959F1B6EFF5600E4577B /* FellowsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D355959D1B6EFF5600E4577B /* FellowsViewController.m */; };
 		D35595A21B6EFF6200E4577B /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D35595A11B6EFF6200E4577B /* MineViewController.m */; };
 		D35595A31B6EFF6200E4577B /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D35595A11B6EFF6200E4577B /* MineViewController.m */; };
+		D35595B61B6F0E2B00E4577B /* LoginApi.m in Sources */ = {isa = PBXBuildFile; fileRef = D35595B51B6F0E2B00E4577B /* LoginApi.m */; };
+		D35595B71B6F0E2B00E4577B /* LoginApi.m in Sources */ = {isa = PBXBuildFile; fileRef = D35595B51B6F0E2B00E4577B /* LoginApi.m */; };
+		D35595BA1B6F0F0D00E4577B /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D35595B91B6F0F0D00E4577B /* LoginModel.m */; };
+		D35595BB1B6F0F0D00E4577B /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D35595B91B6F0F0D00E4577B /* LoginModel.m */; };
+		D35595C21B6F2D1600E4577B /* ImageUrlPath.m in Sources */ = {isa = PBXBuildFile; fileRef = D35595C11B6F2D1600E4577B /* ImageUrlPath.m */; };
+		D35595C51B6F31AD00E4577B /* loading.png in Resources */ = {isa = PBXBuildFile; fileRef = D35595C31B6F31AD00E4577B /* loading.png */; };
+		D35595C61B6F31AD00E4577B /* loading@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D35595C41B6F31AD00E4577B /* loading@2x.png */; };
 		D3DF12541B6B3E1F00DFEE8F /* GetImagePath.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF12531B6B3E1F00DFEE8F /* GetImagePath.m */; };
 		D3DF12611B6B412800DFEE8F /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF12581B6B412800DFEE8F /* FMDatabase.m */; };
 		D3DF12621B6B412800DFEE8F /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF125A1B6B412800DFEE8F /* FMResultSet.m */; };
@@ -97,7 +104,6 @@
 		D3E37A721B68C1B60073D401 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E37A711B68C1B60073D401 /* CoreLocation.framework */; };
 		D3E37A751B68C2B20073D401 /* AFAppDotNetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E37A741B68C2B20073D401 /* AFAppDotNetAPIClient.m */; };
 		D3E37A791B68D15D0073D401 /* SendRequst.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E37A781B68D15D0073D401 /* SendRequst.m */; };
-		D3E37A7D1B68D1BA0073D401 /* TestNetWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E37A7C1B68D1BA0073D401 /* TestNetWorking.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +129,14 @@
 		D355959D1B6EFF5600E4577B /* FellowsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FellowsViewController.m; sourceTree = "<group>"; };
 		D35595A01B6EFF6200E4577B /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		D35595A11B6EFF6200E4577B /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		D35595B41B6F0E2B00E4577B /* LoginApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginApi.h; sourceTree = "<group>"; };
+		D35595B51B6F0E2B00E4577B /* LoginApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginApi.m; sourceTree = "<group>"; };
+		D35595B81B6F0F0D00E4577B /* LoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
+		D35595B91B6F0F0D00E4577B /* LoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginModel.m; sourceTree = "<group>"; };
+		D35595C01B6F2D1600E4577B /* ImageUrlPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageUrlPath.h; sourceTree = "<group>"; };
+		D35595C11B6F2D1600E4577B /* ImageUrlPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageUrlPath.m; sourceTree = "<group>"; };
+		D35595C31B6F31AD00E4577B /* loading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading.png; sourceTree = "<group>"; };
+		D35595C41B6F31AD00E4577B /* loading@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading@2x.png"; sourceTree = "<group>"; };
 		D3DF12521B6B3E1F00DFEE8F /* GetImagePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetImagePath.h; sourceTree = "<group>"; };
 		D3DF12531B6B3E1F00DFEE8F /* GetImagePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetImagePath.m; sourceTree = "<group>"; };
 		D3DF12561B6B412800DFEE8F /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
@@ -279,8 +293,6 @@
 		D3E37A761B68C3250073D401 /* mybuilding.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mybuilding.pch; sourceTree = "<group>"; };
 		D3E37A771B68D15D0073D401 /* SendRequst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendRequst.h; sourceTree = "<group>"; };
 		D3E37A781B68D15D0073D401 /* SendRequst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendRequst.m; sourceTree = "<group>"; };
-		D3E37A7B1B68D1BA0073D401 /* TestNetWorking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestNetWorking.h; sourceTree = "<group>"; };
-		D3E37A7C1B68D1BA0073D401 /* TestNetWorking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNetWorking.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -411,9 +423,30 @@
 			path = Requirements;
 			sourceTree = "<group>";
 		};
+		D35595B31B6F0D2500E4577B /* LoginModel */ = {
+			isa = PBXGroup;
+			children = (
+				D35595B41B6F0E2B00E4577B /* LoginApi.h */,
+				D35595B51B6F0E2B00E4577B /* LoginApi.m */,
+				D35595B81B6F0F0D00E4577B /* LoginModel.h */,
+				D35595B91B6F0F0D00E4577B /* LoginModel.m */,
+			);
+			path = LoginModel;
+			sourceTree = "<group>";
+		};
+		D35595BF1B6F2D0800E4577B /* ImageUrlPath */ = {
+			isa = PBXGroup;
+			children = (
+				D35595C01B6F2D1600E4577B /* ImageUrlPath.h */,
+				D35595C11B6F2D1600E4577B /* ImageUrlPath.m */,
+			);
+			path = ImageUrlPath;
+			sourceTree = "<group>";
+		};
 		D3DF124F1B6B3D7700DFEE8F /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				D35595BF1B6F2D0800E4577B /* ImageUrlPath */,
 				D3DF12DE1B6B7DF300DFEE8F /* MD5 */,
 				D3DF12AC1B6B7DA000DFEE8F /* SDWebImage */,
 				D3DF126C1B6B614400DFEE8F /* MJRefresh */,
@@ -427,6 +460,8 @@
 		D3DF12501B6B3D9400DFEE8F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D35595C31B6F31AD00E4577B /* loading.png */,
+				D35595C41B6F31AD00E4577B /* loading@2x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -767,8 +802,7 @@
 		D3E37A7A1B68D19E0073D401 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D3E37A7B1B68D1BA0073D401 /* TestNetWorking.h */,
-				D3E37A7C1B68D1BA0073D401 /* TestNetWorking.m */,
+				D35595B31B6F0D2500E4577B /* LoginModel */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -854,8 +888,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D35595C51B6F31AD00E4577B /* loading.png in Resources */,
 				D3E379FF1B686C9E0073D401 /* Main.storyboard in Resources */,
 				D3E37A041B686C9E0073D401 /* LaunchScreen.xib in Resources */,
+				D35595C61B6F31AD00E4577B /* loading@2x.png in Resources */,
 				D3DF12A71B6B614400DFEE8F /* MJRefresh.bundle in Resources */,
 				D3E37A011B686C9E0073D401 /* Images.xcassets in Resources */,
 			);
@@ -886,6 +922,7 @@
 				D3DF12641B6B412800DFEE8F /* FMDatabaseAdditions.m in Sources */,
 				D3DF12A11B6B614400DFEE8F /* MJRefreshBackGifFooter.m in Sources */,
 				D3DF12A81B6B614400DFEE8F /* MJRefreshConst.m in Sources */,
+				D35595B61B6F0E2B00E4577B /* LoginApi.m in Sources */,
 				D3DF12631B6B412800DFEE8F /* FMDatabaseQueue.m in Sources */,
 				D3E37A5D1B68BAA20073D401 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				D3E37A5C1B68BAA20073D401 /* Reachability.m in Sources */,
@@ -919,6 +956,7 @@
 				D3DF12DB1B6B7DA000DFEE8F /* UIImageView+HighlightedWebCache.m in Sources */,
 				D3DF12A21B6B614400DFEE8F /* MJRefreshBackNormalFooter.m in Sources */,
 				D35595A21B6EFF6200E4577B /* MineViewController.m in Sources */,
+				D35595BA1B6F0F0D00E4577B /* LoginModel.m in Sources */,
 				D355959E1B6EFF5600E4577B /* FellowsViewController.m in Sources */,
 				D3E37A5F1B68BAA20073D401 /* UIAlertView+AFNetworking.m in Sources */,
 				D3DF12A51B6B614400DFEE8F /* MJRefreshNormalHeader.m in Sources */,
@@ -935,9 +973,9 @@
 				D3E37A591B68BAA20073D401 /* AFURLSessionManager.m in Sources */,
 				D3DF129A1B6B614400DFEE8F /* MJRefreshBackFooter.m in Sources */,
 				D355958F1B6EFD8B00E4577B /* MyBuildingTabBarController.m in Sources */,
-				D3E37A7D1B68D1BA0073D401 /* TestNetWorking.m in Sources */,
 				D3E37A631B68BAA20073D401 /* UIRefreshControl+AFNetworking.m in Sources */,
 				D3DF12D91B6B7DA000DFEE8F /* UIImage+MultiFormat.m in Sources */,
+				D35595C21B6F2D1600E4577B /* ImageUrlPath.m in Sources */,
 				D3E379F91B686C9E0073D401 /* AppDelegate.m in Sources */,
 				D3DF12E11B6B7DF300DFEE8F /* MD5.m in Sources */,
 				D3DF129B1B6B614400DFEE8F /* MJRefreshComponent.m in Sources */,
@@ -958,9 +996,11 @@
 			files = (
 				D355959B1B6EFF4600E4577B /* FocusViewController.m in Sources */,
 				D355959F1B6EFF5600E4577B /* FellowsViewController.m in Sources */,
+				D35595B71B6F0E2B00E4577B /* LoginApi.m in Sources */,
 				D35595A31B6EFF6200E4577B /* MineViewController.m in Sources */,
 				D3E37A101B686C9E0073D401 /* mybuildingTests.m in Sources */,
 				D35595971B6EFF2000E4577B /* MainViewController.m in Sources */,
+				D35595BB1B6F0F0D00E4577B /* LoginModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
