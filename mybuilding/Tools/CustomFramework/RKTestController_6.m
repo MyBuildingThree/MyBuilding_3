@@ -7,8 +7,34 @@
 //
 
 #import "RKTestController_6.h"
+#import "ProjectApi.h"
+#import "ProjectModel.h"
+
+@interface RKTestController_6()
+@property(nonatomic,strong)NSMutableArray *modelArr;
+@end
 
 @implementation RKTestController_6
+-(void)setUp{
+    [super setUp];
+    [self loadList];
+}
+
+-(NSMutableArray *)modelArr{
+    if(!_modelArr){
+        _modelArr = [NSMutableArray array];
+    }
+    return _modelArr;
+}
+
+-(void)loadList{
+    [ProjectApi GetPiProjectSeachWithBlock:^(NSMutableArray *posts, NSError *error) {
+        if(!error){
+            
+        }
+    } startIndex:0 keywords:@"" noNetWork:nil];
+}
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 10;
 }

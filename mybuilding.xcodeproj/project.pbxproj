@@ -50,6 +50,9 @@
 		D355961D1B6F323700E4577B /* RKShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = D35596011B6F323700E4577B /* RKShadowView.m */; };
 		D355961E1B6F323700E4577B /* RKViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = D35596031B6F323700E4577B /* RKViewFactory.m */; };
 		D355961F1B6F323700E4577B /* UIView+ViewKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D35596051B6F323700E4577B /* UIView+ViewKit.m */; };
+		D35596221B6F3C2F00E4577B /* ProjectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D35596211B6F3C2F00E4577B /* ProjectTableViewCell.m */; };
+		D35596261B6F3DBC00E4577B /* ProjectApi.m in Sources */ = {isa = PBXBuildFile; fileRef = D35596251B6F3DBC00E4577B /* ProjectApi.m */; };
+		D35596291B6F3DC900E4577B /* ProjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D35596281B6F3DC900E4577B /* ProjectModel.m */; };
 		D3DF12541B6B3E1F00DFEE8F /* GetImagePath.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF12531B6B3E1F00DFEE8F /* GetImagePath.m */; };
 		D3DF12611B6B412800DFEE8F /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF12581B6B412800DFEE8F /* FMDatabase.m */; };
 		D3DF12621B6B412800DFEE8F /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF125A1B6B412800DFEE8F /* FMResultSet.m */; };
@@ -218,6 +221,12 @@
 		D35596031B6F323700E4577B /* RKViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKViewFactory.m; sourceTree = "<group>"; };
 		D35596041B6F323700E4577B /* UIView+ViewKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewKit.h"; sourceTree = "<group>"; };
 		D35596051B6F323700E4577B /* UIView+ViewKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewKit.m"; sourceTree = "<group>"; };
+		D35596201B6F3C2F00E4577B /* ProjectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectTableViewCell.h; sourceTree = "<group>"; };
+		D35596211B6F3C2F00E4577B /* ProjectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectTableViewCell.m; sourceTree = "<group>"; };
+		D35596241B6F3DBC00E4577B /* ProjectApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectApi.h; sourceTree = "<group>"; };
+		D35596251B6F3DBC00E4577B /* ProjectApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectApi.m; sourceTree = "<group>"; };
+		D35596271B6F3DC900E4577B /* ProjectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectModel.h; sourceTree = "<group>"; };
+		D35596281B6F3DC900E4577B /* ProjectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectModel.m; sourceTree = "<group>"; };
 		D3DF12521B6B3E1F00DFEE8F /* GetImagePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetImagePath.h; sourceTree = "<group>"; };
 		D3DF12531B6B3E1F00DFEE8F /* GetImagePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetImagePath.m; sourceTree = "<group>"; };
 		D3DF12561B6B412800DFEE8F /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
@@ -441,14 +450,10 @@
 		D35595921B6EFEA500E4577B /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				D35595A41B6F063D00E4577B /* Company */,
-				D35595A51B6F063D00E4577B /* Contact */,
-				D35595A61B6F063D00E4577B /* Product */,
-				D35595A71B6F063D00E4577B /* Project */,
-				D35595A81B6F063D00E4577B /* Recommend */,
-				D35595A91B6F063D00E4577B /* Requirements */,
 				D35595941B6EFF2000E4577B /* MainViewController.h */,
 				D35595951B6EFF2000E4577B /* MainViewController.m */,
+				D35596201B6F3C2F00E4577B /* ProjectTableViewCell.h */,
+				D35596211B6F3C2F00E4577B /* ProjectTableViewCell.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -460,48 +465,6 @@
 				D35595A11B6EFF6200E4577B /* MineViewController.m */,
 			);
 			path = Mine;
-			sourceTree = "<group>";
-		};
-		D35595A41B6F063D00E4577B /* Company */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Company;
-			sourceTree = "<group>";
-		};
-		D35595A51B6F063D00E4577B /* Contact */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Contact;
-			sourceTree = "<group>";
-		};
-		D35595A61B6F063D00E4577B /* Product */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Product;
-			sourceTree = "<group>";
-		};
-		D35595A71B6F063D00E4577B /* Project */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Project;
-			sourceTree = "<group>";
-		};
-		D35595A81B6F063D00E4577B /* Recommend */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Recommend;
-			sourceTree = "<group>";
-		};
-		D35595A91B6F063D00E4577B /* Requirements */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Requirements;
 			sourceTree = "<group>";
 		};
 		D35595B31B6F0D2500E4577B /* LoginModel */ = {
@@ -640,6 +603,17 @@
 				D35596051B6F323700E4577B /* UIView+ViewKit.m */,
 			);
 			path = ViewKit;
+			sourceTree = "<group>";
+		};
+		D35596231B6F3DA900E4577B /* ProjectModel */ = {
+			isa = PBXGroup;
+			children = (
+				D35596241B6F3DBC00E4577B /* ProjectApi.h */,
+				D35596251B6F3DBC00E4577B /* ProjectApi.m */,
+				D35596271B6F3DC900E4577B /* ProjectModel.h */,
+				D35596281B6F3DC900E4577B /* ProjectModel.m */,
+			);
+			path = ProjectModel;
 			sourceTree = "<group>";
 		};
 		D3DF124F1B6B3D7700DFEE8F /* Tools */ = {
@@ -1002,6 +976,7 @@
 		D3E37A7A1B68D19E0073D401 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D35596231B6F3DA900E4577B /* ProjectModel */,
 				D35595B31B6F0D2500E4577B /* LoginModel */,
 			);
 			path = Model;
@@ -1159,9 +1134,11 @@
 				D3E37A551B68BAA20073D401 /* AFSecurityPolicy.m in Sources */,
 				D3DF12991B6B614400DFEE8F /* MJRefreshAutoFooter.m in Sources */,
 				D3DF12A91B6B614400DFEE8F /* UIScrollView+MJExtension.m in Sources */,
+				D35596261B6F3DBC00E4577B /* ProjectApi.m in Sources */,
 				D3DF129C1B6B614400DFEE8F /* MJRefreshFooter.m in Sources */,
 				D3DF12D21B6B7DA000DFEE8F /* SDWebImageDecoder.m in Sources */,
 				D3E37A601B68BAA20073D401 /* UIButton+AFNetworking.m in Sources */,
+				D35596291B6F3DC900E4577B /* ProjectModel.m in Sources */,
 				D3DF129F1B6B614400DFEE8F /* MJRefreshAutoNormalFooter.m in Sources */,
 				D3E37A611B68BAA20073D401 /* UIImageView+AFNetworking.m in Sources */,
 				D3E37A531B68BAA20073D401 /* AFHTTPSessionManager.m in Sources */,
@@ -1195,6 +1172,7 @@
 				D3DF129A1B6B614400DFEE8F /* MJRefreshBackFooter.m in Sources */,
 				D355958F1B6EFD8B00E4577B /* MyBuildingTabBarController.m in Sources */,
 				D35596141B6F323700E4577B /* RKTestController_5.m in Sources */,
+				D35596221B6F3C2F00E4577B /* ProjectTableViewCell.m in Sources */,
 				D3E37A631B68BAA20073D401 /* UIRefreshControl+AFNetworking.m in Sources */,
 				D3DF12D91B6B7DA000DFEE8F /* UIImage+MultiFormat.m in Sources */,
 				D35595C21B6F2D1600E4577B /* ImageUrlPath.m in Sources */,

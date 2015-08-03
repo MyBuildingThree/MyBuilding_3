@@ -23,7 +23,8 @@
  *  @param noNetWork 是否网络连接
  */
 + (void)LoginWithBlock:(void (^)(LoginModel *loginModel, NSError *error))block dic:(NSMutableDictionary *)dic noNetWork:(void(^)())noNetWork{
-    [SendRequst formRequstWithUrlString:@"api/account/login" postParamDic:dic success:^(id responseDic) {
+    NSString *urlStr = [NSString stringWithFormat:@"api/account/login"];
+    [SendRequst formRequstWithUrlString:urlStr postParamDic:dic success:^(id responseDic) {
         LoginModel *model = [[LoginModel alloc] init];
         [model setDict:responseDic[@"data"]];
         if(block){

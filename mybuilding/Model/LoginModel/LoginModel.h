@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ *  用户的数据处理
+ */
 @interface LoginModel : NSObject
 /**
  *  用户ID
