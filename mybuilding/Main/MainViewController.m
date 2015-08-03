@@ -43,6 +43,7 @@
     self.pageController.delegate = self;
     [self.pageController.view setMinY:0];
     [self.view addSubview:self.pageController.view];
+    //
 }
 
 - (void)stageViewPageControllerAssistBtnClicked{
