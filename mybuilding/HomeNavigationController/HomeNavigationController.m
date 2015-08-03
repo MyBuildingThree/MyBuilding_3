@@ -138,6 +138,7 @@
     }
     return array;
 }
+
 -(UIViewController *)popViewControllerAnimated:(BOOL)animated
 {
     UIViewController *vc = [super popViewControllerAnimated:animated];
@@ -162,24 +163,24 @@
  *
  *  @param btn 点击的按钮
  */
-- (void)btnClick:(UIButton *)btn
-{
-    if ([btn.titleLabel.text isEqualToString:@"更多功能"])
-    {
-        CGPoint point = CGPointMake(btn.frame.origin.x + btn.frame.size.width/2, btn.frame.origin.y+20 + btn.frame.size.height);
-        PopoverView *pop = [[PopoverView alloc]initWithPoint:point titles:@[@"热线电话",@"消息通知",@"广告活动"] images:nil scroller:NO];
-        [pop show];
-        pop.selectRowAtIndex = ^(NSInteger index)
-        {
-            if (index == 2)
-            {
-                [self presentViewController:[[ADCampaignViewController alloc]init] animated:YES completion:^{
-                    
-                }];
-            }
-        };
-    }
-}
+//- (void)btnClick:(UIButton *)btn
+//{
+//    if ([btn.titleLabel.text isEqualToString:@"更多功能"])
+//    {
+//        CGPoint point = CGPointMake(btn.frame.origin.x + btn.frame.size.width/2, btn.frame.origin.y+20 + btn.frame.size.height);
+//        PopoverView *pop = [[PopoverView alloc]initWithPoint:point titles:@[@"热线电话",@"消息通知",@"广告活动"] images:nil scroller:NO];
+//        [pop show];
+//        pop.selectRowAtIndex = ^(NSInteger index)
+//        {
+//            if (index == 2)
+//            {
+//                [self presentViewController:[[ADCampaignViewController alloc]init] animated:YES completion:^{
+//                    
+//                }];
+//            }
+//        };
+//    }
+//}
 
 
 - (void)didReceiveMemoryWarning {
