@@ -11,12 +11,7 @@
 #import "ConnectionAvailable.h"
 
 @implementation SendRequst
-/**
- *  get请求
- *
- *  @param _urlString url
- *  
- */
+
 + (void) sendRequestWithUrlString : (NSString*) urlString
                            success:(void (^)(id responseDic)) success
                            failure:(void(^)(NSError *error)) failure
@@ -95,36 +90,43 @@
 }
 
 
+/**
+ *  处理获取服务器返回成功的数据
+ *
+ *  @param responseObject json数据
+ */
 + (void)dealSuccessWithreRponseObject:(id)responseObject
                               success:(void (^)(id responseDic)) success
                               failure:(void(^)(NSError *error)) failure{
     NSLog(@"responseObject=========%@",responseObject);
-    
     if ([responseObject[@"status"][@"statusCode"] intValue] == 200) {
-        
         success(responseObject);
-        
     }else{
-        
         NSString *err=[NSString stringWithFormat:@"%@",responseObject[@"status"][@"errorMsg"]];
-        
         NSString *errCode=[NSString stringWithFormat:@"%@",responseObject[@"status"][@"statusCode"]];
         NSError *error=[NSError errorWithDomain:err code:[errCode integerValue] userInfo:nil];
         [SendRequst HudFailWithErrMessage:error];
         failure(error);
-        
     }
-    
 }
 
 
+/**
+ *  处理进入异常错误
+ *
+ *  @param error 自定义的NSError
+ */
 +(void)HudFailWithNetWorkErr:(NSError *)error{
     NSLog(@"userInfo-------%@",error.userInfo);
     NSLog(@"%@",error.userInfo[@"NSLocalizedDescription"]);
     [SendRequst AddAlertView:error.userInfo[@"NSLocalizedDescription"]];
 }
 
-
+/**
+ *  处理服务器返回的错误
+ *
+ *  @param error 服务器返回的NSError
+ */
 +(void)HudFailWithErrMessage:(NSError *)error{
     NSLog(@"===>%@",error.domain);
     NSLog(@"%ld",(long)error.code);
@@ -204,7 +206,7 @@
         case 11008:
             [SendRequst AddAlertView:@"发送频繁，请稍后再试"];
             break;
-        case 11009:
+        case 11009:  
             [SendRequst AddAlertView:@"短消息发送失败"];
             break;
         case 11024:
