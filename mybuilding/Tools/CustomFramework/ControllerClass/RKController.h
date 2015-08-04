@@ -20,6 +20,9 @@ typedef enum {
 - (void)controllerEndLoading;
 @end
 
+/**
+ *  控制器，含视图
+ */
 @interface RKController : NSObject<RKBaseTableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong)UIActivityIndicatorView* indicatorView;
 

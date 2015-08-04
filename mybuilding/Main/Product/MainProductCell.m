@@ -19,7 +19,7 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         //产品图片
-        self.mainImageView.frame = CGRectMake(10, 13, 75, 75);
+        self.mainImageView.frame = CGRectMake(10, 10, 75, 75);
         self.mainImageView.backgroundColor = [UIColor grayColor];
         
         //产品名称

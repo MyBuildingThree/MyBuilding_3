@@ -12,6 +12,9 @@
 - (void)stageViewPageControllerAssistBtnClicked;
 @end
 
+/**
+ 控制着一个scrollView和阶段条
+ */
 @interface RKStageViewPageController : NSObject
 /**
  *  初始化方法,其中titles与controllers的count必须一致
