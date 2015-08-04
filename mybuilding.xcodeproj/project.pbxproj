@@ -33,17 +33,18 @@
 		5B5CA1B21B6F713600CC3896 /* ProjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CA1AE1B6F713600CC3896 /* ProjectModel.m */; };
 		5B5CA1B51B6F716900CC3896 /* ProjectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CA1B41B6F716900CC3896 /* ProjectTableViewCell.m */; };
 		5B5CA1B91B6F718000CC3896 /* ManageString.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CA1B81B6F718000CC3896 /* ManageString.m */; };
-		5B5CA1C11B6F82CC00CC3896 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		5B5CA1C41B6F82E000CC3896 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		5D713E181B6F8CBE00523446 /* ShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D713E171B6F8CBE00523446 /* ShowView.m */; };
-		5D7A13F41B704701003B7A56 /* FindPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A13EF1B704701003B7A56 /* FindPasswordVC.m */; };
-		5D7A13F51B704701003B7A56 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A13F11B704701003B7A56 /* LoginVC.m */; };
-		5D7A13F61B704701003B7A56 /* ResetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A13F31B704701003B7A56 /* ResetVC.m */; };
-		5D7A13FC1B70473F003B7A56 /* PersonApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A13F91B70473F003B7A56 /* PersonApi.m */; };
-		5D7A13FD1B70473F003B7A56 /* PersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A13FB1B70473F003B7A56 /* PersonModel.m */; };
-		5DAC71961B70511300B2ED69 /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC71951B70511300B2ED69 /* RegisterVC.m */; };
-		5DAC719A1B7089CB00B2ED69 /* SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC71991B7089CB00B2ED69 /* SearchVC.m */; };
-		5DAC719D1B70A7EA00B2ED69 /* SearchSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC719C1B70A7EA00B2ED69 /* SearchSqlite.m */; };
+		5BDBE49E1B70803B00459697 /* MainProjectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE49D1B70803B00459697 /* MainProjectController.m */; };
+		5BDBE4A11B70853F00459697 /* MainCompanyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4A01B70853F00459697 /* MainCompanyController.m */; };
+		5BDBE4A41B709A0A00459697 /* MainProductController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4A31B709A0A00459697 /* MainProductController.m */; };
+		5BDBE4A71B709A2E00459697 /* MainProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4A61B709A2E00459697 /* MainProductCell.m */; };
+		5BDBE4BD1B70C11000459697 /* NSString+LabelKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B11B70C11000459697 /* NSString+LabelKit.m */; };
+		5BDBE4BE1B70C11000459697 /* UIImageView+ViewKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B31B70C11000459697 /* UIImageView+ViewKit.m */; };
+		5BDBE4BF1B70C11000459697 /* UILabel+LabelKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B51B70C11000459697 /* UILabel+LabelKit.m */; };
+		5BDBE4C01B70C11000459697 /* UIView+ViewKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B71B70C11000459697 /* UIView+ViewKit.m */; };
+		5BDBE4C11B70C11000459697 /* RKShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4BA1B70C11000459697 /* RKShadowView.m */; };
+		5BDBE4C21B70C11000459697 /* RKViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4BC1B70C11000459697 /* RKViewFactory.m */; };
+		5DAC71A11B70D44300B2ED69 /* SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC71A01B70D44300B2ED69 /* SearchVC.m */; };
+		5DAC71A21B70D9CF00B2ED69 /* SearchSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC719C1B70A7EA00B2ED69 /* SearchSqlite.m */; };
 		D355958E1B6EFD8B00E4577B /* HomeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D355958A1B6EFD8B00E4577B /* HomeNavigationController.m */; };
 		D355958F1B6EFD8B00E4577B /* MyBuildingTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D355958D1B6EFD8B00E4577B /* MyBuildingTabBarController.m */; };
 		D35595961B6EFF2000E4577B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D35595951B6EFF2000E4577B /* MainViewController.m */; };
@@ -245,10 +246,10 @@
 		5D7A13F31B704701003B7A56 /* ResetVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetVC.m; sourceTree = "<group>"; };
 		5DAC71941B70511300B2ED69 /* RegisterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterVC.h; sourceTree = "<group>"; };
 		5DAC71951B70511300B2ED69 /* RegisterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterVC.m; sourceTree = "<group>"; };
-		5DAC71981B7089CB00B2ED69 /* SearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchVC.h; sourceTree = "<group>"; };
-		5DAC71991B7089CB00B2ED69 /* SearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchVC.m; sourceTree = "<group>"; };
 		5DAC719B1B70A7EA00B2ED69 /* SearchSqlite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchSqlite.h; sourceTree = "<group>"; };
 		5DAC719C1B70A7EA00B2ED69 /* SearchSqlite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchSqlite.m; sourceTree = "<group>"; };
+		5DAC719F1B70D44300B2ED69 /* SearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchVC.h; sourceTree = "<group>"; };
+		5DAC71A01B70D44300B2ED69 /* SearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchVC.m; sourceTree = "<group>"; };
 		D35595891B6EFD8B00E4577B /* HomeNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeNavigationController.h; sourceTree = "<group>"; };
 		D355958A1B6EFD8B00E4577B /* HomeNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeNavigationController.m; sourceTree = "<group>"; };
 		D355958C1B6EFD8B00E4577B /* MyBuildingTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBuildingTabBarController.h; sourceTree = "<group>"; };
@@ -718,22 +719,11 @@
 			path = RegisterAndLogin;
 			sourceTree = "<group>";
 		};
-		5D7A13F71B70473F003B7A56 /* PersonModel */ = {
+		5DAC719E1B70D44300B2ED69 /* SearchVC */ = {
 			isa = PBXGroup;
 			children = (
-				5D7A13F81B70473F003B7A56 /* PersonApi.h */,
-				5D7A13F91B70473F003B7A56 /* PersonApi.m */,
-				5D7A13FA1B70473F003B7A56 /* PersonModel.h */,
-				5D7A13FB1B70473F003B7A56 /* PersonModel.m */,
-			);
-			path = PersonModel;
-			sourceTree = "<group>";
-		};
-		5DAC71971B70899F00B2ED69 /* SearchVC */ = {
-			isa = PBXGroup;
-			children = (
-				5DAC71981B7089CB00B2ED69 /* SearchVC.h */,
-				5DAC71991B7089CB00B2ED69 /* SearchVC.m */,
+				5DAC719F1B70D44300B2ED69 /* SearchVC.h */,
+				5DAC71A01B70D44300B2ED69 /* SearchVC.m */,
 			);
 			path = SearchVC;
 			sourceTree = "<group>";
@@ -779,6 +769,7 @@
 		D35595921B6EFEA500E4577B /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				5DAC719E1B70D44300B2ED69 /* SearchVC */,
 				5B5CA1311B6F3A1100CC3896 /* Recommend */,
 				5B5CA1301B6F3A1100CC3896 /* Project */,
 				5B5CA12D1B6F3A1100CC3896 /* Company */,
@@ -1091,8 +1082,7 @@
 		D3E379F21B686C9E0073D401 /* mybuilding */ = {
 			isa = PBXGroup;
 			children = (
-				5DAC71971B70899F00B2ED69 /* SearchVC */,
-				5D7A13ED1B704701003B7A56 /* RegisterAndLogin */,
+				D3A1746D1B6F96CC00BC6DA1 /* RegisterAndLogin */,
 				D35595901B6EFEA500E4577B /* Fellows */,
 				D35595911B6EFEA500E4577B /* Focus */,
 				D35595921B6EFEA500E4577B /* Main */,
@@ -1345,6 +1335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DAC71A21B70D9CF00B2ED69 /* SearchSqlite.m in Sources */,
 				D3B4DE341B707B36006A20E2 /* ShowView.m in Sources */,
 				D3E37A511B68BAA20073D401 /* AFHTTPRequestOperation.m in Sources */,
 				D3A1745E1B6F835B00BC6DA1 /* CompanyTableViewCell.m in Sources */,
@@ -1413,6 +1404,7 @@
 				5B5CA1901B6F70ED00CC3896 /* RKStageViewPageController.m in Sources */,
 				D3E37A791B68D15D0073D401 /* SendRequst.m in Sources */,
 				D3DF12DB1B6B7DA000DFEE8F /* UIImageView+HighlightedWebCache.m in Sources */,
+				5DAC71A11B70D44300B2ED69 /* SearchVC.m in Sources */,
 				5B5CA1A01B6F70ED00CC3896 /* SearchBarTableViewController.m in Sources */,
 				D3DF12A21B6B614400DFEE8F /* MJRefreshBackNormalFooter.m in Sources */,
 				5B5CA1941B6F70ED00CC3896 /* RKTestController_1.m in Sources */,
@@ -1421,7 +1413,6 @@
 				D3E37A5F1B68BAA20073D401 /* UIAlertView+AFNetworking.m in Sources */,
 				5B5CA1911B6F70ED00CC3896 /* RKCamera.m in Sources */,
 				D3DF12A51B6B614400DFEE8F /* MJRefreshNormalHeader.m in Sources */,
-				5DAC719D1B70A7EA00B2ED69 /* SearchSqlite.m in Sources */,
 				D3DF12DD1B6B7DA000DFEE8F /* UIView+WebCacheOperation.m in Sources */,
 				5BDBE49E1B70803B00459697 /* MainProjectController.m in Sources */,
 				D3A8B3E41B70C2F50033457F /* RecommendApi.m in Sources */,
@@ -1431,7 +1422,7 @@
 				5B5CA1AF1B6F713600CC3896 /* LoginApi.m in Sources */,
 				D3DF12DC1B6B7DA000DFEE8F /* UIImageView+WebCache.m in Sources */,
 				D3E37A751B68C2B20073D401 /* AFAppDotNetAPIClient.m in Sources */,
-				5DAC719A1B7089CB00B2ED69 /* SearchVC.m in Sources */,
+				D3EB7E901B7054DD00482BCD /* ProductApi.m in Sources */,
 				D3E37A641B68BAA20073D401 /* UIWebView+AFNetworking.m in Sources */,
 				D3DF12D81B6B7DA000DFEE8F /* UIImage+GIF.m in Sources */,
 				D3DF12A41B6B614400DFEE8F /* MJRefreshGifHeader.m in Sources */,

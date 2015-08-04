@@ -9,7 +9,7 @@
 #import "SearchVC.h"
 #import "SearchSqlite.h"
 
-@interface SearchVC ()<UITextFieldDelegate>
+@interface SearchVC ()<UITextFieldDelegate,UITableViewDataSource,UITableViewDelegate>
 
 //搜索框
 @property (nonatomic,strong)UITextField *searchTf;
@@ -32,7 +32,6 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self createSubViews];
     [self addNavigationItem];
-    [SearchSqlite openSql];
 }
 
 - (void)createSubViews
@@ -59,8 +58,23 @@
     [self.backBtn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
     
     self.tbv = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height) style:UITableViewStylePlain];
+    self.tbv.dataSource = self;
+    self.tbv.delegate = self;
     
-    
+    //查询数据
+    self.array = [SearchSqlite openSqlWithClass:self.classBtn.titleLabel.text];
+    if (self.array.count == 0)
+    {
+        [self.view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview) withObject:nil];
+        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(50, 100, 300, 50)];
+        label.backgroundColor = [UIColor lightGrayColor];
+        label.text = @"没有历史记录";
+        [self.view addSubview:label];
+    }
+    else
+    {
+        [self.view addSubview:self.tbv];
+    }
     
 }
 
@@ -73,12 +87,14 @@
 //UITextField协议
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    
-    
-    NSLog(@"%@",self.searchTf.text);
+    [SearchSqlite addDataWith:@"用户" content:self.searchTf.text];
     return  YES;
 }
 
-
+//UITextField协议
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
 
 @end
