@@ -19,7 +19,9 @@
     
     NSLog(@"urlString=========%@",urlString);
     if(![ConnectionAvailable isConnectionAvailable]){
-        noNetWork();
+        if(noNetWork){
+            noNetWork();
+        }
         return;
     }
     
@@ -45,7 +47,9 @@
     NSLog(@"urlString=========%@",urlString);
     
     if(![ConnectionAvailable isConnectionAvailable]){
-        noNetWork();
+        if(noNetWork){
+            noNetWork();
+        }
         return;
     }
     
@@ -69,7 +73,9 @@
     NSLog(@"postDic=========%@",postParamDic);
     NSLog(@"urlString=========%@",urlString);
     if(![ConnectionAvailable isConnectionAvailable]){
-        noNetWork();
+        if(noNetWork){
+            noNetWork();
+        }
         return;
     }
     
@@ -98,15 +104,19 @@
 + (void)dealSuccessWithreRponseObject:(id)responseObject
                               success:(void (^)(id responseDic)) success
                               failure:(void(^)(NSError *error)) failure{
-    NSLog(@"responseObject=========%@",responseObject);
+//    NSLog(@"responseObject=========%@",responseObject);
     if ([responseObject[@"status"][@"statusCode"] intValue] == 200) {
-        success(responseObject);
+        if(success){
+            success(responseObject);
+        }
     }else{
         NSString *err=[NSString stringWithFormat:@"%@",responseObject[@"status"][@"errorMsg"]];
         NSString *errCode=[NSString stringWithFormat:@"%@",responseObject[@"status"][@"statusCode"]];
         NSError *error=[NSError errorWithDomain:err code:[errCode integerValue] userInfo:nil];
         [SendRequst HudFailWithErrMessage:error];
-        failure(error);
+        if(failure){
+            failure(error);
+        }
     }
 }
 

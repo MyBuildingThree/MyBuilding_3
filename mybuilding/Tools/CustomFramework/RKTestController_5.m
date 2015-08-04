@@ -7,23 +7,53 @@
 //
 
 #import "RKTestController_5.h"
+#import "CompanyTableViewCell.h"
+#import "CompanyApi.h"
+#import "CompanyModel.h"
+
+@interface RKTestController_5()
+@property(nonatomic,strong)NSMutableArray *modelArr;
+@end
 
 @implementation RKTestController_5
+-(void)setUp{
+    [super setUp];
+    [self loadList];
+}
+
+-(NSMutableArray *)modelArr{
+    if(!_modelArr){
+        _modelArr = [NSMutableArray array];
+    }
+    return _modelArr;
+}
+
+-(void)loadList{
+    [CompanyApi GetCompanyListWithBlock:^(NSMutableArray *posts, NSError *error) {
+        if(!error){
+            self.modelArr = posts;
+            [self.tableView reloadData];
+        }
+    } startIndex:0 keyWords:@"" noNetWork:^{
+        
+    }];
+}
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return self.modelArr.count;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 100;
+    return 110;
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell* cell=[tableView dequeueReusableCellWithIdentifier:@"cell"];
+    NSString *CellIdentifier = [NSString stringWithFormat:@"CompanyTableViewCell"];
+    CompanyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (!cell) {
-        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        cell=[[CompanyTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    cell.textLabel.text = @"5555555555555";
-    
+    cell.model = self.modelArr[indexPath.row];
     return cell;
 }
 @end

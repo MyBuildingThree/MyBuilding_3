@@ -69,7 +69,7 @@
     frame.origin.x = kScreenWidth - 10 - self.time.width;
     self.time.frame = frame;
     
-    
+    [self.bottomView setMinY:self.time.maxY+5];
 }
 
 -(UILabel *)PCDLabel{

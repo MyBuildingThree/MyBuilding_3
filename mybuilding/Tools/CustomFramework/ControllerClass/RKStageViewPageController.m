@@ -10,6 +10,8 @@
 #import "RKStageChooseView.h"
 #import "RKScrollViewPageController.h"
 #import "UIView+ViewKit.h"
+//#import "RKPageController.h"
+
 @interface RKStageViewPageController ()<RKStageChooseViewDelegate,RKScrollViewPageControllerDelegate>
 @property(nonatomic, strong) NSMutableArray* titles;
 @property(nonatomic, strong) NSMutableArray* controllers;
@@ -46,6 +48,11 @@
 - (void)scrollViewPageController:(RKScrollViewPageController *)controller changeIndex:(NSInteger)currentIndex{
     [self.stageChooseView stageLabelClickedWithSequence:currentIndex needResponseDelegate:NO];
 }
+
+//- (void)activeControllerWithIndex:(NSInteger)index{
+//    RKPageController* pageController = self.controllers[index];
+//    [pageController pageControllerFirstLoad];
+//}
 
 - (void)stageChooseViewAssistBtnClicked{
     if ([self.delegate respondsToSelector:@selector(stageViewPageControllerAssistBtnClicked)]) {
