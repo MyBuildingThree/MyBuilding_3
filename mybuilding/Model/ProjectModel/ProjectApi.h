@@ -20,5 +20,5 @@
  *  @param keywords   搜索的关键字
  *  @param noNetWork  没有网络的情况处理
  */
-+ (void)GetPiProjectSeachWithBlock:(void (^)(NSMutableArray *posts, NSError *error))block startIndex:(int)startIndex keywords:(NSString *)keywords noNetWork:(void(^)())noNetWork;
++ (void)GetPiProjectSeachWithBlock:(void (^)(NSMutableArray *posts, NSError *error))block startIndex:(NSInteger)startIndex keywords:(NSString *)keywords noNetWork:(void(^)())noNetWork;
 @end

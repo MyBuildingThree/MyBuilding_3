@@ -11,8 +11,8 @@
 #import "SendRequst.h"
 
 @implementation ProjectApi
-+ (void)GetPiProjectSeachWithBlock:(void (^)(NSMutableArray *, NSError *))block startIndex:(int)startIndex keywords:(NSString *)keywords noNetWork:(void (^)())noNetWork{
-    NSString *urlStr = [NSString stringWithFormat:@"api/projects/search?pageSize=5&pageIndex=%d&keywords=%@",startIndex,keywords];
++ (void)GetPiProjectSeachWithBlock:(void (^)(NSMutableArray *, NSError *))block startIndex:(NSInteger)startIndex keywords:(NSString *)keywords noNetWork:(void (^)())noNetWork{
+    NSString *urlStr = [NSString stringWithFormat:@"api/projects/search?pageSize=5&pageIndex=%ld&keywords=%@",(long)startIndex,keywords];
     NSString * encodedString = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes( kCFAllocatorDefault, (CFStringRef)urlStr, NULL, NULL,  kCFStringEncodingUTF8 ));
     [SendRequst sendRequestWithUrlString:encodedString success:^(id responseDic) {
         NSMutableArray *arr = [[NSMutableArray alloc] init];

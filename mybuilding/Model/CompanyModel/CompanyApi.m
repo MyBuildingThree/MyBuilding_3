@@ -11,8 +11,8 @@
 #import "CompanyModel.h"
 
 @implementation CompanyApi
-+(void)GetCompanyListWithBlock:(void (^)(NSMutableArray *posts, NSError *error))block startIndex:(int)startIndex keyWords:(NSString *)keyWords noNetWork:(void(^)())noNetWork{
-    NSString *urlStr = [NSString stringWithFormat:@"api/companyInfo/getAllCompanyBaseInformation?keywords=%@&pageSize=5&pageIndex=%d",keyWords,startIndex];
++(void)GetCompanyListWithBlock:(void (^)(NSMutableArray *posts, NSError *error))block startIndex:(NSInteger)startIndex keyWords:(NSString *)keyWords noNetWork:(void(^)())noNetWork{
+    NSString *urlStr = [NSString stringWithFormat:@"api/companyInfo/getAllCompanyBaseInformation?keywords=%@&pageSize=5&pageIndex=%ld",keyWords,(long)startIndex];
     NSString * encodedString = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes( kCFAllocatorDefault, (CFStringRef)urlStr, NULL, NULL,  kCFStringEncodingUTF8 ));
     [SendRequst sendRequestWithUrlString:encodedString success:^(id responseDic) {
         NSMutableArray *arr = [[NSMutableArray alloc] init];

@@ -66,6 +66,8 @@
 		D3A174741B6F96CC00BC6DA1 /* FindPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A1746F1B6F96CC00BC6DA1 /* FindPasswordVC.m */; };
 		D3A174751B6F96CC00BC6DA1 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A174711B6F96CC00BC6DA1 /* LoginVC.m */; };
 		D3A174761B6F96CC00BC6DA1 /* ResetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A174731B6F96CC00BC6DA1 /* ResetVC.m */; };
+		D3B4DE341B707B36006A20E2 /* ShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B4DE331B707B36006A20E2 /* ShowView.m */; };
+		D3B4DE371B707B4F006A20E2 /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B4DE361B707B4F006A20E2 /* RegisterVC.m */; };
 		D3DF12541B6B3E1F00DFEE8F /* GetImagePath.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF12531B6B3E1F00DFEE8F /* GetImagePath.m */; };
 		D3DF12611B6B412800DFEE8F /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF12581B6B412800DFEE8F /* FMDatabase.m */; };
 		D3DF12621B6B412800DFEE8F /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF125A1B6B412800DFEE8F /* FMResultSet.m */; };
@@ -282,6 +284,10 @@
 		D3A174711B6F96CC00BC6DA1 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
 		D3A174721B6F96CC00BC6DA1 /* ResetVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetVC.h; sourceTree = "<group>"; };
 		D3A174731B6F96CC00BC6DA1 /* ResetVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetVC.m; sourceTree = "<group>"; };
+		D3B4DE321B707B36006A20E2 /* ShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowView.h; sourceTree = "<group>"; };
+		D3B4DE331B707B36006A20E2 /* ShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowView.m; sourceTree = "<group>"; };
+		D3B4DE351B707B4F006A20E2 /* RegisterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterVC.h; sourceTree = "<group>"; };
+		D3B4DE361B707B4F006A20E2 /* RegisterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterVC.m; sourceTree = "<group>"; };
 		D3DF12521B6B3E1F00DFEE8F /* GetImagePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetImagePath.h; sourceTree = "<group>"; };
 		D3DF12531B6B3E1F00DFEE8F /* GetImagePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetImagePath.m; sourceTree = "<group>"; };
 		D3DF12561B6B412800DFEE8F /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
@@ -686,15 +692,6 @@
 			path = ManageString;
 			sourceTree = "<group>";
 		};
-		5BDBE4951B707BBF00459697 /* ShowView */ = {
-			isa = PBXGroup;
-			children = (
-				5BDBE4961B707BBF00459697 /* ShowView.h */,
-				5BDBE4971B707BBF00459697 /* ShowView.m */,
-			);
-			path = ShowView;
-			sourceTree = "<group>";
-		};
 		5D713E151B6F8CA700523446 /* RegisterAndLogin */ = {
 			isa = PBXGroup;
 			children = (
@@ -797,8 +794,8 @@
 		D3A1746D1B6F96CC00BC6DA1 /* RegisterAndLogin */ = {
 			isa = PBXGroup;
 			children = (
-				5BDBE4991B707C0F00459697 /* RegisterVC.h */,
-				5BDBE49A1B707C0F00459697 /* RegisterVC.m */,
+				D3B4DE351B707B4F006A20E2 /* RegisterVC.h */,
+				D3B4DE361B707B4F006A20E2 /* RegisterVC.m */,
 				D3A1746E1B6F96CC00BC6DA1 /* FindPasswordVC.h */,
 				D3A1746F1B6F96CC00BC6DA1 /* FindPasswordVC.m */,
 				D3A174701B6F96CC00BC6DA1 /* LoginVC.h */,
@@ -809,10 +806,19 @@
 			path = RegisterAndLogin;
 			sourceTree = "<group>";
 		};
+		D3B4DE311B707B36006A20E2 /* ShowView */ = {
+			isa = PBXGroup;
+			children = (
+				D3B4DE321B707B36006A20E2 /* ShowView.h */,
+				D3B4DE331B707B36006A20E2 /* ShowView.m */,
+			);
+			path = ShowView;
+			sourceTree = "<group>";
+		};
 		D3DF124F1B6B3D7700DFEE8F /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				5BDBE4951B707BBF00459697 /* ShowView */,
+				D3B4DE311B707B36006A20E2 /* ShowView */,
 				5D713E151B6F8CA700523446 /* RegisterAndLogin */,
 				5B5CA1B61B6F718000CC3896 /* ManageString */,
 				5B5CA1461B6F70EC00CC3896 /* CustomFramework */,
@@ -1293,6 +1299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3B4DE341B707B36006A20E2 /* ShowView.m in Sources */,
 				D3E37A511B68BAA20073D401 /* AFHTTPRequestOperation.m in Sources */,
 				D3A1745E1B6F835B00BC6DA1 /* CompanyTableViewCell.m in Sources */,
 				5B5CA18B1B6F70ED00CC3896 /* RKScrollView.m in Sources */,
@@ -1301,8 +1308,8 @@
 				D3E37A521B68BAA20073D401 /* AFHTTPRequestOperationManager.m in Sources */,
 				D3DF12DA1B6B7DA000DFEE8F /* UIImage+WebP.m in Sources */,
 				5B5CA19A1B6F70ED00CC3896 /* RKTestController_7.m in Sources */,
+				D3B4DE371B707B4F006A20E2 /* RegisterVC.m in Sources */,
 				D3DF12611B6B412800DFEE8F /* FMDatabase.m in Sources */,
-				5BDBE49B1B707C0F00459697 /* RegisterVC.m in Sources */,
 				D3DF129E1B6B614400DFEE8F /* MJRefreshAutoGifFooter.m in Sources */,
 				D3E37A541B68BAA20073D401 /* AFNetworkReachabilityManager.m in Sources */,
 				D35595961B6EFF2000E4577B /* MainViewController.m in Sources */,
@@ -1387,7 +1394,6 @@
 				5B5CA18C1B6F70ED00CC3896 /* RKView.m in Sources */,
 				D3A174761B6F96CC00BC6DA1 /* ResetVC.m in Sources */,
 				D3E37A5E1B68BAA20073D401 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
-				5BDBE4981B707BBF00459697 /* ShowView.m in Sources */,
 				D3EB7E8D1B7054D000482BCD /* ProductModel.m in Sources */,
 				D3E37A591B68BAA20073D401 /* AFURLSessionManager.m in Sources */,
 				D3DF129A1B6B614400DFEE8F /* MJRefreshBackFooter.m in Sources */,
