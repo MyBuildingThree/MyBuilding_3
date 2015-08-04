@@ -21,6 +21,6 @@
  *  @param startIndex 分页 从0开始
  *  @param noNetWork  没有网络的情况处理
  */
-+ (void)SearchUserWithBlock:(void (^)(NSMutableArray *posts, NSError *error))block keywords:(NSString *)keywords startIndex:(int)startIndex noNetWork:(void(^)())noNetWork;
++ (void)SearchUserWithBlock:(void (^)(NSMutableArray *posts, NSError *error))block keywords:(NSString *)keywords startIndex:(NSInteger)startIndex noNetWork:(void(^)())noNetWork;
 
 @end

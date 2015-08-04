@@ -10,24 +10,53 @@
 #import "MainContactCell.h"
 #import "PersonApi.h"
 #import "PersonModel.h"
-
+#import "UIScrollView+MJRefresh.h"
+#import "MJRefreshNormalHeader.h"
+#import "MJRefreshBackNormalFooter.h"
 @implementation MainContactController
 - (void)setUp{
     [super setUp];
     self.tableView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight - 30 - 64 - 49);
     [self pageControllerFirstLoad];
+    [self setUpHeaderAndFooterRefresh];
+}
+
+- (void)setUpHeaderAndFooterRefresh{
+    self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [self netWorkWithType:RKControllerRefreshHeader];
+    }];
+    
+    self.tableView.footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+        [self netWorkWithType:RKControllerRefreshFooter];
+    }];
+}
+
+/**
+ *  接口获取数据
+ *
+ *  @param refreshType 输入是头刷新还是尾刷新
+ */
+- (void)netWorkWithType:(RKControllerRefreshType)refreshType{
+    BOOL isHeaderRefresh = (refreshType == RKControllerRefreshHeader);
+    NSInteger startIndex = isHeaderRefresh ? 0 : (self.startIndex + 1);
+    [PersonApi SearchUserWithBlock:^(NSMutableArray *posts, NSError *error) {
+        if (!error) {
+            if (isHeaderRefresh) [self.models removeAllObjects];
+            [self.models addObjectsFromArray:posts];
+            [self.tableView reloadData];
+            self.startIndex = startIndex;
+        }
+        isHeaderRefresh ? [self.tableView.header endRefreshing] : [self.tableView.footer endRefreshing];
+    } keywords:@"" startIndex:startIndex noNetWork:nil];
 }
 
 - (void)pageControllerFirstLoad{
-    [PersonApi SearchUserWithBlock:^(NSMutableArray *posts, NSError *error) {
-        NSLog(@"posts = %@",posts);
-        self.models = posts;
-        [self.tableView reloadData];
-    } keywords:@"" startIndex:0 noNetWork:nil];
+    [self netWorkWithType:RKControllerRefreshFirstLoad];
+    NSLog(@"refresh = %d",RKControllerRefreshFirstLoad);
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+    return self.models.count;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -37,10 +66,9 @@
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     MainContactCell* cell=[tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (!cell) {
-        cell=[[MainContactCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        cell=[[MainContactCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
     cell.model = self.models[indexPath.row];
     return cell;
 }
-
 @end
