@@ -32,7 +32,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self createSubViews];
     [self addNavigationItem];
-    [SearchSqlite openSql];
+    //[SearchSqlite openSql];
 }
 
 - (void)createSubViews
