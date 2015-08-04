@@ -13,11 +13,7 @@
 -(void)setDict:(NSDictionary *)dict{
     self.a_companyID = dict[@"companyId"];
     self.a_companyName = dict[@"companyName"];
-    if(![dict[@"headImageId"] isEqualToString:@""]){
-        self.a_companyLogo = [ImageUrlPath getNetWorkImageUrl:dict[@"headImageId"] type:@"login" width:@"" height:@"" cut:@""];
-    }else{
-        self.a_companyLogo = nil;
-    }
+    self.a_companyLogo = [ImageUrlPath getNetWorkImageUrl:dict[@"headImageId"] type:@"login" width:@"" height:@"" cut:@""];
     self.a_companyIndustry = dict[@"companyIndustry"];
     self.a_companyFocusNumber = dict[@"focusNum"];
     self.a_companyEmployeeNumber = dict[@"employeesNum"];

@@ -30,7 +30,8 @@
     RKTestController_2* vc2 = [[RKTestController_2 alloc] init];
 
     RKTestController_3* vc3 = [[RKTestController_3 alloc] init];
-    MainContactController* vc4 = [[MainContactController alloc] init];
+    //MainContactController* vc4 = [[MainContactController alloc] init];
+    RKTestController_4* vc4 = [[RKTestController_4 alloc] init];
     RKTestController_5* vc5 = [[RKTestController_5 alloc] init];
     RKTestController_6* vc6 = [[RKTestController_6 alloc] init];
 

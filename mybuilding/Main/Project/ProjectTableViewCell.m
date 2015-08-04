@@ -16,7 +16,7 @@
 +(CGFloat)carculateCellHeightWithModel:(ProjectModel *)cellModel{
     CGFloat height = 0;
     height += [RKViewFactory autoLabelWithMaxWidth:280 maxHeight:40 font:[UIFont systemFontOfSize:14] content:cellModel.a_description];
-    height +=150;
+    height +=156;
     return height;
 }
 

@@ -7,8 +7,36 @@
 //
 
 #import "RKTestController_4.h"
+#import "ProductApi.h"
+#import "ProductModel.h"
+
+@interface RKTestController_4()
+@property(nonatomic,strong)NSMutableArray *modelArr;
+@end
 
 @implementation RKTestController_4
+-(void)setUp{
+    [super setUp];
+    [self loadList];
+}
+
+-(NSMutableArray *)modelArr{
+    if(!_modelArr){
+        _modelArr = [NSMutableArray array];
+    }
+    return _modelArr;
+}
+
+-(void)loadList{
+    [ProductApi GetProductListWithBlock:^(NSMutableArray *posts, NSError *error) {
+        if(!error){
+            
+        }
+    } startIndex:0 productDesc:@"" userId:@"" productIds:@"" noNetWork:^{
+        
+    }];
+}
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 10;
 }

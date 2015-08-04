@@ -10,8 +10,11 @@
 
 @implementation ImageUrlPath
 +(NSURL *)getNetWorkImageUrl:(NSString *)imageID type:(NSString *)type width:(NSString *)width height:(NSString *)height cut:(NSString *)cut{
-    NSString *urlStr = [NSString stringWithFormat:@"%s/image/show?imageId=%@&type=%@&width=%@&height=%@&cut=%@",serverAddress,imageID,type,width,height,cut];
-    NSURL *imageUrl = [NSURL URLWithString:urlStr];
+    NSURL *imageUrl = nil;
+    if(![imageID isEqualToString:@""]){
+        NSString *urlStr = [NSString stringWithFormat:@"%s/image/show?imageId=%@&type=%@&width=%@&height=%@&cut=%@",serverAddress,imageID,type,width,height,cut];
+        imageUrl = [NSURL URLWithString:urlStr];
+    }
     return imageUrl;
 }
 @end

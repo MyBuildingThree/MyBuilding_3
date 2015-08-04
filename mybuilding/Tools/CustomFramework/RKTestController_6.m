@@ -54,6 +54,8 @@
     }
     ProjectModel *model = self.modelArr[indexPath.row];
     cell.model = model;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     return cell;
 }
 @end

@@ -13,7 +13,7 @@
     _dict = dict;
     self.a_id = dict[@"loginId"];
     self.a_name = dict[@"loginName"];
-
+    
     self.a_avatarUrl = [ImageUrlPath getNetWorkImageUrl:dict[@"headImageId"] type:@"login" width:@"180" height:@"180" cut:@""];
     
     self.a_companyName = dict[@"companyName"];
