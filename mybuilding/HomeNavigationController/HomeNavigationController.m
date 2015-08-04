@@ -183,9 +183,7 @@
 //    }
     if ([btn.titleLabel.text isEqualToString:@"搜索"])
     {
-        [self presentViewController:[[LoginVC alloc]init] animated:YES completion:^{
-            
-        }];
+        [LoginVC loadLoginViewControllerPresentBy:self];
     }
 }
 
