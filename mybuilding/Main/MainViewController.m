@@ -18,6 +18,7 @@
 #import "MainProjectController.h"
 #import "MainCompanyController.h"
 #import "MainContactController.h"
+#import "MainProductController.h"
 
 @interface MainViewController ()<RKStageViewPageControllerDelegate>
 @property(nonatomic, strong) RKStageViewPageController* pageController;
@@ -33,7 +34,7 @@
     MainProjectController* vc2 = [[MainProjectController alloc] init];
     MainCompanyController* vc3 = [[MainCompanyController alloc] init];
     MainContactController* vc4 = [[MainContactController alloc] init];
-    RKTestController_5* vc5 = [[RKTestController_5 alloc] init];
+    MainProductController* vc5 = [[MainProductController alloc] init];
     RKTestController_6* vc6 = [[RKTestController_6 alloc] init];
 
     vc1.view.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);

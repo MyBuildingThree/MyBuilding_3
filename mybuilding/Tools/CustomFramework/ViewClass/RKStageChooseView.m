@@ -101,7 +101,7 @@
     [self addSubview:self.assistBtn];
     [self addSubview:self.seperatorLine];
     [self addSubview:self.underLineView];
-    [self stageLabelClickedWithSequence:0];
+    [self stageLabelClickedWithSequence:0 needResponseDelegate:NO];
 }
 
 -(RKStageAndNumberView*)getSingleStageLabelWithText:(NSString*)text sequence:(NSInteger)sequence{
