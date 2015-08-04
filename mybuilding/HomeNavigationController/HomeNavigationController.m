@@ -11,6 +11,7 @@
 //#import "PopoverView.h"
 //#import "ADCampaignViewController.h"
 #import "LoginVC.h"
+#import "SearchVC.h"
 
 
 
@@ -166,8 +167,8 @@
  */
 - (void)btnClick:(UIButton *)btn
 {
-//    if ([btn.titleLabel.text isEqualToString:@"更多功能"])
-//    {
+    if ([btn.titleLabel.text isEqualToString:@"更多功能"])
+    {
 //        CGPoint point = CGPointMake(btn.frame.origin.x + btn.frame.size.width/2, btn.frame.origin.y+20 + btn.frame.size.height);
 //        PopoverView *pop = [[PopoverView alloc]initWithPoint:point titles:@[@"热线电话",@"消息通知",@"广告活动"] images:nil scroller:NO];
 //        [pop show];
@@ -180,7 +181,10 @@
 //                }];
 //            }
 //        };
-//    }
+        SearchVC *sv =  [[SearchVC alloc]init];
+        sv.hidesBottomBarWhenPushed = YES;
+        [self pushViewController:sv animated:YES];
+    }
     if ([btn.titleLabel.text isEqualToString:@"搜索"])
     {
         [LoginVC loadLoginViewControllerPresentBy:self];

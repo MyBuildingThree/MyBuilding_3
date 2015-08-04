@@ -53,6 +53,8 @@
 		5D7A13FC1B70473F003B7A56 /* PersonApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A13F91B70473F003B7A56 /* PersonApi.m */; };
 		5D7A13FD1B70473F003B7A56 /* PersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A13FB1B70473F003B7A56 /* PersonModel.m */; };
 		5DAC71961B70511300B2ED69 /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC71951B70511300B2ED69 /* RegisterVC.m */; };
+		5DAC719A1B7089CB00B2ED69 /* SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC71991B7089CB00B2ED69 /* SearchVC.m */; };
+		5DAC719D1B70A7EA00B2ED69 /* SearchSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC719C1B70A7EA00B2ED69 /* SearchSqlite.m */; };
 		D355958E1B6EFD8B00E4577B /* HomeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D355958A1B6EFD8B00E4577B /* HomeNavigationController.m */; };
 		D355958F1B6EFD8B00E4577B /* MyBuildingTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D355958D1B6EFD8B00E4577B /* MyBuildingTabBarController.m */; };
 		D35595961B6EFF2000E4577B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D35595951B6EFF2000E4577B /* MainViewController.m */; };
@@ -250,6 +252,10 @@
 		5D7A13FB1B70473F003B7A56 /* PersonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonModel.m; sourceTree = "<group>"; };
 		5DAC71941B70511300B2ED69 /* RegisterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterVC.h; sourceTree = "<group>"; };
 		5DAC71951B70511300B2ED69 /* RegisterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterVC.m; sourceTree = "<group>"; };
+		5DAC71981B7089CB00B2ED69 /* SearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchVC.h; sourceTree = "<group>"; };
+		5DAC71991B7089CB00B2ED69 /* SearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchVC.m; sourceTree = "<group>"; };
+		5DAC719B1B70A7EA00B2ED69 /* SearchSqlite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchSqlite.h; sourceTree = "<group>"; };
+		5DAC719C1B70A7EA00B2ED69 /* SearchSqlite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchSqlite.m; sourceTree = "<group>"; };
 		D35595891B6EFD8B00E4577B /* HomeNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeNavigationController.h; sourceTree = "<group>"; };
 		D355958A1B6EFD8B00E4577B /* HomeNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeNavigationController.m; sourceTree = "<group>"; };
 		D355958C1B6EFD8B00E4577B /* MyBuildingTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBuildingTabBarController.h; sourceTree = "<group>"; };
@@ -699,6 +705,15 @@
 			path = PersonModel;
 			sourceTree = "<group>";
 		};
+		5DAC71971B70899F00B2ED69 /* SearchVC */ = {
+			isa = PBXGroup;
+			children = (
+				5DAC71981B7089CB00B2ED69 /* SearchVC.h */,
+				5DAC71991B7089CB00B2ED69 /* SearchVC.m */,
+			);
+			path = SearchVC;
+			sourceTree = "<group>";
+		};
 		D35595881B6EFD8B00E4577B /* HomeNavigationVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -828,6 +843,8 @@
 			children = (
 				D3DF12691B6B438D00DFEE8F /* LoginSqlite.h */,
 				D3DF126A1B6B438D00DFEE8F /* LoginSqlite.m */,
+				5DAC719B1B70A7EA00B2ED69 /* SearchSqlite.h */,
+				5DAC719C1B70A7EA00B2ED69 /* SearchSqlite.m */,
 			);
 			path = Sqlite;
 			sourceTree = "<group>";
@@ -1003,6 +1020,7 @@
 		D3E379F21B686C9E0073D401 /* mybuilding */ = {
 			isa = PBXGroup;
 			children = (
+				5DAC71971B70899F00B2ED69 /* SearchVC */,
 				5D7A13ED1B704701003B7A56 /* RegisterAndLogin */,
 				D35595901B6EFEA500E4577B /* Fellows */,
 				D35595911B6EFEA500E4577B /* Focus */,
@@ -1324,6 +1342,7 @@
 				D3E37A5F1B68BAA20073D401 /* UIAlertView+AFNetworking.m in Sources */,
 				5B5CA1911B6F70ED00CC3896 /* RKCamera.m in Sources */,
 				D3DF12A51B6B614400DFEE8F /* MJRefreshNormalHeader.m in Sources */,
+				5DAC719D1B70A7EA00B2ED69 /* SearchSqlite.m in Sources */,
 				D3DF12DD1B6B7DA000DFEE8F /* UIView+WebCacheOperation.m in Sources */,
 				5B5CA19F1B6F70ED00CC3896 /* ChatBaseViewController.m in Sources */,
 				D3DF12621B6B412800DFEE8F /* FMResultSet.m in Sources */,
@@ -1331,6 +1350,7 @@
 				5B5CA1AF1B6F713600CC3896 /* LoginApi.m in Sources */,
 				D3DF12DC1B6B7DA000DFEE8F /* UIImageView+WebCache.m in Sources */,
 				D3E37A751B68C2B20073D401 /* AFAppDotNetAPIClient.m in Sources */,
+				5DAC719A1B7089CB00B2ED69 /* SearchVC.m in Sources */,
 				D3E37A641B68BAA20073D401 /* UIWebView+AFNetworking.m in Sources */,
 				D3DF12D81B6B7DA000DFEE8F /* UIImage+GIF.m in Sources */,
 				D3DF12A41B6B614400DFEE8F /* MJRefreshGifHeader.m in Sources */,
