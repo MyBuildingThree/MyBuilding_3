@@ -47,6 +47,7 @@
 		5D713E121B6F842600523446 /* FindPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D713E0D1B6F842600523446 /* FindPasswordVC.m */; };
 		5D713E131B6F842600523446 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D713E0F1B6F842600523446 /* LoginVC.m */; };
 		5D713E141B6F842600523446 /* ResetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D713E111B6F842600523446 /* ResetVC.m */; };
+		5D713E181B6F8CBE00523446 /* ShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D713E171B6F8CBE00523446 /* ShowView.m */; };
 		D355958E1B6EFD8B00E4577B /* HomeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D355958A1B6EFD8B00E4577B /* HomeNavigationController.m */; };
 		D355958F1B6EFD8B00E4577B /* MyBuildingTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D355958D1B6EFD8B00E4577B /* MyBuildingTabBarController.m */; };
 		D35595961B6EFF2000E4577B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D35595951B6EFF2000E4577B /* MainViewController.m */; };
@@ -235,6 +236,8 @@
 		5D713E0F1B6F842600523446 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
 		5D713E101B6F842600523446 /* ResetVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetVC.h; sourceTree = "<group>"; };
 		5D713E111B6F842600523446 /* ResetVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetVC.m; sourceTree = "<group>"; };
+		5D713E161B6F8CBE00523446 /* ShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowView.h; sourceTree = "<group>"; };
+		5D713E171B6F8CBE00523446 /* ShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowView.m; sourceTree = "<group>"; };
 		D35595891B6EFD8B00E4577B /* HomeNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeNavigationController.h; sourceTree = "<group>"; };
 		D355958A1B6EFD8B00E4577B /* HomeNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeNavigationController.m; sourceTree = "<group>"; };
 		D355958C1B6EFD8B00E4577B /* MyBuildingTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBuildingTabBarController.h; sourceTree = "<group>"; };
@@ -656,6 +659,15 @@
 			path = RegisterAndLogin;
 			sourceTree = "<group>";
 		};
+		5D713E151B6F8CA700523446 /* ShowView */ = {
+			isa = PBXGroup;
+			children = (
+				5D713E161B6F8CBE00523446 /* ShowView.h */,
+				5D713E171B6F8CBE00523446 /* ShowView.m */,
+			);
+			path = ShowView;
+			sourceTree = "<group>";
+		};
 		D35595881B6EFD8B00E4577B /* HomeNavigationVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -721,6 +733,7 @@
 		D3DF124F1B6B3D7700DFEE8F /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				5D713E151B6F8CA700523446 /* ShowView */,
 				5B5CA1B61B6F718000CC3896 /* ManageString */,
 				5B5CA1461B6F70EC00CC3896 /* CustomFramework */,
 				5B5CA1421B6F70A600CC3896 /* ImageUrlPath */,
@@ -1249,6 +1262,7 @@
 				D3E37A531B68BAA20073D401 /* AFHTTPSessionManager.m in Sources */,
 				D3E37A571B68BAA20073D401 /* AFURLRequestSerialization.m in Sources */,
 				5B5CA1A21B6F70ED00CC3896 /* RKViewFactory.m in Sources */,
+				5D713E181B6F8CBE00523446 /* ShowView.m in Sources */,
 				5B5CA1901B6F70ED00CC3896 /* RKStageViewPageController.m in Sources */,
 				D3E37A791B68D15D0073D401 /* SendRequst.m in Sources */,
 				D3DF12DB1B6B7DA000DFEE8F /* UIImageView+HighlightedWebCache.m in Sources */,

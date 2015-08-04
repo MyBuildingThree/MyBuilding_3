@@ -7,6 +7,7 @@
 //
 
 #import "LoginVC.h"
+#import "ShowView.h"
 #import "LoginApi.h"
 #import "FindPasswordVC.h"
 
@@ -29,9 +30,19 @@
 
 @implementation LoginVC
 
++(void)loadLoginViewControllerPresentBy:(UIViewController *)vc
+{
+    UINavigationController *nc = [[UINavigationController alloc]initWithRootViewController:[[LoginVC alloc]init]];
+    nc.navigationBar.hidden = YES;
+    
+    [vc presentViewController:nc animated:YES completion:^{}];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //创建子控件
     [self createSubViews];
     
     //监听键盘变化
@@ -44,7 +55,7 @@
 {
     //背景图片
     UIImageView *bgImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"bg.png"]];
-    bgImageView.backgroundColor = [UIColor blueColor];
+    bgImageView.backgroundColor = [UIColor lightGrayColor];
     bgImageView.frame = self.view.bounds;
     [self.view addSubview:bgImageView];
     
@@ -129,19 +140,34 @@
     //退出
     if (btn == self.backBtn)
     {
-        
+        [self.navigationController dismissViewControllerAnimated:YES completion:^{}];
     }
     //登陆
     else if (btn == self.loginBtn)
     {
         NSString *userNameStr = self.userNameTF.text;
         NSString *passwordStr = self.passwordTF.text;
+        //判断是否为空
+        if ((userNameStr.length == 0)||(passwordStr.length == 0))
+        {
+            [ShowView showAtFrame:CGRectMake(self.view.bounds.size.width*0.2, self.view.bounds.size.height*0.5, self.view.bounds.size.width*0.6, 50) backgroundColor:[UIColor blackColor] title:@"请输入账号或密码" titleColor:[UIColor whiteColor] titleFontOfSize:18.0f animateWithDuration:2.0f completion:^{
+                self.userNameTF.text = @"";
+                self.passwordTF.text = @"";
+            }];
+        }
+        else
+        {
+            NSDictionary *dict = @{@"downloadType":@"02",@"deviceType":@"05",@"password":passwordStr,@"userNameOrCellPhone":userNameStr};
+            
+            [LoginApi LoginWithBlock:^(LoginModel *loginModel, NSError *error) {
+                
+            } dic:(NSMutableDictionary *)dict noNetWork:^{
+                [ShowView showAtFrame:CGRectMake(self.view.bounds.size.width*0.2, self.view.bounds.size.height*0.5, self.view.bounds.size.width*0.6, 50) backgroundColor:[UIColor blackColor] title:@"无网络可用" titleColor:[UIColor whiteColor] titleFontOfSize:18.0f animateWithDuration:2.0f completion:^{
+                }];
 
-        [LoginApi LoginWithBlock:^(LoginModel *loginModel, NSError *error) {
-            
-        } dic:@{@"downloadType":@"02",@"deviceType":@"05",@"password":@"965eb72c92a549dd",@"userNameOrCellPhone":@"wy0001"} noNetWork:^{
-            
-        }];
+            }];
+        }
+        
     }
     //注册
     else if (btn == self.registerBtn)

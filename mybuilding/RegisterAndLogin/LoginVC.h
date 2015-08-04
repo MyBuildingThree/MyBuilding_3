@@ -10,4 +10,9 @@
 
 @interface LoginVC : UIViewController
 
+/**
+ *  弹出登陆界面
+ */
++(void)loadLoginViewControllerPresentBy:(UIViewController *)vc;
+
 @end
