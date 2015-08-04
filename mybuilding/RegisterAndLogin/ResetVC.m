@@ -8,6 +8,8 @@
 
 #import "ResetVC.h"
 
+#define textRatio (((UIView *)[UIApplication sharedApplication].delegate.window).bounds.size.width)
+
 @interface ResetVC ()
 
 //密码输入框
@@ -36,35 +38,37 @@
 {
     //密码提示文字
     UILabel *passwordLabel = [[UILabel alloc]initWithFrame:CGRectMake(self.view.frame.size.width*0.1, self.view.frame.size.height*0.05, self.view.frame.size.width*0.2, self.view.frame.size.height*0.05)];
-    passwordLabel.font = [UIFont systemFontOfSize:15.0f];
+    passwordLabel.font = [UIFont boldSystemFontOfSize:textRatio*0.05f];
     passwordLabel.textAlignment = NSTextAlignmentLeft;
     //picLabel.textColor = [UIColor lightGrayColor];
     passwordLabel.text = @"密码";
     [self.view addSubview:passwordLabel];
     //密码输入框
-    self.passwordTF = [[UITextField alloc]initWithFrame:CGRectMake(self.view.frame.size.width*0.3, self.view.frame.size.height*0.05, self.view.frame.size.width*0.4, self.view.frame.size.height*0.05)];
+    self.passwordTF = [[UITextField alloc]initWithFrame:CGRectMake(self.view.frame.size.width*0.3, self.view.frame.size.height*0.05, self.view.frame.size.width*0.5, self.view.frame.size.height*0.05)];
     self.passwordTF.backgroundColor = [UIColor whiteColor];
     self.passwordTF.clearButtonMode = UITextFieldViewModeWhileEditing;
     self.passwordTF.layer.borderColor = [UIColor blackColor].CGColor;
     self.passwordTF.layer.borderWidth = 1;
-    self.passwordTF.placeholder = @"仅支持数字和字母";
+    self.passwordTF.font = [UIFont systemFontOfSize:textRatio*0.04f];
+    self.passwordTF.placeholder = @"  仅支持数字和字母";
     [self.view addSubview:self.passwordTF];
     
     
     //重置提示文字
     UILabel *resetLabel = [[UILabel alloc]initWithFrame:CGRectMake(self.view.frame.size.width*0.1, self.view.frame.size.height*0.12, self.view.frame.size.width*0.2, self.view.frame.size.height*0.05)];
-    resetLabel.font = [UIFont systemFontOfSize:15.0f];
+    resetLabel.font = [UIFont boldSystemFontOfSize:textRatio*0.05f];
     resetLabel.textAlignment = NSTextAlignmentLeft;
     //picLabel.textColor = [UIColor lightGrayColor];
     resetLabel.text = @"重置密码";
     [self.view addSubview:resetLabel];
     //重置密码输入框
-    self.repetitionTF = [[UITextField alloc]initWithFrame:CGRectMake(self.view.frame.size.width*0.3, self.view.frame.size.height*0.12, self.view.frame.size.width*0.4, self.view.frame.size.height*0.05)];
+    self.repetitionTF = [[UITextField alloc]initWithFrame:CGRectMake(self.view.frame.size.width*0.3, self.view.frame.size.height*0.12, self.view.frame.size.width*0.5, self.view.frame.size.height*0.05)];
     self.repetitionTF.backgroundColor = [UIColor whiteColor];
     self.repetitionTF.clearButtonMode = UITextFieldViewModeWhileEditing;
     self.repetitionTF.layer.borderColor = [UIColor blackColor].CGColor;
     self.repetitionTF.layer.borderWidth = 1;
-    self.repetitionTF.placeholder = @"仅支持数字和字母";
+    self.repetitionTF.placeholder = @"  仅支持数字和字母";
+    self.repetitionTF.font = [UIFont systemFontOfSize:textRatio*0.04f];
     [self.view addSubview:self.repetitionTF];
     
     //完成按钮
@@ -76,6 +80,7 @@
     self.okBtn.layer.borderWidth = 1;
     [self.okBtn setTitle:@"完成" forState:UIControlStateNormal];
     [self.okBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    self.okBtn.titleLabel.font = [UIFont boldSystemFontOfSize:textRatio*0.05f];
     [self.okBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.okBtn];
 }
