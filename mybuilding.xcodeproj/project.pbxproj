@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B09C8631B704AD800E27100 /* FindPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B09C85E1B704AD800E27100 /* FindPasswordVC.m */; };
+		5B09C8641B704AD800E27100 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B09C8601B704AD800E27100 /* LoginVC.m */; };
+		5B09C8651B704AD800E27100 /* ResetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B09C8621B704AD800E27100 /* ResetVC.m */; };
+		5B09C86B1B704B7F00E27100 /* PersonApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B09C8681B704B7F00E27100 /* PersonApi.m */; };
+		5B09C86C1B704B7F00E27100 /* PersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B09C86A1B704B7F00E27100 /* PersonModel.m */; };
 		5B5CA1381B6F3ED100CC3896 /* MainContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CA1371B6F3ED100CC3896 /* MainContactController.m */; };
 		5B5CA13B1B6F4A1600CC3896 /* MainContactCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CA13A1B6F4A1600CC3896 /* MainContactCell.m */; };
 		5B5CA1451B6F70A600CC3896 /* ImageUrlPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CA1441B6F70A600CC3896 /* ImageUrlPath.m */; };
@@ -44,9 +49,6 @@
 		5B5CA1B21B6F713600CC3896 /* ProjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CA1AE1B6F713600CC3896 /* ProjectModel.m */; };
 		5B5CA1B51B6F716900CC3896 /* ProjectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CA1B41B6F716900CC3896 /* ProjectTableViewCell.m */; };
 		5B5CA1B91B6F718000CC3896 /* ManageString.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CA1B81B6F718000CC3896 /* ManageString.m */; };
-		5D713E121B6F842600523446 /* FindPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D713E0D1B6F842600523446 /* FindPasswordVC.m */; };
-		5D713E131B6F842600523446 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D713E0F1B6F842600523446 /* LoginVC.m */; };
-		5D713E141B6F842600523446 /* ResetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D713E111B6F842600523446 /* ResetVC.m */; };
 		5D713E181B6F8CBE00523446 /* ShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D713E171B6F8CBE00523446 /* ShowView.m */; };
 		D355958E1B6EFD8B00E4577B /* HomeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D355958A1B6EFD8B00E4577B /* HomeNavigationController.m */; };
 		D355958F1B6EFD8B00E4577B /* MyBuildingTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D355958D1B6EFD8B00E4577B /* MyBuildingTabBarController.m */; };
@@ -154,6 +156,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B09C85D1B704AD800E27100 /* FindPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindPasswordVC.h; sourceTree = "<group>"; };
+		5B09C85E1B704AD800E27100 /* FindPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindPasswordVC.m; sourceTree = "<group>"; };
+		5B09C85F1B704AD800E27100 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
+		5B09C8601B704AD800E27100 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
+		5B09C8611B704AD800E27100 /* ResetVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetVC.h; sourceTree = "<group>"; };
+		5B09C8621B704AD800E27100 /* ResetVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetVC.m; sourceTree = "<group>"; };
+		5B09C8671B704B7F00E27100 /* PersonApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonApi.h; sourceTree = "<group>"; };
+		5B09C8681B704B7F00E27100 /* PersonApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonApi.m; sourceTree = "<group>"; };
+		5B09C8691B704B7F00E27100 /* PersonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonModel.h; sourceTree = "<group>"; };
+		5B09C86A1B704B7F00E27100 /* PersonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonModel.m; sourceTree = "<group>"; };
 		5B5CA1361B6F3ED100CC3896 /* MainContactController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainContactController.h; sourceTree = "<group>"; };
 		5B5CA1371B6F3ED100CC3896 /* MainContactController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainContactController.m; sourceTree = "<group>"; };
 		5B5CA1391B6F4A1600CC3896 /* MainContactCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainContactCell.h; sourceTree = "<group>"; };
@@ -231,12 +243,6 @@
 		5B5CA1B41B6F716900CC3896 /* ProjectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectTableViewCell.m; sourceTree = "<group>"; };
 		5B5CA1B71B6F718000CC3896 /* ManageString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageString.h; sourceTree = "<group>"; };
 		5B5CA1B81B6F718000CC3896 /* ManageString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageString.m; sourceTree = "<group>"; };
-		5D713E0C1B6F842600523446 /* FindPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindPasswordVC.h; sourceTree = "<group>"; };
-		5D713E0D1B6F842600523446 /* FindPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindPasswordVC.m; sourceTree = "<group>"; };
-		5D713E0E1B6F842600523446 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
-		5D713E0F1B6F842600523446 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
-		5D713E101B6F842600523446 /* ResetVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetVC.h; sourceTree = "<group>"; };
-		5D713E111B6F842600523446 /* ResetVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetVC.m; sourceTree = "<group>"; };
 		5D713E161B6F8CBE00523446 /* ShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowView.h; sourceTree = "<group>"; };
 		5D713E171B6F8CBE00523446 /* ShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowView.m; sourceTree = "<group>"; };
 		D35595891B6EFD8B00E4577B /* HomeNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeNavigationController.h; sourceTree = "<group>"; };
@@ -441,6 +447,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B09C85C1B704AD800E27100 /* RegisterAndLogin */ = {
+			isa = PBXGroup;
+			children = (
+				5B09C85D1B704AD800E27100 /* FindPasswordVC.h */,
+				5B09C85E1B704AD800E27100 /* FindPasswordVC.m */,
+				5B09C85F1B704AD800E27100 /* LoginVC.h */,
+				5B09C8601B704AD800E27100 /* LoginVC.m */,
+				5B09C8611B704AD800E27100 /* ResetVC.h */,
+				5B09C8621B704AD800E27100 /* ResetVC.m */,
+			);
+			path = RegisterAndLogin;
+			sourceTree = "<group>";
+		};
+		5B09C8661B704B7F00E27100 /* PersonModel */ = {
+			isa = PBXGroup;
+			children = (
+				5B09C8671B704B7F00E27100 /* PersonApi.h */,
+				5B09C8681B704B7F00E27100 /* PersonApi.m */,
+				5B09C8691B704B7F00E27100 /* PersonModel.h */,
+				5B09C86A1B704B7F00E27100 /* PersonModel.m */,
+			);
+			path = PersonModel;
+			sourceTree = "<group>";
+		};
 		5B5CA12D1B6F3A1100CC3896 /* Company */ = {
 			isa = PBXGroup;
 			children = (
@@ -651,17 +681,6 @@
 				5B5CA1B81B6F718000CC3896 /* ManageString.m */,
 			);
 			path = ManageString;
-			sourceTree = "<group>";
-		};
-		5B5CA1BE1B6F82CC00CC3896 /* PersonModel */ = {
-			isa = PBXGroup;
-			children = (
-				5B5CA1BF1B6F82CC00CC3896 /* PersonModel.h */,
-				5B5CA1C01B6F82CC00CC3896 /* PersonModel.m */,
-				5B5CA1C21B6F82E000CC3896 /* PersonApi.h */,
-				5B5CA1C31B6F82E000CC3896 /* PersonApi.m */,
-			);
-			path = PersonModel;
 			sourceTree = "<group>";
 		};
 		5D713E151B6F8CA700523446 /* ShowView */ = {
@@ -977,7 +996,7 @@
 		D3E379F21B686C9E0073D401 /* mybuilding */ = {
 			isa = PBXGroup;
 			children = (
-				5D713E0B1B6F842600523446 /* RegisterAndLogin */,
+				5B09C85C1B704AD800E27100 /* RegisterAndLogin */,
 				D35595901B6EFEA500E4577B /* Fellows */,
 				D35595911B6EFEA500E4577B /* Focus */,
 				D35595921B6EFEA500E4577B /* Main */,
@@ -1107,6 +1126,7 @@
 		D3E37A7A1B68D19E0073D401 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5B09C8661B704B7F00E27100 /* PersonModel */,
 				D3A1745F1B6F841500BC6DA1 /* CompanyModel */,
 				5B5CA1A51B6F713600CC3896 /* LoginModel */,
 				5B5CA1AA1B6F713600CC3896 /* ProjectModel */,
@@ -1224,7 +1244,6 @@
 				D3E37A521B68BAA20073D401 /* AFHTTPRequestOperationManager.m in Sources */,
 				D3DF12DA1B6B7DA000DFEE8F /* UIImage+WebP.m in Sources */,
 				5B5CA19A1B6F70ED00CC3896 /* RKTestController_7.m in Sources */,
-				5B5CA1C41B6F82E000CC3896 /* PersonApi.m in Sources */,
 				D3DF12611B6B412800DFEE8F /* FMDatabase.m in Sources */,
 				D3DF129E1B6B614400DFEE8F /* MJRefreshAutoGifFooter.m in Sources */,
 				D3E37A541B68BAA20073D401 /* AFNetworkReachabilityManager.m in Sources */,
@@ -1247,6 +1266,7 @@
 				D3DF12AB1B6B614400DFEE8F /* UIView+MJExtension.m in Sources */,
 				D3DF12A31B6B614400DFEE8F /* MJRefreshBackStateFooter.m in Sources */,
 				D3DF12A61B6B614400DFEE8F /* MJRefreshStateHeader.m in Sources */,
+				5B09C8631B704AD800E27100 /* FindPasswordVC.m in Sources */,
 				D3DF12D71B6B7DA000DFEE8F /* UIButton+WebCache.m in Sources */,
 				5B5CA19C1B6F70ED00CC3896 /* ChatToolBar.m in Sources */,
 				5B5CA19B1B6F70ED00CC3896 /* ChatMoreSelectView.m in Sources */,
@@ -1259,12 +1279,12 @@
 				5B5CA1991B6F70ED00CC3896 /* RKTestController_6.m in Sources */,
 				5B5CA1B21B6F713600CC3896 /* ProjectModel.m in Sources */,
 				D3DF12D61B6B7DA000DFEE8F /* SDWebImagePrefetcher.m in Sources */,
+				5B09C86B1B704B7F00E27100 /* PersonApi.m in Sources */,
 				D3DF12651B6B412800DFEE8F /* FMDatabasePool.m in Sources */,
 				D3DF12D11B6B7DA000DFEE8F /* SDWebImageCompat.m in Sources */,
 				5B5CA1971B6F70ED00CC3896 /* RKTestController_4.m in Sources */,
 				5B5CA1931B6F70ED00CC3896 /* RKTestController.m in Sources */,
 				D3DF129D1B6B614400DFEE8F /* MJRefreshHeader.m in Sources */,
-				5D713E121B6F842600523446 /* FindPasswordVC.m in Sources */,
 				D3E37A551B68BAA20073D401 /* AFSecurityPolicy.m in Sources */,
 				D3DF12991B6B614400DFEE8F /* MJRefreshAutoFooter.m in Sources */,
 				D3DF12A91B6B614400DFEE8F /* UIScrollView+MJExtension.m in Sources */,
@@ -1273,16 +1293,15 @@
 				D3E37A601B68BAA20073D401 /* UIButton+AFNetworking.m in Sources */,
 				5B5CA19E1B6F70ED00CC3896 /* RKStageChooseView.m in Sources */,
 				D3DF129F1B6B614400DFEE8F /* MJRefreshAutoNormalFooter.m in Sources */,
-				5D713E131B6F842600523446 /* LoginVC.m in Sources */,
 				D3E37A611B68BAA20073D401 /* UIImageView+AFNetworking.m in Sources */,
 				D3E37A531B68BAA20073D401 /* AFHTTPSessionManager.m in Sources */,
 				D3E37A571B68BAA20073D401 /* AFURLRequestSerialization.m in Sources */,
 				5B5CA1A21B6F70ED00CC3896 /* RKViewFactory.m in Sources */,
 				5D713E181B6F8CBE00523446 /* ShowView.m in Sources */,
+				5B09C8651B704AD800E27100 /* ResetVC.m in Sources */,
 				5B5CA1901B6F70ED00CC3896 /* RKStageViewPageController.m in Sources */,
 				D3E37A791B68D15D0073D401 /* SendRequst.m in Sources */,
 				D3DF12DB1B6B7DA000DFEE8F /* UIImageView+HighlightedWebCache.m in Sources */,
-				5B5CA1C11B6F82CC00CC3896 /* PersonModel.m in Sources */,
 				5B5CA1A31B6F70ED00CC3896 /* UIImageView+ViewKit.m in Sources */,
 				5B5CA1A01B6F70ED00CC3896 /* SearchBarTableViewController.m in Sources */,
 				D3DF12A21B6B614400DFEE8F /* MJRefreshBackNormalFooter.m in Sources */,
@@ -1290,8 +1309,10 @@
 				5B5CA18E1B6F70ED00CC3896 /* RKScrollViewControl.m in Sources */,
 				D35595A21B6EFF6200E4577B /* MineViewController.m in Sources */,
 				D355959E1B6EFF5600E4577B /* FellowsViewController.m in Sources */,
+				5B09C8641B704AD800E27100 /* LoginVC.m in Sources */,
 				D3E37A5F1B68BAA20073D401 /* UIAlertView+AFNetworking.m in Sources */,
 				5B5CA1911B6F70ED00CC3896 /* RKCamera.m in Sources */,
+				5B09C86C1B704B7F00E27100 /* PersonModel.m in Sources */,
 				D3DF12A51B6B614400DFEE8F /* MJRefreshNormalHeader.m in Sources */,
 				D3DF12DD1B6B7DA000DFEE8F /* UIView+WebCacheOperation.m in Sources */,
 				5B5CA19F1B6F70ED00CC3896 /* ChatBaseViewController.m in Sources */,
@@ -1329,7 +1350,6 @@
 				D3DF12D31B6B7DA000DFEE8F /* SDWebImageDownloader.m in Sources */,
 				5B5CA1B11B6F713600CC3896 /* ProjectApi.m in Sources */,
 				D3DF12541B6B3E1F00DFEE8F /* GetImagePath.m in Sources */,
-				5D713E141B6F842600523446 /* ResetVC.m in Sources */,
 				D3DF12D41B6B7DA000DFEE8F /* SDWebImageDownloaderOperation.m in Sources */,
 				D3DF12CE1B6B7DA000DFEE8F /* MKAnnotationView+WebCache.m in Sources */,
 				D3E379F61B686C9E0073D401 /* main.m in Sources */,

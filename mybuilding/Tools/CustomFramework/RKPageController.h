@@ -9,5 +9,8 @@
 #import "RKController.h"
 
 @interface RKPageController : RKController
+/**
+ *  第一次获取网络数据
+ */
 - (void)pageControllerFirstLoad;
 @end
