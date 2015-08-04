@@ -12,10 +12,6 @@
 -(void)setDict:(NSDictionary *)dict{
     self.a_userID = dict[@"loginId"];
     self.a_userName = dict[@"wy0001"];
-    if(![dict[@"headImageId"] isEqualToString:@""]){
-        self.a_userAvatarUrl = [ImageUrlPath getNetWorkImageUrl:dict[@"headImageId"] type:@"login" width:@"" height:@"" cut:@""];
-    }else{
-        self.a_userAvatarUrl = nil;
-    }
+    self.a_userAvatarUrl = [ImageUrlPath getNetWorkImageUrl:dict[@"headImageId"] type:@"login" width:@"" height:@"" cut:@""];
 }
 @end

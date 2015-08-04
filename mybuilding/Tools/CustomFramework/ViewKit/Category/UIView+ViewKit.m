@@ -9,6 +9,7 @@
 #import "UIView+ViewKit.h"
 
 @implementation UIView (ViewKit)
+
 - (CGFloat)minX{
     return CGRectGetMinX(self.frame);
 }
@@ -53,6 +54,17 @@
     return CGPointMake(self.halfWidth, self.halfHeight);
 }
 
+- (CGSize)size{
+    return self.frame.size;
+}
+
+- (void)setSize:(CGSize)size{
+    CGRect frame = self.frame;
+    frame.size = size;
+    self.frame = frame;
+}
+
+#pragma 分割线
 - (CGRect)setMinX:(CGFloat)minX{
     CGRect frame = self.frame;
     frame.origin.x = minX;
@@ -84,8 +96,6 @@
     
     return self.frame;
 }
-
-
 
 + (void)horizontalArrangeViews:(NSArray*)/*UIView*/views distances:(NSArray*)/*NSString*/distances alignmentType:(RKViewArrangeAlignment)alignment direction:(RKViewArrangeDirection)direction{
     __block UIView* lastView;

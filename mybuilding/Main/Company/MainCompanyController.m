@@ -1,19 +1,20 @@
 //
-//  MainContactController.m
+//  MainCompanyController.m
 //  mybuilding
 //
-//  Created by 孙元侃 on 15/8/3.
+//  Created by 孙元侃 on 15/8/4.
 //  Copyright (c) 2015年 wy. All rights reserved.
 //
 
-#import "MainContactController.h"
-#import "MainContactCell.h"
-#import "PersonApi.h"
-#import "PersonModel.h"
+#import "MainCompanyController.h"
+#import "CompanyTableViewCell.h"
+#import "CompanyApi.h"
 #import "UIScrollView+MJRefresh.h"
 #import "MJRefreshNormalHeader.h"
 #import "MJRefreshBackNormalFooter.h"
-@implementation MainContactController
+
+@implementation MainCompanyController
+
 - (void)setUp{
     [super setUp];
     self.tableView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight - 30 - 64 - 49);
@@ -39,7 +40,7 @@
 - (void)netWorkWithType:(RKControllerRefreshType)refreshType{
     BOOL isHeaderRefresh = (refreshType == RKControllerRefreshHeader);
     NSInteger startIndex = isHeaderRefresh ? 0 : (self.startIndex + 1);
-    [PersonApi SearchUserWithBlock:^(NSMutableArray *posts, NSError *error) {
+    [CompanyApi GetCompanyListWithBlock:^(NSMutableArray *posts, NSError *error) {
         if (!error) {
             if (isHeaderRefresh) [self.models removeAllObjects];
             [self.models addObjectsFromArray:posts];
@@ -47,7 +48,7 @@
             self.startIndex = startIndex;
         }
         isHeaderRefresh ? [self.tableView.header endRefreshing] : [self.tableView.footer endRefreshing];
-    } keywords:@"" startIndex:startIndex noNetWork:nil];
+    } startIndex:startIndex keyWords:@"" noNetWork:nil];
 }
 
 - (void)pageControllerFirstLoad{
@@ -59,15 +60,17 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return [MainContactCell carculateHeightWithModel:nil];
+    return 110;
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    MainContactCell* cell=[tableView dequeueReusableCellWithIdentifier:@"cell"];
+    NSString *CellIdentifier = [NSString stringWithFormat:@"CompanyTableViewCell"];
+    CompanyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (!cell) {
-        cell=[[MainContactCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        cell=[[CompanyTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     cell.model = self.models[indexPath.row];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 @end

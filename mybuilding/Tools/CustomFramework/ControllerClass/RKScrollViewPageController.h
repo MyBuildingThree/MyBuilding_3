@@ -26,6 +26,9 @@
 
 @end
 
+/**
+ scrollView的控制器，并且控制着内部的RKPageController
+ */
 @interface RKScrollViewPageController : NSObject
 
 - (instancetype)initWithControllers:(NSMutableArray*)/*RKController*/controllers pageViewSize:(CGSize)pageViewSize;

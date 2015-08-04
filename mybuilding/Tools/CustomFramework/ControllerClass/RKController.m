@@ -110,6 +110,17 @@
     self.tableView.frame = self.view.bounds;
 }
 
+- (NSMutableArray *)models{
+    if (!_models) {
+        _models = [NSMutableArray array];
+    }
+    return _models;
+}
+
+- (void)setNavigationController:(UINavigationController *)navigationController{
+    _navigationController = navigationController;
+}
+
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }

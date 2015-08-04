@@ -12,7 +12,7 @@
 @synthesize bottomView = _bottomView;
 
 + (CGFloat)carculateHeightWithModel:(id)model{
-    return 96;
+    return 44;
 }
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{

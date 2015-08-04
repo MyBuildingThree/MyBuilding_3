@@ -15,8 +15,8 @@
 
 +(CGFloat)carculateCellHeightWithModel:(ProjectModel *)cellModel{
     CGFloat height = 0;
-    height += [RKViewFactory autoLabelWithMaxWidth:280 maxHeight:40 font:[UIFont systemFontOfSize:14] content:cellModel.a_description];
-    height +=150;
+    height += [RKViewFactory autoLabelWithMaxWidth:kScreenWidth-30 maxHeight:40 font:[UIFont systemFontOfSize:14] content:cellModel.a_description];
+    height +=148;
     return height;
 }
 
@@ -54,11 +54,14 @@
 }
 
 -(void)layoutSubviews{
-    [RKViewFactory autoLabel:self.projectDescription maxWidth:280 maxHeight:40];
+    [RKViewFactory autoLabel:self.projectDescription maxWidth:kScreenWidth-30 maxHeight:40];
     CGFloat height = 0;
     CGRect frame = self.projectDescription.frame;
-    self.projectDescription.frame = frame;
-    height += CGRectGetHeight(self.projectDescription.frame)+CGRectGetMaxY(self.projectDescription.frame);
+    if(frame.size.height < 40){
+        height += 125;
+    }else{
+        height += CGRectGetHeight(self.projectDescription.frame)+105;
+    }
     
     frame = self.cutLine2.frame;
     frame.origin.y = height;

@@ -96,6 +96,7 @@
             label.text = titleStrArray[i];
             [btn addSubview:label];
         }
+        [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [self.bgImageView addSubview:btn];
     }
 }

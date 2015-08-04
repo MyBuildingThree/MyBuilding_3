@@ -1,19 +1,21 @@
 //
-//  MainContactController.m
+//  MainProductController.m
 //  mybuilding
 //
-//  Created by 孙元侃 on 15/8/3.
+//  Created by 孙元侃 on 15/8/4.
 //  Copyright (c) 2015年 wy. All rights reserved.
 //
 
-#import "MainContactController.h"
-#import "MainContactCell.h"
-#import "PersonApi.h"
-#import "PersonModel.h"
+#import "MainProductController.h"
+#import "MainProductCell.h"
+#import "ProductModel.h"
+#import "ProductApi.h"
 #import "UIScrollView+MJRefresh.h"
 #import "MJRefreshNormalHeader.h"
 #import "MJRefreshBackNormalFooter.h"
-@implementation MainContactController
+
+@implementation MainProductController
+
 - (void)setUp{
     [super setUp];
     self.tableView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight - 30 - 64 - 49);
@@ -39,7 +41,8 @@
 - (void)netWorkWithType:(RKControllerRefreshType)refreshType{
     BOOL isHeaderRefresh = (refreshType == RKControllerRefreshHeader);
     NSInteger startIndex = isHeaderRefresh ? 0 : (self.startIndex + 1);
-    [PersonApi SearchUserWithBlock:^(NSMutableArray *posts, NSError *error) {
+    
+    [ProductApi GetProductListWithBlock:^(NSMutableArray *posts, NSError *error) {
         if (!error) {
             if (isHeaderRefresh) [self.models removeAllObjects];
             [self.models addObjectsFromArray:posts];
@@ -47,7 +50,7 @@
             self.startIndex = startIndex;
         }
         isHeaderRefresh ? [self.tableView.header endRefreshing] : [self.tableView.footer endRefreshing];
-    } keywords:@"" startIndex:startIndex noNetWork:nil];
+    } startIndex:startIndex productDesc:@"" userId:@"" productIds:@"" noNetWork:nil];
 }
 
 - (void)pageControllerFirstLoad{
@@ -59,13 +62,13 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return [MainContactCell carculateHeightWithModel:nil];
+    return [MainProductCell carculateHeightWithModel:nil];
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    MainContactCell* cell=[tableView dequeueReusableCellWithIdentifier:@"cell"];
+    MainProductCell* cell=[tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (!cell) {
-        cell=[[MainContactCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        cell=[[MainProductCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
     cell.model = self.models[indexPath.row];
     return cell;

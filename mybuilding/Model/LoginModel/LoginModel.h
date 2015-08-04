@@ -38,14 +38,14 @@
 @property(nonatomic,copy)NSString *a_phone;
 
 /**
- *  用户类型 0是个人用户 1是公司用户
+ *  用户类型 01是个人用户 02是公司用户
  */
-@property(nonatomic)int *a_userType;
+@property(nonatomic,copy)NSString *a_userType;
 
 /**
  *  用户是否有公司认证
  */
-@property(nonatomic)BOOL *a_hasCompany;
+@property(nonatomic)BOOL a_hasCompany;
 
 /**
  *  公司联系人姓名

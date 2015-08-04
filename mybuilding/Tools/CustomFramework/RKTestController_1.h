@@ -6,8 +6,8 @@
 //
 //
 
-#import "RKTestController.h"
+#import "RKPageController.h"
 
-@interface RKTestController_1 : RKTestController
+@interface RKTestController_1 : RKPageController
 
 @end

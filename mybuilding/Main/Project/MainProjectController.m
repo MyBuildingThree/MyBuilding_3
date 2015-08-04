@@ -1,19 +1,20 @@
 //
-//  MainContactController.m
+//  MainProjectController.m
 //  mybuilding
 //
-//  Created by 孙元侃 on 15/8/3.
+//  Created by 孙元侃 on 15/8/4.
 //  Copyright (c) 2015年 wy. All rights reserved.
 //
 
-#import "MainContactController.h"
-#import "MainContactCell.h"
-#import "PersonApi.h"
-#import "PersonModel.h"
+#import "MainProjectController.h"
+#import "ProjectTableViewCell.h"
+#import "ProjectApi.h"
 #import "UIScrollView+MJRefresh.h"
 #import "MJRefreshNormalHeader.h"
 #import "MJRefreshBackNormalFooter.h"
-@implementation MainContactController
+
+@implementation MainProjectController
+
 - (void)setUp{
     [super setUp];
     self.tableView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight - 30 - 64 - 49);
@@ -39,7 +40,7 @@
 - (void)netWorkWithType:(RKControllerRefreshType)refreshType{
     BOOL isHeaderRefresh = (refreshType == RKControllerRefreshHeader);
     NSInteger startIndex = isHeaderRefresh ? 0 : (self.startIndex + 1);
-    [PersonApi SearchUserWithBlock:^(NSMutableArray *posts, NSError *error) {
+    [ProjectApi GetPiProjectSeachWithBlock:^(NSMutableArray *posts, NSError *error) {
         if (!error) {
             if (isHeaderRefresh) [self.models removeAllObjects];
             [self.models addObjectsFromArray:posts];
@@ -47,7 +48,7 @@
             self.startIndex = startIndex;
         }
         isHeaderRefresh ? [self.tableView.header endRefreshing] : [self.tableView.footer endRefreshing];
-    } keywords:@"" startIndex:startIndex noNetWork:nil];
+    } startIndex:startIndex keywords:@"" noNetWork:nil];
 }
 
 - (void)pageControllerFirstLoad{
@@ -59,15 +60,20 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return [MainContactCell carculateHeightWithModel:nil];
+    ProjectModel *model = self.models[indexPath.row];
+    return [ProjectTableViewCell carculateCellHeightWithModel:model];
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    MainContactCell* cell=[tableView dequeueReusableCellWithIdentifier:@"cell"];
+    NSString *CellIdentifier = [NSString stringWithFormat:@"ProjectTableViewCell"];
+    ProjectTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (!cell) {
-        cell=[[MainContactCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        cell=[[ProjectTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    cell.model = self.models[indexPath.row];
+    ProjectModel *model = self.models[indexPath.row];
+    cell.model = model;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     return cell;
 }
 @end

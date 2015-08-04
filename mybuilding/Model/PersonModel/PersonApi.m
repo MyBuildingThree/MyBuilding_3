@@ -11,7 +11,7 @@
 #import "SendRequst.h"
 
 @implementation PersonApi
-+ (void)SearchUserWithBlock:(void (^)(NSMutableArray *posts, NSError *error))block keywords:(NSString *)keywords startIndex:(int)startIndex noNetWork:(void(^)())noNetWork{
++ (void)SearchUserWithBlock:(void (^)(NSMutableArray *posts, NSError *error))block keywords:(NSString *)keywords startIndex:(NSInteger)startIndex noNetWork:(void(^)())noNetWork{
     NSString *urlStr = [NSString stringWithFormat:@"api/account/search?keywords=%@&pageIndex=%d&pageSize=15",keywords,startIndex];
     [SendRequst sendRequestWithUrlString:urlStr success:^(id responseDic) {
         NSLog(@"responseDic = %@",responseDic);
