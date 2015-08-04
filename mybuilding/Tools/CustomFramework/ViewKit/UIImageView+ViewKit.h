@@ -9,6 +9,17 @@
 #import <UIKit/UIKit.h>
 
 @interface UIImageView (ViewKit)
+/**
+ *  设置成圆形的
+ *
+ *  @param isRound 是否需要变成圆形，NO的话则为方形
+ */
 - (void)setIsRound:(BOOL)isRound;
+
+/**
+ *  设置圆角半径
+ *
+ *  @param cornerRadius 半径长度
+ */
 - (void)setCornerRadius:(CGFloat)cornerRadius;
 @end

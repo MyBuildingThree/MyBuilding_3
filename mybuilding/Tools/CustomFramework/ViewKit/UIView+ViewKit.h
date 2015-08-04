@@ -29,6 +29,8 @@
 
 @property(nonatomic, readonly) CGPoint internalCenter;//视图内部的center
 
+@property(nonatomic, assign) CGSize size;
+
 /**
  *  设置最左的x
  *  @return 设置完之后的view.frame
@@ -53,28 +55,29 @@
  */
 - (CGRect)setMidY:(CGFloat)midY;
 
-
+/**
+ *  排列的对齐方向
+ */
 typedef enum{
     RKViewArrangeAlignmentLeft,
     RKViewArrangeAlignmentRight,
     RKViewArrangeAlignmentTop,
     RKViewArrangeAlignmentBottom,
-    RKViewArrangeAlignmentMid
+    RKViewArrangeAlignmentMid //可用
 }RKViewArrangeAlignment;
 
+/**
+ *  排列的方向
+ */
 typedef enum{
-    RKViewArrangeDirectionRight,
+    RKViewArrangeDirectionRight, //可用
     RKViewArrangeDirectionLeft,
-    RKViewArrangeDirectionBottom,
+    RKViewArrangeDirectionBottom, //可用
     RKViewArrangeDirectionTop
 }RKViewArrangeDirection;
+
 /**
  *  水平排列所有view，distances传递他们之间的距离，第一个distance为第一个view到左边的距离
  */
 + (void)horizontalArrangeViews:(NSArray*)/*UIView*/views distances:(NSArray*)/*NSString*/distances alignmentType:(RKViewArrangeAlignment)alignment direction:(RKViewArrangeDirection)direction;
-
-/**
- *  垂直排列所有view，多参传递他们之间的距离，多参数量为views.count-1
- */
-+ (void)verticalArrangeViewsAndDistance:(NSArray*)/*UIView*/views,/*CGFloat*/...;
 @end

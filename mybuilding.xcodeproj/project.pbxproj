@@ -41,6 +41,8 @@
 		5BDBE4A11B70853F00459697 /* MainCompanyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4A01B70853F00459697 /* MainCompanyController.m */; };
 		5BDBE4A41B709A0A00459697 /* MainProductController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4A31B709A0A00459697 /* MainProductController.m */; };
 		5BDBE4A71B709A2E00459697 /* MainProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4A61B709A2E00459697 /* MainProductCell.m */; };
+		5BDBE4AA1B70A7DB00459697 /* UILabel+LabelKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4A91B70A7DB00459697 /* UILabel+LabelKit.m */; };
+		5BDBE4AD1B70ACAE00459697 /* NSString+LabelKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4AC1B70ACAE00459697 /* NSString+LabelKit.m */; };
 		D355958E1B6EFD8B00E4577B /* HomeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D355958A1B6EFD8B00E4577B /* HomeNavigationController.m */; };
 		D355958F1B6EFD8B00E4577B /* MyBuildingTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D355958D1B6EFD8B00E4577B /* MyBuildingTabBarController.m */; };
 		D35595961B6EFF2000E4577B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D35595951B6EFF2000E4577B /* MainViewController.m */; };
@@ -227,6 +229,10 @@
 		5BDBE4A31B709A0A00459697 /* MainProductController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainProductController.m; sourceTree = "<group>"; };
 		5BDBE4A51B709A2E00459697 /* MainProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainProductCell.h; sourceTree = "<group>"; };
 		5BDBE4A61B709A2E00459697 /* MainProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainProductCell.m; sourceTree = "<group>"; };
+		5BDBE4A81B70A7DB00459697 /* UILabel+LabelKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+LabelKit.h"; sourceTree = "<group>"; };
+		5BDBE4A91B70A7DB00459697 /* UILabel+LabelKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+LabelKit.m"; sourceTree = "<group>"; };
+		5BDBE4AB1B70ACAE00459697 /* NSString+LabelKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LabelKit.h"; sourceTree = "<group>"; };
+		5BDBE4AC1B70ACAE00459697 /* NSString+LabelKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LabelKit.m"; sourceTree = "<group>"; };
 		5D7A13EE1B704701003B7A56 /* FindPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindPasswordVC.h; sourceTree = "<group>"; };
 		5D7A13EF1B704701003B7A56 /* FindPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindPasswordVC.m; sourceTree = "<group>"; };
 		5D7A13F01B704701003B7A56 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
@@ -618,14 +624,18 @@
 		5B5CA1801B6F70ED00CC3896 /* ViewKit */ = {
 			isa = PBXGroup;
 			children = (
+				5B5CA1871B6F70ED00CC3896 /* UIView+ViewKit.h */,
+				5B5CA1881B6F70ED00CC3896 /* UIView+ViewKit.m */,
+				5BDBE4A81B70A7DB00459697 /* UILabel+LabelKit.h */,
+				5BDBE4A91B70A7DB00459697 /* UILabel+LabelKit.m */,
+				5BDBE4AB1B70ACAE00459697 /* NSString+LabelKit.h */,
+				5BDBE4AC1B70ACAE00459697 /* NSString+LabelKit.m */,
+				5B5CA1851B6F70ED00CC3896 /* UIImageView+ViewKit.h */,
+				5B5CA1861B6F70ED00CC3896 /* UIImageView+ViewKit.m */,
 				5B5CA1811B6F70ED00CC3896 /* RKShadowView.h */,
 				5B5CA1821B6F70ED00CC3896 /* RKShadowView.m */,
 				5B5CA1831B6F70ED00CC3896 /* RKViewFactory.h */,
 				5B5CA1841B6F70ED00CC3896 /* RKViewFactory.m */,
-				5B5CA1851B6F70ED00CC3896 /* UIImageView+ViewKit.h */,
-				5B5CA1861B6F70ED00CC3896 /* UIImageView+ViewKit.m */,
-				5B5CA1871B6F70ED00CC3896 /* UIView+ViewKit.h */,
-				5B5CA1881B6F70ED00CC3896 /* UIView+ViewKit.m */,
 			);
 			path = ViewKit;
 			sourceTree = "<group>";
@@ -1339,6 +1349,7 @@
 				D3DF12A21B6B614400DFEE8F /* MJRefreshBackNormalFooter.m in Sources */,
 				5B5CA1941B6F70ED00CC3896 /* RKTestController_1.m in Sources */,
 				D35595A21B6EFF6200E4577B /* MineViewController.m in Sources */,
+				5BDBE4AD1B70ACAE00459697 /* NSString+LabelKit.m in Sources */,
 				D355959E1B6EFF5600E4577B /* FellowsViewController.m in Sources */,
 				D3E37A5F1B68BAA20073D401 /* UIAlertView+AFNetworking.m in Sources */,
 				5B5CA1911B6F70ED00CC3896 /* RKCamera.m in Sources */,
@@ -1386,6 +1397,7 @@
 				D3DF12CE1B6B7DA000DFEE8F /* MKAnnotationView+WebCache.m in Sources */,
 				D3E379F61B686C9E0073D401 /* main.m in Sources */,
 				D3E37A5B1B68BAA20073D401 /* networkConnect.m in Sources */,
+				5BDBE4AA1B70A7DB00459697 /* UILabel+LabelKit.m in Sources */,
 				5B5CA18D1B6F70ED00CC3896 /* RKController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
