@@ -15,6 +15,7 @@
 #import "MainCompanyController.h"
 #import "MainContactController.h"
 #import "MainProductController.h"
+#import "MainRecommendController.h"
 
 @interface MainViewController ()<RKStageViewPageControllerDelegate>
 @property(nonatomic, strong) RKStageViewPageController* pageController;
@@ -26,7 +27,7 @@
     [super viewDidLoad];
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor], NSForegroundColorAttributeName,[UIFont boldSystemFontOfSize:19], NSFontAttributeName,nil]];
     self.view.backgroundColor = [UIColor whiteColor];
-    RKTestController_1* vc1 = [[RKTestController_1 alloc] init];
+    MainRecommendController* vc1 = [[MainRecommendController alloc] init];
     MainProjectController* vc2 = [[MainProjectController alloc] init];
     MainCompanyController* vc3 = [[MainCompanyController alloc] init];
     MainContactController* vc4 = [[MainContactController alloc] init];

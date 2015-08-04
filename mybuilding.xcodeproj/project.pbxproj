@@ -61,6 +61,9 @@
 		D3A174741B6F96CC00BC6DA1 /* FindPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A1746F1B6F96CC00BC6DA1 /* FindPasswordVC.m */; };
 		D3A174751B6F96CC00BC6DA1 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A174711B6F96CC00BC6DA1 /* LoginVC.m */; };
 		D3A174761B6F96CC00BC6DA1 /* ResetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A174731B6F96CC00BC6DA1 /* ResetVC.m */; };
+		D3A8B3DE1B70C2BE0033457F /* MainRecommendController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A8B3DD1B70C2BE0033457F /* MainRecommendController.m */; };
+		D3A8B3E41B70C2F50033457F /* RecommendApi.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A8B3E11B70C2F50033457F /* RecommendApi.m */; };
+		D3A8B3E51B70C2F50033457F /* RecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A8B3E31B70C2F50033457F /* RecommendModel.m */; };
 		D3B4DE341B707B36006A20E2 /* ShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B4DE331B707B36006A20E2 /* ShowView.m */; };
 		D3B4DE371B707B4F006A20E2 /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B4DE361B707B4F006A20E2 /* RegisterVC.m */; };
 		D3DF12541B6B3E1F00DFEE8F /* GetImagePath.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF12531B6B3E1F00DFEE8F /* GetImagePath.m */; };
@@ -269,6 +272,12 @@
 		D3A174711B6F96CC00BC6DA1 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
 		D3A174721B6F96CC00BC6DA1 /* ResetVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetVC.h; sourceTree = "<group>"; };
 		D3A174731B6F96CC00BC6DA1 /* ResetVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetVC.m; sourceTree = "<group>"; };
+		D3A8B3DC1B70C2BE0033457F /* MainRecommendController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainRecommendController.h; sourceTree = "<group>"; };
+		D3A8B3DD1B70C2BE0033457F /* MainRecommendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainRecommendController.m; sourceTree = "<group>"; };
+		D3A8B3E01B70C2F50033457F /* RecommendApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendApi.h; sourceTree = "<group>"; };
+		D3A8B3E11B70C2F50033457F /* RecommendApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendApi.m; sourceTree = "<group>"; };
+		D3A8B3E21B70C2F50033457F /* RecommendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendModel.h; sourceTree = "<group>"; };
+		D3A8B3E31B70C2F50033457F /* RecommendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendModel.m; sourceTree = "<group>"; };
 		D3B4DE321B707B36006A20E2 /* ShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowView.h; sourceTree = "<group>"; };
 		D3B4DE331B707B36006A20E2 /* ShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowView.m; sourceTree = "<group>"; };
 		D3B4DE351B707B4F006A20E2 /* RegisterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterVC.h; sourceTree = "<group>"; };
@@ -508,6 +517,8 @@
 		5B5CA1311B6F3A1100CC3896 /* Recommend */ = {
 			isa = PBXGroup;
 			children = (
+				D3A8B3DC1B70C2BE0033457F /* MainRecommendController.h */,
+				D3A8B3DD1B70C2BE0033457F /* MainRecommendController.m */,
 			);
 			path = Recommend;
 			sourceTree = "<group>";
@@ -799,6 +810,17 @@
 				D3A174731B6F96CC00BC6DA1 /* ResetVC.m */,
 			);
 			path = RegisterAndLogin;
+			sourceTree = "<group>";
+		};
+		D3A8B3DF1B70C2F50033457F /* RecommendModel */ = {
+			isa = PBXGroup;
+			children = (
+				D3A8B3E01B70C2F50033457F /* RecommendApi.h */,
+				D3A8B3E11B70C2F50033457F /* RecommendApi.m */,
+				D3A8B3E21B70C2F50033457F /* RecommendModel.h */,
+				D3A8B3E31B70C2F50033457F /* RecommendModel.m */,
+			);
+			path = RecommendModel;
 			sourceTree = "<group>";
 		};
 		D3B4DE311B707B36006A20E2 /* ShowView */ = {
@@ -1172,6 +1194,7 @@
 		D3E37A7A1B68D19E0073D401 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D3A8B3DF1B70C2F50033457F /* RecommendModel */,
 				D3EB7E8A1B7054C400482BCD /* ProductModel */,
 				D3A174661B6F96AE00BC6DA1 /* PersonModel */,
 				D3A1745F1B6F841500BC6DA1 /* CompanyModel */,
@@ -1327,6 +1350,7 @@
 				5BDBE4BD1B70C11000459697 /* NSString+LabelKit.m in Sources */,
 				D3DF12AB1B6B614400DFEE8F /* UIView+MJExtension.m in Sources */,
 				5BDBE4C01B70C11000459697 /* UIView+ViewKit.m in Sources */,
+				D3A8B3DE1B70C2BE0033457F /* MainRecommendController.m in Sources */,
 				D3DF12A31B6B614400DFEE8F /* MJRefreshBackStateFooter.m in Sources */,
 				D3DF12A61B6B614400DFEE8F /* MJRefreshStateHeader.m in Sources */,
 				D3DF12D71B6B7DA000DFEE8F /* UIButton+WebCache.m in Sources */,
@@ -1371,6 +1395,7 @@
 				D3DF12A51B6B614400DFEE8F /* MJRefreshNormalHeader.m in Sources */,
 				D3DF12DD1B6B7DA000DFEE8F /* UIView+WebCacheOperation.m in Sources */,
 				5BDBE49E1B70803B00459697 /* MainProjectController.m in Sources */,
+				D3A8B3E41B70C2F50033457F /* RecommendApi.m in Sources */,
 				5B5CA19F1B6F70ED00CC3896 /* ChatBaseViewController.m in Sources */,
 				D3DF12621B6B412800DFEE8F /* FMResultSet.m in Sources */,
 				D3DF12D01B6B7DA000DFEE8F /* SDImageCache.m in Sources */,
@@ -1386,6 +1411,7 @@
 				5B5CA18C1B6F70ED00CC3896 /* RKView.m in Sources */,
 				D3A174761B6F96CC00BC6DA1 /* ResetVC.m in Sources */,
 				D3E37A5E1B68BAA20073D401 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				D3A8B3E51B70C2F50033457F /* RecommendModel.m in Sources */,
 				5BDBE4BE1B70C11000459697 /* UIImageView+ViewKit.m in Sources */,
 				D3EB7E8D1B7054D000482BCD /* ProductModel.m in Sources */,
 				D3E37A591B68BAA20073D401 /* AFURLSessionManager.m in Sources */,
