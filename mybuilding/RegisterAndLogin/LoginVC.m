@@ -172,12 +172,16 @@
     //注册
     else if (btn == self.registerBtn)
     {
-        
+        FindPasswordVC *vc = [[FindPasswordVC alloc]init];
+        vc.title = @"注册";
+        [self.navigationController pushViewController:vc animated:YES];
     }
     //找回密码
     else if (btn == self.forgetPasswordBtn)
     {
-        [self.navigationController pushViewController:[[FindPasswordVC alloc]init] animated:YES];
+        FindPasswordVC *vc = [[FindPasswordVC alloc]init];
+        vc.title = @"密码找回";
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 

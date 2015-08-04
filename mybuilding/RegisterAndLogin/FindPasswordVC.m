@@ -8,11 +8,15 @@
 
 #import "FindPasswordVC.h"
 #import "ShowView.h"
+#import "ResetVC.h"
+#import "RegisterVC.h"
 
 #define textRatio (((UIView *)[UIApplication sharedApplication].delegate.window).bounds.size.width)
 
 @interface FindPasswordVC ()
 
+//返回按钮
+@property (nonatomic,strong)UIButton *backBtn;
 //图片输入框
 @property (nonatomic,strong)UITextField *picTF;
 //验证码图片
@@ -25,6 +29,8 @@
 @property (nonatomic,strong)UITextField *codeTF;
 //下一步按钮
 @property (nonatomic,strong)UIButton *nextBtn;
+//已读按钮
+@property (nonatomic,strong)UIButton *readBtn;
 //倒计时
 @property (nonatomic,strong)NSTimer *timer;
 
@@ -36,12 +42,18 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    
     //修改导航栏元素(项)
     self.navigationController.navigationBar.hidden = NO;
     self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.barTintColor = [UIColor blueColor];
-    //self.navigationItem.leftBarButtonItem
-    self.title = @"密码找回";
+    //返回按钮
+    self.backBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 30, 50)];
+    [self.backBtn setTitle:@"返" forState:UIControlStateNormal];
+    [self.backBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:self.backBtn];
+
+    //self.title = @"密码找回";
     
     [self createSubViews];
     //定时器
@@ -135,13 +147,32 @@
     [self.nextBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [self.nextBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.nextBtn];
+    
+    //条款
+    if ([self.title isEqualToString:@"注册"])
+    {
+        self.readBtn = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width*0.3, self.view.frame.size.height*0.32, self.view.frame.size.height*0.1, self.view.frame.size.height*0.1)];
+        self.readBtn.backgroundColor = [UIColor blueColor];
+        [self.readBtn setTitle:@"不勾" forState:UIControlStateNormal];
+        [self.readBtn setTitle:@"勾" forState:UIControlStateSelected];
+        [self.readBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:self.readBtn];
+
+        [self.nextBtn setTitle:@"注册" forState:UIControlStateNormal];
+    }
 }
 
 //按钮点击事件
 - (void)btnClick:(UIButton *)btn
 {
+    //返回
+    if (btn == self.backBtn)
+    {
+        self.navigationController.navigationBar.hidden = YES;
+        [self.navigationController popViewControllerAnimated:YES];
+    }
     //点击获取验证码
-    if (btn == self.codeBtn)
+    else if (btn == self.codeBtn)
     {
         //空
         if (self.picTF.text.length == 0||self.numberTF.text.length == 0)
@@ -152,9 +183,31 @@
         else
         {
             self.codeBtn.selected = YES;
+            self.codeBtn.userInteractionEnabled = NO;
             [self.timer setFireDate:[NSDate distantPast]];
         }
-        
+    }
+    //重置密码 or 注册
+    else if (btn == self.nextBtn)
+    {
+        if ([btn.titleLabel.text isEqualToString:@"下一步"])
+        {
+            [self.navigationController pushViewController:[[ResetVC alloc]init] animated:YES];
+        } else
+        {
+            if (self.readBtn.selected) {
+                [self.navigationController pushViewController:[[RegisterVC alloc]init] animated:YES];
+            }
+        }
+    }
+    //读条款
+    else if (btn == self.readBtn)
+    {
+        if (btn.selected) {
+            btn.selected = NO;
+        } else {
+            btn.selected = YES;
+        }
     }
 }
 
@@ -167,6 +220,7 @@
         [self.timer setFireDate:[NSDate distantFuture]];
         i = 59;
         self.codeBtn.selected = NO;
+        self.codeBtn.userInteractionEnabled = YES;
     }
     
 }
