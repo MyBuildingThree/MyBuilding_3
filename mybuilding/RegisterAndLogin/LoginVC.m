@@ -10,6 +10,7 @@
 #import "ShowView.h"
 #import "LoginApi.h"
 #import "FindPasswordVC.h"
+#import "MD5.h"
 
 @interface LoginVC ()
 
@@ -157,10 +158,12 @@
         }
         else
         {
-            NSDictionary *dict = @{@"downloadType":@"02",@"deviceType":@"05",@"password":passwordStr,@"userNameOrCellPhone":userNameStr};
+            NSDictionary *dict = @{@"downloadType":@"02",@"deviceType":@"05",@"password":[MD5 md5HexDigest:passwordStr],@"userNameOrCellPhone":userNameStr};
             
             [LoginApi LoginWithBlock:^(LoginModel *loginModel, NSError *error) {
+                if(!error){
                 
+                }
             } dic:(NSMutableDictionary *)dict noNetWork:^{
                 [ShowView showAtFrame:CGRectMake(self.view.bounds.size.width*0.2, self.view.bounds.size.height*0.5, self.view.bounds.size.width*0.6, 50) backgroundColor:[UIColor blackColor] title:@"无网络可用" titleColor:[UIColor whiteColor] titleFontOfSize:18.0f animateWithDuration:2.0f completion:^{
                 }];

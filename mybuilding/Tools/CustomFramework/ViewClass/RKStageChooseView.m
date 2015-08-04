@@ -84,7 +84,6 @@
 -(void)setUp{
     self.backgroundColor=RGBCOLOR(248, 248, 248);
     NSInteger count=self.stages.count;
-    
     CGFloat const widthWithoutAssistBtn = kChooseViewWidth - self.assistBtn.width;
     
     for (int i=0; i<count; i++) {
