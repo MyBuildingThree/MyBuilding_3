@@ -9,14 +9,12 @@
 #import "SearchSqlite.h"
 #import "FMDB.h"
 
-#define dataBasePath [[(NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES)) lastObject]stringByAppendingPathComponent:@"MyBuilding.sqlite"]
-
-//@interface SearchSqlite ()
-////{
-//////@property (nonatomic, strong)FMDatabase *db;
-////NSMutableArray *_hisArray;
-////}
-//@end
+@interface SearchSqlite ()
+//{
+////@property (nonatomic, strong)FMDatabase *db;
+//NSMutableArray *_hisArray;
+//}
+@end
 
 @implementation SearchSqlite
 
@@ -33,7 +31,7 @@
 {
     NSMutableArray *hisArray =[NSMutableArray array];
     
-    FMDatabase *db = [FMDatabase databaseWithPath:dataBasePath];
+    FMDatabase *db = [FMDatabase databaseWithPath:DataBasePath];
     if ([db open])
     {
         NSString *sqlCreateTable =  [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS SearchResult (ID text PRIMARY KEY AUTOINCREMENT, Class text, Content text)"];
@@ -58,7 +56,7 @@
 //增加数据
 + (void)addDataWith:(NSString *)classStr content:(NSString *)contentStr
 {
-    FMDatabase *db = [FMDatabase databaseWithPath:dataBasePath];
+    FMDatabase *db = [FMDatabase databaseWithPath:DataBasePath];
     if ([db open])
     {
         NSString *sqlCreateTable =  [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS SearchResult (ID integer PRIMARY KEY AUTOINCREMENT, Class text, Content text)"];

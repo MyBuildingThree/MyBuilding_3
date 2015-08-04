@@ -11,14 +11,11 @@
 
 @implementation LoginSqlite
 +(void)opensql{
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documents = [paths objectAtIndex:0];
-    NSString *database_path = [documents stringByAppendingPathComponent:DataBaseName];
-    NSLog(@"%@",database_path);
-    FMDatabase *db = [FMDatabase databaseWithPath:database_path];
+    NSLog(@"%@",DataBasePath);
+    FMDatabase *db = [FMDatabase databaseWithPath:DataBasePath];
     
     if ([db open]) {
-        NSString *sqlCreateTable =  [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS Login (ID TEXT, UserName TEXT)"];
+        NSString *sqlCreateTable =  [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS Login (data Text ,datakey Text)"];
         BOOL res = [db executeUpdate:sqlCreateTable];
         if (!res) {
             NSLog(@"error when creating db table");
@@ -28,5 +25,28 @@
         [db close];
         
     }
+}
+
++(void)insertData:(NSString *)data datakey:(NSString *)datakey{
+    FMDatabase *db = [FMDatabase databaseWithPath:DataBasePath];
+    if([db open]){
+        NSInteger count = [LoginSqlite loadKey:datakey];
+        if(count !=0){
+            [db executeUpdate:@"UPDATE Login SET data=? WHERE datakey=?",
+             data,datakey];
+        }else{
+            [db executeUpdate:@"INSERT INTO Login(data,datakey) VALUES (?,?)",data,datakey];
+        }
+        [db close];
+    }
+}
+
++(NSUInteger)loadKey:(NSString *)datakey{
+    NSUInteger count = 0;
+    FMDatabase *db = [FMDatabase databaseWithPath:DataBasePath];
+    if ([db open]) {
+        count = [db intForQuery:@"select count(*) from Login where datakey=?",datakey];
+    }
+    return count;
 }
 @end
