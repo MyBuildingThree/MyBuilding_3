@@ -189,7 +189,7 @@
     if (!_assistBtn) {
         UIButton* btn = [UIButton buttonWithType:UIButtonTypeSystem];
         btn.frame = CGRectMake(kScreenWidth-20, 0, 20, 20);
-        [btn setTitle:@"艹" forState:UIControlStateNormal];
+        [btn setTitle:@"多" forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(assistBtnClicked) forControlEvents:UIControlEventTouchUpInside];
         
         _assistBtn = btn;
