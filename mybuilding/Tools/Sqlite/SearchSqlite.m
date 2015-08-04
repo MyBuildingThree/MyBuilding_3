@@ -82,7 +82,7 @@
 //删除数据
 + (void)deleteDataWith:(NSString *)classStr
 {
-    FMDatabase *db = [FMDatabase databaseWithPath:dataBasePath];
+    FMDatabase *db = [FMDatabase databaseWithPath:DataBasePath];
     if ([db open])
     {
         NSString *sqlCreateTable =  [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS SearchResult (ID integer PRIMARY KEY AUTOINCREMENT, Class text, Content text)"];
@@ -94,7 +94,7 @@
             FMResultSet *rs = [db executeQuery:@"select * from SearchResult where Class = ?",classStr];
             while ([rs next])
             {
-                [db executeUpdate:@"delete form SearchResult where ID = ?",[rs stringForColumn:@"ID"]];
+                [db executeUpdate:@"delete from SearchResult where ID = ?",[rs stringForColumn:@"ID"]];
             }
         }
     }

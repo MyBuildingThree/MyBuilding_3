@@ -58,6 +58,7 @@
     [self.backBtn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
     
     self.tbv = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height) style:UITableViewStylePlain];
+    self.tbv.sectionFooterHeight = 44;
     self.tbv.dataSource = self;
     self.tbv.delegate = self;
     
@@ -73,6 +74,7 @@
     }
     else
     {
+        [self.view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview) withObject:nil];
         [self.view addSubview:self.tbv];
     }
     
@@ -82,6 +84,16 @@
 {
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:self.searchTf];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:self.backBtn];
+}
+
+- (void)btnClick:(UIButton *)btn
+{
+    if ([btn.titleLabel.text isEqualToString:@"清除记录"])
+    {
+        [SearchSqlite deleteDataWith:self.classBtn.titleLabel.text];
+        [self.view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview) withObject:nil];
+        [self createSubViews];
+    }
 }
 
 //UITextField协议
@@ -95,6 +107,37 @@
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.array.count;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    UIView *view = [[UIView alloc]init];
+    view.backgroundColor = [UIColor whiteColor];
+    UIButton *clearBtn = [[UIButton alloc]initWithFrame:CGRectMake(100, 10, 150, 30)];
+    clearBtn.backgroundColor = [UIColor lightGrayColor];
+    [clearBtn setTitle:@"清除记录" forState:UIControlStateNormal];
+    [clearBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [view addSubview:clearBtn];
+    return view;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *cellID = self.classBtn.titleLabel.text;
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    
+    if (!cell)
+    {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+    }
+    cell.textLabel.text = self.array[indexPath.row];
+    return cell;
 }
 
 @end
