@@ -11,5 +11,6 @@
 @interface SearchSqlite : NSObject
 
 + (NSMutableArray *)openSqlWithClass:(NSString *)classStr;
-
++ (void)addDataWith:(NSString *)classStr content:(NSString *)contentStr;
++ (void)deleteDataWith:(NSString *)classStr;
 @end
