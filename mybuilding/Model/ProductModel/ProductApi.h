@@ -22,5 +22,5 @@
  *  @param productIds  产品ID串
  *  @param noNetWork   没有网络的情况处理
  */
-+ (void)GetProductListWithBlock:(void (^)(NSMutableArray *posts, NSError *error))block startIndex:(int)startIndex productDesc:(NSString *)productDesc userId:(NSString *)userId productIds:(NSString *)productIds noNetWork:(void(^)())noNetWork;
++ (void)GetProductListWithBlock:(void (^)(NSMutableArray *posts, NSError *error))block startIndex:(NSInteger)startIndex productDesc:(NSString *)productDesc userId:(NSString *)userId productIds:(NSString *)productIds noNetWork:(void(^)())noNetWork;
 @end

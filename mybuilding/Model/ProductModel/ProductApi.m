@@ -11,8 +11,8 @@
 #import "ProductModel.h"
 
 @implementation ProductApi
-+(void)GetProductListWithBlock:(void (^)(NSMutableArray *, NSError *))block startIndex:(int)startIndex productDesc:(NSString *)productDesc userId:(NSString *)userId productIds:(NSString *)productIds noNetWork:(void (^)())noNetWork{
-    NSString *urlStr = [NSString stringWithFormat:@"api/productInfo/getProductInfoPage?pageSize=10&pageIndex=%d&productDesc=%@&userId=%@&productIds=%@",startIndex,productDesc,userId,productIds];
++(void)GetProductListWithBlock:(void (^)(NSMutableArray *, NSError *))block startIndex:(NSInteger)startIndex productDesc:(NSString *)productDesc userId:(NSString *)userId productIds:(NSString *)productIds noNetWork:(void (^)())noNetWork{
+    NSString *urlStr = [NSString stringWithFormat:@"api/productInfo/getProductInfoPage?pageSize=10&pageIndex=%ld&productDesc=%@&userId=%@&productIds=%@",(long)startIndex,productDesc,userId,productIds];
     NSString * encodedString = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes( kCFAllocatorDefault, (CFStringRef)urlStr, NULL, NULL,  kCFStringEncodingUTF8 ));
     [SendRequst sendRequestWithUrlString:encodedString success:^(id responseDic) {
         NSMutableArray *arr = [[NSMutableArray alloc] init];
