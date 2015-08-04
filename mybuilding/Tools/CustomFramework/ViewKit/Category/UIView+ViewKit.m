@@ -9,7 +9,6 @@
 #import "UIView+ViewKit.h"
 
 @implementation UIView (ViewKit)
-//@synthesize size = _size;
 
 - (CGFloat)minX{
     return CGRectGetMinX(self.frame);

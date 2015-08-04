@@ -21,11 +21,17 @@
     if (maxWidth == 0) return [self autosize];
     
     CGRect bounds = [self.text autosizeWithFont:self.font maxWidth:maxWidth];
-
-    return CGRectZero;
+    self.size = bounds.size;
+    
+    return self.frame;
 }
 
 - (CGRect)autosizeWithMaxWidth:(CGFloat)maxWidth maxHeight:(CGFloat)maxHeight{
-    return CGRectZero;
+    if (maxHeight == 0) return [self autosizeWithMaxWidth:maxWidth];
+    
+    CGRect bounds = [self.text autosizeWithFont:self.font maxWidth:maxWidth maxHeight:maxHeight];
+    self.size = bounds.size;
+    
+    return self.frame;
 }
 @end
