@@ -33,7 +33,6 @@
 		5B5CA1B21B6F713600CC3896 /* ProjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CA1AE1B6F713600CC3896 /* ProjectModel.m */; };
 		5B5CA1B51B6F716900CC3896 /* ProjectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CA1B41B6F716900CC3896 /* ProjectTableViewCell.m */; };
 		5B5CA1B91B6F718000CC3896 /* ManageString.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CA1B81B6F718000CC3896 /* ManageString.m */; };
-		5DAC71A11B70D44300B2ED69 /* SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC71A01B70D44300B2ED69 /* SearchVC.m */; };
 		5DAC71A21B70D9CF00B2ED69 /* SearchSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC719C1B70A7EA00B2ED69 /* SearchSqlite.m */; };
 		D355958E1B6EFD8B00E4577B /* HomeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D355958A1B6EFD8B00E4577B /* HomeNavigationController.m */; };
 		D355958F1B6EFD8B00E4577B /* MyBuildingTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D355958D1B6EFD8B00E4577B /* MyBuildingTabBarController.m */; };
@@ -69,6 +68,9 @@
 		D3A8B4171B70EA110033457F /* RKShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4BA1B70C11000459697 /* RKShadowView.m */; };
 		D3A8B4181B70EA110033457F /* RKViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4BC1B70C11000459697 /* RKViewFactory.m */; };
 		D3B4DE341B707B36006A20E2 /* ShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B4DE331B707B36006A20E2 /* ShowView.m */; };
+		D3DD5DE61B719A2500FFF890 /* SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC71A51B70E8E500B2ED69 /* SearchVC.m */; };
+		D3DD5DEC1B722A6A00FFF890 /* ProjectContactModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DD5DEB1B722A6A00FFF890 /* ProjectContactModel.m */; };
+		D3DD5DEF1B722C3F00FFF890 /* ProjectImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DD5DEE1B722C3F00FFF890 /* ProjectImageModel.m */; };
 		D3DF12541B6B3E1F00DFEE8F /* GetImagePath.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF12531B6B3E1F00DFEE8F /* GetImagePath.m */; };
 		D3DF12611B6B412800DFEE8F /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF12581B6B412800DFEE8F /* FMDatabase.m */; };
 		D3DF12621B6B412800DFEE8F /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF125A1B6B412800DFEE8F /* FMResultSet.m */; };
@@ -288,6 +290,10 @@
 		D3A8B4051B70E9B20033457F /* ResetVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetVC.m; sourceTree = "<group>"; };
 		D3B4DE321B707B36006A20E2 /* ShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowView.h; sourceTree = "<group>"; };
 		D3B4DE331B707B36006A20E2 /* ShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowView.m; sourceTree = "<group>"; };
+		D3DD5DEA1B722A6A00FFF890 /* ProjectContactModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectContactModel.h; sourceTree = "<group>"; };
+		D3DD5DEB1B722A6A00FFF890 /* ProjectContactModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectContactModel.m; sourceTree = "<group>"; };
+		D3DD5DED1B722C3F00FFF890 /* ProjectImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectImageModel.h; sourceTree = "<group>"; };
+		D3DD5DEE1B722C3F00FFF890 /* ProjectImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectImageModel.m; sourceTree = "<group>"; };
 		D3DF12521B6B3E1F00DFEE8F /* GetImagePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetImagePath.h; sourceTree = "<group>"; };
 		D3DF12531B6B3E1F00DFEE8F /* GetImagePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetImagePath.m; sourceTree = "<group>"; };
 		D3DF12561B6B412800DFEE8F /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
@@ -656,6 +662,10 @@
 				5B5CA1AC1B6F713600CC3896 /* ProjectApi.m */,
 				5B5CA1AD1B6F713600CC3896 /* ProjectModel.h */,
 				5B5CA1AE1B6F713600CC3896 /* ProjectModel.m */,
+				D3DD5DEA1B722A6A00FFF890 /* ProjectContactModel.h */,
+				D3DD5DEB1B722A6A00FFF890 /* ProjectContactModel.m */,
+				D3DD5DED1B722C3F00FFF890 /* ProjectImageModel.h */,
+				D3DD5DEE1B722C3F00FFF890 /* ProjectImageModel.m */,
 			);
 			path = ProjectModel;
 			sourceTree = "<group>";
@@ -1335,6 +1345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3DD5DE61B719A2500FFF890 /* SearchVC.m in Sources */,
 				D3A8B40A1B70EA110033457F /* MainProjectController.m in Sources */,
 				D3A8B40B1B70EA110033457F /* MainCompanyController.m in Sources */,
 				D3A8B40C1B70EA110033457F /* MainProductController.m in Sources */,
@@ -1345,6 +1356,7 @@
 				D3A8B4151B70EA110033457F /* UILabel+LabelKit.m in Sources */,
 				D3A8B4161B70EA110033457F /* UIView+ViewKit.m in Sources */,
 				D3A8B4171B70EA110033457F /* RKShadowView.m in Sources */,
+				D3DD5DEC1B722A6A00FFF890 /* ProjectContactModel.m in Sources */,
 				D3A8B4181B70EA110033457F /* RKViewFactory.m in Sources */,
 				5DAC71A21B70D9CF00B2ED69 /* SearchSqlite.m in Sources */,
 				D3B4DE341B707B36006A20E2 /* ShowView.m in Sources */,
@@ -1413,7 +1425,6 @@
 				D3DF12A21B6B614400DFEE8F /* MJRefreshBackNormalFooter.m in Sources */,
 				5B5CA1941B6F70ED00CC3896 /* RKTestController_1.m in Sources */,
 				D35595A21B6EFF6200E4577B /* MineViewController.m in Sources */,
-				5DAC71A61B70E8E500B2ED69 /* SearchVC.m in Sources */,
 				D355959E1B6EFF5600E4577B /* FellowsViewController.m in Sources */,
 				D3E37A5F1B68BAA20073D401 /* UIAlertView+AFNetworking.m in Sources */,
 				5B5CA1911B6F70ED00CC3896 /* RKCamera.m in Sources */,
@@ -1423,6 +1434,7 @@
 				5B5CA19F1B6F70ED00CC3896 /* ChatBaseViewController.m in Sources */,
 				D3DF12621B6B412800DFEE8F /* FMResultSet.m in Sources */,
 				D3DF12D01B6B7DA000DFEE8F /* SDImageCache.m in Sources */,
+				D3DD5DEF1B722C3F00FFF890 /* ProjectImageModel.m in Sources */,
 				5B5CA1AF1B6F713600CC3896 /* LoginApi.m in Sources */,
 				D3DF12DC1B6B7DA000DFEE8F /* UIImageView+WebCache.m in Sources */,
 				D3E37A751B68C2B20073D401 /* AFAppDotNetAPIClient.m in Sources */,

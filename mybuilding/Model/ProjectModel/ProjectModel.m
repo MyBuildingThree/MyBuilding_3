@@ -9,8 +9,6 @@
 #import "ProjectModel.h"
 #import "ManageString.h"
 
-#define NODATASTRING @"暂无数据"
-
 @implementation ProjectModel
 -(void)setDict:(NSDictionary *)dict{
     self.a_projectID = dict[@"projectId"];

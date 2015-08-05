@@ -27,6 +27,7 @@
     [super viewDidLoad];
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor], NSForegroundColorAttributeName,[UIFont boldSystemFontOfSize:19], NSFontAttributeName,nil]];
     self.view.backgroundColor = [UIColor whiteColor];
+    //self.navigationController.navigationBar.hidden = YES;
     MainRecommendController* vc1 = [[MainRecommendController alloc] init];
     MainProjectController* vc2 = [[MainProjectController alloc] init];
     MainCompanyController* vc3 = [[MainCompanyController alloc] init];

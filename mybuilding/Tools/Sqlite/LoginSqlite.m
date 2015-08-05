@@ -46,7 +46,20 @@
     FMDatabase *db = [FMDatabase databaseWithPath:DataBasePath];
     if ([db open]) {
         count = [db intForQuery:@"select count(*) from Login where datakey=?",datakey];
+        [db close];
     }
     return count;
+}
+
++(NSString *)getdata:(NSString *)datakey
+{
+    NSString *str = nil;
+    FMDatabase *db = [FMDatabase databaseWithPath:DataBasePath];
+    if ([db open]) {
+        str = [db stringForQuery:@"select data from Login where datakey=?",datakey];
+        [db close];
+    }
+    
+    return str;
 }
 @end
