@@ -8,6 +8,7 @@
 
 #import "SearchVC.h"
 #import "SearchSqlite.h"
+#import "PopoverView.h"
 
 @interface SearchVC ()<UITextFieldDelegate,UITableViewDataSource,UITableViewDelegate>
 
@@ -40,17 +41,19 @@
     self.searchTf.delegate = self;
     self.searchTf.clearButtonMode = UITextFieldViewModeWhileEditing;
     self.searchTf.enablesReturnKeyAutomatically = YES;
-    self.searchTf.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    //self.searchTf.layer.borderColor = [UIColor lightGrayColor].CGColor;
     self.searchTf.leftViewMode = UITextFieldViewModeAlways;
     self.searchTf.returnKeyType = UIReturnKeySearch;
-    self.searchTf.layer.borderWidth = 1;
-    self.searchTf.layer.masksToBounds = YES;
-    self.searchTf.layer.cornerRadius = 2;
+    self.searchTf.borderStyle = UITextBorderStyleRoundedRect;
+    //self.searchTf.layer.borderWidth = 1;
+    //self.searchTf.layer.masksToBounds = YES;
+    //self.searchTf.layer.cornerRadius = 2;
     self.searchTf.placeholder = @"请输入搜索的关键词";
     
     self.classBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 50, 34)];
     [self.classBtn setTitle:@"用户" forState:UIControlStateNormal];
     [self.classBtn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+    [self.classBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     self.searchTf.leftView = self.classBtn;
     
     self.backBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 50, 34)];
@@ -98,6 +101,17 @@
     else if ([btn.titleLabel.text isEqualToString:@"取消"])
     {
         [self.navigationController popViewControllerAnimated: YES];
+    }
+    if (btn == self.classBtn)
+    {
+        CGRect rc = [self.searchTf convertRect:self.searchTf.leftView.frame toView:[UIApplication sharedApplication].keyWindow];
+        NSArray *array = @[@"用户",@"公司",@"项目",@"丫丫"];
+        CGPoint point = CGPointMake(rc.origin.x + rc.size.width/2, rc.origin.y + rc.size.height);
+        [PopoverView popUpWithPoint:point titles:array images:nil scroller:NO selectTodo:^(NSInteger index) {
+            [self.classBtn setTitle:array[index] forState:UIControlStateNormal];
+        }];
+       
+
     }
 }
 
