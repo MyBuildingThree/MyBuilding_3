@@ -8,8 +8,8 @@
 
 #import "HomeNavigationController.h"
 #import "MyBuildingTabBarController.h"
-//#import "PopoverView.h"
-//#import "ADCampaignViewController.h"
+#import "PopoverView.h"
+#import "ADScrollView.h"
 #import "LoginVC.h"
 #import "SearchVC.h"
 
@@ -181,6 +181,15 @@
 //                }];
 //            }
 //        };
+        CGRect rc = [self.navigationBar convertRect:btn.frame toView:[UIApplication sharedApplication].keyWindow];
+        
+        CGPoint point = CGPointMake(rc.origin.x + rc.size.width/2, rc.origin.y + rc.size.height);
+        [PopoverView popUpWithPoint:point titles:@[@"热线电话",@"消息通知",@"广告活动"] images:nil scroller:NO selectTodo:^(NSInteger index) {
+            if (index == 2) {
+                ADScrollView *ad = [[ADScrollView alloc]initWithFrame:self.view.bounds];
+                [[[UIApplication sharedApplication].windows lastObject] addSubview:ad];
+            }
+        }];
         
     }
     if ([btn.titleLabel.text isEqualToString:@"搜索"])
