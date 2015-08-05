@@ -33,6 +33,10 @@
 		5B5CA1B21B6F713600CC3896 /* ProjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CA1AE1B6F713600CC3896 /* ProjectModel.m */; };
 		5B5CA1B51B6F716900CC3896 /* ProjectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CA1B41B6F716900CC3896 /* ProjectTableViewCell.m */; };
 		5B5CA1B91B6F718000CC3896 /* ManageString.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CA1B81B6F718000CC3896 /* ManageString.m */; };
+		5B863CD01B719F9C00AF0D36 /* UILabel+LabelKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B51B70C11000459697 /* UILabel+LabelKit.m */; };
+		5B863CD31B71B03000AF0D36 /* RKImageLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B863CD21B71B03000AF0D36 /* RKImageLabel.m */; };
+		5B863CD61B71B58E00AF0D36 /* RKImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B863CD51B71B58E00AF0D36 /* RKImageView.m */; };
+		5B863CD91B71D8A900AF0D36 /* RKLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B863CD81B71D8A900AF0D36 /* RKLabel.m */; };
 		5DAC719A1B7089CB00B2ED69 /* SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC71991B7089CB00B2ED69 /* SearchVC.m */; };
 		5DAC719D1B70A7EA00B2ED69 /* SearchSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC719C1B70A7EA00B2ED69 /* SearchSqlite.m */; };
 		D355958E1B6EFD8B00E4577B /* HomeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D355958A1B6EFD8B00E4577B /* HomeNavigationController.m */; };
@@ -217,6 +221,12 @@
 		5B5CA1B41B6F716900CC3896 /* ProjectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectTableViewCell.m; sourceTree = "<group>"; };
 		5B5CA1B71B6F718000CC3896 /* ManageString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageString.h; sourceTree = "<group>"; };
 		5B5CA1B81B6F718000CC3896 /* ManageString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageString.m; sourceTree = "<group>"; };
+		5B863CD11B71B03000AF0D36 /* RKImageLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKImageLabel.h; sourceTree = "<group>"; };
+		5B863CD21B71B03000AF0D36 /* RKImageLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKImageLabel.m; sourceTree = "<group>"; };
+		5B863CD41B71B58E00AF0D36 /* RKImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKImageView.h; sourceTree = "<group>"; };
+		5B863CD51B71B58E00AF0D36 /* RKImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKImageView.m; sourceTree = "<group>"; };
+		5B863CD71B71D8A900AF0D36 /* RKLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKLabel.h; sourceTree = "<group>"; };
+		5B863CD81B71D8A900AF0D36 /* RKLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKLabel.m; sourceTree = "<group>"; };
 		5BDBE49C1B70803B00459697 /* MainProjectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainProjectController.h; sourceTree = "<group>"; };
 		5BDBE49D1B70803B00459697 /* MainProjectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainProjectController.m; sourceTree = "<group>"; };
 		5BDBE49F1B70853F00459697 /* MainCompanyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCompanyController.h; sourceTree = "<group>"; };
@@ -584,6 +594,10 @@
 				5B5CA1501B6F70EC00CC3896 /* RKScrollView.m */,
 				5B5CA1511B6F70EC00CC3896 /* RKView.h */,
 				5B5CA1521B6F70EC00CC3896 /* RKView.m */,
+				5B863CD41B71B58E00AF0D36 /* RKImageView.h */,
+				5B863CD51B71B58E00AF0D36 /* RKImageView.m */,
+				5B863CD71B71D8A900AF0D36 /* RKLabel.h */,
+				5B863CD81B71D8A900AF0D36 /* RKLabel.m */,
 			);
 			path = BaseView;
 			sourceTree = "<group>";
@@ -622,6 +636,8 @@
 				5B5CA1781B6F70ED00CC3896 /* RKStageAndNumberView.m */,
 				5B5CA1791B6F70ED00CC3896 /* RKStageChooseView.h */,
 				5B5CA17A1B6F70ED00CC3896 /* RKStageChooseView.m */,
+				5B863CD11B71B03000AF0D36 /* RKImageLabel.h */,
+				5B863CD21B71B03000AF0D36 /* RKImageLabel.m */,
 			);
 			path = ViewClass;
 			sourceTree = "<group>";
@@ -1334,6 +1350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B863CD01B719F9C00AF0D36 /* UILabel+LabelKit.m in Sources */,
 				D3A8B3FA1B70D8810033457F /* NSString+LabelKit.m in Sources */,
 				D3A8B3FB1B70D8810033457F /* UIImageView+ViewKit.m in Sources */,
 				D3A8B3FC1B70D8810033457F /* UIView+ViewKit.m in Sources */,
@@ -1371,6 +1388,7 @@
 				D355959A1B6EFF4600E4577B /* FocusViewController.m in Sources */,
 				D355958E1B6EFD8B00E4577B /* HomeNavigationController.m in Sources */,
 				D3DF12CF1B6B7DA000DFEE8F /* NSData+ImageContentType.m in Sources */,
+				5B863CD91B71D8A900AF0D36 /* RKLabel.m in Sources */,
 				D3DF12AB1B6B614400DFEE8F /* UIView+MJExtension.m in Sources */,
 				D3A8B3DE1B70C2BE0033457F /* MainRecommendController.m in Sources */,
 				D3DF12A31B6B614400DFEE8F /* MJRefreshBackStateFooter.m in Sources */,
@@ -1383,6 +1401,7 @@
 				D3E37A621B68BAA20073D401 /* UIProgressView+AFNetworking.m in Sources */,
 				D3E37A561B68BAA20073D401 /* AFURLConnectionOperation.m in Sources */,
 				D3E37A5A1B68BAA20073D401 /* ConnectionAvailable.m in Sources */,
+				5B863CD31B71B03000AF0D36 /* RKImageLabel.m in Sources */,
 				5B5CA1991B6F70ED00CC3896 /* RKTestController_6.m in Sources */,
 				5B5CA1B21B6F713600CC3896 /* ProjectModel.m in Sources */,
 				D3A1746B1B6F96AE00BC6DA1 /* PersonApi.m in Sources */,
@@ -1399,6 +1418,7 @@
 				5B5CA19E1B6F70ED00CC3896 /* RKStageChooseView.m in Sources */,
 				D3A1746C1B6F96AE00BC6DA1 /* PersonModel.m in Sources */,
 				D3DF129F1B6B614400DFEE8F /* MJRefreshAutoNormalFooter.m in Sources */,
+				5B863CD61B71B58E00AF0D36 /* RKImageView.m in Sources */,
 				D3E37A611B68BAA20073D401 /* UIImageView+AFNetworking.m in Sources */,
 				D3E37A531B68BAA20073D401 /* AFHTTPSessionManager.m in Sources */,
 				D3E37A571B68BAA20073D401 /* AFURLRequestSerialization.m in Sources */,
