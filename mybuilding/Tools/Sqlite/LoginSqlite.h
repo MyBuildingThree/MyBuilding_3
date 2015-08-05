@@ -10,4 +10,5 @@
 
 @interface LoginSqlite : NSObject
 +(void)opensql;
++(void)insertData:(NSString *)data datakey:(NSString *)datakey;
 @end

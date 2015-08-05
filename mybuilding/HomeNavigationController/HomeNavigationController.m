@@ -181,13 +181,13 @@
 //                }];
 //            }
 //        };
-        SearchVC *sv =  [[SearchVC alloc]init];
-        sv.hidesBottomBarWhenPushed = YES;
-        [self pushViewController:sv animated:YES];
+        
     }
     if ([btn.titleLabel.text isEqualToString:@"搜索"])
     {
-        [LoginVC loadLoginViewControllerPresentBy:self];
+        SearchVC *sv =  [[SearchVC alloc]init];
+        sv.hidesBottomBarWhenPushed = YES;
+        [self pushViewController:sv animated:YES];
     }
 }
 

@@ -7,6 +7,9 @@
 //
 
 #import "RegisterVC.h"
+#import "ShowView.h"
+#import "LoginApi.h"
+#import "MD5.h"
 
 #define textRatio (((UIView *)[UIApplication sharedApplication].delegate.window).bounds.size.width)
 
@@ -14,8 +17,7 @@
 
 //返回按钮
 @property (nonatomic,strong)UIButton *backBtn;
-//绑定手机输入框
-@property (nonatomic,strong)UITextField *numberTF;
+
 //用户名输入框
 @property (nonatomic,strong)UITextField *userNameTF;
 //密码输入框
@@ -45,7 +47,7 @@
     numberLabel.font = [UIFont boldSystemFontOfSize:textRatio*0.05f];
     numberLabel.textAlignment = NSTextAlignmentLeft;
     //picLabel.textColor = [UIColor lightGrayColor];
-    numberLabel.text = @"绑定手机";
+    numberLabel.text = @"不用输入了,没必要";
     [self.view addSubview:numberLabel];
     //绑定手机输入框
     self.numberTF = [[UITextField alloc]initWithFrame:CGRectMake(self.view.frame.size.width*0.3, self.view.frame.size.height*0.05, self.view.frame.size.width*0.6, self.view.frame.size.height*0.05)];
@@ -54,7 +56,7 @@
     self.numberTF.layer.borderColor = [UIColor blackColor].CGColor;
     self.numberTF.layer.borderWidth = 1;
     self.numberTF.font = [UIFont systemFontOfSize:textRatio*0.04f];
-    self.numberTF.placeholder = @"  仅支持数字";
+    self.numberTF.placeholder = @"  不用输入了,没必要";
     [self.view addSubview:self.numberTF];
     
     
@@ -124,20 +126,42 @@
     [self.view addSubview:self.registerBtn];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)btnClick:(UIButton *)btn
+{
+    if (self.userNameTF.text.length == 0 || self.passwordTF.text.length == 0 || self.password2TF.text.length == 0 ) {
+        [ShowView showAtFrame:CGRectMake(self.view.bounds.size.width*0.2, self.view.bounds.size.height*0.5, self.view.bounds.size.width*0.6, 50) backgroundColor:[UIColor blackColor] title:@"不能有空" titleColor:[UIColor whiteColor] titleFontOfSize:18.0f animateWithDuration:2.0f completion:^{}];
+    }
+    if ([btn.titleLabel.text isEqualToString:@"注册"])
+    {
+        if (self.userNameTF.text.length == 0 || self.passwordTF.text.length == 0 || self.password2TF.text.length == 0 ) {
+            [ShowView showAtFrame:CGRectMake(self.view.bounds.size.width*0.2, self.view.bounds.size.height*0.5, self.view.bounds.size.width*0.6, 50) backgroundColor:[UIColor blackColor] title:@"不能有空" titleColor:[UIColor whiteColor] titleFontOfSize:18.0f animateWithDuration:2.0f completion:^{}];
+        }
+        //两次密码输入不正确
+       else if (![self.passwordTF.text isEqualToString:self.password2TF.text])
+        {
+            [ShowView showAtFrame:CGRectMake(self.view.bounds.size.width*0.2, self.view.bounds.size.height*0.5, self.view.bounds.size.width*0.6, 50) backgroundColor:[UIColor blackColor] title:@"两次密码输入不正确" titleColor:[UIColor whiteColor] titleFontOfSize:18.0f animateWithDuration:2.0f completion:^{}];
+        }
+        else
+        {
+//            cellPhone 注册的手机号码，
+//            *                   password  注册密码 md5加密，
+//            *                   deviceType 登录设备，05表示手机端，
+//            *                   barCode   验证码，
+//            *                   username  注册的用户名，
+//            *                   token     ios推送口令牌，
+//            *                   downloadType ios设备登录证书区分，01是99正式，02是299证书
+            //上传的字典
+            NSDictionary *dict = @{@"downloadType":@"02",@"deviceType":@"05",@"password":[MD5 md5HexDigest:self.passwordTF.text],@"username":self.userNameTF.text,@"token":@"",@"barCode":@"1234",@"cellPhone":@"12345678907"};
+            [LoginApi RegisterWithBlock:^(LoginModel *loginModel, NSError *error) {
+                if (!error)
+                {
+                    [ShowView showAtFrame:CGRectMake(self.view.bounds.size.width*0.2, self.view.bounds.size.height*0.5, self.view.bounds.size.width*0.6, 50) backgroundColor:[UIColor blackColor] title:@"Temp注册成功" titleColor:[UIColor whiteColor] titleFontOfSize:18.0f animateWithDuration:2.0f completion:^{
+                        [self.navigationController dismissViewControllerAnimated:YES completion:^{}];
+                    }];
+                }
+            } dic:(NSMutableDictionary *)dict noNetWork:^{}];
+        }
+    }
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
