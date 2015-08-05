@@ -33,8 +33,8 @@
 		5B5CA1B21B6F713600CC3896 /* ProjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CA1AE1B6F713600CC3896 /* ProjectModel.m */; };
 		5B5CA1B51B6F716900CC3896 /* ProjectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CA1B41B6F716900CC3896 /* ProjectTableViewCell.m */; };
 		5B5CA1B91B6F718000CC3896 /* ManageString.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CA1B81B6F718000CC3896 /* ManageString.m */; };
-		5DAC71A11B70D44300B2ED69 /* SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC71A01B70D44300B2ED69 /* SearchVC.m */; };
 		5DAC71A21B70D9CF00B2ED69 /* SearchSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC719C1B70A7EA00B2ED69 /* SearchSqlite.m */; };
+		5DDA3A3A1B719AF0008DD88F /* SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC71A51B70E8E500B2ED69 /* SearchVC.m */; };
 		D355958E1B6EFD8B00E4577B /* HomeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D355958A1B6EFD8B00E4577B /* HomeNavigationController.m */; };
 		D355958F1B6EFD8B00E4577B /* MyBuildingTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D355958D1B6EFD8B00E4577B /* MyBuildingTabBarController.m */; };
 		D35595961B6EFF2000E4577B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D35595951B6EFF2000E4577B /* MainViewController.m */; };
@@ -1335,6 +1335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DDA3A3A1B719AF0008DD88F /* SearchVC.m in Sources */,
 				D3A8B40A1B70EA110033457F /* MainProjectController.m in Sources */,
 				D3A8B40B1B70EA110033457F /* MainCompanyController.m in Sources */,
 				D3A8B40C1B70EA110033457F /* MainProductController.m in Sources */,
@@ -1413,7 +1414,6 @@
 				D3DF12A21B6B614400DFEE8F /* MJRefreshBackNormalFooter.m in Sources */,
 				5B5CA1941B6F70ED00CC3896 /* RKTestController_1.m in Sources */,
 				D35595A21B6EFF6200E4577B /* MineViewController.m in Sources */,
-				5DAC71A61B70E8E500B2ED69 /* SearchVC.m in Sources */,
 				D355959E1B6EFF5600E4577B /* FellowsViewController.m in Sources */,
 				D3E37A5F1B68BAA20073D401 /* UIAlertView+AFNetworking.m in Sources */,
 				5B5CA1911B6F70ED00CC3896 /* RKCamera.m in Sources */,

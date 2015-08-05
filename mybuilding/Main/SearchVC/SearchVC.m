@@ -55,6 +55,7 @@
     
     self.backBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 50, 34)];
     [self.backBtn setTitle:@"取消" forState:UIControlStateNormal];
+    [self.backBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.backBtn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
     
     self.tbv = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height) style:UITableViewStylePlain];
@@ -93,6 +94,10 @@
         [SearchSqlite deleteDataWith:self.classBtn.titleLabel.text];
         [self.view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview) withObject:nil];
         [self createSubViews];
+    }
+    else if ([btn.titleLabel.text isEqualToString:@"取消"])
+    {
+        [self.navigationController popViewControllerAnimated: YES];
     }
 }
 

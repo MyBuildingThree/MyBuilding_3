@@ -7,6 +7,9 @@
 //
 
 #import "ResetVC.h"
+#import "ShowView.h"
+#import "MD5.h"
+#import "LoginApi.h"
 
 #define textRatio (((UIView *)[UIApplication sharedApplication].delegate.window).bounds.size.width)
 
@@ -59,7 +62,7 @@
     resetLabel.font = [UIFont boldSystemFontOfSize:textRatio*0.05f];
     resetLabel.textAlignment = NSTextAlignmentLeft;
     //picLabel.textColor = [UIColor lightGrayColor];
-    resetLabel.text = @"重置密码";
+    resetLabel.text = @"重复密码";
     [self.view addSubview:resetLabel];
     //重置密码输入框
     self.repetitionTF = [[UITextField alloc]initWithFrame:CGRectMake(self.view.frame.size.width*0.3, self.view.frame.size.height*0.12, self.view.frame.size.width*0.5, self.view.frame.size.height*0.05)];
@@ -85,11 +88,42 @@
     [self.view addSubview:self.okBtn];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)btnClick:(UIButton *)btn
+{
+    if (self.passwordTF.text.length == 0 || self.repetitionTF.text.length == 0) {
+        [ShowView showAtFrame:CGRectMake(self.view.bounds.size.width*0.2, self.view.bounds.size.height*0.5, self.view.bounds.size.width*0.6, 50) backgroundColor:[UIColor blackColor] title:@"不能有空" titleColor:[UIColor whiteColor] titleFontOfSize:18.0f animateWithDuration:2.0f completion:^{}];
+    }
+            //两次密码输入不正确
+        else if (![self.passwordTF.text isEqualToString:self.repetitionTF.text])
+        {
+            [ShowView showAtFrame:CGRectMake(self.view.bounds.size.width*0.2, self.view.bounds.size.height*0.5, self.view.bounds.size.width*0.6, 50) backgroundColor:[UIColor blackColor] title:@"两次密码输入不正确" titleColor:[UIColor whiteColor] titleFontOfSize:18.0f animateWithDuration:2.0f completion:^{}];
+        }
+        else
+        {
+            /**
+             *  忘记密码重新设置新密码 post
+             *
+             *  @param block     回调给页面的数据
+             *  @param dic       传递给服务器的数据
+             *                   barCode 验证码
+             *                   password 新密码
+             *                   cellPhone 手机号码
+             *  @param noNetWork 是否网络连接
+             */
+            //上传的字典
+            NSDictionary *dict = @{@"barCode":@"1234",@"password":[MD5 md5HexDigest:self.passwordTF.text],@"cellPhone":@"12345678909"};
+            
+            [LoginApi FindPasswordWithBlock:^(NSMutableArray *posts, NSError *error) {
+                if (!error)
+                {
+                    [ShowView showAtFrame:CGRectMake(self.view.bounds.size.width*0.2, self.view.bounds.size.height*0.5, self.view.bounds.size.width*0.6, 50) backgroundColor:[UIColor blackColor] title:@"Temp成功" titleColor:[UIColor whiteColor] titleFontOfSize:18.0f animateWithDuration:2.0f completion:^{
+                        [self.navigationController dismissViewControllerAnimated:YES completion:^{}];
+                    }];
+                }
+
+            } dic:dict noNetWork:^{}];
+        }
+    
 }
-
-
 
 @end

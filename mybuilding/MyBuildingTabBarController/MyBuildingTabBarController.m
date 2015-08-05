@@ -7,6 +7,7 @@
 //
 
 #import "MyBuildingTabBarController.h"
+#import "LoginVC.h"
 
 
 
@@ -131,13 +132,21 @@
  */
 - (void)btnClick:(UIButton *)btn
 {
-    if (btn != self.selectedBtn)
+    if (btn.tag == 12)
     {
+        [LoginVC loadLoginViewControllerPresentBy:self];
+        
+    }
+    else if (btn != self.selectedBtn)
+    {
+        
+        
         self.selectedBtn.selected = NO;
         btn.selected = YES;
         self.selectedBtn = btn;
         
         self.selectedIndex = btn.tag - 10;
+        
     }
 }
 
