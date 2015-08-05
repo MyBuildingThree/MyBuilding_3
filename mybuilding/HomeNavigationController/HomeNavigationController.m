@@ -81,7 +81,7 @@
 {
     [self removeSubviews];
     //添加 搜索 按钮
-    self.searchBtn = [[UIButton alloc]initWithFrame:CGRectMake(150, 5, 60, 30)];
+    self.searchBtn = [[UIButton alloc]initWithFrame:CGRectMake(210, 5, 60, 30)];
     //self.searchBtn.backgroundColor = [UIColor brownColor];
     [self.searchBtn setTitle:@"搜索" forState:UIControlStateNormal];
     [self.searchBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -89,7 +89,7 @@
     [self.navigationBar addSubview:self.searchBtn];
     
     //添加 更多功能 按钮
-    self.moreBtn = [[UIButton alloc]initWithFrame:CGRectMake(230, 5, 80, 30)];
+    self.moreBtn = [[UIButton alloc]initWithFrame:CGRectMake(280, 5, 80, 30)];
     //self.moreBtn.backgroundColor = [UIColor brownColor];
     [self.moreBtn setTitle:@"更多功能" forState:UIControlStateNormal];
     [self.moreBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
