@@ -64,6 +64,7 @@
     self.bgImageView = [[UIImageView alloc]initWithFrame:self.tabBar.bounds];
     self.bgImageView.userInteractionEnabled = YES;
     self.bgImageView.image = [UIImage imageNamed:@"bg"];
+    self.bgImageView.backgroundColor = [UIColor greenColor];
     [self.tabBar addSubview:self.bgImageView];
 }
 
