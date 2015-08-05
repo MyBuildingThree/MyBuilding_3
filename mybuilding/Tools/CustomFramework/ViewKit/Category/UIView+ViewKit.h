@@ -30,6 +30,7 @@
 @property(nonatomic, readonly) CGPoint internalCenter;//视图内部的center
 
 @property(nonatomic, assign) CGSize size;
+@property(nonatomic, assign) CGPoint origin;
 
 /**
  *  设置最左的x
@@ -54,6 +55,18 @@
  *  @return 设置完之后的view.frame
  */
 - (CGRect)setMidY:(CGFloat)midY;
+
+/**
+ *  设置宽度
+ *  @return 设置完之后的view.frame
+ */
+- (CGRect)setWidth:(CGFloat)width;
+
+/**
+ *  设置最左的x和中间的y
+ *  @return 设置完之后的view.frame
+ */
+- (CGRect)setMinX:(CGFloat)minX midY:(CGFloat)midY;
 
 /**
  *  排列的对齐方向

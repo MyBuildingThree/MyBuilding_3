@@ -13,6 +13,8 @@
 #import "UIScrollView+MJRefresh.h"
 #import "MJRefreshNormalHeader.h"
 #import "MJRefreshBackNormalFooter.h"
+#import "RKImageLabel.h"
+
 @implementation MainContactController
 - (void)setUp{
     [super setUp];
@@ -47,7 +49,7 @@
             self.startIndex = startIndex;
         }
         isHeaderRefresh ? [self.tableView.header endRefreshing] : [self.tableView.footer endRefreshing];
-    } keywords:@"" startIndex:startIndex noNetWork:nil];
+    } keywords:@"wy" startIndex:startIndex noNetWork:nil];
 }
 
 - (void)pageControllerFirstLoad{

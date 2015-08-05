@@ -64,6 +64,16 @@
     self.frame = frame;
 }
 
+- (CGPoint)origin{
+    return self.frame.origin;
+}
+
+- (void)setOrigin:(CGPoint)origin{
+    CGRect frame = self.frame;
+    frame.origin = origin;
+    self.frame = frame;
+}
+
 #pragma 分割线
 - (CGRect)setMinX:(CGFloat)minX{
     CGRect frame = self.frame;
@@ -97,6 +107,22 @@
     return self.frame;
 }
 
+- (CGRect)setWidth:(CGFloat)width{
+    CGRect frame = self.frame;
+    frame.size.width = width;
+    self.frame = frame;
+    
+    return frame;
+}
+
+- (CGRect)setMinX:(CGFloat)minX midY:(CGFloat)midY{
+    CGPoint center = CGPointMake(minX + self.halfWidth, midY);
+    self.center = center;
+    
+    return self.frame;
+}
+
+#pragma 分割线
 + (void)horizontalArrangeViews:(NSArray*)/*UIView*/views distances:(NSArray*)/*NSString*/distances alignmentType:(RKViewArrangeAlignment)alignment direction:(RKViewArrangeDirection)direction{
     __block UIView* lastView;
     [views enumerateObjectsUsingBlock:^(UIView* view, NSUInteger idx, BOOL *stop) {
