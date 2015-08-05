@@ -37,8 +37,15 @@
 		5B863CD31B71B03000AF0D36 /* RKImageLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B863CD21B71B03000AF0D36 /* RKImageLabel.m */; };
 		5B863CD61B71B58E00AF0D36 /* RKImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B863CD51B71B58E00AF0D36 /* RKImageView.m */; };
 		5B863CD91B71D8A900AF0D36 /* RKLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B863CD81B71D8A900AF0D36 /* RKLabel.m */; };
-		5DAC719A1B7089CB00B2ED69 /* SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC71991B7089CB00B2ED69 /* SearchVC.m */; };
-		5DAC719D1B70A7EA00B2ED69 /* SearchSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC719C1B70A7EA00B2ED69 /* SearchSqlite.m */; };
+		5B863CE61B71EA3300AF0D36 /* MainCompanyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4A01B70853F00459697 /* MainCompanyController.m */; };
+		5B863CE71B71EA4700AF0D36 /* MainProjectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE49D1B70803B00459697 /* MainProjectController.m */; };
+		5B863CE81B71EA4700AF0D36 /* MainProductController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4A31B709A0A00459697 /* MainProductController.m */; };
+		5B863CE91B71EA4700AF0D36 /* MainProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4A61B709A2E00459697 /* MainProductCell.m */; };
+		5B863CEA1B71EA5400AF0D36 /* RKShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4BA1B70C11000459697 /* RKShadowView.m */; };
+		5B863CEB1B71EA5F00AF0D36 /* RKViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4BC1B70C11000459697 /* RKViewFactory.m */; };
+		5B863CEC1B71EA6800AF0D36 /* SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC71A51B70E8E500B2ED69 /* SearchVC.m */; };
+		5B863CED1B71EA9D00AF0D36 /* ProductApi.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EB7E8F1B7054DD00482BCD /* ProductApi.m */; };
+		5B863CEE1B71EAA700AF0D36 /* SearchSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC719C1B70A7EA00B2ED69 /* SearchSqlite.m */; };
 		D355958E1B6EFD8B00E4577B /* HomeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D355958A1B6EFD8B00E4577B /* HomeNavigationController.m */; };
 		D355958F1B6EFD8B00E4577B /* MyBuildingTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D355958D1B6EFD8B00E4577B /* MyBuildingTabBarController.m */; };
 		D35595961B6EFF2000E4577B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D35595951B6EFF2000E4577B /* MainViewController.m */; };
@@ -61,17 +68,6 @@
 		D3A8B4071B70E9B20033457F /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A8B4011B70E9B20033457F /* LoginVC.m */; };
 		D3A8B4081B70E9B20033457F /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A8B4031B70E9B20033457F /* RegisterVC.m */; };
 		D3A8B4091B70E9B20033457F /* ResetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A8B4051B70E9B20033457F /* ResetVC.m */; };
-		D3A8B40A1B70EA110033457F /* MainProjectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE49D1B70803B00459697 /* MainProjectController.m */; };
-		D3A8B40B1B70EA110033457F /* MainCompanyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4A01B70853F00459697 /* MainCompanyController.m */; };
-		D3A8B40C1B70EA110033457F /* MainProductController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4A31B709A0A00459697 /* MainProductController.m */; };
-		D3A8B40D1B70EA110033457F /* MainProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4A61B709A2E00459697 /* MainProductCell.m */; };
-		D3A8B40E1B70EA110033457F /* ProductApi.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EB7E8F1B7054DD00482BCD /* ProductApi.m */; };
-		D3A8B4131B70EA110033457F /* NSString+LabelKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B11B70C11000459697 /* NSString+LabelKit.m */; };
-		D3A8B4141B70EA110033457F /* UIImageView+ViewKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B31B70C11000459697 /* UIImageView+ViewKit.m */; };
-		D3A8B4151B70EA110033457F /* UILabel+LabelKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B51B70C11000459697 /* UILabel+LabelKit.m */; };
-		D3A8B4161B70EA110033457F /* UIView+ViewKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B71B70C11000459697 /* UIView+ViewKit.m */; };
-		D3A8B4171B70EA110033457F /* RKShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4BA1B70C11000459697 /* RKShadowView.m */; };
-		D3A8B4181B70EA110033457F /* RKViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4BC1B70C11000459697 /* RKViewFactory.m */; };
 		D3B4DE341B707B36006A20E2 /* ShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B4DE331B707B36006A20E2 /* ShowView.m */; };
 		D3DF12541B6B3E1F00DFEE8F /* GetImagePath.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF12531B6B3E1F00DFEE8F /* GetImagePath.m */; };
 		D3DF12611B6B412800DFEE8F /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF12581B6B412800DFEE8F /* FMDatabase.m */; };
@@ -1351,17 +1347,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B863CEE1B71EAA700AF0D36 /* SearchSqlite.m in Sources */,
+				5B863CED1B71EA9D00AF0D36 /* ProductApi.m in Sources */,
+				5B863CEC1B71EA6800AF0D36 /* SearchVC.m in Sources */,
+				5B863CEB1B71EA5F00AF0D36 /* RKViewFactory.m in Sources */,
+				5B863CEA1B71EA5400AF0D36 /* RKShadowView.m in Sources */,
+				5B863CE71B71EA4700AF0D36 /* MainProjectController.m in Sources */,
+				5B863CE81B71EA4700AF0D36 /* MainProductController.m in Sources */,
+				5B863CE91B71EA4700AF0D36 /* MainProductCell.m in Sources */,
+				5B863CE61B71EA3300AF0D36 /* MainCompanyController.m in Sources */,
 				5B863CD01B719F9C00AF0D36 /* UILabel+LabelKit.m in Sources */,
-				D3A8B3FA1B70D8810033457F /* NSString+LabelKit.m in Sources */,
-				D3A8B3FB1B70D8810033457F /* UIImageView+ViewKit.m in Sources */,
-				D3A8B3FC1B70D8810033457F /* UIView+ViewKit.m in Sources */,
-				D3A8B3F81B70D65D0033457F /* RKShadowView.m in Sources */,
-				D3A8B3F91B70D65D0033457F /* RKViewFactory.m in Sources */,
-				D3A8B3F51B70D63C0033457F /* MainProductController.m in Sources */,
-				D3A8B3F61B70D63C0033457F /* MainProductCell.m in Sources */,
-				D3A8B3F71B70D63C0033457F /* ProductApi.m in Sources */,
-				D3A8B3F31B70D61A0033457F /* MainProjectController.m in Sources */,
-				D3A8B3F41B70D61A0033457F /* MainCompanyController.m in Sources */,
 				D3B4DE341B707B36006A20E2 /* ShowView.m in Sources */,
 				D3E37A511B68BAA20073D401 /* AFHTTPRequestOperation.m in Sources */,
 				D3A1745E1B6F835B00BC6DA1 /* CompanyTableViewCell.m in Sources */,
