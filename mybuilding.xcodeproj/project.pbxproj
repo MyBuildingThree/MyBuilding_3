@@ -33,10 +33,24 @@
 		5B5CA1B21B6F713600CC3896 /* ProjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CA1AE1B6F713600CC3896 /* ProjectModel.m */; };
 		5B5CA1B51B6F716900CC3896 /* ProjectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CA1B41B6F716900CC3896 /* ProjectTableViewCell.m */; };
 		5B5CA1B91B6F718000CC3896 /* ManageString.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CA1B81B6F718000CC3896 /* ManageString.m */; };
-		5DAC71A21B70D9CF00B2ED69 /* SearchSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC719C1B70A7EA00B2ED69 /* SearchSqlite.m */; };
-		5DDA3A3A1B719AF0008DD88F /* SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC71A51B70E8E500B2ED69 /* SearchVC.m */; };
-		5DDA3A411B7208BC008DD88F /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDA3A401B7208BC008DD88F /* PopoverView.m */; };
-		5DDA3A451B720F6B008DD88F /* ADScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDA3A441B720F6B008DD88F /* ADScrollView.m */; };
+		5B863CD01B719F9C00AF0D36 /* UILabel+LabelKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B51B70C11000459697 /* UILabel+LabelKit.m */; };
+		5B863CD31B71B03000AF0D36 /* RKImageLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B863CD21B71B03000AF0D36 /* RKImageLabel.m */; };
+		5B863CD61B71B58E00AF0D36 /* RKImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B863CD51B71B58E00AF0D36 /* RKImageView.m */; };
+		5B863CD91B71D8A900AF0D36 /* RKLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B863CD81B71D8A900AF0D36 /* RKLabel.m */; };
+		5B863CE61B71EA3300AF0D36 /* MainCompanyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4A01B70853F00459697 /* MainCompanyController.m */; };
+		5B863CE71B71EA4700AF0D36 /* MainProjectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE49D1B70803B00459697 /* MainProjectController.m */; };
+		5B863CE81B71EA4700AF0D36 /* MainProductController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4A31B709A0A00459697 /* MainProductController.m */; };
+		5B863CE91B71EA4700AF0D36 /* MainProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4A61B709A2E00459697 /* MainProductCell.m */; };
+		5B863CEA1B71EA5400AF0D36 /* RKShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4BA1B70C11000459697 /* RKShadowView.m */; };
+		5B863CEB1B71EA5F00AF0D36 /* RKViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4BC1B70C11000459697 /* RKViewFactory.m */; };
+		5B863CEC1B71EA6800AF0D36 /* SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC71A51B70E8E500B2ED69 /* SearchVC.m */; };
+		5B863CED1B71EA9D00AF0D36 /* ProductApi.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EB7E8F1B7054DD00482BCD /* ProductApi.m */; };
+		5B863CEE1B71EAA700AF0D36 /* SearchSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC719C1B70A7EA00B2ED69 /* SearchSqlite.m */; };
+		5B863CEF1B71EB1A00AF0D36 /* UIView+ViewKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B71B70C11000459697 /* UIView+ViewKit.m */; };
+		5B863CF01B71EB3900AF0D36 /* UIImageView+ViewKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B31B70C11000459697 /* UIImageView+ViewKit.m */; };
+		5B863CF11B71EB5700AF0D36 /* NSString+LabelKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B11B70C11000459697 /* NSString+LabelKit.m */; };
+		5DDA3A461B721601008DD88F /* ADScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDA3A441B720F6B008DD88F /* ADScrollView.m */; };
+		5DDA3A471B721601008DD88F /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDA3A401B7208BC008DD88F /* PopoverView.m */; };
 		D355958E1B6EFD8B00E4577B /* HomeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D355958A1B6EFD8B00E4577B /* HomeNavigationController.m */; };
 		D355958F1B6EFD8B00E4577B /* MyBuildingTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D355958D1B6EFD8B00E4577B /* MyBuildingTabBarController.m */; };
 		D35595961B6EFF2000E4577B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D35595951B6EFF2000E4577B /* MainViewController.m */; };
@@ -1362,6 +1376,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DDA3A461B721601008DD88F /* ADScrollView.m in Sources */,
+				5DDA3A471B721601008DD88F /* PopoverView.m in Sources */,
 				5B863CF11B71EB5700AF0D36 /* NSString+LabelKit.m in Sources */,
 				5B863CF01B71EB3900AF0D36 /* UIImageView+ViewKit.m in Sources */,
 				5B863CEF1B71EB1A00AF0D36 /* UIView+ViewKit.m in Sources */,
@@ -1420,7 +1436,6 @@
 				5B5CA1B21B6F713600CC3896 /* ProjectModel.m in Sources */,
 				D3A1746B1B6F96AE00BC6DA1 /* PersonApi.m in Sources */,
 				D3DF12D61B6B7DA000DFEE8F /* SDWebImagePrefetcher.m in Sources */,
-				5DDA3A451B720F6B008DD88F /* ADScrollView.m in Sources */,
 				D3DF12651B6B412800DFEE8F /* FMDatabasePool.m in Sources */,
 				D3DF12D11B6B7DA000DFEE8F /* SDWebImageCompat.m in Sources */,
 				D3DF129D1B6B614400DFEE8F /* MJRefreshHeader.m in Sources */,
@@ -1476,7 +1491,6 @@
 				D3A8B4081B70E9B20033457F /* RegisterVC.m in Sources */,
 				D3DF12D91B6B7DA000DFEE8F /* UIImage+MultiFormat.m in Sources */,
 				D3A174651B6F843700BC6DA1 /* CompanyApi.m in Sources */,
-				5DDA3A411B7208BC008DD88F /* PopoverView.m in Sources */,
 				D3E379F91B686C9E0073D401 /* AppDelegate.m in Sources */,
 				5B5CA1451B6F70A600CC3896 /* ImageUrlPath.m in Sources */,
 				D3DF12E11B6B7DF300DFEE8F /* MD5.m in Sources */,

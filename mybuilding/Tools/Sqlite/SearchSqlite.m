@@ -9,22 +9,7 @@
 #import "SearchSqlite.h"
 #import "FMDB.h"
 
-@interface SearchSqlite ()
-//{
-////@property (nonatomic, strong)FMDatabase *db;
-//NSMutableArray *_hisArray;
-//}
-@end
-
 @implementation SearchSqlite
-
-//-(NSMutableArray *)hisArray
-//{
-//    if (!_hisArray) {
-//        _hisArray = [NSMutableArray array];
-//    }
-//    return _hisArray;
-//}
 
 //查询数据
 + (NSMutableArray *)openSqlWithClass:(NSString *)classStr
