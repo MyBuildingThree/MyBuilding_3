@@ -46,6 +46,9 @@
 		5B863CEC1B71EA6800AF0D36 /* SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC71A51B70E8E500B2ED69 /* SearchVC.m */; };
 		5B863CED1B71EA9D00AF0D36 /* ProductApi.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EB7E8F1B7054DD00482BCD /* ProductApi.m */; };
 		5B863CEE1B71EAA700AF0D36 /* SearchSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC719C1B70A7EA00B2ED69 /* SearchSqlite.m */; };
+		5B863CEF1B71EB1A00AF0D36 /* UIView+ViewKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B71B70C11000459697 /* UIView+ViewKit.m */; };
+		5B863CF01B71EB3900AF0D36 /* UIImageView+ViewKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B31B70C11000459697 /* UIImageView+ViewKit.m */; };
+		5B863CF11B71EB5700AF0D36 /* NSString+LabelKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B11B70C11000459697 /* NSString+LabelKit.m */; };
 		D355958E1B6EFD8B00E4577B /* HomeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D355958A1B6EFD8B00E4577B /* HomeNavigationController.m */; };
 		D355958F1B6EFD8B00E4577B /* MyBuildingTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D355958D1B6EFD8B00E4577B /* MyBuildingTabBarController.m */; };
 		D35595961B6EFF2000E4577B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D35595951B6EFF2000E4577B /* MainViewController.m */; };
@@ -1347,6 +1350,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B863CF11B71EB5700AF0D36 /* NSString+LabelKit.m in Sources */,
+				5B863CF01B71EB3900AF0D36 /* UIImageView+ViewKit.m in Sources */,
+				5B863CEF1B71EB1A00AF0D36 /* UIView+ViewKit.m in Sources */,
 				5B863CEE1B71EAA700AF0D36 /* SearchSqlite.m in Sources */,
 				5B863CED1B71EA9D00AF0D36 /* ProductApi.m in Sources */,
 				5B863CEC1B71EA6800AF0D36 /* SearchVC.m in Sources */,
