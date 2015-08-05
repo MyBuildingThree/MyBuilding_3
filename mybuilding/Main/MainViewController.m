@@ -27,12 +27,12 @@
     [super viewDidLoad];
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor], NSForegroundColorAttributeName,[UIFont boldSystemFontOfSize:19], NSFontAttributeName,nil]];
     self.view.backgroundColor = [UIColor whiteColor];
-    MainRecommendController* vc1 = [[MainRecommendController alloc] init];
-    MainProjectController* vc2 = [[MainProjectController alloc] init];
-    MainCompanyController* vc3 = [[MainCompanyController alloc] init];
-    MainContactController* vc4 = [[MainContactController alloc] init];
-    MainProductController* vc5 = [[MainProductController alloc] init];
-    RKTestController_6* vc6 = [[RKTestController_6 alloc] init];
+    MainRecommendController* vc1 = [[MainRecommendController alloc] initWithNavi:self.navigationController];
+    MainProjectController* vc2 = [[MainProjectController alloc] initWithNavi:self.navigationController];
+    MainCompanyController* vc3 = [[MainCompanyController alloc] initWithNavi:self.navigationController];
+    MainContactController* vc4 = [[MainContactController alloc] initWithNavi:self.navigationController];
+    MainProductController* vc5 = [[MainProductController alloc] initWithNavi:self.navigationController];
+    RKTestController_6* vc6 = [[RKTestController_6 alloc] initWithNavi:self.navigationController];
 
     vc1.view.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
     

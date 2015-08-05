@@ -60,11 +60,11 @@
     [self.subLabel_2 autosize];
     
     self.mainLabel.origin = CGPointMake(79, 13);
-    self.subLabel_1.origin = CGPointMake(79, self.mainLabel.maxY + 5);
-    self.subLabel_2.origin = CGPointMake(79, self.subLabel_1.maxY + 4);
+    self.subLabel_1.origin = CGPointMake(79, self.mainLabel.maxY + 3);
+    self.subLabel_2.origin = CGPointMake(79, self.subLabel_1.maxY + 2);
 
-    self.mainLabel.backgroundColor = [UIColor greenColor];
-    self.subLabel_1.backgroundColor = [UIColor greenColor];
-    self.subLabel_2.backgroundColor = [UIColor greenColor];
+//    self.mainLabel.backgroundColor = [UIColor greenColor];
+//    self.subLabel_1.backgroundColor = [UIColor greenColor];
+//    self.subLabel_2.backgroundColor = [UIColor greenColor];
 }
 @end
