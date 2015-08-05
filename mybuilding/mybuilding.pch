@@ -54,3 +54,8 @@
 
 
 #define DataBasePath [[(NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES)) lastObject]stringByAppendingPathComponent:@"MyBuilding.sqlite"]
+
+#define IS_IPHONE_6P (kScreenWidth > 375)
+#define IMAGEWIDTH (IS_IPHONE_6P?1125:kScreenWidth*2)
+
+#define NODATASTRING @"暂无数据"

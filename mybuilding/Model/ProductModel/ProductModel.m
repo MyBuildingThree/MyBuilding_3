@@ -15,7 +15,7 @@
     self.a_productName = dict[@"productName"];
     self.a_productDesc = dict[@"productDesc"];
     self.a_productListSmallImageUrl = [ImageUrlPath getNetWorkImageUrl:dict[@"productImagesId"] type:@"product" width:@"80" height:@"80" cut:@"1"];
-    self.a_productOriginImageUrl = [ImageUrlPath getNetWorkImageUrl:dict[@"productImagesId"] type:@"product" width:[NSString stringWithFormat:@"%f",kScreenWidth] height:@"" cut:@""];
+    self.a_productOriginImageUrl = [ImageUrlPath getNetWorkImageUrl:dict[@"productImagesId"] type:@"product" width:[NSString stringWithFormat:@"%d",(int)IMAGEWIDTH] height:@"" cut:@""];
     NSLog(@"a_productOriginImageUrl ===> %@",self.a_productOriginImageUrl);
     self.a_commentNumber = dict[@"commentsNum"];
     self.a_createdBy = dict[@"createdTime"];

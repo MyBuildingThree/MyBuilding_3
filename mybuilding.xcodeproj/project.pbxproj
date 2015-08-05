@@ -76,6 +76,9 @@
 		D3A8B4081B70E9B20033457F /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A8B4031B70E9B20033457F /* RegisterVC.m */; };
 		D3A8B4091B70E9B20033457F /* ResetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A8B4051B70E9B20033457F /* ResetVC.m */; };
 		D3B4DE341B707B36006A20E2 /* ShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B4DE331B707B36006A20E2 /* ShowView.m */; };
+		D3DD5DE61B719A2500FFF890 /* SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC71A51B70E8E500B2ED69 /* SearchVC.m */; };
+		D3DD5DEC1B722A6A00FFF890 /* ProjectContactModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DD5DEB1B722A6A00FFF890 /* ProjectContactModel.m */; };
+		D3DD5DEF1B722C3F00FFF890 /* ProjectImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DD5DEE1B722C3F00FFF890 /* ProjectImageModel.m */; };
 		D3DF12541B6B3E1F00DFEE8F /* GetImagePath.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF12531B6B3E1F00DFEE8F /* GetImagePath.m */; };
 		D3DF12611B6B412800DFEE8F /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF12581B6B412800DFEE8F /* FMDatabase.m */; };
 		D3DF12621B6B412800DFEE8F /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF125A1B6B412800DFEE8F /* FMResultSet.m */; };
@@ -309,6 +312,10 @@
 		D3A8B4051B70E9B20033457F /* ResetVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetVC.m; sourceTree = "<group>"; };
 		D3B4DE321B707B36006A20E2 /* ShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowView.h; sourceTree = "<group>"; };
 		D3B4DE331B707B36006A20E2 /* ShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowView.m; sourceTree = "<group>"; };
+		D3DD5DEA1B722A6A00FFF890 /* ProjectContactModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectContactModel.h; sourceTree = "<group>"; };
+		D3DD5DEB1B722A6A00FFF890 /* ProjectContactModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectContactModel.m; sourceTree = "<group>"; };
+		D3DD5DED1B722C3F00FFF890 /* ProjectImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectImageModel.h; sourceTree = "<group>"; };
+		D3DD5DEE1B722C3F00FFF890 /* ProjectImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectImageModel.m; sourceTree = "<group>"; };
 		D3DF12521B6B3E1F00DFEE8F /* GetImagePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetImagePath.h; sourceTree = "<group>"; };
 		D3DF12531B6B3E1F00DFEE8F /* GetImagePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetImagePath.m; sourceTree = "<group>"; };
 		D3DF12561B6B412800DFEE8F /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
@@ -686,6 +693,10 @@
 				5B5CA1AC1B6F713600CC3896 /* ProjectApi.m */,
 				5B5CA1AD1B6F713600CC3896 /* ProjectModel.h */,
 				5B5CA1AE1B6F713600CC3896 /* ProjectModel.m */,
+				D3DD5DEA1B722A6A00FFF890 /* ProjectContactModel.h */,
+				D3DD5DEB1B722A6A00FFF890 /* ProjectContactModel.m */,
+				D3DD5DED1B722C3F00FFF890 /* ProjectImageModel.h */,
+				D3DD5DEE1B722C3F00FFF890 /* ProjectImageModel.m */,
 			);
 			path = ProjectModel;
 			sourceTree = "<group>";
@@ -1489,6 +1500,7 @@
 				5B5CA19F1B6F70ED00CC3896 /* ChatBaseViewController.m in Sources */,
 				D3DF12621B6B412800DFEE8F /* FMResultSet.m in Sources */,
 				D3DF12D01B6B7DA000DFEE8F /* SDImageCache.m in Sources */,
+				D3DD5DEF1B722C3F00FFF890 /* ProjectImageModel.m in Sources */,
 				5B5CA1AF1B6F713600CC3896 /* LoginApi.m in Sources */,
 				D3DF12DC1B6B7DA000DFEE8F /* UIImageView+WebCache.m in Sources */,
 				D3E37A751B68C2B20073D401 /* AFAppDotNetAPIClient.m in Sources */,
