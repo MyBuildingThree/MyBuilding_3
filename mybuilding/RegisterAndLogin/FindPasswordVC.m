@@ -10,6 +10,7 @@
 #import "ShowView.h"
 #import "ResetVC.h"
 #import "RegisterVC.h"
+#import "LoginApi.h"
 
 #define textRatio (((UIView *)[UIApplication sharedApplication].delegate.window).bounds.size.width)
 
@@ -85,7 +86,6 @@
     self.pic.backgroundColor = [UIColor blueColor];
     self.pic.frame = CGRectMake(self.view.frame.size.width*0.75, self.view.frame.size.height*0.05, self.view.frame.size.width*0.2, self.view.frame.size.height*0.05);
     [self.view addSubview:self.pic];
-    
     
     //手机号码提示文字
     UILabel *numberLabel = [[UILabel alloc]initWithFrame:CGRectMake(self.view.frame.size.width*0.05, self.view.frame.size.height*0.12, self.view.frame.size.width*0.2, self.view.frame.size.height*0.05)];
@@ -175,16 +175,59 @@
     else if (btn == self.codeBtn)
     {
         //空
-        if (self.picTF.text.length == 0||self.numberTF.text.length == 0)
+        if (self.numberTF.text.length == 0)
         {
-            [ShowView showAtFrame:CGRectMake(self.view.bounds.size.width*0.2, self.view.bounds.size.height*0.5, self.view.bounds.size.width*0.6, 50) backgroundColor:[UIColor blackColor] title:@"请输入手机号/图片验证码" titleColor:[UIColor whiteColor] titleFontOfSize:18.0f animateWithDuration:2.0f completion:^{}];
+            [ShowView showAtFrame:CGRectMake(self.view.bounds.size.width*0.2, self.view.bounds.size.height*0.5, self.view.bounds.size.width*0.6, 50) backgroundColor:[UIColor blackColor] title:@"请输入手机号" titleColor:[UIColor whiteColor] titleFontOfSize:18.0f animateWithDuration:2.0f completion:^{}];
+        }
+        //手机号错误
+       else if ((self.numberTF.text.length != 11))
+       {
+            [ShowView showAtFrame:CGRectMake(self.view.bounds.size.width*0.2, self.view.bounds.size.height*0.5, self.view.bounds.size.width*0.6, 50) backgroundColor:[UIColor blackColor] title:@"手机号码不正确" titleColor:[UIColor whiteColor] titleFontOfSize:18.0f animateWithDuration:2.0f completion:^{}];
         }
         //倒计时
         else
         {
-            self.codeBtn.selected = YES;
-            self.codeBtn.userInteractionEnabled = NO;
-            [self.timer setFireDate:[NSDate distantPast]];
+            //查看该手机号是否已经存在(注册)
+           [LoginApi GetIsExistWithBlock:^(NSDictionary *item, NSError *error) {
+               //如果不存在
+               if ([[item objectForKey:@"statusCode"]isEqualToString:@"200"])
+               {
+                   if ([self.nextBtn.titleLabel.text isEqualToString:@"注册"]) {
+                       self.codeBtn.selected = YES;
+                       [self.timer setFireDate:[NSDate distantPast]];
+                       //获取验证码
+                       [LoginApi GenerateWithBlock:^(NSMutableArray *posts, NSError *error) {
+                           NSLog(@"**********获取验证码%@**********",posts);
+                       } dic:(NSMutableDictionary *)@{@"cellPhone":self.numberTF.text, @"codeType":@"00"} noNetWork:^{}];
+                   }
+                   else if ([self.nextBtn.titleLabel.text isEqualToString:@"下一步"]) {
+                       self.codeBtn.selected = YES;
+                       [self.timer setFireDate:[NSDate distantPast]];
+                       //获取验证码
+                       [ShowView showAtFrame:CGRectMake(self.view.bounds.size.width*0.2, self.view.bounds.size.height*0.5, self.view.bounds.size.width*0.6, 50) backgroundColor:[UIColor blackColor] title:@"用户不存在" titleColor:[UIColor whiteColor] titleFontOfSize:18.0f animateWithDuration:2.0f completion:^{}];
+                   }
+                   
+               }
+               //用户存在
+               else
+               {
+                   if ([self.nextBtn.titleLabel.text isEqualToString:@"注册"]) {
+                       [ShowView showAtFrame:CGRectMake(self.view.bounds.size.width*0.2, self.view.bounds.size.height*0.5, self.view.bounds.size.width*0.6, 50) backgroundColor:[UIColor blackColor] title:@"用户已存在" titleColor:[UIColor whiteColor] titleFontOfSize:18.0f animateWithDuration:2.0f completion:^{}];
+                   }
+                   else if ([self.nextBtn.titleLabel.text isEqualToString:@"下一步"]) {
+                       
+                       self.codeBtn.selected = YES;
+                       [self.timer setFireDate:[NSDate distantPast]];
+                       //获取验证码
+                       [LoginApi GenerateWithBlock:^(NSMutableArray *posts, NSError *error) {
+                           NSLog(@"**********获取验证码%@**********",posts);
+                       } dic:(NSMutableDictionary *)@{@"cellPhone":self.numberTF.text, @"codeType":@"01"} noNetWork:^{}];
+                   }
+
+                   
+               }
+           } userName:self.numberTF.text noNetWork:^{}];
+            
         }
     }
     //重置密码 or 注册
@@ -192,11 +235,29 @@
     {
         if ([btn.titleLabel.text isEqualToString:@"下一步"])
         {
-            [self.navigationController pushViewController:[[ResetVC alloc]init] animated:YES];
-        } else
+            //验证验证码
+            [LoginApi VerifyCodeWithBlock:^(NSMutableArray *posts, NSError *error) {
+                if (!error)
+                {
+                    [self.navigationController pushViewController:[[ResetVC alloc]init] animated:YES];
+                }
+            } cellPhone:self.numberTF.text code:self.codeTF.text noNetWork:^{}];
+            
+        }
+        else
         {
             if (self.readBtn.selected) {
-                [self.navigationController pushViewController:[[RegisterVC alloc]init] animated:YES];
+                //验证验证码
+                [LoginApi VerifyCodeWithBlock:^(NSMutableArray *posts, NSError *error) {
+                    if (!error)
+                    {
+                        RegisterVC *rvc = [[RegisterVC alloc]init];
+                        rvc.numberTF.text = self.numberTF.text;
+                        //注册
+                        [self.navigationController pushViewController:rvc animated:YES];
+                    }
+                } cellPhone:self.numberTF.text code:self.codeTF.text noNetWork:^{}];
+                
             }
         }
     }
@@ -237,5 +298,13 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+//- (BOOL)checkTelNumber:(NSString *) telNumber
+//{
+//    NSString *pattern = @^1+[3578]+\d{9};
+//    NSPredicate *pred = [NSPredicate predicateWithFormat:@SELF MATCHES %@, pattern];
+//    BOOL isMatch = [pred evaluateWithObject:telNumber];
+//    return isMatch;
+//}
 
 @end

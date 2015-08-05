@@ -31,6 +31,7 @@
 
 @implementation LoginVC
 
+//弹出登陆界面
 +(void)loadLoginViewControllerPresentBy:(UIViewController *)vc
 {
     UINavigationController *nc = [[UINavigationController alloc]initWithRootViewController:[[LoginVC alloc]init]];
@@ -42,10 +43,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     //创建子控件
     [self createSubViews];
-    
     //监听键盘变化
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
@@ -141,6 +140,8 @@
     //退出
     if (btn == self.backBtn)
     {
+        [self.userNameTF resignFirstResponder];
+        [self.passwordTF resignFirstResponder];
         [self.navigationController dismissViewControllerAnimated:YES completion:^{}];
     }
     //登陆
@@ -151,24 +152,24 @@
         //判断是否为空
         if ((userNameStr.length == 0)||(passwordStr.length == 0))
         {
-            [ShowView showAtFrame:CGRectMake(self.view.bounds.size.width*0.2, self.view.bounds.size.height*0.5, self.view.bounds.size.width*0.6, 50) backgroundColor:[UIColor blackColor] title:@"请输入账号或密码" titleColor:[UIColor whiteColor] titleFontOfSize:18.0f animateWithDuration:2.0f completion:^{
-                self.userNameTF.text = @"";
-                self.passwordTF.text = @"";
-            }];
+            [ShowView showAtFrame:CGRectMake(self.view.bounds.size.width*0.2, self.view.bounds.size.height*0.5, self.view.bounds.size.width*0.6, 50) backgroundColor:[UIColor blackColor] title:@"请输入账号或密码" titleColor:[UIColor whiteColor] titleFontOfSize:18.0f animateWithDuration:2.0f completion:^{}];
         }
         else
         {
+            //上传的字典
             NSDictionary *dict = @{@"downloadType":@"02",@"deviceType":@"05",@"password":[MD5 md5HexDigest:passwordStr],@"userNameOrCellPhone":userNameStr};
-            
+            //上传方法
             [LoginApi LoginWithBlock:^(LoginModel *loginModel, NSError *error) {
-                if(!error){
-                
-                }
-            } dic:(NSMutableDictionary *)dict noNetWork:^{
-                [ShowView showAtFrame:CGRectMake(self.view.bounds.size.width*0.2, self.view.bounds.size.height*0.5, self.view.bounds.size.width*0.6, 50) backgroundColor:[UIColor blackColor] title:@"无网络可用" titleColor:[UIColor whiteColor] titleFontOfSize:18.0f animateWithDuration:2.0f completion:^{
-                }];
-
-            }];
+                //登陆成功
+                if(!error)
+                {
+                    [ShowView showAtFrame:CGRectMake(self.view.bounds.size.width*0.2, self.view.bounds.size.height*0.5, self.view.bounds.size.width*0.6, 50) backgroundColor:[UIColor blackColor] title:@"登陆成功" titleColor:[UIColor whiteColor] titleFontOfSize:18.0f animateWithDuration:0.6f completion:^{
+                        [self.userNameTF resignFirstResponder];
+                        [self.passwordTF resignFirstResponder];
+                        [self.navigationController dismissViewControllerAnimated:YES completion:^{}];
+                    }];
+                 }
+            } dic:(NSMutableDictionary *)dict noNetWork:^{}];
         }
         
     }

@@ -7,6 +7,7 @@
 //
 
 #import "MyBuildingTabBarController.h"
+#import "LoginVC.h"
 
 
 
@@ -63,6 +64,7 @@
     self.bgImageView = [[UIImageView alloc]initWithFrame:self.tabBar.bounds];
     self.bgImageView.userInteractionEnabled = YES;
     self.bgImageView.image = [UIImage imageNamed:@"bg"];
+    self.bgImageView.backgroundColor = [UIColor greenColor];
     [self.tabBar addSubview:self.bgImageView];
 }
 
@@ -131,13 +133,21 @@
  */
 - (void)btnClick:(UIButton *)btn
 {
-    if (btn != self.selectedBtn)
+    if (btn.tag == 12)
     {
+        [LoginVC loadLoginViewControllerPresentBy:self];
+        
+    }
+    else if (btn != self.selectedBtn)
+    {
+        
+        
         self.selectedBtn.selected = NO;
         btn.selected = YES;
         self.selectedBtn = btn;
         
         self.selectedIndex = btn.tag - 10;
+        
     }
 }
 

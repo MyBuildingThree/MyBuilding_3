@@ -8,8 +8,8 @@
 
 #import "HomeNavigationController.h"
 #import "MyBuildingTabBarController.h"
-//#import "PopoverView.h"
-//#import "ADCampaignViewController.h"
+#import "PopoverView.h"
+#import "ADScrollView.h"
 #import "LoginVC.h"
 #import "SearchVC.h"
 
@@ -81,7 +81,7 @@
 {
     [self removeSubviews];
     //添加 搜索 按钮
-    self.searchBtn = [[UIButton alloc]initWithFrame:CGRectMake(150, 5, 60, 30)];
+    self.searchBtn = [[UIButton alloc]initWithFrame:CGRectMake(210, 5, 60, 30)];
     //self.searchBtn.backgroundColor = [UIColor brownColor];
     [self.searchBtn setTitle:@"搜索" forState:UIControlStateNormal];
     [self.searchBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -89,7 +89,7 @@
     [self.navigationBar addSubview:self.searchBtn];
     
     //添加 更多功能 按钮
-    self.moreBtn = [[UIButton alloc]initWithFrame:CGRectMake(230, 5, 80, 30)];
+    self.moreBtn = [[UIButton alloc]initWithFrame:CGRectMake(280, 5, 80, 30)];
     //self.moreBtn.backgroundColor = [UIColor brownColor];
     [self.moreBtn setTitle:@"更多功能" forState:UIControlStateNormal];
     [self.moreBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -181,13 +181,22 @@
 //                }];
 //            }
 //        };
-        SearchVC *sv =  [[SearchVC alloc]init];
-        sv.hidesBottomBarWhenPushed = YES;
-        [self pushViewController:sv animated:YES];
+        CGRect rc = [self.navigationBar convertRect:btn.frame toView:[UIApplication sharedApplication].keyWindow];
+        
+        CGPoint point = CGPointMake(rc.origin.x + rc.size.width/2, rc.origin.y + rc.size.height);
+        [PopoverView popUpWithPoint:point titles:@[@"热线电话",@"消息通知",@"广告活动"] images:nil scroller:NO selectTodo:^(NSInteger index) {
+            if (index == 2) {
+                ADScrollView *ad = [[ADScrollView alloc]initWithFrame:self.view.bounds];
+                [[[UIApplication sharedApplication].windows lastObject] addSubview:ad];
+            }
+        }];
+        
     }
     if ([btn.titleLabel.text isEqualToString:@"搜索"])
     {
-        [LoginVC loadLoginViewControllerPresentBy:self];
+        SearchVC *sv =  [[SearchVC alloc]init];
+        sv.hidesBottomBarWhenPushed = YES;
+        [self pushViewController:sv animated:YES];
     }
 }
 

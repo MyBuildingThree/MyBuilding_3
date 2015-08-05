@@ -9,22 +9,7 @@
 #import "SearchSqlite.h"
 #import "FMDB.h"
 
-@interface SearchSqlite ()
-//{
-////@property (nonatomic, strong)FMDatabase *db;
-//NSMutableArray *_hisArray;
-//}
-@end
-
 @implementation SearchSqlite
-
-//-(NSMutableArray *)hisArray
-//{
-//    if (!_hisArray) {
-//        _hisArray = [NSMutableArray array];
-//    }
-//    return _hisArray;
-//}
 
 //查询数据
 + (NSMutableArray *)openSqlWithClass:(NSString *)classStr
@@ -82,7 +67,7 @@
 //删除数据
 + (void)deleteDataWith:(NSString *)classStr
 {
-    FMDatabase *db = [FMDatabase databaseWithPath:DataBaseName];
+    FMDatabase *db = [FMDatabase databaseWithPath:DataBasePath];
     if ([db open])
     {
         NSString *sqlCreateTable =  [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS SearchResult (ID integer PRIMARY KEY AUTOINCREMENT, Class text, Content text)"];
@@ -90,7 +75,6 @@
         BOOL res = [db executeUpdate:sqlCreateTable];
         if (res)
         {
-            //[SearchSqlite getHistoryWith:classStr];
             FMResultSet *rs = [db executeQuery:@"select * from SearchResult where Class = ?",classStr];
             while ([rs next])
             {
