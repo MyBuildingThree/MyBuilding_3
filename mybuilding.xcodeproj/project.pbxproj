@@ -248,8 +248,8 @@
 		5DAC71951B70511300B2ED69 /* RegisterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterVC.m; sourceTree = "<group>"; };
 		5DAC719B1B70A7EA00B2ED69 /* SearchSqlite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchSqlite.h; sourceTree = "<group>"; };
 		5DAC719C1B70A7EA00B2ED69 /* SearchSqlite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchSqlite.m; sourceTree = "<group>"; };
-		5DAC719F1B70D44300B2ED69 /* SearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchVC.h; sourceTree = "<group>"; };
-		5DAC71A01B70D44300B2ED69 /* SearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchVC.m; sourceTree = "<group>"; };
+		5DAC71A41B70E8E500B2ED69 /* SearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchVC.h; sourceTree = "<group>"; };
+		5DAC71A51B70E8E500B2ED69 /* SearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchVC.m; sourceTree = "<group>"; };
 		D35595891B6EFD8B00E4577B /* HomeNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeNavigationController.h; sourceTree = "<group>"; };
 		D355958A1B6EFD8B00E4577B /* HomeNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeNavigationController.m; sourceTree = "<group>"; };
 		D355958C1B6EFD8B00E4577B /* MyBuildingTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBuildingTabBarController.h; sourceTree = "<group>"; };
@@ -719,11 +719,11 @@
 			path = RegisterAndLogin;
 			sourceTree = "<group>";
 		};
-		5DAC719E1B70D44300B2ED69 /* SearchVC */ = {
+		5DAC71A31B70E8E500B2ED69 /* SearchVC */ = {
 			isa = PBXGroup;
 			children = (
-				5DAC719F1B70D44300B2ED69 /* SearchVC.h */,
-				5DAC71A01B70D44300B2ED69 /* SearchVC.m */,
+				5DAC71A41B70E8E500B2ED69 /* SearchVC.h */,
+				5DAC71A51B70E8E500B2ED69 /* SearchVC.m */,
 			);
 			path = SearchVC;
 			sourceTree = "<group>";
@@ -769,7 +769,7 @@
 		D35595921B6EFEA500E4577B /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				5DAC719E1B70D44300B2ED69 /* SearchVC */,
+				5DAC71A31B70E8E500B2ED69 /* SearchVC */,
 				5B5CA1311B6F3A1100CC3896 /* Recommend */,
 				5B5CA1301B6F3A1100CC3896 /* Project */,
 				5B5CA12D1B6F3A1100CC3896 /* Company */,
@@ -1409,11 +1409,11 @@
 				D3E37A791B68D15D0073D401 /* SendRequst.m in Sources */,
 				D3A8B4091B70E9B20033457F /* ResetVC.m in Sources */,
 				D3DF12DB1B6B7DA000DFEE8F /* UIImageView+HighlightedWebCache.m in Sources */,
-				5DAC71A11B70D44300B2ED69 /* SearchVC.m in Sources */,
 				5B5CA1A01B6F70ED00CC3896 /* SearchBarTableViewController.m in Sources */,
 				D3DF12A21B6B614400DFEE8F /* MJRefreshBackNormalFooter.m in Sources */,
 				5B5CA1941B6F70ED00CC3896 /* RKTestController_1.m in Sources */,
 				D35595A21B6EFF6200E4577B /* MineViewController.m in Sources */,
+				5DAC71A61B70E8E500B2ED69 /* SearchVC.m in Sources */,
 				D355959E1B6EFF5600E4577B /* FellowsViewController.m in Sources */,
 				D3E37A5F1B68BAA20073D401 /* UIAlertView+AFNetworking.m in Sources */,
 				5B5CA1911B6F70ED00CC3896 /* RKCamera.m in Sources */,

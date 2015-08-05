@@ -94,7 +94,7 @@
             FMResultSet *rs = [db executeQuery:@"select * from SearchResult where Class = ?",classStr];
             while ([rs next])
             {
-                [db executeUpdate:@"delete form SearchResult where ID = ?",[rs stringForColumn:@"ID"]];
+                [db executeUpdate:@"delete from SearchResult where ID = ?",[rs stringForColumn:@"ID"]];
             }
         }
     }
