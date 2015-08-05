@@ -82,7 +82,7 @@
 //删除数据
 + (void)deleteDataWith:(NSString *)classStr
 {
-    FMDatabase *db = [FMDatabase databaseWithPath:dataBasePath];
+    FMDatabase *db = [FMDatabase databaseWithPath:DataBaseName];
     if ([db open])
     {
         NSString *sqlCreateTable =  [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS SearchResult (ID integer PRIMARY KEY AUTOINCREMENT, Class text, Content text)"];

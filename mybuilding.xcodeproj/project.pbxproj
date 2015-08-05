@@ -33,16 +33,6 @@
 		5B5CA1B21B6F713600CC3896 /* ProjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CA1AE1B6F713600CC3896 /* ProjectModel.m */; };
 		5B5CA1B51B6F716900CC3896 /* ProjectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CA1B41B6F716900CC3896 /* ProjectTableViewCell.m */; };
 		5B5CA1B91B6F718000CC3896 /* ManageString.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CA1B81B6F718000CC3896 /* ManageString.m */; };
-		5BDBE49E1B70803B00459697 /* MainProjectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE49D1B70803B00459697 /* MainProjectController.m */; };
-		5BDBE4A11B70853F00459697 /* MainCompanyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4A01B70853F00459697 /* MainCompanyController.m */; };
-		5BDBE4A41B709A0A00459697 /* MainProductController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4A31B709A0A00459697 /* MainProductController.m */; };
-		5BDBE4A71B709A2E00459697 /* MainProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4A61B709A2E00459697 /* MainProductCell.m */; };
-		5BDBE4BD1B70C11000459697 /* NSString+LabelKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B11B70C11000459697 /* NSString+LabelKit.m */; };
-		5BDBE4BE1B70C11000459697 /* UIImageView+ViewKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B31B70C11000459697 /* UIImageView+ViewKit.m */; };
-		5BDBE4BF1B70C11000459697 /* UILabel+LabelKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B51B70C11000459697 /* UILabel+LabelKit.m */; };
-		5BDBE4C01B70C11000459697 /* UIView+ViewKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B71B70C11000459697 /* UIView+ViewKit.m */; };
-		5BDBE4C11B70C11000459697 /* RKShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4BA1B70C11000459697 /* RKShadowView.m */; };
-		5BDBE4C21B70C11000459697 /* RKViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4BC1B70C11000459697 /* RKViewFactory.m */; };
 		5DAC71A11B70D44300B2ED69 /* SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC71A01B70D44300B2ED69 /* SearchVC.m */; };
 		5DAC71A21B70D9CF00B2ED69 /* SearchSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC719C1B70A7EA00B2ED69 /* SearchSqlite.m */; };
 		D355958E1B6EFD8B00E4577B /* HomeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D355958A1B6EFD8B00E4577B /* HomeNavigationController.m */; };
@@ -63,20 +53,21 @@
 		D3A8B3DE1B70C2BE0033457F /* MainRecommendController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A8B3DD1B70C2BE0033457F /* MainRecommendController.m */; };
 		D3A8B3E41B70C2F50033457F /* RecommendApi.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A8B3E11B70C2F50033457F /* RecommendApi.m */; };
 		D3A8B3E51B70C2F50033457F /* RecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A8B3E31B70C2F50033457F /* RecommendModel.m */; };
-		D3A8B3EF1B70D53F0033457F /* FindPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A8B3E81B70D53F0033457F /* FindPasswordVC.m */; };
-		D3A8B3F01B70D53F0033457F /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A8B3EA1B70D53F0033457F /* LoginVC.m */; };
-		D3A8B3F11B70D53F0033457F /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A8B3EC1B70D53F0033457F /* RegisterVC.m */; };
-		D3A8B3F21B70D53F0033457F /* ResetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A8B3EE1B70D53F0033457F /* ResetVC.m */; };
-		D3A8B3F31B70D61A0033457F /* MainProjectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE49D1B70803B00459697 /* MainProjectController.m */; };
-		D3A8B3F41B70D61A0033457F /* MainCompanyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4A01B70853F00459697 /* MainCompanyController.m */; };
-		D3A8B3F51B70D63C0033457F /* MainProductController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4A31B709A0A00459697 /* MainProductController.m */; };
-		D3A8B3F61B70D63C0033457F /* MainProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4A61B709A2E00459697 /* MainProductCell.m */; };
-		D3A8B3F71B70D63C0033457F /* ProductApi.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EB7E8F1B7054DD00482BCD /* ProductApi.m */; };
-		D3A8B3F81B70D65D0033457F /* RKShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4BA1B70C11000459697 /* RKShadowView.m */; };
-		D3A8B3F91B70D65D0033457F /* RKViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4BC1B70C11000459697 /* RKViewFactory.m */; };
-		D3A8B3FA1B70D8810033457F /* NSString+LabelKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B11B70C11000459697 /* NSString+LabelKit.m */; };
-		D3A8B3FB1B70D8810033457F /* UIImageView+ViewKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B31B70C11000459697 /* UIImageView+ViewKit.m */; };
-		D3A8B3FC1B70D8810033457F /* UIView+ViewKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B71B70C11000459697 /* UIView+ViewKit.m */; };
+		D3A8B4061B70E9B20033457F /* FindPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A8B3FF1B70E9B20033457F /* FindPasswordVC.m */; };
+		D3A8B4071B70E9B20033457F /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A8B4011B70E9B20033457F /* LoginVC.m */; };
+		D3A8B4081B70E9B20033457F /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A8B4031B70E9B20033457F /* RegisterVC.m */; };
+		D3A8B4091B70E9B20033457F /* ResetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A8B4051B70E9B20033457F /* ResetVC.m */; };
+		D3A8B40A1B70EA110033457F /* MainProjectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE49D1B70803B00459697 /* MainProjectController.m */; };
+		D3A8B40B1B70EA110033457F /* MainCompanyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4A01B70853F00459697 /* MainCompanyController.m */; };
+		D3A8B40C1B70EA110033457F /* MainProductController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4A31B709A0A00459697 /* MainProductController.m */; };
+		D3A8B40D1B70EA110033457F /* MainProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4A61B709A2E00459697 /* MainProductCell.m */; };
+		D3A8B40E1B70EA110033457F /* ProductApi.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EB7E8F1B7054DD00482BCD /* ProductApi.m */; };
+		D3A8B4131B70EA110033457F /* NSString+LabelKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B11B70C11000459697 /* NSString+LabelKit.m */; };
+		D3A8B4141B70EA110033457F /* UIImageView+ViewKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B31B70C11000459697 /* UIImageView+ViewKit.m */; };
+		D3A8B4151B70EA110033457F /* UILabel+LabelKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B51B70C11000459697 /* UILabel+LabelKit.m */; };
+		D3A8B4161B70EA110033457F /* UIView+ViewKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B71B70C11000459697 /* UIView+ViewKit.m */; };
+		D3A8B4171B70EA110033457F /* RKShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4BA1B70C11000459697 /* RKShadowView.m */; };
+		D3A8B4181B70EA110033457F /* RKViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4BC1B70C11000459697 /* RKViewFactory.m */; };
 		D3B4DE341B707B36006A20E2 /* ShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B4DE331B707B36006A20E2 /* ShowView.m */; };
 		D3DF12541B6B3E1F00DFEE8F /* GetImagePath.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF12531B6B3E1F00DFEE8F /* GetImagePath.m */; };
 		D3DF12611B6B412800DFEE8F /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF12581B6B412800DFEE8F /* FMDatabase.m */; };
@@ -287,14 +278,14 @@
 		D3A8B3E11B70C2F50033457F /* RecommendApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendApi.m; sourceTree = "<group>"; };
 		D3A8B3E21B70C2F50033457F /* RecommendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendModel.h; sourceTree = "<group>"; };
 		D3A8B3E31B70C2F50033457F /* RecommendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendModel.m; sourceTree = "<group>"; };
-		D3A8B3E71B70D53F0033457F /* FindPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindPasswordVC.h; sourceTree = "<group>"; };
-		D3A8B3E81B70D53F0033457F /* FindPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindPasswordVC.m; sourceTree = "<group>"; };
-		D3A8B3E91B70D53F0033457F /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
-		D3A8B3EA1B70D53F0033457F /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
-		D3A8B3EB1B70D53F0033457F /* RegisterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterVC.h; sourceTree = "<group>"; };
-		D3A8B3EC1B70D53F0033457F /* RegisterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterVC.m; sourceTree = "<group>"; };
-		D3A8B3ED1B70D53F0033457F /* ResetVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetVC.h; sourceTree = "<group>"; };
-		D3A8B3EE1B70D53F0033457F /* ResetVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetVC.m; sourceTree = "<group>"; };
+		D3A8B3FE1B70E9B20033457F /* FindPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindPasswordVC.h; sourceTree = "<group>"; };
+		D3A8B3FF1B70E9B20033457F /* FindPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindPasswordVC.m; sourceTree = "<group>"; };
+		D3A8B4001B70E9B20033457F /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
+		D3A8B4011B70E9B20033457F /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
+		D3A8B4021B70E9B20033457F /* RegisterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterVC.h; sourceTree = "<group>"; };
+		D3A8B4031B70E9B20033457F /* RegisterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterVC.m; sourceTree = "<group>"; };
+		D3A8B4041B70E9B20033457F /* ResetVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetVC.h; sourceTree = "<group>"; };
+		D3A8B4051B70E9B20033457F /* ResetVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetVC.m; sourceTree = "<group>"; };
 		D3B4DE321B707B36006A20E2 /* ShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowView.h; sourceTree = "<group>"; };
 		D3B4DE331B707B36006A20E2 /* ShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowView.m; sourceTree = "<group>"; };
 		D3DF12521B6B3E1F00DFEE8F /* GetImagePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetImagePath.h; sourceTree = "<group>"; };
@@ -833,17 +824,17 @@
 			path = RecommendModel;
 			sourceTree = "<group>";
 		};
-		D3A8B3E61B70D53F0033457F /* RegisterAndLogin */ = {
+		D3A8B3FD1B70E9B20033457F /* RegisterAndLogin */ = {
 			isa = PBXGroup;
 			children = (
-				D3A8B3E71B70D53F0033457F /* FindPasswordVC.h */,
-				D3A8B3E81B70D53F0033457F /* FindPasswordVC.m */,
-				D3A8B3E91B70D53F0033457F /* LoginVC.h */,
-				D3A8B3EA1B70D53F0033457F /* LoginVC.m */,
-				D3A8B3EB1B70D53F0033457F /* RegisterVC.h */,
-				D3A8B3EC1B70D53F0033457F /* RegisterVC.m */,
-				D3A8B3ED1B70D53F0033457F /* ResetVC.h */,
-				D3A8B3EE1B70D53F0033457F /* ResetVC.m */,
+				D3A8B3FE1B70E9B20033457F /* FindPasswordVC.h */,
+				D3A8B3FF1B70E9B20033457F /* FindPasswordVC.m */,
+				D3A8B4001B70E9B20033457F /* LoginVC.h */,
+				D3A8B4011B70E9B20033457F /* LoginVC.m */,
+				D3A8B4021B70E9B20033457F /* RegisterVC.h */,
+				D3A8B4031B70E9B20033457F /* RegisterVC.m */,
+				D3A8B4041B70E9B20033457F /* ResetVC.h */,
+				D3A8B4051B70E9B20033457F /* ResetVC.m */,
 			);
 			path = RegisterAndLogin;
 			sourceTree = "<group>";
@@ -1091,7 +1082,7 @@
 		D3E379F21B686C9E0073D401 /* mybuilding */ = {
 			isa = PBXGroup;
 			children = (
-				D3A1746D1B6F96CC00BC6DA1 /* RegisterAndLogin */,
+				D3A8B3FD1B70E9B20033457F /* RegisterAndLogin */,
 				D35595901B6EFEA500E4577B /* Fellows */,
 				D35595911B6EFEA500E4577B /* Focus */,
 				D35595921B6EFEA500E4577B /* Main */,
@@ -1344,6 +1335,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3A8B40A1B70EA110033457F /* MainProjectController.m in Sources */,
+				D3A8B40B1B70EA110033457F /* MainCompanyController.m in Sources */,
+				D3A8B40C1B70EA110033457F /* MainProductController.m in Sources */,
+				D3A8B40D1B70EA110033457F /* MainProductCell.m in Sources */,
+				D3A8B40E1B70EA110033457F /* ProductApi.m in Sources */,
+				D3A8B4131B70EA110033457F /* NSString+LabelKit.m in Sources */,
+				D3A8B4141B70EA110033457F /* UIImageView+ViewKit.m in Sources */,
+				D3A8B4151B70EA110033457F /* UILabel+LabelKit.m in Sources */,
+				D3A8B4161B70EA110033457F /* UIView+ViewKit.m in Sources */,
+				D3A8B4171B70EA110033457F /* RKShadowView.m in Sources */,
+				D3A8B4181B70EA110033457F /* RKViewFactory.m in Sources */,
 				5DAC71A21B70D9CF00B2ED69 /* SearchSqlite.m in Sources */,
 				D3B4DE341B707B36006A20E2 /* ShowView.m in Sources */,
 				D3E37A511B68BAA20073D401 /* AFHTTPRequestOperation.m in Sources */,
@@ -1360,7 +1362,7 @@
 				D3DF12641B6B412800DFEE8F /* FMDatabaseAdditions.m in Sources */,
 				D3DF12A11B6B614400DFEE8F /* MJRefreshBackGifFooter.m in Sources */,
 				D3DF12A81B6B614400DFEE8F /* MJRefreshConst.m in Sources */,
-				D3A8B3EF1B70D53F0033457F /* FindPasswordVC.m in Sources */,
+				D3A8B4061B70E9B20033457F /* FindPasswordVC.m in Sources */,
 				D3DF12631B6B412800DFEE8F /* FMDatabaseQueue.m in Sources */,
 				5B5CA18A1B6F70ED00CC3896 /* RKBaseTableViewCell.m in Sources */,
 				D3E37A5D1B68BAA20073D401 /* AFNetworkActivityIndicatorManager.m in Sources */,
@@ -1405,7 +1407,7 @@
 				D3E37A571B68BAA20073D401 /* AFURLRequestSerialization.m in Sources */,
 				5B5CA1901B6F70ED00CC3896 /* RKStageViewPageController.m in Sources */,
 				D3E37A791B68D15D0073D401 /* SendRequst.m in Sources */,
-				D3A8B3F21B70D53F0033457F /* ResetVC.m in Sources */,
+				D3A8B4091B70E9B20033457F /* ResetVC.m in Sources */,
 				D3DF12DB1B6B7DA000DFEE8F /* UIImageView+HighlightedWebCache.m in Sources */,
 				5DAC71A11B70D44300B2ED69 /* SearchVC.m in Sources */,
 				5B5CA1A01B6F70ED00CC3896 /* SearchBarTableViewController.m in Sources */,
@@ -1424,7 +1426,6 @@
 				5B5CA1AF1B6F713600CC3896 /* LoginApi.m in Sources */,
 				D3DF12DC1B6B7DA000DFEE8F /* UIImageView+WebCache.m in Sources */,
 				D3E37A751B68C2B20073D401 /* AFAppDotNetAPIClient.m in Sources */,
-				D3EB7E901B7054DD00482BCD /* ProductApi.m in Sources */,
 				D3E37A641B68BAA20073D401 /* UIWebView+AFNetworking.m in Sources */,
 				D3DF12D81B6B7DA000DFEE8F /* UIImage+GIF.m in Sources */,
 				D3DF12A41B6B614400DFEE8F /* MJRefreshGifHeader.m in Sources */,
@@ -1435,13 +1436,13 @@
 				D3A8B3E51B70C2F50033457F /* RecommendModel.m in Sources */,
 				D3EB7E8D1B7054D000482BCD /* ProductModel.m in Sources */,
 				D3E37A591B68BAA20073D401 /* AFURLSessionManager.m in Sources */,
-				D3A8B3F01B70D53F0033457F /* LoginVC.m in Sources */,
+				D3A8B4071B70E9B20033457F /* LoginVC.m in Sources */,
 				D3DF129A1B6B614400DFEE8F /* MJRefreshBackFooter.m in Sources */,
 				D355958F1B6EFD8B00E4577B /* MyBuildingTabBarController.m in Sources */,
 				5B5CA18F1B6F70ED00CC3896 /* RKScrollViewPageController.m in Sources */,
 				D3E37A631B68BAA20073D401 /* UIRefreshControl+AFNetworking.m in Sources */,
 				5B5CA1891B6F70ED00CC3896 /* RKBaseTableView.m in Sources */,
-				D3A8B3F11B70D53F0033457F /* RegisterVC.m in Sources */,
+				D3A8B4081B70E9B20033457F /* RegisterVC.m in Sources */,
 				D3DF12D91B6B7DA000DFEE8F /* UIImage+MultiFormat.m in Sources */,
 				D3A174651B6F843700BC6DA1 /* CompanyApi.m in Sources */,
 				D3E379F91B686C9E0073D401 /* AppDelegate.m in Sources */,

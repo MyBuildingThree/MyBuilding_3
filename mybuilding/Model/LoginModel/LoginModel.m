@@ -10,10 +10,13 @@
 
 @implementation LoginModel
 -(void)setDict:(NSDictionary *)dict{
-    self.a_userID = dict[@"loginId"];
-    self.a_userName = dict[@"wy0001"];
-    self.a_userAvatarUrl = [ImageUrlPath getNetWorkImageUrl:dict[@"headImageId"] type:@"login" width:@"" height:@"" cut:@""];
-    
     [LoginSqlite insertData:dict[@"loginId"] datakey:@"userId"];
+    [LoginSqlite insertData:dict[@"loginName"] datakey:@"userName"];
+    [LoginSqlite insertData:dict[@"token"] datakey:@"token"];
+    [LoginSqlite insertData:dict[@"headImageId"] datakey:@"userImage"];
+    [LoginSqlite insertData:dict[@"userType"] datakey:@"userType"];
+    [LoginSqlite insertData:dict[@"loginTel"] datakey:@"userPhone"];
+    [LoginSqlite insertData:dict[@"contactName"] datakey:@"contactName"];
+    [LoginSqlite insertData:dict[@"contactTel"] datakey:@"contactTel"];
 }
 @end
