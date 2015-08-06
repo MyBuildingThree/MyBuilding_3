@@ -12,74 +12,32 @@
 
 @interface ProjectDataInfoView1 ()
 
-/**
- *  土地面积
- */
 @property(nonatomic, strong) RKLabelLabel* labelLabel00;
 
-/**
- *  主体设计阶段
- */
 @property(nonatomic, strong) RKLabelLabel* labelLabel01;
 
-/**
- *  钢结构
- */
 @property(nonatomic, strong) RKLabelLabel* labelLabel02;
 
-/**
- *  预计开工
- */
 @property(nonatomic, strong) RKLabelLabel* labelLabel03;
 
-/**
- *  预计竣工
- */
 @property(nonatomic, strong) RKLabelLabel* labelLabel04;
 
-/**
- *  建筑层高
- */
 @property(nonatomic, strong) RKLabelLabel* labelLabel05;
 
-/**
- *  土地面积
- */
 @property(nonatomic, strong) RKLabelLabel* labelLabel06;
 
-/**
- *  投资额
- */
 @property(nonatomic, strong) RKLabelLabel* labelLabel07;
 
-/**
- *  外资参与
- */
 @property(nonatomic, strong) RKLabelLabel* labelLabel08;
 
-/**
- *  土地容积率
- */
 @property(nonatomic, strong) RKLabelLabel* labelLabel09;
 
-/**
- *  建筑面积
- */
 @property(nonatomic, strong) RKLabelLabel* labelLabel10;
 
-/**
- *  桩基基坑
- */
 @property(nonatomic, strong) RKLabelLabel* labelLabel11;
 
-/**
- *  业主类型
- */
 @property(nonatomic, strong) RKLabelLabel* labelLabel12;
 
-/**
- *  地块用途
- */
 @property(nonatomic, strong) RKLabelLabel* labelLabel13;
 
 @end
@@ -102,4 +60,6 @@
     }
     return _labelLabel00;
 }
+
+- (RKLabelLabel *)getRKLabelWith
 @end

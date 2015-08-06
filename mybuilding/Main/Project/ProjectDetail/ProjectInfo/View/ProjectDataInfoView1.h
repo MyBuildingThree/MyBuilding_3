@@ -13,7 +13,7 @@
 /**
  *  设置各参数
  *
- *  @param contents 参数顺序为:土地面积，主体设计阶段，钢结构，预计开工，预计竣工，建筑层高，土地
+ *  @param contents 参数顺序为:暂时不写，设计图有问题，等做完后给需求确认
  */
 - (void)setProjectDataInfoViewContents:(NSArray*)contents;
 
