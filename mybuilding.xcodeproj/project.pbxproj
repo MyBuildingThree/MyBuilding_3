@@ -34,7 +34,6 @@
 		5B5CA1B51B6F716900CC3896 /* ProjectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CA1B41B6F716900CC3896 /* ProjectTableViewCell.m */; };
 		5B5CA1B91B6F718000CC3896 /* ManageString.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CA1B81B6F718000CC3896 /* ManageString.m */; };
 		5B814BCE1B722628004A2559 /* RKLabelLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B814BCD1B722628004A2559 /* RKLabelLabel.m */; };
-		5B814BD11B722DB7004A2559 /* ProjectDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B814BD01B722DB7004A2559 /* ProjectDetailViewController.m */; };
 		5B863CD01B719F9C00AF0D36 /* UILabel+LabelKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B51B70C11000459697 /* UILabel+LabelKit.m */; };
 		5B863CD31B71B03000AF0D36 /* RKImageLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B863CD21B71B03000AF0D36 /* RKImageLabel.m */; };
 		5B863CD61B71B58E00AF0D36 /* RKImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B863CD51B71B58E00AF0D36 /* RKImageView.m */; };
@@ -50,7 +49,6 @@
 		5B863CEF1B71EB1A00AF0D36 /* UIView+ViewKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B71B70C11000459697 /* UIView+ViewKit.m */; };
 		5B863CF01B71EB3900AF0D36 /* UIImageView+ViewKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B31B70C11000459697 /* UIImageView+ViewKit.m */; };
 		5B863CF11B71EB5700AF0D36 /* NSString+LabelKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B11B70C11000459697 /* NSString+LabelKit.m */; };
-		5DAC71A21B70D9CF00B2ED69 /* SearchSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC719C1B70A7EA00B2ED69 /* SearchSqlite.m */; };
 		5BA668A81B7343A200E4A955 /* ProjectCommentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA668931B7343A200E4A955 /* ProjectCommentController.m */; };
 		5BA668A91B7343A200E4A955 /* ProjectDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA668951B7343A200E4A955 /* ProjectDetailViewController.m */; };
 		5BA668AA1B7343A200E4A955 /* ProjectDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA668981B7343A200E4A955 /* ProjectDetailController.m */; };
@@ -61,6 +59,7 @@
 		5BA668AF1B7343A200E4A955 /* ProjectDataInfoView2.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA668A31B7343A200E4A955 /* ProjectDataInfoView2.m */; };
 		5BA668B01B7343A200E4A955 /* ProjectImageInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA668A51B7343A200E4A955 /* ProjectImageInfoView.m */; };
 		5BA668B11B7343A200E4A955 /* ProjectNameInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA668A71B7343A200E4A955 /* ProjectNameInfoView.m */; };
+		5DAC71A21B70D9CF00B2ED69 /* SearchSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC719C1B70A7EA00B2ED69 /* SearchSqlite.m */; };
 		5DDA3A461B721601008DD88F /* ADScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDA3A441B720F6B008DD88F /* ADScrollView.m */; };
 		5DDA3A471B721601008DD88F /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDA3A401B7208BC008DD88F /* PopoverView.m */; };
 		5DECC9351B733C96005762EB /* MyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DECC9341B733C96005762EB /* MyVC.m */; };
@@ -175,8 +174,8 @@
 		D3E91F861B72E90A00FD8851 /* RequirementsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E91F851B72E90A00FD8851 /* RequirementsTableViewCell.m */; };
 		D3E91F871B72EBFD00FD8851 /* ProjectContactModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DD5DEB1B722A6A00FFF890 /* ProjectContactModel.m */; };
 		D3E91F8A1B73218600FD8851 /* MainRequirementsController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E91F891B73218600FD8851 /* MainRequirementsController.m */; };
-		D3E91F8B1B73428D00FD8851 /* ProjectDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA668421B72F35900E4A955 /* ProjectDetailController.m */; };
-		D3E91F8C1B73428D00FD8851 /* ProjectCommentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA668451B72F36B00E4A955 /* ProjectCommentController.m */; };
+		D3E91F8B1B73428D00FD8851 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		D3E91F8C1B73428D00FD8851 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		D3EB7E8D1B7054D000482BCD /* ProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EB7E8C1B7054D000482BCD /* ProductModel.m */; };
 /* End PBXBuildFile section */
 
@@ -310,12 +309,12 @@
 		5DDA3A401B7208BC008DD88F /* PopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverView.m; sourceTree = "<group>"; };
 		5DDA3A431B720F6B008DD88F /* ADScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADScrollView.h; sourceTree = "<group>"; };
 		5DDA3A441B720F6B008DD88F /* ADScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADScrollView.m; sourceTree = "<group>"; };
-		5DECC9331B733C96005762EB /* MyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyVC.h; sourceTree = "<group>"; };
-		5DECC9341B733C96005762EB /* MyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyVC.m; sourceTree = "<group>"; };
-		5DECC9361B733D3B005762EB /* MyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyModel.h; sourceTree = "<group>"; };
-		5DECC9371B733D3B005762EB /* MyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyModel.m; sourceTree = "<group>"; };
-		5DECC9391B736172005762EB /* MyInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyInfoCell.h; sourceTree = "<group>"; };
-		5DECC93A1B736172005762EB /* MyInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyInfoCell.m; sourceTree = "<group>"; };
+		5DECC9331B733C96005762EB /* MyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyVC.h; path = ../Main/MyVC/MyVC.h; sourceTree = "<group>"; };
+		5DECC9341B733C96005762EB /* MyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyVC.m; path = ../Main/MyVC/MyVC.m; sourceTree = "<group>"; };
+		5DECC9361B733D3B005762EB /* MyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyModel.h; path = ../Main/MyVC/MyModel.h; sourceTree = "<group>"; };
+		5DECC9371B733D3B005762EB /* MyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyModel.m; path = ../Main/MyVC/MyModel.m; sourceTree = "<group>"; };
+		5DECC9391B736172005762EB /* MyInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyInfoCell.h; path = ../Main/MyVC/MyInfoCell.h; sourceTree = "<group>"; };
+		5DECC93A1B736172005762EB /* MyInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyInfoCell.m; path = ../Main/MyVC/MyInfoCell.m; sourceTree = "<group>"; };
 		D35595891B6EFD8B00E4577B /* HomeNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeNavigationController.h; sourceTree = "<group>"; };
 		D355958A1B6EFD8B00E4577B /* HomeNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeNavigationController.m; sourceTree = "<group>"; };
 		D355958C1B6EFD8B00E4577B /* MyBuildingTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBuildingTabBarController.h; sourceTree = "<group>"; };
@@ -910,12 +909,6 @@
 		5DECC9321B733B32005762EB /* MyVC */ = {
 			isa = PBXGroup;
 			children = (
-				5DECC9331B733C96005762EB /* MyVC.h */,
-				5DECC9341B733C96005762EB /* MyVC.m */,
-				5DECC9361B733D3B005762EB /* MyModel.h */,
-				5DECC9371B733D3B005762EB /* MyModel.m */,
-				5DECC9391B736172005762EB /* MyInfoCell.h */,
-				5DECC93A1B736172005762EB /* MyInfoCell.m */,
 			);
 			path = MyVC;
 			sourceTree = "<group>";
@@ -930,13 +923,13 @@
 			path = HomeNavigationController;
 			sourceTree = "<group>";
 		};
-		D355958B1B6EFD8B00E4577B /* MyBuildingTBVC */ = {
+		D355958B1B6EFD8B00E4577B /* MBTBVC */ = {
 			isa = PBXGroup;
 			children = (
 				D355958C1B6EFD8B00E4577B /* MyBuildingTabBarController.h */,
 				D355958D1B6EFD8B00E4577B /* MyBuildingTabBarController.m */,
 			);
-			name = MyBuildingTBVC;
+			name = MBTBVC;
 			path = MyBuildingTabBarController;
 			sourceTree = "<group>";
 		};
@@ -979,6 +972,12 @@
 		D35595931B6EFEA500E4577B /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				5DECC9331B733C96005762EB /* MyVC.h */,
+				5DECC9341B733C96005762EB /* MyVC.m */,
+				5DECC9361B733D3B005762EB /* MyModel.h */,
+				5DECC9371B733D3B005762EB /* MyModel.m */,
+				5DECC9391B736172005762EB /* MyInfoCell.h */,
+				5DECC93A1B736172005762EB /* MyInfoCell.m */,
 				D35595A01B6EFF6200E4577B /* MineViewController.h */,
 				D35595A11B6EFF6200E4577B /* MineViewController.m */,
 			);
@@ -1275,7 +1274,7 @@
 				D35595921B6EFEA500E4577B /* Main */,
 				D35595931B6EFEA500E4577B /* Mine */,
 				D35595881B6EFD8B00E4577B /* HomeNavigationVC */,
-				D355958B1B6EFD8B00E4577B /* MyBuildingTBVC */,
+				D355958B1B6EFD8B00E4577B /* MBTBVC */,
 				D3E37A7A1B68D19E0073D401 /* Model */,
 				D3E37A231B68BAA20073D401 /* NetWork */,
 				D3DF124F1B6B3D7700DFEE8F /* Tools */,
@@ -1535,8 +1534,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3E91F8B1B73428D00FD8851 /* ProjectDetailController.m in Sources */,
-				D3E91F8C1B73428D00FD8851 /* ProjectCommentController.m in Sources */,
+				D3E91F8B1B73428D00FD8851 /* (null) in Sources */,
+				D3E91F8C1B73428D00FD8851 /* (null) in Sources */,
 				D3E91F871B72EBFD00FD8851 /* ProjectContactModel.m in Sources */,
 				5DAC71A21B70D9CF00B2ED69 /* SearchSqlite.m in Sources */,
 				5DDA3A461B721601008DD88F /* ADScrollView.m in Sources */,

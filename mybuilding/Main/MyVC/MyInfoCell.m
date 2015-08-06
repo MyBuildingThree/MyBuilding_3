@@ -7,6 +7,7 @@
 //
 
 #import "MyInfoCell.h"
+#import "UIView+ViewKit.h"
 
 @interface MyInfoCell ()
 /**
@@ -36,6 +37,7 @@
     {
         self.userImage = [[UIImageView alloc]init];
         self.userImage.layer.masksToBounds = YES;
+        self.userImage.layer.cornerRadius = self.userImage.width*0.5;
     }
     return self;
 }
