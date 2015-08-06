@@ -10,6 +10,12 @@
 
 @interface SearchVC : UIViewController
 
+/**
+ *  进入搜索界面
+ *
+ *  @param classArray 分类字符串的数组
+ *  @param nc         导航控制器
+ */
 + (void)searchWithClass:(NSArray *)classArray pushBy:(UINavigationController *)nc;
 
 @end
