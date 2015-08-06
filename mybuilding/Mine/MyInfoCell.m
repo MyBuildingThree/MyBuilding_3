@@ -35,11 +35,18 @@
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier])
     {
+        //头像
         self.userImage = [[UIImageView alloc]init];
         self.userImage.layer.masksToBounds = YES;
         self.userImage.layer.cornerRadius = self.userImage.width*0.5;
+        self.userImage.backgroundColor = AllLightGrayColor;
     }
     return self;
+}
+
+-(void)setMyInfoDict:(NSMutableDictionary *)myInfoDict
+{
+    
 }
 
 @end
