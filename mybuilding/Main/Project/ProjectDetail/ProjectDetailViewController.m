@@ -34,6 +34,7 @@ typedef enum{
 - (instancetype)init{
     if (self = [super init]) {
         [self view];
+        self.view.backgroundColor = [UIColor whiteColor];
     }
     return self;
 }

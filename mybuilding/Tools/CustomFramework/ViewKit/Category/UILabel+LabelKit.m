@@ -22,6 +22,7 @@
     
     CGRect bounds = [self.text autosizeWithFont:self.font maxWidth:maxWidth];
     self.size = bounds.size;
+    self.numberOfLines = 0;
     
     return self.frame;
 }
@@ -31,6 +32,7 @@
     
     CGRect bounds = [self.text autosizeWithFont:self.font maxWidth:maxWidth maxHeight:maxHeight];
     self.size = bounds.size;
+    self.numberOfLines = 0;
     
     return self.frame;
 }
