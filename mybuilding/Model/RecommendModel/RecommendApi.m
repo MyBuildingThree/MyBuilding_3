@@ -25,7 +25,10 @@
             block(arr,nil);
         }
     } failure:^(NSError *error) {
-        
+        NSLog(@"error===>%@",error);
+        if (block) {
+            block(nil, error);
+        }
     } noNetWork:noNetWork];
 }
 @end
