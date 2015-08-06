@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PersonModel.h"
 
 /**
  *  和人有关的接口
@@ -23,4 +24,12 @@
  */
 + (void)SearchUserWithBlock:(void (^)(NSMutableArray *posts, NSError *error))block keywords:(NSString *)keywords startIndex:(NSInteger)startIndex noNetWork:(void(^)())noNetWork;
 
+/**
+ *   人的详情接口
+ *
+ *  @param block     接口返回的数据 PersonModel
+ *  @param userId    人的ID
+ *  @param noNetWork 没有网络的情况处理
+ */
++ (void)GetUserInformationWithBlock:(void (^)(PersonModel *model, NSError *error))block userId:(NSString *)userId noNetWork:(void(^)())noNetWork;
 @end
