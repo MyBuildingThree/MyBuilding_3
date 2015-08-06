@@ -87,6 +87,12 @@
 - (CGRect)setMidX:(CGFloat)midX maxY:(CGFloat)maxY;
 
 /**
+ *  设置最高的y和高度
+ *  @return 设置完之后的view.frame
+ */
+- (CGRect)setMinY:(CGFloat)minY height:(CGFloat)height;
+
+/**
  *  排列的对齐方向
  */
 typedef enum{

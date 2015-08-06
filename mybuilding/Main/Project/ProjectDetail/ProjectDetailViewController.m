@@ -8,96 +8,96 @@
 
 #import "ProjectDetailViewController.h"
 #import "UIView+ViewKit.h"
-#import "RKPageController.h"
+#import "ProjectDetailController.h"
+#import "ProjectCommentController.h"
 
-@interface ProjectDetailViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface ProjectDetailViewController ()<RKControllerDelegate>
 /**
  *  项目详情的控制器
  */
-@property(nonatomic, strong) RKPageController* detailController;
+@property(nonatomic, strong) ProjectDetailController* detailController;
 
 /**
  *  评论详情的控制器
  */
-@property(nonatomic, strong) RKPageController* commentController;
+@property(nonatomic, strong) ProjectCommentController* commentController;
 
 @end
 
+typedef enum{
+    ShowDetailView,//显示项目详情
+    ShowCommentView//显示项目评论
+}ShowViewType;
 
 @implementation ProjectDetailViewController
-- (void)viewDidLoad{
-    [super viewDidLoad];
-    [self.detailController.tableView setMinY:0];
-    [self.commentController.tableView setMinY:self.detailController.tableView.maxY];
+
+- (instancetype)init{
+    if (self = [super init]) {
+        [self view];
+    }
+    return self;
 }
 
-//- (UITableView *)tableView1{
-//    if (!_tableView1) {
-//        UITableView* tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-//        tableView.delegate = self;
-//        tableView.dataSource = self;
-//        [self.view addSubview:tableView];
-//        
-//        _tableView1 = tableView;
-//    }
-//    return _tableView1;
-//}
-//
-//- (UITableView *)tableView2{
-//    if (!_tableView2) {
-//        UITableView* tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-//        tableView.delegate = self;
-//        tableView.dataSource = self;
-//        [self.view addSubview:tableView];
-//        
-//        _tableView2 = tableView;
-//    }
-//    return _tableView2;
-//}
+- (void)viewDidLoad{
+    [super viewDidLoad];
+    [self detailController];
+    [self commentController];
+//    [self showView:ShowDetailView];
+}
 
-//- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
-//    NSLog(@"22");
-//    [UIView animateWithDuration:.5 animations:^{
-//        [self.tableView1 setMinY:-self.tableView1.height];
-//        [self.tableView2 setMinY:0];
-//    }];
-//}
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
+    if (scrollView == self.detailController.tableView) {
+        if (scrollView.contentOffset.y + scrollView.height - scrollView.contentSize.height >= 20) {
+            [self showView:ShowCommentView];
+        }
+    }else if (scrollView == self.commentController.tableView) {
+        if (scrollView.contentOffset.y <= -20) {
+            [self showView:ShowDetailView];
+        }
+    }
+}
 
-//-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-//    return 5;
-//}
-//
-//-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    return 100;
-//}
-//
-//-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    UITableViewCell* cell=[tableView dequeueReusableCellWithIdentifier:@"cell"];
-//    if (!cell) {
-//        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-//    }
-//
-//    cell.textLabel.text = (tableView == self.tableView1) ? @"111" : @"222";
-//    cell.backgroundColor = (tableView == self.tableView1) ? [UIColor redColor] : [UIColor blueColor];
-//    
-//    return cell;
-//}
+/**
+ *  显示项目详情或评论详情的界面切换和动画
+ *
+ *  @param showViewType 显示详情或评论
+ */
+- (void)showView:(ShowViewType)showViewType{
+    BOOL isShowDetail = (showViewType == ShowDetailView);
+    
+    [UIView animateWithDuration:.5 animations:^{
+        isShowDetail ? [self.detailController.view setMinY:64] : [self.detailController.view setMaxY:64];
+        isShowDetail ? [self.commentController.view setMinY:kScreenHeight] : [self.commentController.view setMinY:64];
+    }];
+}
 
-- (RKPageController *)detailController{
+- (ProjectDetailController *)detailController{
     if (!_detailController) {
-        RKPageController* pageController = [[RKPageController alloc] initWithNavi:self.navigationController];
+        ProjectDetailController* pageController = [[ProjectDetailController alloc] initWithNavi:self.navigationController];
+        pageController.projectId = self.projectId;
+        [pageController.view setMinY:64  height:kScreenHeight - 64];
+        pageController.delegate = self;
+        [self.view addSubview:pageController.view];
+        pageController.tableView.backgroundColor = [UIColor grayColor];
         
         _detailController = pageController;
     }
     return _detailController;
 }
 
-- (RKPageController *)commentController{
+- (ProjectCommentController *)commentController{
     if (!_commentController) {
-        RKPageController* pageController = [[RKPageController alloc] initWithNavi:self.navigationController];
+        ProjectCommentController* pageController = [[ProjectCommentController alloc] initWithNavi:self.navigationController];
+        [pageController.view setMinY:kScreenHeight  height:kScreenHeight - 64];
+        pageController.delegate = self;
+        [self.view addSubview:pageController.view];
         
         _commentController = pageController;
     }
     return _commentController;
+}
+
+- (void)setProjectId:(NSString *)projectId{
+    self.detailController.projectId = projectId;
 }
 @end

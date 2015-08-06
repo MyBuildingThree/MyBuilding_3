@@ -13,7 +13,7 @@
     self.a_imageID = dict[@"projectImagesId"];
     self.a_projectId = dict[@"projectId"];
     self.a_imageCompressLocation = [ImageUrlPath getNetWorkImageUrl:dict[@"projectImagesId"] type:@"project" width:[NSString stringWithFormat:@"%d",(int)IMAGEWIDTH] height:IS_IPHONE_6P?@"375":@"250" cut:@"1"];
-    NSLog(@"%@",self.a_imageCompressLocation);
+//    NSLog(@"%@",self.a_imageCompressLocation);
     
     self.a_imageOriginalLocation = [ImageUrlPath getNetWorkImageUrl:dict[@"projectImagesId"] type:@"project" width:[NSString stringWithFormat:@"%d",(int)IMAGEWIDTH] height:@"" cut:@""];
     
