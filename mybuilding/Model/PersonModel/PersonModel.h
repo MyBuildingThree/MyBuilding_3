@@ -45,5 +45,55 @@
  */
 @property(nonatomic)BOOL a_isWaiting;
 
+/**
+ *  是否签到过
+ */
+@property(nonatomic)BOOL a_isSign;
+
+/**
+ *  我的积分
+ */
+@property(nonatomic,strong)NSString *a_points;
+
+/**
+ *  兑换记录
+ */
+@property(nonatomic,strong)NSString *a_exchangeNum;
+
+/**
+ *  进行中合同的数量
+ */
+@property(nonatomic,strong)NSString *a_contractNum_begin;
+
+/**
+ *  已完成合同的数量
+ */
+@property(nonatomic,strong)NSString *a_contractNum_end;
+
+/**
+ *  关闭合同的数量
+ */
+@property(nonatomic,strong)NSString *a_contractNum_close;
+
+/**
+ *  关注的项目数量
+ */
+@property(nonatomic,strong)NSString *a_focusProjectNum;
+
+/**
+ *  关注的人数量
+ */
+@property(nonatomic,strong)NSString *a_focusPersonNum;
+
+/**
+ *  关注的产品数量
+ */
+@property(nonatomic,strong)NSString *a_focusProductNum;
+
+/**
+ *  关注的公司数量
+ */
+@property(nonatomic,strong)NSString *a_focusCompanyNum;
+
 @property(nonatomic,strong)NSDictionary *dict;
 @end
