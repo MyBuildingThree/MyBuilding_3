@@ -9,5 +9,7 @@
 #import "RequirementsModel.h"
 
 @implementation RequirementsModel
-
+-(void)setDict:(NSDictionary *)dict{
+    
+}
 @end

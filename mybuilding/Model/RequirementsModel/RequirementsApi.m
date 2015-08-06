@@ -14,7 +14,7 @@
     NSString *urlStr = [NSString stringWithFormat:@"api/require/pageRequire?pageSize=5&pageIndex=%ld&requireType=&keywords=%@",(long)startIndex,keywords];
     NSString * encodedString = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes( kCFAllocatorDefault, (CFStringRef)urlStr, NULL, NULL,  kCFStringEncodingUTF8 ));
     [SendRequst sendRequestWithUrlString:encodedString success:^(id responseDic) {
-        
+        NSLog(@"%@",responseDic);
     } failure:^(NSError *error) {
         NSLog(@"error===>%@",error);
         if (block) {

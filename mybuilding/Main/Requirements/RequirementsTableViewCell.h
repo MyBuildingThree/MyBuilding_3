@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RequirementsModel.h"
 
 @interface RequirementsTableViewCell : UITableViewCell
 @property(nonatomic,strong)UIButton *headImageBtn;
@@ -15,4 +16,6 @@
 @property(nonatomic,strong)UIImageView *timeImageView;
 @property(nonatomic,strong)UILabel *timeLabel;
 @property(nonatomic,strong)UIView *bottomView;
+@property(nonatomic,strong)RequirementsModel *model;
++(CGFloat)carculateCellHeightWithModel:(RequirementsModel *)cellModel;
 @end

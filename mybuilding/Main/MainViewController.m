@@ -16,6 +16,7 @@
 #import "MainContactController.h"
 #import "MainProductController.h"
 #import "MainRecommendController.h"
+#import "MainRequirementsController.h"
 
 @interface MainViewController ()<RKStageViewPageControllerDelegate>
 @property(nonatomic, strong) RKStageViewPageController* pageController;
@@ -32,7 +33,7 @@
     MainCompanyController* vc3 = [[MainCompanyController alloc] initWithNavi:self.navigationController];
     MainContactController* vc4 = [[MainContactController alloc] initWithNavi:self.navigationController];
     MainProductController* vc5 = [[MainProductController alloc] initWithNavi:self.navigationController];
-    RKTestController_6* vc6 = [[RKTestController_6 alloc] initWithNavi:self.navigationController];
+    MainRequirementsController* vc6 = [[MainRequirementsController alloc] initWithNavi:self.navigationController];
 
     vc1.view.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
     

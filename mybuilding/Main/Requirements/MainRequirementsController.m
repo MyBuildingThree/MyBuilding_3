@@ -1,12 +1,12 @@
 //
-//  RequirementsController.m
+//  MainRequirementsController.m
 //  mybuilding
 //
 //  Created by 汪洋 on 15/8/6.
 //  Copyright (c) 2015年 wy. All rights reserved.
 //
 
-#import "RequirementsController.h"
+#import "MainRequirementsController.h"
 #import "UIScrollView+MJRefresh.h"
 #import "MJRefreshNormalHeader.h"
 #import "MJRefreshBackNormalFooter.h"
@@ -14,7 +14,7 @@
 #import "RequirementsModel.h"
 #import "RequirementsTableViewCell.h"
 
-@implementation RequirementsController
+@implementation MainRequirementsController
 - (void)setUp{
     [super setUp];
     self.tableView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight - 30 - 64 - 49);

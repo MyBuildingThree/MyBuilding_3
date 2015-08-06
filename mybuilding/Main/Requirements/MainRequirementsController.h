@@ -1,5 +1,5 @@
 //
-//  RequirementsController.h
+//  MainRequirementsController.h
 //  mybuilding
 //
 //  Created by 汪洋 on 15/8/6.
@@ -8,6 +8,6 @@
 
 #import "RKPageController.h"
 
-@interface RequirementsController : RKPageController
+@interface MainRequirementsController : RKPageController
 
 @end
