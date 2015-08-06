@@ -7,7 +7,6 @@
 //
 
 #import "PersonApi.h"
-#import "PersonModel.h"
 #import "SendRequst.h"
 
 @implementation PersonApi
@@ -33,4 +32,15 @@
 
 }
 
++ (void)GetUserInformationWithBlock:(void (^)(PersonModel *model, NSError *error))block userId:(NSString *)userId noNetWork:(void(^)())noNetWork{
+    NSString *urlStr = [NSString stringWithFormat:@"api/account/userDetails?userId=%@",userId];
+    [SendRequst sendRequestWithUrlString:urlStr success:^(id responseDic) {
+        
+    } failure:^(NSError *error) {
+        NSLog(@"error===>%@",error);
+        if (block) {
+            block(nil, error);
+        }
+    } noNetWork:noNetWork];
+}
 @end

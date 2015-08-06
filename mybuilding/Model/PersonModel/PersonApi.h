@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PersonModel.h"
 
 /**
  *  和人有关的接口
@@ -30,5 +31,5 @@
  *  @param userId    人的ID
  *  @param noNetWork 没有网络的情况处理
  */
-+ (void)GetUserInformationWithBlock:(void (^)(NSMutableArray *posts, NSError *error))block userId:(NSString *)userId noNetWork:(void(^)())noNetWork;
++ (void)GetUserInformationWithBlock:(void (^)(PersonModel *model, NSError *error))block userId:(NSString *)userId noNetWork:(void(^)())noNetWork;
 @end
