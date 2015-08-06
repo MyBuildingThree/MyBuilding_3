@@ -35,6 +35,7 @@
 		5B5CA1B91B6F718000CC3896 /* ManageString.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CA1B81B6F718000CC3896 /* ManageString.m */; };
 		5B814BCE1B722628004A2559 /* RKLabelLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B814BCD1B722628004A2559 /* RKLabelLabel.m */; };
 		5B814BD11B722DB7004A2559 /* ProjectDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B814BD01B722DB7004A2559 /* ProjectDetailViewController.m */; };
+		5B814BD21B723CB1004A2559 /* ProjectContactModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DD5DEB1B722A6A00FFF890 /* ProjectContactModel.m */; };
 		5B863CD01B719F9C00AF0D36 /* UILabel+LabelKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B51B70C11000459697 /* UILabel+LabelKit.m */; };
 		5B863CD31B71B03000AF0D36 /* RKImageLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B863CD21B71B03000AF0D36 /* RKImageLabel.m */; };
 		5B863CD61B71B58E00AF0D36 /* RKImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B863CD51B71B58E00AF0D36 /* RKImageView.m */; };
@@ -76,8 +77,6 @@
 		D3A8B4081B70E9B20033457F /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A8B4031B70E9B20033457F /* RegisterVC.m */; };
 		D3A8B4091B70E9B20033457F /* ResetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A8B4051B70E9B20033457F /* ResetVC.m */; };
 		D3B4DE341B707B36006A20E2 /* ShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B4DE331B707B36006A20E2 /* ShowView.m */; };
-		D3DD5DE61B719A2500FFF890 /* SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC71A51B70E8E500B2ED69 /* SearchVC.m */; };
-		D3DD5DEC1B722A6A00FFF890 /* ProjectContactModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DD5DEB1B722A6A00FFF890 /* ProjectContactModel.m */; };
 		D3DD5DEF1B722C3F00FFF890 /* ProjectImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DD5DEE1B722C3F00FFF890 /* ProjectImageModel.m */; };
 		D3DF12541B6B3E1F00DFEE8F /* GetImagePath.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF12531B6B3E1F00DFEE8F /* GetImagePath.m */; };
 		D3DF12611B6B412800DFEE8F /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF12581B6B412800DFEE8F /* FMDatabase.m */; };
@@ -1405,6 +1404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B814BD21B723CB1004A2559 /* ProjectContactModel.m in Sources */,
 				5DDA3A461B721601008DD88F /* ADScrollView.m in Sources */,
 				5DDA3A471B721601008DD88F /* PopoverView.m in Sources */,
 				5B863CF11B71EB5700AF0D36 /* NSString+LabelKit.m in Sources */,

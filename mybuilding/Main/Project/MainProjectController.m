@@ -124,7 +124,17 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     ProjectDetailViewController* vc = [[ProjectDetailViewController alloc] init];
-    [vc setHidesBottomBarWhenPushed:YES];
+    vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
+    
+//    ProjectModel *model = self.models[indexPath.row];
+//    [ProjectApi GetProjectInfoWithBlock:^(ProjectModel *proModel, NSMutableArray *contactArr, NSMutableArray *imageArr ,NSError *error) {
+//        if(!error){
+//            NSLog(@"====>%@",proModel.a_projectID);
+//        }
+//    } projectId:model.a_projectID noNetWork:^{
+//        
+//    }];
+
 }
 @end
