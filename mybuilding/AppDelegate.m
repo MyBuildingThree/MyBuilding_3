@@ -13,7 +13,6 @@
 #import "FocusViewController.h"
 #import "FellowsViewController.h"
 #import "MineViewController.h"
-#import "MyVC.h"
 #import "HomeNavigationController.h"
 
 @interface AppDelegate ()
@@ -75,7 +74,7 @@
     FellowsViewController *fellows = [[FellowsViewController alloc] init];
     UINavigationController *fellowsNav = [[UINavigationController alloc] initWithRootViewController:fellows];
     
-    MyVC *mine = [[MyVC alloc] init];
+    MineViewController *mine = [[MineViewController alloc] init];
     UINavigationController *mineNav = [[UINavigationController alloc] initWithRootViewController:mine];
     
     tab.viewControllers = @[mainNav,focusNav,fellowsNav,mineNav];

@@ -35,7 +35,12 @@
 + (void)GetUserInformationWithBlock:(void (^)(PersonModel *model, NSError *error))block userId:(NSString *)userId noNetWork:(void(^)())noNetWork{
     NSString *urlStr = [NSString stringWithFormat:@"api/account/userDetails?userId=%@",userId];
     [SendRequst sendRequestWithUrlString:urlStr success:^(id responseDic) {
-        
+        NSLog(@"%@",responseDic);
+        PersonModel *model = [[PersonModel alloc] init];
+        [model setDict:responseDic[@"data"]];
+        if(block){
+            block(model,nil);
+        }
     } failure:^(NSError *error) {
         NSLog(@"error===>%@",error);
         if (block) {
