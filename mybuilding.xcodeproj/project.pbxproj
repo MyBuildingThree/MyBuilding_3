@@ -241,6 +241,10 @@
 		5B863CD51B71B58E00AF0D36 /* RKImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKImageView.m; sourceTree = "<group>"; };
 		5B863CD71B71D8A900AF0D36 /* RKLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKLabel.h; sourceTree = "<group>"; };
 		5B863CD81B71D8A900AF0D36 /* RKLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKLabel.m; sourceTree = "<group>"; };
+		5BA668411B72F35900E4A955 /* ProjectDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectDetailController.h; sourceTree = "<group>"; };
+		5BA668421B72F35900E4A955 /* ProjectDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectDetailController.m; sourceTree = "<group>"; };
+		5BA668441B72F36B00E4A955 /* ProjectCommentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectCommentController.h; sourceTree = "<group>"; };
+		5BA668451B72F36B00E4A955 /* ProjectCommentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectCommentController.m; sourceTree = "<group>"; };
 		5BDBE49C1B70803B00459697 /* MainProjectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainProjectController.h; sourceTree = "<group>"; };
 		5BDBE49D1B70803B00459697 /* MainProjectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainProjectController.m; sourceTree = "<group>"; };
 		5BDBE49F1B70853F00459697 /* MainCompanyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCompanyController.h; sourceTree = "<group>"; };
@@ -730,8 +734,51 @@
 			children = (
 				5B814BCF1B722DB7004A2559 /* ProjectDetailViewController.h */,
 				5B814BD01B722DB7004A2559 /* ProjectDetailViewController.m */,
+				5BA6683F1B72F34000E4A955 /* ProjectComment */,
+				5BA668401B72F34000E4A955 /* ProjectDetail */,
 			);
 			path = ProjectDetail;
+			sourceTree = "<group>";
+		};
+		5BA6683F1B72F34000E4A955 /* ProjectComment */ = {
+			isa = PBXGroup;
+			children = (
+				5BA6687A1B731E6B00E4A955 /* View */,
+				5BA668411B72F35900E4A955 /* ProjectDetailController.h */,
+				5BA668421B72F35900E4A955 /* ProjectDetailController.m */,
+			);
+			path = ProjectComment;
+			sourceTree = "<group>";
+		};
+		5BA668401B72F34000E4A955 /* ProjectDetail */ = {
+			isa = PBXGroup;
+			children = (
+				5BA668441B72F36B00E4A955 /* ProjectCommentController.h */,
+				5BA668451B72F36B00E4A955 /* ProjectCommentController.m */,
+			);
+			path = ProjectDetail;
+			sourceTree = "<group>";
+		};
+		5BA668471B72F6B800E4A955 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3DF12661B6B414000DFEE8F /* libsqlite3.0.dylib */,
+				D3E37A711B68C1B60073D401 /* CoreLocation.framework */,
+				D3E37A6F1B68C1A80073D401 /* Security.framework */,
+				D3E37A6D1B68C19D0073D401 /* SystemConfiguration.framework */,
+				D3E37A6B1B68C1930073D401 /* MobileCoreServices.framework */,
+				D3E37A691B68C1860073D401 /* CoreGraphics.framework */,
+				D3E37A671B68C1740073D401 /* UIKit.framework */,
+				D3E37A651B68C1680073D401 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5BA6687A1B731E6B00E4A955 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		5BDBE4AE1B70C11000459697 /* ViewKit */ = {
@@ -1141,14 +1188,6 @@
 		D3E379E71B686C9E0073D401 = {
 			isa = PBXGroup;
 			children = (
-				D3DF12661B6B414000DFEE8F /* libsqlite3.0.dylib */,
-				D3E37A711B68C1B60073D401 /* CoreLocation.framework */,
-				D3E37A6F1B68C1A80073D401 /* Security.framework */,
-				D3E37A6D1B68C19D0073D401 /* SystemConfiguration.framework */,
-				D3E37A6B1B68C1930073D401 /* MobileCoreServices.framework */,
-				D3E37A691B68C1860073D401 /* CoreGraphics.framework */,
-				D3E37A671B68C1740073D401 /* UIKit.framework */,
-				D3E37A651B68C1680073D401 /* Foundation.framework */,
 				D3E379F21B686C9E0073D401 /* mybuilding */,
 				D3E37A0C1B686C9E0073D401 /* mybuildingTests */,
 				D3E379F11B686C9E0073D401 /* Products */,
@@ -1192,6 +1231,7 @@
 		D3E379F31B686C9E0073D401 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5BA668471B72F6B800E4A955 /* Frameworks */,
 				D3DF12501B6B3D9400DFEE8F /* Images */,
 				D3E379F41B686C9E0073D401 /* Info.plist */,
 				D3E379F51B686C9E0073D401 /* main.m */,
@@ -1451,6 +1491,7 @@
 				5B863CE61B71EA3300AF0D36 /* MainCompanyController.m in Sources */,
 				5B863CD01B719F9C00AF0D36 /* UILabel+LabelKit.m in Sources */,
 				D3B4DE341B707B36006A20E2 /* ShowView.m in Sources */,
+				5BA668431B72F35900E4A955 /* ProjectDetailController.m in Sources */,
 				D3E37A511B68BAA20073D401 /* AFHTTPRequestOperation.m in Sources */,
 				D3E91F8A1B73218600FD8851 /* MainRequirementsController.m in Sources */,
 				D3A1745E1B6F835B00BC6DA1 /* CompanyTableViewCell.m in Sources */,
@@ -1501,6 +1542,7 @@
 				D3DF12D11B6B7DA000DFEE8F /* SDWebImageCompat.m in Sources */,
 				D3DF129D1B6B614400DFEE8F /* MJRefreshHeader.m in Sources */,
 				D3E37A551B68BAA20073D401 /* AFSecurityPolicy.m in Sources */,
+				5BA668461B72F36B00E4A955 /* ProjectCommentController.m in Sources */,
 				D3DF12991B6B614400DFEE8F /* MJRefreshAutoFooter.m in Sources */,
 				D3DF12A91B6B614400DFEE8F /* UIScrollView+MJExtension.m in Sources */,
 				D3DF129C1B6B614400DFEE8F /* MJRefreshFooter.m in Sources */,

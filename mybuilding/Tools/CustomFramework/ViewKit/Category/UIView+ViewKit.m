@@ -145,6 +145,14 @@
     return self.frame;
 }
 
+- (CGRect)setMinY:(CGFloat)minY height:(CGFloat)height{
+    CGRect frame = self.frame;
+    frame.origin.y = minY;
+    frame.size.height = height;
+    self.frame = frame;
+    
+    return self.frame;
+}
 #pragma 分割线
 + (void)horizontalArrangeViews:(NSArray*)/*UIView*/views distances:(NSArray*)/*NSString*/distances alignmentType:(RKViewArrangeAlignment)alignment direction:(RKViewArrangeDirection)direction{
     __block UIView* lastView;

@@ -27,6 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor], NSForegroundColorAttributeName,[UIFont boldSystemFontOfSize:19], NSFontAttributeName,nil]];
+    
     self.view.backgroundColor = [UIColor whiteColor];
     MainRecommendController* vc1 = [[MainRecommendController alloc] initWithNavi:self.navigationController];
     MainProjectController* vc2 = [[MainProjectController alloc] initWithNavi:self.navigationController];
@@ -42,7 +43,7 @@
     
     self.pageController = [[RKStageViewPageController alloc] initWithTitles:titles controllers:controllers size:CGSizeMake(kScreenWidth, kScreenHeight - 64 - 49)];
     self.pageController.delegate = self;
-    [self.pageController.view setMinY:0];
+    [self.pageController.view setMinY:64];
     [self.view addSubview:self.pageController.view];
 }
 

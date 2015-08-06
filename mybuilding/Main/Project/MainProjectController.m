@@ -123,10 +123,16 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    ProjectModel* model = self.models[indexPath.row];
+    
     ProjectDetailViewController* vc = [[ProjectDetailViewController alloc] init];
     vc.hidesBottomBarWhenPushed = YES;
+    vc.projectId = model.a_projectID;
+
     [self.navigationController pushViewController:vc animated:YES];
+
     
+
 //    ProjectModel *model = self.models[indexPath.row];
 //    [ProjectApi GetProjectInfoWithBlock:^(ProjectModel *proModel, NSMutableArray *contactArr, NSMutableArray *imageArr ,NSError *error) {
 //        if(!error){

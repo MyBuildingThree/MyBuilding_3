@@ -66,16 +66,16 @@
     MyBuildingTabBarController *tab = [MyBuildingTabBarController sharedTabbarController];
     
     MainViewController *main = [[MainViewController alloc] init];
-    HomeNavigationController *mainNav = [[HomeNavigationController alloc] initWithRootViewController:main];
+    UINavigationController *mainNav = [[UINavigationController alloc] initWithRootViewController:main];
     
     FocusViewController *focus = [[FocusViewController alloc] init];
-    HomeNavigationController *focusNav = [[HomeNavigationController alloc] initWithRootViewController:focus];
+    UINavigationController *focusNav = [[UINavigationController alloc] initWithRootViewController:focus];
     
     FellowsViewController *fellows = [[FellowsViewController alloc] init];
-    HomeNavigationController *fellowsNav = [[HomeNavigationController alloc] initWithRootViewController:fellows];
+    UINavigationController *fellowsNav = [[UINavigationController alloc] initWithRootViewController:fellows];
     
     MineViewController *mine = [[MineViewController alloc] init];
-    HomeNavigationController *mineNav = [[HomeNavigationController alloc] initWithRootViewController:mine];
+    UINavigationController *mineNav = [[UINavigationController alloc] initWithRootViewController:mine];
     
     tab.viewControllers = @[mainNav,focusNav,fellowsNav,mineNav];
     
