@@ -51,6 +51,16 @@
 		5B863CF01B71EB3900AF0D36 /* UIImageView+ViewKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B31B70C11000459697 /* UIImageView+ViewKit.m */; };
 		5B863CF11B71EB5700AF0D36 /* NSString+LabelKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B11B70C11000459697 /* NSString+LabelKit.m */; };
 		5DAC71A21B70D9CF00B2ED69 /* SearchSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC719C1B70A7EA00B2ED69 /* SearchSqlite.m */; };
+		5BA668A81B7343A200E4A955 /* ProjectCommentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA668931B7343A200E4A955 /* ProjectCommentController.m */; };
+		5BA668A91B7343A200E4A955 /* ProjectDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA668951B7343A200E4A955 /* ProjectDetailViewController.m */; };
+		5BA668AA1B7343A200E4A955 /* ProjectDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA668981B7343A200E4A955 /* ProjectDetailController.m */; };
+		5BA668AB1B7343A200E4A955 /* ProjectAddressInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6689B1B7343A200E4A955 /* ProjectAddressInfoView.m */; };
+		5BA668AC1B7343A200E4A955 /* ProjectContactsInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6689D1B7343A200E4A955 /* ProjectContactsInfoView.m */; };
+		5BA668AD1B7343A200E4A955 /* ProjectCreatedUserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6689F1B7343A200E4A955 /* ProjectCreatedUserView.m */; };
+		5BA668AE1B7343A200E4A955 /* ProjectDataInfoView1.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA668A11B7343A200E4A955 /* ProjectDataInfoView1.m */; };
+		5BA668AF1B7343A200E4A955 /* ProjectDataInfoView2.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA668A31B7343A200E4A955 /* ProjectDataInfoView2.m */; };
+		5BA668B01B7343A200E4A955 /* ProjectImageInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA668A51B7343A200E4A955 /* ProjectImageInfoView.m */; };
+		5BA668B11B7343A200E4A955 /* ProjectNameInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA668A71B7343A200E4A955 /* ProjectNameInfoView.m */; };
 		5DDA3A461B721601008DD88F /* ADScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDA3A441B720F6B008DD88F /* ADScrollView.m */; };
 		5DDA3A471B721601008DD88F /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDA3A401B7208BC008DD88F /* PopoverView.m */; };
 		D355958E1B6EFD8B00E4577B /* HomeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D355958A1B6EFD8B00E4577B /* HomeNavigationController.m */; };

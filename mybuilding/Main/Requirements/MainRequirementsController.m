@@ -13,13 +13,28 @@
 #import "RequirementsApi.h"
 #import "RequirementsModel.h"
 #import "RequirementsTableViewCell.h"
+#import "RKShadowView.h"
+#import "UIView+ViewKit.h"
 
 @implementation MainRequirementsController
 - (void)setUp{
     [super setUp];
     self.tableView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight - 30 - 64 - 49);
+    [self setUpHeaderView];
     [self pageControllerFirstLoad];
     [self setUpHeaderAndFooterRefresh];
+}
+
+- (void)setUpHeaderView{
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(0, 0, kScreenWidth, 40);
+    btn.backgroundColor = RGBCOLOR(243, 243, 243);
+    [btn setTitle:@"类型筛选" forState:UIControlStateNormal];
+    [btn setTitleColor:RGBCOLOR(51, 51, 51) forState:UIControlStateNormal];
+    UIView* sepe = [RKShadowView seperatorLine];
+    [sepe setMaxY:btn.maxY];
+    [btn addSubview:sepe];
+    self.tableView.tableHeaderView = btn;
 }
 
 - (void)setUpHeaderAndFooterRefresh{

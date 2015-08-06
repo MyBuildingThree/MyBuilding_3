@@ -12,14 +12,13 @@
 #import "RKViewFactory.h"
 #import "UILabel+LabelKit.h"
 #import "NSString+LabelKit.h"
-#import "RKImageLabel.h"
 
 @implementation RequirementsTableViewCell
 +(CGFloat)carculateCellHeightWithModel:(RequirementsModel *)cellModel{
     CGFloat height = 0;
     CGRect size = [cellModel.a_reqDesc autosizeWithFont:[UIFont systemFontOfSize:16] maxWidth:kScreenWidth-26 maxHeight:90];
     height += size.size.height;
-    height +=148;
+    height +=100;
     return height;
 }
 
@@ -29,7 +28,6 @@
         [self.contentView addSubview:self.userNameLabel];
         [self.contentView addSubview:self.contentLabel];
         [self.contentView addSubview:self.reqTypeLabel];
-        [self.contentView addSubview:self.timeImageView];
         [self.contentView addSubview:self.timeLabel];
         [self.contentView addSubview:self.bottomView];
     }
@@ -41,13 +39,17 @@
     self.userNameLabel.text = model.a_loginName;
     self.contentLabel.text = model.a_reqDesc;
     self.reqTypeLabel.text = model.a_reqTypeCn;
+    self.timeLabel.mainLabel.text = model.a_createdTime;
 }
 
 -(void)layoutSubviews{
     CGRect size = [self.contentLabel autosizeWithMaxWidth:kScreenWidth-26 maxHeight:90];
     CGFloat height = 0;
     height = size.origin.y + size.size.height;
-    self.reqTypeLabel.frame = CGRectMake(10, height+16, 108, 20);
+    self.reqTypeLabel.frame = CGRectMake(10, height+14, 108, 20);
+    [self.timeLabel setMaxX:kScreenWidth - 10 minY:height + 16];
+    height += 20+16;
+    [self.bottomView setMinY:height];
 }
 
 -(UIButton *)headImageBtn{
@@ -87,11 +89,22 @@
     return _reqTypeLabel;
 }
 
--(UIImageView *)timeImageView{
-    if(!_timeImageView){
-        _timeImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
-        _timeImageView.backgroundColor = [UIColor yellowColor];
+-(RKImageLabel *)timeLabel{
+    if(!_timeLabel){
+        _timeLabel = [RKImageLabel imageLabelWithHeight:13];
+        _timeLabel.imageView.backgroundColor = [UIColor yellowColor];
+        _timeLabel.imageView.size = CGSizeMake(13, 13);
+        _timeLabel.mainLabel.font = [UIFont systemFontOfSize:12];
+        _timeLabel.mainLabel.textColor = RGBCOLOR(148, 148, 153);
+        _timeLabel.secondMargin = 3;
     }
-    return _timeImageView;
+    return _timeLabel;
+}
+
+-(UIView *)bottomView{
+    if(!_bottomView){
+        _bottomView = [RKShadowView seperatorLineWithHeight:10 top:0];
+    }
+    return _bottomView;
 }
 @end
