@@ -14,6 +14,7 @@
 @property(nonatomic,strong)UILabel *userNameLabel;
 @property(nonatomic,strong)UILabel *contentLabel;
 @property(nonatomic,strong)UIImageView *timeImageView;
+@property(nonatomic,strong)UILabel *reqTypeLabel;
 @property(nonatomic,strong)UILabel *timeLabel;
 @property(nonatomic,strong)UIView *bottomView;
 @property(nonatomic,strong)RequirementsModel *model;

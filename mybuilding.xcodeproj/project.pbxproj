@@ -162,6 +162,8 @@
 		D3E91F861B72E90A00FD8851 /* RequirementsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E91F851B72E90A00FD8851 /* RequirementsTableViewCell.m */; };
 		D3E91F871B72EBFD00FD8851 /* ProjectContactModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DD5DEB1B722A6A00FFF890 /* ProjectContactModel.m */; };
 		D3E91F8A1B73218600FD8851 /* MainRequirementsController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E91F891B73218600FD8851 /* MainRequirementsController.m */; };
+		D3E91F8B1B73428D00FD8851 /* ProjectDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA668421B72F35900E4A955 /* ProjectDetailController.m */; };
+		D3E91F8C1B73428D00FD8851 /* ProjectCommentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA668451B72F36B00E4A955 /* ProjectCommentController.m */; };
 		D3EB7E8D1B7054D000482BCD /* ProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EB7E8C1B7054D000482BCD /* ProductModel.m */; };
 /* End PBXBuildFile section */
 
@@ -1472,6 +1474,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3E91F8B1B73428D00FD8851 /* ProjectDetailController.m in Sources */,
+				D3E91F8C1B73428D00FD8851 /* ProjectCommentController.m in Sources */,
 				D3E91F871B72EBFD00FD8851 /* ProjectContactModel.m in Sources */,
 				5DAC71A21B70D9CF00B2ED69 /* SearchSqlite.m in Sources */,
 				5DDA3A461B721601008DD88F /* ADScrollView.m in Sources */,
@@ -1491,7 +1495,6 @@
 				5B863CE61B71EA3300AF0D36 /* MainCompanyController.m in Sources */,
 				5B863CD01B719F9C00AF0D36 /* UILabel+LabelKit.m in Sources */,
 				D3B4DE341B707B36006A20E2 /* ShowView.m in Sources */,
-				5BA668431B72F35900E4A955 /* ProjectDetailController.m in Sources */,
 				D3E37A511B68BAA20073D401 /* AFHTTPRequestOperation.m in Sources */,
 				D3E91F8A1B73218600FD8851 /* MainRequirementsController.m in Sources */,
 				D3A1745E1B6F835B00BC6DA1 /* CompanyTableViewCell.m in Sources */,
@@ -1542,7 +1545,6 @@
 				D3DF12D11B6B7DA000DFEE8F /* SDWebImageCompat.m in Sources */,
 				D3DF129D1B6B614400DFEE8F /* MJRefreshHeader.m in Sources */,
 				D3E37A551B68BAA20073D401 /* AFSecurityPolicy.m in Sources */,
-				5BA668461B72F36B00E4A955 /* ProjectCommentController.m in Sources */,
 				D3DF12991B6B614400DFEE8F /* MJRefreshAutoFooter.m in Sources */,
 				D3DF12A91B6B614400DFEE8F /* UIScrollView+MJExtension.m in Sources */,
 				D3DF129C1B6B614400DFEE8F /* MJRefreshFooter.m in Sources */,

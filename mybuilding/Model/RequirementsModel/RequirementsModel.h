@@ -25,7 +25,7 @@
 /**
  *  发需求的人头像
  */
-@property(nonatomic,strong)NSString *a_avatarUrl;
+@property(nonatomic,strong)NSURL *a_avatarUrl;
 
 /**
  *  发需求的人ID
