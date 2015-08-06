@@ -14,6 +14,7 @@
 #import "MJRefreshNormalHeader.h"
 #import "MJRefreshBackNormalFooter.h"
 #import "RKImageLabel.h"
+#import "UIView+ViewKit.h"
 
 @implementation MainContactController
 - (void)setUp{

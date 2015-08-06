@@ -14,6 +14,13 @@
 
 @interface RKImageLabel ()<RKImageViewDelegate,RKLabelDelegate>
 
+@property(nonatomic, assign) RKImageLabelDirection direction;
+
+/**
+ *  创建时的高度，只要未设置过canClickedSize，则 originHeight == self.height
+ */
+@property(nonatomic, assign) CGFloat originHeight;
+
 @end
 
 @implementation RKImageLabel
@@ -21,7 +28,22 @@
 @synthesize mainLabel = _mainLabel;
 
 + (instancetype)imageLabelWithHeight:(CGFloat)height{
-    return [[self alloc] initWithFrame:CGRectMake(0, 0, 0, height)];
+    return [[self alloc] initWithHeight:height direction:RKImageLabelDirectionRight];
+}
+
++ (instancetype)imageLabelWithHeight:(CGFloat)height direction:(RKImageLabelDirection)direction{
+    return [[self alloc] initWithHeight:height direction:direction];
+}
+
+- (instancetype)initWithHeight:(CGFloat)height direction:(RKImageLabelDirection)direction{
+    if (self = [super initWithFrame:CGRectMake(0, 0, 0, height)]) {
+        self.direction = direction;
+        self.originHeight = height;
+        
+        UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageLabelClicked)];
+        [self addGestureRecognizer:tap];
+    }
+    return self;
 }
 
 - (void)imageView:(RKImageView *)imageView changeFrame:(CGRect)frame{
@@ -42,26 +64,58 @@
     [self refresh];
 }
 
-- (void)setLeftMargin:(CGFloat)leftMargin{
-    _leftMargin = leftMargin;
+- (void)setFirstMargin:(CGFloat)firstMargin{
+    _firstMargin = firstMargin;
     [self refresh];
 }
 
-- (void)setCenterMargin:(CGFloat)centerMargin{
-    _centerMargin = centerMargin;
+- (void)setSecondMargin:(CGFloat)secondMargin{
+    _secondMargin = secondMargin;
     [self refresh];
 }
 
-- (void)setRightMargin:(CGFloat)rightMargin{
-    _rightMargin = rightMargin;
+- (void)setThirdMargin:(CGFloat)thirdMargin{
+    _thirdMargin = thirdMargin;
+    [self refresh];
+}
+
+- (void)setCanClickedSize:(CGSize)canClickedSize{
+    if (self.direction == RKImageLabelDirectionRight) return;
+    _canClickedSize = canClickedSize;
+    
+    self.size = canClickedSize;
     [self refresh];
 }
 
 - (void)refresh{
-    [self.imageView setMinX:self.leftMargin midY:self.halfHeight];
-    [self.mainLabel setMinX:self.imageView.maxX + self.centerMargin midY:self.halfHeight];
-    self.width = self.mainLabel.maxX + self.rightMargin;
-    NSLog(@"mainLabelFrame = %@",NSStringFromCGRect(self.mainLabel.frame));
+    CGFloat firstMargin = self.firstMargin;
+    CGFloat secondMargin = self.secondMargin;
+    CGFloat thirdMargin = self.thirdMargin;
+    
+    //向右排列
+    if (self.direction == RKImageLabelDirectionRight) {
+        [self.imageView setMinX:firstMargin midY:self.halfHeight];
+        [self.mainLabel setMinX:self.imageView.maxX + secondMargin midY:self.halfHeight];
+        self.width = self.mainLabel.maxX + thirdMargin;
+        
+    //向下排列
+    }else if (self.direction == RKImageLabelDirectionBottom) {
+
+        CGFloat midX;
+        if (CGSizeEqualToSize(self.canClickedSize, CGSizeZero)) {
+            CGFloat halfWidth = MAX(self.imageView.halfWidth, self.mainLabel.halfWidth);
+            midX = halfWidth;
+            self.width = halfWidth * 2;
+        }else{
+            CGFloat extraMargin = (self.height - self.originHeight) * 0.5 ;
+            firstMargin += extraMargin;
+            thirdMargin += extraMargin;
+            midX = self.width * 0.5;
+        }
+
+        [self.imageView setMidX:midX minY:firstMargin];
+        [self.mainLabel setMidX:midX maxY:self.height - thirdMargin];
+    }
 }
 
 - (UILabel *)mainLabel{
@@ -84,5 +138,11 @@
         _imageView = imageView;
     }
     return _imageView;
+}
+
+- (void)imageLabelClicked{
+    if ([self.delegate respondsToSelector:@selector(imageLabelClicked:)]) {
+        [self.delegate imageLabelClicked:self];
+    }
 }
 @end

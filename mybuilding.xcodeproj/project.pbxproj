@@ -73,8 +73,6 @@
 		D3A8B4081B70E9B20033457F /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A8B4031B70E9B20033457F /* RegisterVC.m */; };
 		D3A8B4091B70E9B20033457F /* ResetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A8B4051B70E9B20033457F /* ResetVC.m */; };
 		D3B4DE341B707B36006A20E2 /* ShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B4DE331B707B36006A20E2 /* ShowView.m */; };
-		D3DD5DE61B719A2500FFF890 /* SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC71A51B70E8E500B2ED69 /* SearchVC.m */; };
-		D3DD5DEC1B722A6A00FFF890 /* ProjectContactModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DD5DEB1B722A6A00FFF890 /* ProjectContactModel.m */; };
 		D3DD5DEF1B722C3F00FFF890 /* ProjectImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DD5DEE1B722C3F00FFF890 /* ProjectImageModel.m */; };
 		D3DF12541B6B3E1F00DFEE8F /* GetImagePath.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF12531B6B3E1F00DFEE8F /* GetImagePath.m */; };
 		D3DF12611B6B412800DFEE8F /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF12581B6B412800DFEE8F /* FMDatabase.m */; };
@@ -229,6 +227,10 @@
 		5B5CA1B41B6F716900CC3896 /* ProjectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectTableViewCell.m; sourceTree = "<group>"; };
 		5B5CA1B71B6F718000CC3896 /* ManageString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageString.h; sourceTree = "<group>"; };
 		5B5CA1B81B6F718000CC3896 /* ManageString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageString.m; sourceTree = "<group>"; };
+		5B814BCC1B722628004A2559 /* RKLabelLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKLabelLabel.h; sourceTree = "<group>"; };
+		5B814BCD1B722628004A2559 /* RKLabelLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKLabelLabel.m; sourceTree = "<group>"; };
+		5B814BCF1B722DB7004A2559 /* ProjectDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectDetailViewController.h; sourceTree = "<group>"; };
+		5B814BD01B722DB7004A2559 /* ProjectDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectDetailViewController.m; sourceTree = "<group>"; };
 		5B863CD11B71B03000AF0D36 /* RKImageLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKImageLabel.h; sourceTree = "<group>"; };
 		5B863CD21B71B03000AF0D36 /* RKImageLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKImageLabel.m; sourceTree = "<group>"; };
 		5B863CD41B71B58E00AF0D36 /* RKImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKImageView.h; sourceTree = "<group>"; };
@@ -549,6 +551,7 @@
 				5BDBE49D1B70803B00459697 /* MainProjectController.m */,
 				5B5CA1B31B6F716900CC3896 /* ProjectTableViewCell.h */,
 				5B5CA1B41B6F716900CC3896 /* ProjectTableViewCell.m */,
+				5B814BCB1B72245E004A2559 /* ProjectDetail */,
 			);
 			path = Project;
 			sourceTree = "<group>";
@@ -666,6 +669,8 @@
 				5B5CA17A1B6F70ED00CC3896 /* RKStageChooseView.m */,
 				5B863CD11B71B03000AF0D36 /* RKImageLabel.h */,
 				5B863CD21B71B03000AF0D36 /* RKImageLabel.m */,
+				5B814BCC1B722628004A2559 /* RKLabelLabel.h */,
+				5B814BCD1B722628004A2559 /* RKLabelLabel.m */,
 			);
 			path = ViewClass;
 			sourceTree = "<group>";
@@ -714,6 +719,15 @@
 				5B5CA1B81B6F718000CC3896 /* ManageString.m */,
 			);
 			path = ManageString;
+			sourceTree = "<group>";
+		};
+		5B814BCB1B72245E004A2559 /* ProjectDetail */ = {
+			isa = PBXGroup;
+			children = (
+				5B814BCF1B722DB7004A2559 /* ProjectDetailViewController.h */,
+				5B814BD01B722DB7004A2559 /* ProjectDetailViewController.m */,
+			);
+			path = ProjectDetail;
 			sourceTree = "<group>";
 		};
 		5BDBE4AE1B70C11000459697 /* ViewKit */ = {
@@ -1454,6 +1468,7 @@
 				5B5CA1B51B6F716900CC3896 /* ProjectTableViewCell.m in Sources */,
 				5B5CA1B01B6F713600CC3896 /* LoginModel.m in Sources */,
 				D3E37A5C1B68BAA20073D401 /* Reachability.m in Sources */,
+				5B814BD11B722DB7004A2559 /* ProjectDetailViewController.m in Sources */,
 				D3E37A581B68BAA20073D401 /* AFURLResponseSerialization.m in Sources */,
 				D355959A1B6EFF4600E4577B /* FocusViewController.m in Sources */,
 				D355958E1B6EFD8B00E4577B /* HomeNavigationController.m in Sources */,

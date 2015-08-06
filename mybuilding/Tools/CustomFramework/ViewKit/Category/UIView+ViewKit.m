@@ -83,14 +83,6 @@
     return frame;
 }
 
-- (CGRect)setMinY:(CGFloat)minY{
-    CGRect frame = self.frame;
-    frame.origin.y = minY;
-    self.frame = frame;
-    
-    return frame;
-}
-
 - (CGRect)setMidX:(CGFloat)midX{
     CGPoint center = self.center;
     center.x = midX;
@@ -99,10 +91,27 @@
     return self.frame;
 }
 
+- (CGRect)setMinY:(CGFloat)minY{
+    CGRect frame = self.frame;
+    frame.origin.y = minY;
+    self.frame = frame;
+    
+    return frame;
+}
+
+
 - (CGRect)setMidY:(CGFloat)midY{
     CGPoint center = self.center;
     center.y = midY;
     self.center = center;
+    
+    return self.frame;
+}
+
+- (CGRect)setMaxY:(CGFloat)maxY{
+    CGRect frame = self.frame;
+    frame.origin.y = maxY - self.height;
+    self.frame = frame;
     
     return self.frame;
 }
@@ -117,6 +126,20 @@
 
 - (CGRect)setMinX:(CGFloat)minX midY:(CGFloat)midY{
     CGPoint center = CGPointMake(minX + self.halfWidth, midY);
+    self.center = center;
+    
+    return self.frame;
+}
+
+- (CGRect)setMidX:(CGFloat)midX minY:(CGFloat)minY{
+    CGPoint center = CGPointMake(midX, minY + self.halfHeight);
+    self.center = center;
+    
+    return self.frame;
+}
+
+- (CGRect)setMidX:(CGFloat)midX maxY:(CGFloat)maxY{
+    CGPoint center = CGPointMake(midX, maxY - self.halfHeight);
     self.center = center;
     
     return self.frame;

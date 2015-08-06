@@ -39,16 +39,22 @@
 - (CGRect)setMinX:(CGFloat)minX;
 
 /**
+ *  设置中间的x
+ *  @return 设置完之后的view.frame
+ */
+- (CGRect)setMidX:(CGFloat)midX;
+
+/**
  *  设置最高的y
  *  @return 设置完之后的view.frame
  */
 - (CGRect)setMinY:(CGFloat)minY;
 
 /**
- *  设置中间的x
+ *  设置最低的y
  *  @return 设置完之后的view.frame
  */
-- (CGRect)setMidX:(CGFloat)midX;
+- (CGRect)setMaxY:(CGFloat)maxY;
 
 /**
  *  设置中间的y
@@ -67,6 +73,18 @@
  *  @return 设置完之后的view.frame
  */
 - (CGRect)setMinX:(CGFloat)minX midY:(CGFloat)midY;
+
+/**
+ *  设置中间的x和最高的y
+ *  @return 设置完之后的view.frame
+ */
+- (CGRect)setMidX:(CGFloat)midX minY:(CGFloat)minY;
+
+/**
+ *  设置中间的x和最低的y
+ *  @return 设置完之后的view.frame
+ */
+- (CGRect)setMidX:(CGFloat)midX maxY:(CGFloat)maxY;
 
 /**
  *  排列的对齐方向
