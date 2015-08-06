@@ -12,7 +12,7 @@
 
 @implementation PersonApi
 + (void)SearchUserWithBlock:(void (^)(NSMutableArray *posts, NSError *error))block keywords:(NSString *)keywords startIndex:(NSInteger)startIndex noNetWork:(void(^)())noNetWork{
-    NSString *urlStr = [NSString stringWithFormat:@"api/account/search?keywords=%@&pageIndex=%d&pageSize=15",keywords,startIndex];
+    NSString *urlStr = [NSString stringWithFormat:@"api/account/search?keywords=%@&pageIndex=%ld&pageSize=15",keywords,(long)startIndex];
     [SendRequst sendRequestWithUrlString:urlStr success:^(id responseDic) {
         NSLog(@"responseDic = %@",responseDic);
         NSMutableArray *arr = [[NSMutableArray alloc] init];
