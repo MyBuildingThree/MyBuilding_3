@@ -186,17 +186,18 @@
         CGPoint point = CGPointMake(rc.origin.x + rc.size.width/2, rc.origin.y + rc.size.height);
         [PopoverView popUpWithPoint:point titles:@[@"热线电话",@"消息通知",@"广告活动"] images:nil scroller:NO selectTodo:^(NSInteger index) {
             if (index == 2) {
-                ADScrollView *ad = [[ADScrollView alloc]initWithFrame:self.view.bounds];
-                [[[UIApplication sharedApplication].windows lastObject] addSubview:ad];
+                
+                [ADScrollView showADwithImageUrlArray:@[@"http://d.hiphotos.baidu.com/image/pic/item/c9fcc3cec3fdfc03f9a789b6d63f8794a5c226e4.jpg",@"http://a.hiphotos.baidu.com/image/pic/item/d043ad4bd11373f002b33681a60f4bfbfbed041b.jpg",@"http://c.hiphotos.baidu.com/image/pic/item/a08b87d6277f9e2f6d4a83021d30e924b899f3b9.jpg"] jumpToWebUrl:@[@"0www",@"1wwww",@"2wwww"]];
             }
         }];
         
     }
     if ([btn.titleLabel.text isEqualToString:@"搜索"])
     {
-        SearchVC *sv =  [[SearchVC alloc]init];
-        sv.hidesBottomBarWhenPushed = YES;
-        [self pushViewController:sv animated:YES];
+//        SearchVC *sv =  [[SearchVC alloc]init];
+//        sv.hidesBottomBarWhenPushed = YES;
+//        [self pushViewController:sv animated:YES];
+        [SearchVC searchWithClass:@[@"用户",@"企业",@"项目",@"产品"] pushBy:self];
     }
 }
 
