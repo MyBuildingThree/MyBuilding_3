@@ -6,8 +6,12 @@
 //  Copyright (c) 2015年 wy. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ChatBaseViewController.h"
+@interface ProjectDetailViewController : ChatBaseViewController
 
-@interface ProjectDetailViewController : UIViewController
+/**
+ *  项目id
+ */
+@property(nonatomic, copy) NSString* projectId;
 
 @end

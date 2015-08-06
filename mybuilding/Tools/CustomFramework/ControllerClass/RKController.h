@@ -15,7 +15,8 @@ typedef enum {
     RKControllerRefreshFirstLoad = RKControllerRefreshHeader
 }RKControllerRefreshType;
 
-@protocol RKControllerDelegate <NSObject>
+@protocol RKControllerDelegate <NSObject,UITableViewDelegate>
+@optional
 - (void)controllerStartLoading;
 - (void)controllerEndLoading;
 @end
@@ -43,7 +44,7 @@ typedef enum {
 @property(nonatomic)NSInteger startIndex;
 
 @property(nonatomic,strong)UIView* view;
-- (void)setViewFrame:(CGRect)frame;
+//- (void)setViewFrame:(CGRect)frame;
 
 @property(nonatomic,strong)RKBaseTableView* tableView;
 @property(nonatomic,strong)UIView* tableViewNoDataView;

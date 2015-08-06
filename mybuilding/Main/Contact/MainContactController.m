@@ -50,7 +50,7 @@
             self.startIndex = startIndex;
         }
         isHeaderRefresh ? [self.tableView.header endRefreshing] : [self.tableView.footer endRefreshing];
-    } keywords:@"wy" startIndex:startIndex noNetWork:nil];
+    } keywords:@"" startIndex:startIndex noNetWork:nil];
 }
 
 - (void)pageControllerFirstLoad{

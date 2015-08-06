@@ -13,23 +13,69 @@
  */
 @interface UIView (ViewKit)
 
-@property(nonatomic, readonly) CGFloat minX;//最左的x值
-@property(nonatomic, readonly) CGFloat midX;//中间的x值
-@property(nonatomic, readonly) CGFloat maxX;//最右的x值
+/**
+ *  最左的x值
+ */
+@property(nonatomic, readonly) CGFloat minX;
 
-@property(nonatomic, readonly) CGFloat minY;//最高的y值
-@property(nonatomic, readonly) CGFloat midY;//中间的y值
-@property(nonatomic, readonly) CGFloat maxY;//最低的y值
+/**
+ *  中间的x值
+ */
+@property(nonatomic, readonly) CGFloat midX;
 
-@property(nonatomic, readonly) CGFloat width;//宽度
-@property(nonatomic, readonly) CGFloat height;//高度
+/**
+ *  最右的x值
+ */
+@property(nonatomic, readonly) CGFloat maxX;
 
-@property(nonatomic, readonly) CGFloat halfWidth;//一半的宽度
-@property(nonatomic, readonly) CGFloat halfHeight;//一半的高度
+/**
+ *  最高的y值
+ */
+@property(nonatomic, readonly) CGFloat minY;
 
-@property(nonatomic, readonly) CGPoint internalCenter;//视图内部的center
+/**
+ *  中间的y值
+ */
+@property(nonatomic, readonly) CGFloat midY;
 
+/**
+ *  最低的y值
+ */
+@property(nonatomic, readonly) CGFloat maxY;
+
+/**
+ *  宽度
+ */
+@property(nonatomic, readonly) CGFloat width;
+
+/**
+ *  高度
+ */
+@property(nonatomic, readonly) CGFloat height;
+
+/**
+ *  一半的宽度
+ */
+@property(nonatomic, readonly) CGFloat halfWidth;
+
+/**
+ *  一半的高度
+ */
+@property(nonatomic, readonly) CGFloat halfHeight;
+
+/**
+ *  视图内部的center
+ */
+@property(nonatomic, readonly) CGPoint internalCenter;
+
+/**
+ *  等价于frame.size，但是可以直接赋值
+ */
 @property(nonatomic, assign) CGSize size;
+
+/**
+ *  等价于frame.origin，但是可以直接赋值
+ */
 @property(nonatomic, assign) CGPoint origin;
 
 /**
@@ -85,6 +131,12 @@
  *  @return 设置完之后的view.frame
  */
 - (CGRect)setMidX:(CGFloat)midX maxY:(CGFloat)maxY;
+
+/**
+ *  设置最高的y和高度
+ *  @return 设置完之后的view.frame
+ */
+- (CGRect)setMinY:(CGFloat)minY height:(CGFloat)height;
 
 /**
  *  排列的对齐方向
