@@ -51,15 +51,25 @@
 
 - (RKLabelLabel *)labelLabel00{
     if (!_labelLabel00) {
-        RKLabelLabel* labelLabel = [RKLabelLabel labelLabelWithHeight:50];
-        [self addSubview:labelLabel];
-        labelLabel.backgroundColor = [[UIColor alloc] initWithRed:.5 green:.5 blue:.5 alpha:.5];
-        labelLabel.secondLabel.text = @"土地面积（平方米）";
-        
-        _labelLabel00 = labelLabel;
+        _labelLabel00 = [self getRKLabelWithTitle:@"土地面积(平方米)"];
     }
     return _labelLabel00;
 }
 
-//- (RKLabelLabel *)getRKLabelWith
+- (RKLabelLabel *)getRKLabelWithTitle:(NSString *)title{
+    RKLabelLabel* labelLabel = [RKLabelLabel labelLabelWithHeight:35];
+    labelLabel.secondLabel.text = title;
+    labelLabel.secondLabel.textColor = RGBCOLOR(127, 127, 127);
+    labelLabel.secondLabel.font = [UIFont systemFontOfSize:14];
+    labelLabel.firstLabel.textColor = RGBCOLOR(22, 119, 203);
+    labelLabel.firstLabel.font = [UIFont systemFontOfSize:17];
+
+    labelLabel.firstLabel.backgroundColor = [UIColor greenColor];
+    labelLabel.secondLabel.backgroundColor = [UIColor yellowColor];
+    
+    [self addSubview:labelLabel];
+    labelLabel.backgroundColor = [[UIColor alloc] initWithRed:.5 green:.5 blue:.5 alpha:.5];
+
+    return labelLabel;
+}
 @end

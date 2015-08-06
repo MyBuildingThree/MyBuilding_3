@@ -37,12 +37,14 @@
 }
 
 - (void)label:(RKLabel *)label changeText:(NSString *)text{
-    [label autosize];
+    [self.firstLabel autosize];
+    [self.secondLabel autosize];
     [self refresh];
 }
 
 - (void)label:(RKLabel *)label changeFont:(UIFont *)font{
-    [label autosize];
+    [self.firstLabel autosize];
+    [self.secondLabel autosize];
     [self refresh];
 }
 
