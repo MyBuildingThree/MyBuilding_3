@@ -95,5 +95,45 @@
  */
 @property(nonatomic,strong)NSString *a_focusCompanyNum;
 
+/**
+ *  真实姓名
+ */
+@property(nonatomic,strong)NSString *a_realName;
+
+/**
+ *  性别
+ */
+@property(nonatomic,strong)NSString *a_sex;
+
+/**
+ *  所在地
+ */
+@property(nonatomic,strong)NSString *a_address;
+
+/**
+ *  生日
+ */
+@property(nonatomic,strong)NSString *a_birthday;
+
+/**
+ *  星座
+ */
+@property(nonatomic,strong)NSString *a_constel;
+
+/**
+ *  血型
+ */
+@property(nonatomic,strong)NSString *a_bloodType;
+
+/**
+ *  邮箱
+ */
+@property(nonatomic,strong)NSString *a_email;
+
+/**
+ *  手机
+ */
+@property(nonatomic,strong)NSString *a_loginTel;
+
 @property(nonatomic,strong)NSDictionary *dict;
 @end

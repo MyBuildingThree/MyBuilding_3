@@ -43,5 +43,21 @@
     self.a_focusProductNum = @"13";
     
     self.a_focusCompanyNum = @"34";
+    
+    self.a_realName = dict[@"realName"];
+    
+    self.a_sex = dict[@"sex"];
+    
+    self.a_address = dict[@"address"];
+    
+    self.a_birthday = dict[@"birthday"];
+    
+    self.a_constel = dict[@"constel"];
+    
+    self.a_bloodType = dict[@"bloodTypeCn"];
+    
+    self.a_email = dict[@"email"];
+    
+    self.a_loginTel = dict[@"loginTel"];
 }
 @end
