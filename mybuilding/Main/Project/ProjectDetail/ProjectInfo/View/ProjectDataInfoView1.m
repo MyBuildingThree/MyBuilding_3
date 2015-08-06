@@ -61,5 +61,5 @@
     return _labelLabel00;
 }
 
-- (RKLabelLabel *)getRKLabelWith
+//- (RKLabelLabel *)getRKLabelWith
 @end
