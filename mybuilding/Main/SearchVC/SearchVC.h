@@ -10,4 +10,6 @@
 
 @interface SearchVC : UIViewController
 
++ (void)searchWithClass:(NSArray *)classArray pushBy:(UINavigationController *)nc;
+
 @end

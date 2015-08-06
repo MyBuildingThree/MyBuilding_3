@@ -11,6 +11,7 @@
 @interface ADScrollView ()<UIScrollViewDelegate>
 
 @property (nonatomic,strong)NSArray *adArray;
+@property (nonatomic,strong)NSArray *webArray;
 @property (nonatomic,strong)UIScrollView *scrollView;
 @property (nonatomic,strong)UIPageControl *pageControl;
 
@@ -18,20 +19,28 @@
 
 @implementation ADScrollView
 
++(void)showADwithImageUrlArray:(NSArray *)imageUrlArray jumpToWebUrl:(NSArray *)webUrlArray
+{
+    UIView *kW = [[UIApplication sharedApplication].windows lastObject];
+    ADScrollView *adSV = [[ADScrollView alloc]initWithFrame:kW.bounds];
+    adSV.adArray = imageUrlArray;
+    adSV.webArray = webUrlArray;
+    [adSV createScrollViewAndPageControl];
+    [kW addSubview:adSV];
+}
+
 -(instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame])
     {
         self.backgroundColor = [UIColor colorWithRed:0.1 green:0.1 blue:0.1 alpha:0.8];
-        [self createScrollViewAndPageControl];
+       
     }
     return self;
 }
 
 - (void)createScrollViewAndPageControl
 {
-    self.adArray = @[@"aaaaaa", @"bbbbbb", @"ccccccc"];
-    
     //实现模糊效果
     UIVisualEffectView *visualEffectView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];
     visualEffectView.frame = self.bounds;
@@ -61,8 +70,8 @@
     int originX = self.scrollView.bounds.size.width*0.1;
     for(int i = 0; i<self.adArray.count; i++)
     {
-        
-        UIView *adView = [[UIView alloc]init];
+        UIImageView *adView = [[UIImageView alloc]init];
+        adView.userInteractionEnabled = YES;
         adView.backgroundColor = [UIColor whiteColor];
         adView.layer.cornerRadius = 5.0f;
         adView.layer.masksToBounds = YES;
@@ -73,7 +82,7 @@
         rect.size.width = self.scrollView.frame.size.width*0.8;
         rect.size.height = self.scrollView.frame.size.height*0.7;
         adView.frame = rect;
-        
+        [adView sd_setImageWithURL:self.adArray[i] placeholderImage:nil];
         [self.scrollView addSubview:adView];
         
         originX += self.scrollView.frame.size.width;
@@ -100,7 +109,11 @@
 //手势事件
 - (void)gestureClick
 {
-    NSLog(@"%ld",self.pageControl.currentPage);
+    NSLog(@"%@",self.webArray[self.pageControl.currentPage]);
+//    UIWebView *webView= [[UIWebView alloc] initWithFrame:self.bounds];
+//    NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.baidu.com"]];
+//    [self addSubview: webView];
+//    [webView loadRequest:request];
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
