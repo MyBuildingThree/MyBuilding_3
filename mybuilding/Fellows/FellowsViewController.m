@@ -7,6 +7,7 @@
 //
 
 #import "FellowsViewController.h"
+#import "RLViewController.h"
 
 @interface FellowsViewController ()
 
@@ -17,11 +18,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self temp];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+-(void)temp
+{
+    RLViewController *r = [[RLViewController alloc]init];
+    r.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:r animated:YES];
 }
 
 /*

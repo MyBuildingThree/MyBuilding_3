@@ -115,7 +115,8 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:self.backBtn];
 
     //tableview
-    self.tbv = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-64) style:UITableViewStylePlain];
+    self.tbv = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height) style:UITableViewStylePlain];
+    self.tbv.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     self.tbv.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         if (!self.history)

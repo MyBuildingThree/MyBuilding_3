@@ -63,6 +63,7 @@
 		5D83CB281B745A2400B76716 /* TemplateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D83CB271B745A2400B76716 /* TemplateCell.m */; };
 		5D83CB2B1B74830200B76716 /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D83CB2A1B74830200B76716 /* MyView.m */; };
 		5D83CB2E1B748A4D00B76716 /* OtherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D83CB2D1B748A4D00B76716 /* OtherCell.m */; };
+		5D83CB311B74A26200B76716 /* RLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D83CB301B74A26200B76716 /* RLViewController.m */; };
 		5DAC71A21B70D9CF00B2ED69 /* SearchSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC719C1B70A7EA00B2ED69 /* SearchSqlite.m */; };
 		5DDA3A461B721601008DD88F /* ADScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDA3A441B720F6B008DD88F /* ADScrollView.m */; };
 		5DDA3A471B721601008DD88F /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDA3A401B7208BC008DD88F /* PopoverView.m */; };
@@ -315,6 +316,8 @@
 		5D83CB2A1B74830200B76716 /* MyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
 		5D83CB2C1B748A4D00B76716 /* OtherCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherCell.h; sourceTree = "<group>"; };
 		5D83CB2D1B748A4D00B76716 /* OtherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherCell.m; sourceTree = "<group>"; };
+		5D83CB2F1B74A26200B76716 /* RLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLViewController.h; sourceTree = "<group>"; };
+		5D83CB301B74A26200B76716 /* RLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLViewController.m; sourceTree = "<group>"; };
 		5DAC71941B70511300B2ED69 /* RegisterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterVC.h; sourceTree = "<group>"; };
 		5DAC71951B70511300B2ED69 /* RegisterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterVC.m; sourceTree = "<group>"; };
 		5DAC719B1B70A7EA00B2ED69 /* SearchSqlite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchSqlite.h; sourceTree = "<group>"; };
@@ -1047,6 +1050,8 @@
 				D3A8B3FF1B70E9B20033457F /* FindPasswordVC.m */,
 				D3A8B4001B70E9B20033457F /* LoginVC.h */,
 				D3A8B4011B70E9B20033457F /* LoginVC.m */,
+				5D83CB2F1B74A26200B76716 /* RLViewController.h */,
+				5D83CB301B74A26200B76716 /* RLViewController.m */,
 				D3A8B4021B70E9B20033457F /* RegisterVC.h */,
 				D3A8B4031B70E9B20033457F /* RegisterVC.m */,
 				D3A8B4041B70E9B20033457F /* ResetVC.h */,
@@ -1659,6 +1664,7 @@
 				D3DF129C1B6B614400DFEE8F /* MJRefreshFooter.m in Sources */,
 				D3DF12D21B6B7DA000DFEE8F /* SDWebImageDecoder.m in Sources */,
 				D3E37A601B68BAA20073D401 /* UIButton+AFNetworking.m in Sources */,
+				5D83CB311B74A26200B76716 /* RLViewController.m in Sources */,
 				5B5CA19E1B6F70ED00CC3896 /* RKStageChooseView.m in Sources */,
 				D3F24FFC1B745A1800E03716 /* CompanyContentCell.m in Sources */,
 				D3A1746C1B6F96AE00BC6DA1 /* PersonModel.m in Sources */,
