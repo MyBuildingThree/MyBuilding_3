@@ -145,4 +145,10 @@
         [self.delegate imageLabelClicked:self];
     }
 }
+
+- (CGRect)setHeight:(CGFloat)height{
+    CGRect frame = [super setHeight:height];;
+    [self refresh];
+    return frame;
+}
 @end

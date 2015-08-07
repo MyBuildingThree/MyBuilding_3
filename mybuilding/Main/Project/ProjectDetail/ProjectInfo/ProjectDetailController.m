@@ -57,9 +57,12 @@
 
 - (void)pageControllerFirstLoad{
     [ProjectApi GetProjectInfoWithBlock:^(ProjectModel *proModel, NSMutableArray *contactArr, NSMutableArray *imageArr, NSError *error) {
-        self.projectModel = proModel;
-        self.imageArr = imageArr;
-        [self refreshData];
+        if (!error) {
+            self.projectModel = proModel;
+            self.imageArr = imageArr;
+            [self refreshData];
+        }
+
     } projectId:self.projectId noNetWork:nil];
 }
 
