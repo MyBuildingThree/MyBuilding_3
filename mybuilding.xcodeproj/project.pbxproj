@@ -824,14 +824,14 @@
 		5BA668991B7343A200E4A955 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5BA6689A1B7343A200E4A955 /* ProjectAddressInfoView.h */,
-				5BA6689B1B7343A200E4A955 /* ProjectAddressInfoView.m */,
 				5BA6689C1B7343A200E4A955 /* ProjectContactsInfoView.h */,
 				5BA6689D1B7343A200E4A955 /* ProjectContactsInfoView.m */,
 				5BA6689E1B7343A200E4A955 /* ProjectCreatedUserView.h */,
 				5BA6689F1B7343A200E4A955 /* ProjectCreatedUserView.m */,
 				5BA668A01B7343A200E4A955 /* ProjectDataInfoView1.h */,
 				5BA668A11B7343A200E4A955 /* ProjectDataInfoView1.m */,
+				5BA6689A1B7343A200E4A955 /* ProjectAddressInfoView.h */,
+				5BA6689B1B7343A200E4A955 /* ProjectAddressInfoView.m */,
 				5BA668A21B7343A200E4A955 /* ProjectDataInfoView2.h */,
 				5BA668A31B7343A200E4A955 /* ProjectDataInfoView2.m */,
 				5BA668A41B7343A200E4A955 /* ProjectImageInfoView.h */,

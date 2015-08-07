@@ -45,7 +45,9 @@
     [ProjectApi GetProjectInfoWithBlock:^(ProjectModel *proModel, NSMutableArray *contactArr, NSMutableArray *imageArr, NSError *error) {
         NSLog(@"%@",proModel);
         [self.projectNameView setName:proModel.a_projectName describe:@"的实打实大多数顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶" favoriteNum:@"1523" commentNum:@"523" focusNum:@"1523" time:proModel.a_lastUpdatedTime];
-        [self.dataInfoView1 setProjectDataInfoViewContents:@[@"123123"]];
+        [self.dataInfoView1 setProjectDataInfoViewContents:@[@"1111",@"22222",@"33333",@"44444",@"55555",@"66666",@"77777",@"88888",@"0000000000000000000000000000000000000000000000000000000000000000000",@"1111111111111111111111111111111111111111111111111111111111111111111111111111111"]];
+        [self.dataInfoView2 setProjectDataInfoViewContents:@[@"1111",@"22222",@"33333",@"44444",@"55555",@"66666",@"77777",@"88888",@"99999",@"00000",@"111",@"22222",@"3333",@"4444",@"5555"]];
+
         [self.tableView reloadData];
     } projectId:self.projectId noNetWork:nil];
 }
@@ -65,13 +67,13 @@
         cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
-    [cell.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    [cell.contentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     UIView* sepe = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 1)];
     sepe.backgroundColor = [UIColor redColor];
     [cell addSubview:sepe];
     
     UIView* view = self.viewArr[indexPath.row];
-    [cell addSubview:view];
+    [cell.contentView addSubview:view];
     
     return cell;
 }
@@ -132,10 +134,7 @@
 
 - (ProjectDataInfoView2 *)dataInfoView2{
     if (!_dataInfoView2) {
-        ProjectDataInfoView2* view = [[ProjectDataInfoView2 alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 100)];
-        UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
-        label.text = @"数据信息2";
-        [view addSubview:label];
+        ProjectDataInfoView2* view = [[ProjectDataInfoView2 alloc] init];
         
         _dataInfoView2 = view;
     }
