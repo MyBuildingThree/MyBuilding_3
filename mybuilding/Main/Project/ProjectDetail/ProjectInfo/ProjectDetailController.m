@@ -45,8 +45,6 @@
 - (void)setUp{
     [super setUp];
     self.tableView.size = CGSizeMake(kScreenWidth, kScreenHeight - 64);
-//    self.tableView.backgroundColor = RGBCOLOR(222, 222, 222);
-//    self.view.backgroundColor = RGBCOLOR(222, 222, 222);
     [self setUpFooterView];
 }
 
@@ -59,7 +57,6 @@
 
 - (void)pageControllerFirstLoad{
     [ProjectApi GetProjectInfoWithBlock:^(ProjectModel *proModel, NSMutableArray *contactArr, NSMutableArray *imageArr, NSError *error) {
-        NSLog(@"%@",proModel);
         self.projectModel = proModel;
         self.imageArr = imageArr;
         [self refreshData];
@@ -69,12 +66,11 @@
 - (void)refreshData{
     [self.projectNameView setName:self.projectModel.a_projectName describe:self.projectModel.a_description favoriteNum:@"1523" commentNum:self.projectModel.a_commentsNum focusNum:@"111" time:self.projectModel.a_lastUpdatedTime];
     [self.dataInfoView1 setProjectDataInfoViewContents:@[self.projectModel.a_exceptStartTime,self.projectModel.a_exceptFinishTime,self.projectModel.a_storeyHeight,self.projectModel.a_area,self.projectModel.a_investment,self.projectModel.a_foreignInvestment,self.projectModel.a_plotRatio,self.projectModel.a_storeyArea,self.projectModel.a_ownerType,self.projectModel.a_usage]];
-    [self.dataInfoView2 setProjectDataInfoViewContents:@[@"1111",@"22222",@"33333",@"44444",@"55555",@"66666",@"77777",@"88888",@"00000",@"111",@"22222",@"3333",@"4444",@"5555"]];
+    [self.dataInfoView2 setProjectDataInfoViewContents:@[self.projectModel.a_exceptStartTime,self.projectModel.a_exceptFinishTime,self.projectModel.a_elevator,self.projectModel.a_mainDesignStage,self.projectModel.a_stealStructure,self.projectModel.a_airCondition,self.projectModel.a_heating,self.projectModel.a_externalWallMeterial,self.projectModel.a_actureStartTime,self.projectModel.a_fireControl,self.projectModel.a_green,self.projectModel.a_electorWeakInstallation,self.projectModel.a_decorationSituation,self.projectModel.a_decorationProcess]];
     [self.addressInfoView setContent:@"我是一个地址我是一个地址我是一个地址我是一个地址我是一个地址我是一个地址我是一个地址我是一个地址我是一个地址我是一个地址我是一个地址我是一个地址我是一个地址我是一个地址我是一个地址我是一个地址我是一个地址我是一个地址"];
     
     ProjectImageModel* imageModel = self.imageArr.firstObject;
     [self.imageInfoView setImageUrl:imageModel.a_imageCompressLocation imageNum:[NSString stringWithFormat:@"%d张图片",(int)self.imageArr.count]];
-    
     
     [self.tableView reloadData];
 
@@ -137,7 +133,7 @@
 
 - (ProjectAddressInfoView *)addressInfoView{
     if (!_addressInfoView) {
-        ProjectAddressInfoView* view = [[ProjectAddressInfoView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 100)];
+        ProjectAddressInfoView* view = [[ProjectAddressInfoView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 125)];
         [view addTarget:self action:@selector(addressViewClicked) forControlEvents:UIControlEventTouchUpInside];
         
         _addressInfoView = view;
