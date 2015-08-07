@@ -29,7 +29,7 @@
 
 @property(nonatomic, strong) RKLabelLabel* labelLabel07;
 
-@property(nonatomic, strong) RKLabelLabel* labelLabel08;
+//@property(nonatomic, strong) RKLabelLabel* labelLabel08;
 
 @property(nonatomic, strong) RKLabelLabel* labelLabel09;
 
@@ -58,6 +58,9 @@
     CGFloat const eachArrangeW = 50;
     __block NSArray* arrangeHArr = @[@10, @(153.0 / 375 * kScreenWidth), @(kScreenWidth - 83)];
     
+#warning 这边要进行处理，最后确认样式，是普通布局还是什么
+    self.backgroundColor = [[UIColor alloc] initWithRed:.5 green:.5 blue:.5 alpha:.5];
+    
     NSArray* normalLabelArr = self.labelArr;
     [normalLabelArr enumerateObjectsUsingBlock:^(RKLabelLabel* labelLabel, NSUInteger idx, BOOL *stop) {
         CGFloat originX = [arrangeHArr[idx % 3] doubleValue];
@@ -69,7 +72,7 @@
     self.size = CGSizeMake(kScreenWidth, laseLabel.maxY + topMargin);
     
     //设置分割线
-    self.sepe1.midY = (self.labelLabel08.maxY + self.labelLabel09.minY) * 0.5;
+    self.sepe1.midY = (self.labelLabel06.maxY + self.labelLabel09.minY) * 0.5;
     self.sepe2.midY = (self.labelLabel11.maxY + self.labelLabel12.minY) * 0.5;
 
 }
@@ -77,7 +80,9 @@
 - (void)setProjectDataInfoViewContents:(NSArray *)contents{
     [contents enumerateObjectsUsingBlock:^(NSString* content, NSUInteger idx, BOOL *stop) {
         RKLabelLabel* labelLabel = self.labelArr[idx];
-        labelLabel.firstLabel.text = content;
+        BOOL isNothing = [content isEqualToString:@""];
+        labelLabel.firstLabel.text = isNothing ? @"暂无数据" : content;
+        labelLabel.firstLabel.textColor = isNothing ? RGBCOLOR(127, 127, 127) : RGBCOLOR(22, 119, 203);
     }];
     [self refreshViews];
 }
@@ -87,12 +92,9 @@
     labelLabel.secondLabel.text = title;
     labelLabel.secondLabel.textColor = RGBCOLOR(127, 127, 127);
     labelLabel.secondLabel.font = [UIFont systemFontOfSize:14];
-    labelLabel.firstLabel.textColor = RGBCOLOR(22, 119, 203);
     labelLabel.firstLabel.font = [UIFont systemFontOfSize:17];
     
     [self addSubview:labelLabel];
-    //    labelLabel.backgroundColor = [[UIColor alloc] initWithRed:.5 green:.5 blue:.5 alpha:.5];
-    
     return labelLabel;
 }
 
@@ -114,7 +116,7 @@
 
 - (NSArray *)labelArr{
     if (!_labelArr) {
-        _labelArr = @[self.labelLabel00,self.labelLabel01,self.labelLabel02,self.labelLabel03,self.labelLabel04,self.labelLabel05,self.labelLabel06,self.labelLabel07,self.labelLabel08,self.labelLabel09,self.labelLabel10,self.labelLabel11,self.labelLabel12,self.labelLabel13,self.labelLabel14];
+        _labelArr = @[self.labelLabel00,self.labelLabel01,self.labelLabel02,self.labelLabel03,self.labelLabel04,self.labelLabel05,self.labelLabel06,self.labelLabel07,/*self.labelLabel08,*/self.labelLabel09,self.labelLabel10,self.labelLabel11,self.labelLabel12,self.labelLabel13,self.labelLabel14];
     }
     return _labelArr;
 }
@@ -175,16 +177,16 @@
     return _labelLabel07;
 }
 
-- (RKLabelLabel *)labelLabel08{
-    if (!_labelLabel08) {
-        _labelLabel08 = [self getRKLabelWithTitle:@"外资参与"];
-    }
-    return _labelLabel08;
-}
+//- (RKLabelLabel *)labelLabel08{
+//    if (!_labelLabel08) {
+//        _labelLabel08 = [self getRKLabelWithTitle:@"外资参与"];
+//    }
+//    return _labelLabel08;
+//}
 
 - (RKLabelLabel *)labelLabel09{
     if (!_labelLabel09) {
-        _labelLabel09 = [self getRKLabelWithTitle:@"预计开工"];
+        _labelLabel09 = [self getRKLabelWithTitle:@"实际开工时间"];
     }
     return _labelLabel09;
 }
@@ -205,21 +207,21 @@
 
 - (RKLabelLabel *)labelLabel12{
     if (!_labelLabel12) {
-        _labelLabel12 = [self getRKLabelWithTitle:@"预计开工"];
+        _labelLabel12 = [self getRKLabelWithTitle:@"弱电安装"];
     }
     return _labelLabel12;
 }
 
 - (RKLabelLabel *)labelLabel13{
     if (!_labelLabel13) {
-        _labelLabel13 = [self getRKLabelWithTitle:@"消防"];
+        _labelLabel13 = [self getRKLabelWithTitle:@"装修情况"];
     }
     return _labelLabel13;
 }
 
 - (RKLabelLabel *)labelLabel14{
     if (!_labelLabel14) {
-        _labelLabel14 = [self getRKLabelWithTitle:@"绿化"];
+        _labelLabel14 = [self getRKLabelWithTitle:@"装修进度"];
     }
     return _labelLabel14;
 }

@@ -99,6 +99,15 @@
     return self.frame;
 }
 
+- (CGRect)setMaxX:(CGFloat)maxX{
+    CGRect frame = self.frame;
+    frame.origin.x = maxX - self.width;
+    self.frame = frame;
+    
+    return self.frame;
+}
+
+
 - (CGRect)setMinY:(CGFloat)minY{
     CGRect frame = self.frame;
     frame.origin.y = minY;

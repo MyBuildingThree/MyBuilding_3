@@ -9,6 +9,9 @@
 #import "ProjectDetailController.h"
 #import "UIView+ViewKit.h"
 #import "ProjectApi.h"
+#import "ProjectImageModel.h"
+#import "ProjectContactModel.h"
+
 #import "ProjectCreatedUserView.h"
 #import "ProjectNameInfoView.h"
 #import "ProjectAddressInfoView.h"
@@ -17,7 +20,7 @@
 #import "ProjectDataInfoView2.h"
 #import "ProjectContactsInfoView.h"
 
-@interface ProjectDetailController ()
+@interface ProjectDetailController ()<ProjectImageInfoViewDelegate>
 
 /**
  *  存各cell的view
@@ -32,6 +35,9 @@
 @property(nonatomic, strong) ProjectDataInfoView2* dataInfoView2;
 @property(nonatomic, strong) ProjectContactsInfoView* contactsInfoView;
 
+@property(nonatomic, strong) ProjectModel* projectModel;
+@property(nonatomic, strong) NSArray* imageArr;
+
 @end
 
 @implementation ProjectDetailController
@@ -39,17 +45,47 @@
 - (void)setUp{
     [super setUp];
     self.tableView.size = CGSizeMake(kScreenWidth, kScreenHeight - 64);
+//    self.tableView.backgroundColor = RGBCOLOR(222, 222, 222);
+//    self.view.backgroundColor = RGBCOLOR(222, 222, 222);
+    [self setUpFooterView];
+}
+
+- (void)setUpFooterView{
+    UIButton* btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 50)];
+    [btn setTitle:@"向下滑动查看更多" forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    self.tableView.tableFooterView = btn;
 }
 
 - (void)pageControllerFirstLoad{
     [ProjectApi GetProjectInfoWithBlock:^(ProjectModel *proModel, NSMutableArray *contactArr, NSMutableArray *imageArr, NSError *error) {
         NSLog(@"%@",proModel);
-        [self.projectNameView setName:proModel.a_projectName describe:@"的实打实大多数顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶" favoriteNum:@"1523" commentNum:@"523" focusNum:@"1523" time:proModel.a_lastUpdatedTime];
-        [self.dataInfoView1 setProjectDataInfoViewContents:@[@"1111",@"22222",@"33333",@"44444",@"55555",@"66666",@"77777",@"88888",@"0000000000000000000000000000000000000000000000000000000000000000000",@"1111111111111111111111111111111111111111111111111111111111111111111111111111111"]];
-        [self.dataInfoView2 setProjectDataInfoViewContents:@[@"1111",@"22222",@"33333",@"44444",@"55555",@"66666",@"77777",@"88888",@"99999",@"00000",@"111",@"22222",@"3333",@"4444",@"5555"]];
-
-        [self.tableView reloadData];
+        self.projectModel = proModel;
+        self.imageArr = imageArr;
+        [self refreshData];
     } projectId:self.projectId noNetWork:nil];
+}
+
+- (void)refreshData{
+    [self.projectNameView setName:self.projectModel.a_projectName describe:self.projectModel.a_description favoriteNum:@"1523" commentNum:self.projectModel.a_commentsNum focusNum:@"111" time:self.projectModel.a_lastUpdatedTime];
+    [self.dataInfoView1 setProjectDataInfoViewContents:@[self.projectModel.a_exceptStartTime,self.projectModel.a_exceptFinishTime,self.projectModel.a_storeyHeight,self.projectModel.a_area,self.projectModel.a_investment,self.projectModel.a_foreignInvestment,self.projectModel.a_plotRatio,self.projectModel.a_storeyArea,self.projectModel.a_ownerType,self.projectModel.a_usage]];
+    [self.dataInfoView2 setProjectDataInfoViewContents:@[@"1111",@"22222",@"33333",@"44444",@"55555",@"66666",@"77777",@"88888",@"00000",@"111",@"22222",@"3333",@"4444",@"5555"]];
+    [self.addressInfoView setContent:@"我是一个地址我是一个地址我是一个地址我是一个地址我是一个地址我是一个地址我是一个地址我是一个地址我是一个地址我是一个地址我是一个地址我是一个地址我是一个地址我是一个地址我是一个地址我是一个地址我是一个地址我是一个地址"];
+    
+    ProjectImageModel* imageModel = self.imageArr.firstObject;
+    [self.imageInfoView setImageUrl:imageModel.a_imageCompressLocation imageNum:[NSString stringWithFormat:@"%d张图片",(int)self.imageArr.count]];
+    
+    
+    [self.tableView reloadData];
+
+}
+
+- (void)imageInfoViewClicked:(ProjectImageInfoView *)imageInfoView{
+    NSLog(@"imageInfoViewClicked");
+}
+
+- (void)addressViewClicked{
+    NSLog(@"addressViewClicked");
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -102,9 +138,7 @@
 - (ProjectAddressInfoView *)addressInfoView{
     if (!_addressInfoView) {
         ProjectAddressInfoView* view = [[ProjectAddressInfoView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 100)];
-        UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
-        label.text = @"地址信息";
-        [view addSubview:label];
+        [view addTarget:self action:@selector(addressViewClicked) forControlEvents:UIControlEventTouchUpInside];
         
         _addressInfoView = view;
     }
@@ -122,10 +156,8 @@
 
 - (ProjectImageInfoView *)imageInfoView{
     if (!_imageInfoView) {
-        ProjectImageInfoView* view = [[ProjectImageInfoView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 100)];
-        UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
-        label.text = @"图片信息";
-        [view addSubview:label];
+        ProjectImageInfoView* view = [[ProjectImageInfoView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 125)];
+        view.delegate = self;
         
         _imageInfoView = view;
     }

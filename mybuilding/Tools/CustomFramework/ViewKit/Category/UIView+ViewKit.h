@@ -97,6 +97,12 @@
 - (CGRect)setMidX:(CGFloat)midX;
 
 /**
+ *  设置最右的x
+ *  @return 设置完之后的view.frame
+ */
+- (CGRect)setMaxX:(CGFloat)maxX;
+
+/**
  *  设置最高的y
  *  @return 设置完之后的view.frame
  */

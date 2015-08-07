@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ *  项目详情多字段2号块
+ */
 @interface ProjectDataInfoView2 : UIView
 
 /**

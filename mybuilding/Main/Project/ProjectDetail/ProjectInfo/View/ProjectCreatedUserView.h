@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ProjectCreatedUserView : UIView
+
 @property(nonatomic, strong) UIImageView* avator;
+
 @end

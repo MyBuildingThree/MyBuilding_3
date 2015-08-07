@@ -19,6 +19,9 @@
 
 @end
 
+/**
+ *  项目详情项目名称等各信息
+ */
 @interface ProjectNameInfoView : UIView
 
 @property(nonatomic, weak) id<ProjectNameInfoViewDelegate> delegate;

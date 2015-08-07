@@ -34,12 +34,6 @@
 
 @property(nonatomic, strong) RKLabelLabel* labelLabel10;
 
-@property(nonatomic, strong) RKLabelLabel* labelLabel11;
-
-@property(nonatomic, strong) RKLabelLabel* labelLabel12;
-
-@property(nonatomic, strong) RKLabelLabel* labelLabel13;
-
 @property(nonatomic, strong) NSArray* labelArr;
 
 @end
@@ -77,7 +71,11 @@
 - (void)setProjectDataInfoViewContents:(NSArray *)contents{
     [contents enumerateObjectsUsingBlock:^(NSString* content, NSUInteger idx, BOOL *stop) {
         RKLabelLabel* labelLabel = self.labelArr[idx];
-        labelLabel.firstLabel.text = content;
+        BOOL isNothing = [content isEqualToString:@""];
+
+        labelLabel.firstLabel.text = isNothing ? @"暂无数据" : content;
+        labelLabel.firstLabel.textColor = isNothing ? RGBCOLOR(127, 127, 127) : RGBCOLOR(22, 119, 203);
+
     }];
     [self refreshViews];
 }
@@ -87,8 +85,7 @@
     labelLabel.secondLabel.text = title;
     labelLabel.secondLabel.textColor = RGBCOLOR(127, 127, 127);
     labelLabel.secondLabel.font = [UIFont systemFontOfSize:14];
-    labelLabel.firstLabel.textColor = RGBCOLOR(22, 119, 203);
-    labelLabel.firstLabel.font = [UIFont systemFontOfSize:17];
+    labelLabel.firstLabel.font = [UIFont boldSystemFontOfSize:17];
     
     [self addSubview:labelLabel];
 //    labelLabel.backgroundColor = [[UIColor alloc] initWithRed:.5 green:.5 blue:.5 alpha:.5];
