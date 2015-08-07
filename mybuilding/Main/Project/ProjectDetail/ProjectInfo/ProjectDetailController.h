@@ -8,6 +8,9 @@
 
 #import "RKPageController.h"
 
+/**
+ *  项目详情控制器
+ */
 @interface ProjectDetailController : RKPageController
 
 /**

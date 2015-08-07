@@ -36,6 +36,8 @@
 + (void)GetProjectInfoWithBlock:(void (^)(ProjectModel *proModel, NSMutableArray *contactArr, NSMutableArray *imageArr ,NSError *error))block projectId:(NSString *)projectId noNetWork:(void(^)())noNetWork{
     NSString *urlStr = [NSString stringWithFormat:@"api/projects/info?projectId=%@",projectId];
     [SendRequst sendRequestWithUrlString:urlStr success:^(id responseDic) {
+        NSLog(@"response = %@",responseDic);
+        
         ProjectModel *proModel = [[ProjectModel alloc] init];
         NSMutableDictionary *dataDic = [[NSMutableDictionary alloc] init];
         [dataDic setValuesForKeysWithDictionary:responseDic[@"data"][@"info"]];

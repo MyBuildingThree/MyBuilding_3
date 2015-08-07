@@ -8,6 +8,9 @@
 
 #import "RKPageController.h"
 
+/**
+ *  项目评论控制器
+ */
 @interface ProjectCommentController : RKPageController
 
 @end
