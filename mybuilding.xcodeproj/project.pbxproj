@@ -181,6 +181,15 @@
 		D3F24FFC1B745A1800E03716 /* CompanyContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F24FFB1B745A1800E03716 /* CompanyContentCell.m */; };
 		D3F24FFF1B74724500E03716 /* CompanyOtherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F24FFE1B74724500E03716 /* CompanyOtherCell.m */; };
 		D3F250021B747BC800E03716 /* CompanyProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F250011B747BC800E03716 /* CompanyProductCell.m */; };
+		D3F250051B7481B800E03716 /* MyCompanyDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F250041B7481B800E03716 /* MyCompanyDetailController.m */; };
+		D3F250081B7483C300E03716 /* CompanyEmployeeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F250071B7483C300E03716 /* CompanyEmployeeCell.m */; };
+		D3F2500B1B74851400E03716 /* MyCompanyHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F2500A1B74851400E03716 /* MyCompanyHeadCell.m */; };
+		D3F250121B748B2500E03716 /* ContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F250111B748B2500E03716 /* ContactDetailViewController.m */; };
+		D3F250151B748D9F00E03716 /* ContactHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F250141B748D9F00E03716 /* ContactHeadCell.m */; };
+		D3F250181B748DF200E03716 /* ContactFriendsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F250171B748DF200E03716 /* ContactFriendsCell.m */; };
+		D3F2501B1B748E6A00E03716 /* ContactCompanyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F2501A1B748E6A00E03716 /* ContactCompanyCell.m */; };
+		D3F2501E1B7490A100E03716 /* ContactWorkHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F2501D1B7490A100E03716 /* ContactWorkHistoryCell.m */; };
+		D3F250211B7491B200E03716 /* ContactOtherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F250201B7491B200E03716 /* ContactOtherCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -537,6 +546,24 @@
 		D3F24FFE1B74724500E03716 /* CompanyOtherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyOtherCell.m; sourceTree = "<group>"; };
 		D3F250001B747BC800E03716 /* CompanyProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyProductCell.h; sourceTree = "<group>"; };
 		D3F250011B747BC800E03716 /* CompanyProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyProductCell.m; sourceTree = "<group>"; };
+		D3F250031B7481B800E03716 /* MyCompanyDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCompanyDetailController.h; sourceTree = "<group>"; };
+		D3F250041B7481B800E03716 /* MyCompanyDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCompanyDetailController.m; sourceTree = "<group>"; };
+		D3F250061B7483C300E03716 /* CompanyEmployeeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyEmployeeCell.h; sourceTree = "<group>"; };
+		D3F250071B7483C300E03716 /* CompanyEmployeeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyEmployeeCell.m; sourceTree = "<group>"; };
+		D3F250091B74851400E03716 /* MyCompanyHeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCompanyHeadCell.h; sourceTree = "<group>"; };
+		D3F2500A1B74851400E03716 /* MyCompanyHeadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCompanyHeadCell.m; sourceTree = "<group>"; };
+		D3F250101B748B2500E03716 /* ContactDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactDetailViewController.h; sourceTree = "<group>"; };
+		D3F250111B748B2500E03716 /* ContactDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactDetailViewController.m; sourceTree = "<group>"; };
+		D3F250131B748D9F00E03716 /* ContactHeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactHeadCell.h; sourceTree = "<group>"; };
+		D3F250141B748D9F00E03716 /* ContactHeadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactHeadCell.m; sourceTree = "<group>"; };
+		D3F250161B748DF200E03716 /* ContactFriendsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactFriendsCell.h; sourceTree = "<group>"; };
+		D3F250171B748DF200E03716 /* ContactFriendsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactFriendsCell.m; sourceTree = "<group>"; };
+		D3F250191B748E6A00E03716 /* ContactCompanyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactCompanyCell.h; sourceTree = "<group>"; };
+		D3F2501A1B748E6A00E03716 /* ContactCompanyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactCompanyCell.m; sourceTree = "<group>"; };
+		D3F2501C1B7490A100E03716 /* ContactWorkHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactWorkHistoryCell.h; sourceTree = "<group>"; };
+		D3F2501D1B7490A100E03716 /* ContactWorkHistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactWorkHistoryCell.m; sourceTree = "<group>"; };
+		D3F2501F1B7491B200E03716 /* ContactOtherCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactOtherCell.h; sourceTree = "<group>"; };
+		D3F250201B7491B200E03716 /* ContactOtherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactOtherCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -580,6 +607,7 @@
 		5B5CA12E1B6F3A1100CC3896 /* Contact */ = {
 			isa = PBXGroup;
 			children = (
+				D3F2500C1B7489D200E03716 /* ContactDetail */,
 				5B5CA1361B6F3ED100CC3896 /* MainContactController.h */,
 				5B5CA1371B6F3ED100CC3896 /* MainContactController.m */,
 				5B5CA1391B6F4A1600CC3896 /* MainContactCell.h */,
@@ -1448,8 +1476,33 @@
 				D3F24FFE1B74724500E03716 /* CompanyOtherCell.m */,
 				D3F250001B747BC800E03716 /* CompanyProductCell.h */,
 				D3F250011B747BC800E03716 /* CompanyProductCell.m */,
+				D3F250031B7481B800E03716 /* MyCompanyDetailController.h */,
+				D3F250041B7481B800E03716 /* MyCompanyDetailController.m */,
+				D3F250061B7483C300E03716 /* CompanyEmployeeCell.h */,
+				D3F250071B7483C300E03716 /* CompanyEmployeeCell.m */,
+				D3F250091B74851400E03716 /* MyCompanyHeadCell.h */,
+				D3F2500A1B74851400E03716 /* MyCompanyHeadCell.m */,
 			);
 			path = CompanyDetail;
+			sourceTree = "<group>";
+		};
+		D3F2500C1B7489D200E03716 /* ContactDetail */ = {
+			isa = PBXGroup;
+			children = (
+				D3F250101B748B2500E03716 /* ContactDetailViewController.h */,
+				D3F250111B748B2500E03716 /* ContactDetailViewController.m */,
+				D3F250131B748D9F00E03716 /* ContactHeadCell.h */,
+				D3F250141B748D9F00E03716 /* ContactHeadCell.m */,
+				D3F250161B748DF200E03716 /* ContactFriendsCell.h */,
+				D3F250171B748DF200E03716 /* ContactFriendsCell.m */,
+				D3F250191B748E6A00E03716 /* ContactCompanyCell.h */,
+				D3F2501A1B748E6A00E03716 /* ContactCompanyCell.m */,
+				D3F2501C1B7490A100E03716 /* ContactWorkHistoryCell.h */,
+				D3F2501D1B7490A100E03716 /* ContactWorkHistoryCell.m */,
+				D3F2501F1B7491B200E03716 /* ContactOtherCell.h */,
+				D3F250201B7491B200E03716 /* ContactOtherCell.m */,
+			);
+			path = ContactDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1559,7 +1612,9 @@
 				D3F24FFF1B74724500E03716 /* CompanyOtherCell.m in Sources */,
 				D3E91F871B72EBFD00FD8851 /* ProjectContactModel.m in Sources */,
 				5DAC71A21B70D9CF00B2ED69 /* SearchSqlite.m in Sources */,
+				D3F250181B748DF200E03716 /* ContactFriendsCell.m in Sources */,
 				5DDA3A461B721601008DD88F /* ADScrollView.m in Sources */,
+				D3F250051B7481B800E03716 /* MyCompanyDetailController.m in Sources */,
 				5DDA3A471B721601008DD88F /* PopoverView.m in Sources */,
 				5B863CF11B71EB5700AF0D36 /* NSString+LabelKit.m in Sources */,
 				5B863CF01B71EB3900AF0D36 /* UIImageView+ViewKit.m in Sources */,
@@ -1581,6 +1636,7 @@
 				D3E37A511B68BAA20073D401 /* AFHTTPRequestOperation.m in Sources */,
 				D3E91F8A1B73218600FD8851 /* MainRequirementsController.m in Sources */,
 				D3A1745E1B6F835B00BC6DA1 /* CompanyTableViewCell.m in Sources */,
+				D3F250211B7491B200E03716 /* ContactOtherCell.m in Sources */,
 				5B5CA18B1B6F70ED00CC3896 /* RKScrollView.m in Sources */,
 				D3E379FC1B686C9E0073D401 /* ViewController.m in Sources */,
 				5B5CA1381B6F3ED100CC3896 /* MainContactController.m in Sources */,
@@ -1589,8 +1645,11 @@
 				D3DF12611B6B412800DFEE8F /* FMDatabase.m in Sources */,
 				D3DF129E1B6B614400DFEE8F /* MJRefreshAutoGifFooter.m in Sources */,
 				D3E37A541B68BAA20073D401 /* AFNetworkReachabilityManager.m in Sources */,
+				D3F250121B748B2500E03716 /* ContactDetailViewController.m in Sources */,
+				D3F2501B1B748E6A00E03716 /* ContactCompanyCell.m in Sources */,
 				5BA668AA1B7343A200E4A955 /* ProjectDetailController.m in Sources */,
 				D35595961B6EFF2000E4577B /* MainViewController.m in Sources */,
+				D3F2501E1B7490A100E03716 /* ContactWorkHistoryCell.m in Sources */,
 				D3DF12641B6B412800DFEE8F /* FMDatabaseAdditions.m in Sources */,
 				5BA668B11B7343A200E4A955 /* ProjectNameInfoView.m in Sources */,
 				D3DF12A11B6B614400DFEE8F /* MJRefreshBackGifFooter.m in Sources */,
@@ -1626,6 +1685,7 @@
 				D3F24FF61B744C9400E03716 /* CompanyDetailController.m in Sources */,
 				5B5CA1B21B6F713600CC3896 /* ProjectModel.m in Sources */,
 				D3A1746B1B6F96AE00BC6DA1 /* PersonApi.m in Sources */,
+				D3F250151B748D9F00E03716 /* ContactHeadCell.m in Sources */,
 				D3DF12D61B6B7DA000DFEE8F /* SDWebImagePrefetcher.m in Sources */,
 				D3DF12651B6B412800DFEE8F /* FMDatabasePool.m in Sources */,
 				D3DF12D11B6B7DA000DFEE8F /* SDWebImageCompat.m in Sources */,
@@ -1646,6 +1706,7 @@
 				5B863CD61B71B58E00AF0D36 /* RKImageView.m in Sources */,
 				D3E91F801B72E69500FD8851 /* RequirementsModel.m in Sources */,
 				D3E37A611B68BAA20073D401 /* UIImageView+AFNetworking.m in Sources */,
+				D3F2500B1B74851400E03716 /* MyCompanyHeadCell.m in Sources */,
 				D3E37A531B68BAA20073D401 /* AFHTTPSessionManager.m in Sources */,
 				D3E37A571B68BAA20073D401 /* AFURLRequestSerialization.m in Sources */,
 				5BA668AD1B7343A200E4A955 /* ProjectCreatedUserView.m in Sources */,
@@ -1702,6 +1763,7 @@
 				D3DF12A01B6B614400DFEE8F /* MJRefreshAutoStateFooter.m in Sources */,
 				5B5CA13B1B6F4A1600CC3896 /* MainContactCell.m in Sources */,
 				D3DF12D51B6B7DA000DFEE8F /* SDWebImageManager.m in Sources */,
+				D3F250081B7483C300E03716 /* CompanyEmployeeCell.m in Sources */,
 				D3DF12D31B6B7DA000DFEE8F /* SDWebImageDownloader.m in Sources */,
 				5B5CA1B11B6F713600CC3896 /* ProjectApi.m in Sources */,
 				5BA668A91B7343A200E4A955 /* ProjectDetailViewController.m in Sources */,

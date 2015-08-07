@@ -13,6 +13,7 @@
 #import "MJRefreshNormalHeader.h"
 #import "MJRefreshBackNormalFooter.h"
 #import "CompanyDetailController.h"
+#import "MyCompanyDetailController.h"
 
 @implementation MainCompanyController
 
@@ -77,7 +78,8 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     CompanyModel *model = self.models[indexPath.row];
-    CompanyDetailController *view = [[CompanyDetailController alloc] init];
+    //CompanyDetailController *view = [[CompanyDetailController alloc] init];
+    MyCompanyDetailController *view = [[MyCompanyDetailController alloc] init];
     view.companyID = model.a_companyID;
     view.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:view animated:YES];

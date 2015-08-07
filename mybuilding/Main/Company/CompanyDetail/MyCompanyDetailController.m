@@ -1,13 +1,13 @@
 //
-//  CompanyDetailController.m
+//  MyCompanyDetailController.m
 //  mybuilding
 //
 //  Created by 汪洋 on 15/8/7.
 //  Copyright (c) 2015年 wy. All rights reserved.
 //
 
-#import "CompanyDetailController.h"
-#import "CompanyHeadCell.h"
+#import "MyCompanyDetailController.h"
+#import "MyCompanyHeadCell.h"
 #import "CompanyApi.h"
 #import "CompanyModel.h"
 #import "CompanyContentCell.h"
@@ -15,21 +15,30 @@
 #import "CompanyProductCell.h"
 #import "UIView+ViewKit.h"
 #import "RKShadowView.h"
+#import "CompanyEmployeeCell.h"
 
-@interface CompanyDetailController()
+@interface MyCompanyDetailController ()
 @property(nonatomic,strong)CompanyModel *companyModel;
 @property(nonatomic,strong)NSArray *titleArr;
 @property(nonatomic,strong)NSMutableArray *countArr;
 @property(nonatomic,strong)NSMutableArray *productArr;
+@property(nonatomic,strong)NSMutableArray *personlArr;
 @end
 
-@implementation CompanyDetailController
-- (void)viewDidLoad{
+@implementation MyCompanyDetailController
+
+- (void)viewDidLoad {
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
     [self initNav];
     [self loadCompanyInfo];
     [self initTableView];
     self.tableView.backgroundColor = RGBCOLOR(248, 248, 248);
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 -(NSArray *)titleArr{
@@ -65,13 +74,14 @@
             [self.countArr addObject:self.companyModel.a_productNum];
             [self.countArr addObject:self.companyModel.a_projectNum];
             self.productArr = [[NSMutableArray alloc] init];
+            self.personlArr = [[NSMutableArray alloc] init];
             [self.tableView reloadData];
         }
     } companyId:self.companyID noNetWork:nil];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 4;
+    return 5;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -80,6 +90,8 @@
     }else if(section == 1){
         return 1;
     }else if (section == 2){
+        return 1;
+    }else if (section == 3){
         if(self.productArr.count == 0){
             return 1;
         }else{
@@ -93,7 +105,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section;{
     if(section == 0){
         return 0;
-    }else if (section == 3){
+    }else if (section == 4){
         return 10;
     }
     return 35;
@@ -101,10 +113,16 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if(indexPath.section == 0){
-        return 176;
+        return 111;
     }else if (indexPath.section == 1){
         return [CompanyContentCell carculateCellHeightWithString:self.companyModel.a_companyDescription];
-    }else if(indexPath.section == 2){
+    }else if (indexPath.section == 2){
+        if(self.personlArr.count == 0){
+            return 45;
+        }else{
+            return 90;
+        }
+    }else if(indexPath.section == 3){
         if(self.productArr.count == 0){
             return 45;
         }else{
@@ -121,6 +139,9 @@
         UIView *bgView = [self addSectionView:@"公司简介"];
         return bgView;
     }else if (section == 2){
+        UIView *bgView = [self addSectionView:@"员工认证"];
+        return bgView;
+    }else if (section == 3){
         UIView *bgView = [self addSectionView:@"产品列表"];
         return bgView;
     }else{
@@ -132,10 +153,10 @@
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if(indexPath.section == 0){
-        NSString *CellIdentifier = [NSString stringWithFormat:@"CompanyHeadCell"];
-        CompanyHeadCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        NSString *CellIdentifier = [NSString stringWithFormat:@"MyCompanyHeadCell"];
+        MyCompanyHeadCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         if (!cell) {
-            cell=[[CompanyHeadCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+            cell=[[MyCompanyHeadCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         }
         cell.model = self.companyModel;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -150,6 +171,34 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }else if (indexPath.section == 2){
+        if(self.personlArr.count == 0){
+            NSString *CellIdentifier = [NSString stringWithFormat:@"CompanyEmployeeCell"];
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+            if (!cell) {
+                cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+            }
+            UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 100, 20)];
+            label.textColor = RGBCOLOR(68, 74, 89);
+            label.textAlignment = NSTextAlignmentLeft;
+            label.font = [UIFont systemFontOfSize:16];
+            label.text = @"暂无数据";
+            [cell.contentView addSubview:label];
+            
+            UIView *cutLine = [RKShadowView seperatorLine];
+            [cutLine setMinY:44];
+            [cell.contentView addSubview:cutLine];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            return cell;
+        }else{
+            NSString *CellIdentifier = [NSString stringWithFormat:@"CompanyEmployeeCell"];
+            CompanyEmployeeCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+            if (!cell) {
+                cell=[[CompanyEmployeeCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+            }
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            return cell;
+        }
+    }else if (indexPath.section == 3){
         if(self.productArr.count == 0){
             NSString *CellIdentifier = [NSString stringWithFormat:@"CompanyProductCell"];
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -177,7 +226,7 @@
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             return cell;
         }
-    }else if (indexPath.section == 3){
+    }else if (indexPath.section == 4){
         NSString *CellIdentifier = [NSString stringWithFormat:@"CompanyOtherCell"];
         CompanyOtherCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         if (!cell) {
@@ -214,6 +263,7 @@
     }
     
 }
+
 
 -(UIView *)addSectionView:(NSString *)str{
     UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 40)];

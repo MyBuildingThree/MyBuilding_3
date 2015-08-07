@@ -15,6 +15,7 @@
 #import "MJRefreshBackNormalFooter.h"
 #import "RKImageLabel.h"
 #import "UIView+ViewKit.h"
+#import "ContactDetailViewController.h"
 
 @implementation MainContactController
 - (void)setUp{
@@ -72,5 +73,13 @@
     }
     cell.model = self.models[indexPath.row];
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    PersonModel *model = self.models[indexPath.row];
+    ContactDetailViewController *view = [[ContactDetailViewController alloc] init];
+    view.contactID = model.a_id;
+    view.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:view animated:YES];
 }
 @end

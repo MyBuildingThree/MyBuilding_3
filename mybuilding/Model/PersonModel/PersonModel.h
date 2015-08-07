@@ -25,6 +25,16 @@
 @property(nonatomic,copy)NSString *a_companyName;
 
 /**
+ *  认证公司
+ */
+@property(nonatomic,copy)NSString *a_approveCompanyName;
+
+/**
+ *  认证公司行业
+ */
+@property(nonatomic,copy)NSString *a_industry;
+
+/**
  *  职位
  */
 @property(nonatomic,copy)NSString *a_duties;
@@ -134,6 +144,41 @@
  *  手机
  */
 @property(nonatomic,strong)NSString *a_loginTel;
+
+/**
+ *  省
+ */
+@property(nonatomic,strong)NSString *a_province;
+
+/**
+ *  市
+ */
+@property(nonatomic,strong)NSString *a_city;
+
+/**
+ *  区
+ */
+@property(nonatomic,strong)NSString *a_district;
+
+/**
+ *  所有产品的数量
+ */
+@property(nonatomic,strong)NSString *a_productNum;
+
+/**
+ *  所有项目的数量
+ */
+@property(nonatomic,strong)NSString *a_projectNum;
+
+/**
+ *  是否有工作经历
+ */
+@property(nonatomic)BOOL a_isWorkHistory;
+
+/**
+ *  是否有认证公司
+ */
+@property(nonatomic)BOOL a_isCompany;
 
 @property(nonatomic,strong)NSDictionary *dict;
 @end
