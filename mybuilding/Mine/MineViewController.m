@@ -31,6 +31,8 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
+    self.personModel = [[PersonModel alloc]init];
+    
     [self addRightBarButtonItems];
     [self addTableView];
     
@@ -100,35 +102,41 @@
 {
        switch (indexPath.row)
     {
-        case 0:
+        case 0://人
         {
             MyInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyInfo"];
             if (!cell)
             {
                 cell = [[MyInfoCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MyInfo"];
+                cell.selectionStyle = UITableViewCellSelectionStyleNone;
             }
             cell.personModel = self.personModel;
             
             return cell;
         }
-        case 1:
+        case 1://积分
         {
             MyIntegralCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyIntegral"];
             if (!cell)
             {
                 cell = [[MyIntegralCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MyIntegral"];
+                cell.selectionStyle = UITableViewCellSelectionStyleNone;
             }
-            
+            cell.personModel = self.personModel;
             return cell;
         }
-        case 2:
+        case 2://合同
         {
             TemplateCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Template"];
             if (!cell)
             {
                 cell = [[TemplateCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Template"];
+                cell.selectionStyle = UITableViewCellSelectionStyleNone;
             }
-            [cell setSubviewsWithNum:@[@"35",@"7",@"5"] textArray:@[@"进行中",@"已完成",@"已关闭"] title:@"我的全部合同"];
+            NSMutableArray *array0 = [NSMutableArray arrayWithObjects:self.personModel.a_contractNum_begin,self.personModel.a_contractNum_end,self.personModel.a_contractNum_close, nil];
+            NSMutableArray *array1 =  [NSMutableArray arrayWithObjects:@"进行中",@"已完成",@"已关闭", nil];
+            
+            [cell setSubviewsWithNum:array0 textArray:array1 title:@"我的全部合同"];
             
             return cell;
         }
@@ -138,8 +146,12 @@
             if (!cell)
             {
                 cell = [[TemplateCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Template2"];
+                cell.selectionStyle = UITableViewCellSelectionStyleNone;
             }
-            [cell setSubviewsWithNum:@[@"35",@"71",@"15",@"34"] textArray:@[@"进行中",@"已完成",@"已关闭",@"wo的合同"] title:@"我的全部合同"];
+            NSMutableArray *array00 = [NSMutableArray arrayWithObjects:self.personModel.a_focusProjectNum,self.personModel.a_focusPersonNum,self.personModel.a_focusCompanyNum,self.personModel.a_focusProductNum, nil];
+            NSMutableArray *array11 =  [NSMutableArray arrayWithObjects:@"关注的项目",@"关注的人",@"关注的公司",@"关注的产品", nil];
+            
+            [cell setSubviewsWithNum:array00 textArray:array11 title:@"我的全部合同"];
             
             return cell;
         }
@@ -149,6 +161,7 @@
             if (!cell)
             {
                 cell = [[OtherCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Other"];
+                cell.selectionStyle = UITableViewCellSelectionStyleNone;
             }
             cell.otherArray = @[@"我的询价",@"待回复询价",@"发布的项目",@"发布的动态",@"发布的产品",@"发布的需求",@"帮助"];
             

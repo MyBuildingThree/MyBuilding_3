@@ -80,31 +80,37 @@
 
 - (void)setSubviewsWithNum:(NSMutableArray *)numArray textArray:(NSMutableArray *)textArray title:(NSString *)title
 {
-    self.numArray = numArray;
-    self.textArray = textArray;
     
-    self.topView.title = title;
-    
-    [self setlabelwithText:numArray[0] textAlignment:NSTextAlignmentLeft fontSize:30.f bold:YES withObj:self.onLabel];
-    [self setlabelwithText:textArray[0] textAlignment:NSTextAlignmentLeft fontSize:14.f bold:NO withObj:self.otLabel];
-    [self setlabelwithText:numArray[1] textAlignment:NSTextAlignmentLeft fontSize:30.f bold:YES withObj:self.tnLabel];
-    [self setlabelwithText:textArray[1] textAlignment:NSTextAlignmentLeft fontSize:14.f bold:NO withObj:self.ttLabel];
-    
-    if (textArray.count == 3)
+    if ((numArray.count != 0)&&(textArray.count != 0))
     {
-        [self setlabelwithText:numArray[2] textAlignment:NSTextAlignmentLeft fontSize:30.f bold:YES withObj:self.thnLabel];
-        [self setlabelwithText:textArray[2] textAlignment:NSTextAlignmentRight fontSize:14.f bold:NO withObj:self.thtLabel];
-    }
-    else if (textArray.count == 4)
-    {
-        [self setlabelwithText:numArray[2] textAlignment:NSTextAlignmentLeft fontSize:30.f bold:YES withObj:self.thnLabel];
-        [self setlabelwithText:textArray[2] textAlignment:NSTextAlignmentLeft fontSize:14.f bold:NO withObj:self.thtLabel];
-        [self setlabelwithText:numArray[3] textAlignment:NSTextAlignmentLeft fontSize:30.f bold:YES withObj:self.fnLabel];
-        [self setlabelwithText:textArray[3] textAlignment:NSTextAlignmentRight fontSize:14.f bold:NO withObj:self.ftLabel];
+        self.numArray = numArray;
+        self.textArray = textArray;
+        
+        self.topView.title = title;
+        
+        [self setlabelwithText:numArray[0] textAlignment:NSTextAlignmentLeft fontSize:30.f bold:YES withObj:self.onLabel];
+        [self setlabelwithText:textArray[0] textAlignment:NSTextAlignmentLeft fontSize:14.f bold:NO withObj:self.otLabel];
+        [self setlabelwithText:numArray[1] textAlignment:NSTextAlignmentLeft fontSize:30.f bold:YES withObj:self.tnLabel];
+        [self setlabelwithText:textArray[1] textAlignment:NSTextAlignmentLeft fontSize:14.f bold:NO withObj:self.ttLabel];
+        
+        if (textArray.count == 3)
+        {
+            [self setlabelwithText:numArray[2] textAlignment:NSTextAlignmentLeft fontSize:30.f bold:YES withObj:self.thnLabel];
+            [self setlabelwithText:textArray[2] textAlignment:NSTextAlignmentRight fontSize:14.f bold:NO withObj:self.thtLabel];
+        }
+        else if (textArray.count == 4)
+        {
+            [self setlabelwithText:numArray[2] textAlignment:NSTextAlignmentLeft fontSize:30.f bold:YES withObj:self.thnLabel];
+            [self setlabelwithText:textArray[2] textAlignment:NSTextAlignmentLeft fontSize:14.f bold:NO withObj:self.thtLabel];
+            [self setlabelwithText:numArray[3] textAlignment:NSTextAlignmentLeft fontSize:30.f bold:YES withObj:self.fnLabel];
+            [self setlabelwithText:textArray[3] textAlignment:NSTextAlignmentRight fontSize:14.f bold:NO withObj:self.ftLabel];
+        }
+
     }
         
+   
+    
 }
-
 
 -(void)layoutSubviews
 {

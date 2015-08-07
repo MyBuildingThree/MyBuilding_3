@@ -87,18 +87,35 @@
         self.shadowView = [RKShadowView seperatorLineWithHeight:10 top:0];
         [self addSubview:self.shadowView];
         
-        [self set];
+        
     }
     return self;
 }
 
--(void)set
+-(void)setPersonModel:(PersonModel *)personModel
 {
     self.oneLabel.text = @"我的积分";
-    self.integralLabel.text = @"123456789";
+    
+    if (personModel.a_points.length == 0)
+    {
+        self.integralLabel.text = @"0";
+    }
+    else
+    {
+        self.integralLabel.text = personModel.a_points;
+    }
+    
     [self.checkBtn setTitle:@"签到" forState:UIControlStateNormal];
     self.twoLabel.text = @"兑换记录";
-    self.exchangeLabel.text = @"19";
+    
+    if (personModel.a_exchangeNum.length == 0)
+    {
+        self.exchangeLabel.text = @"0";
+    }
+    else
+    {
+        self.exchangeLabel.text = personModel.a_exchangeNum;
+    }
     
 }
 

@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PersonModel.h"
 
 @interface TemplateCell : UITableViewCell
+
 
 - (void)setSubviewsWithNum:(NSMutableArray *)numArray textArray:(NSMutableArray *)textArray title:(NSString *)title;
 

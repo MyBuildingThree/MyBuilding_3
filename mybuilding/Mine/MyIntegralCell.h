@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PersonModel.h"
 
 @interface MyIntegralCell : UITableViewCell
 
-
+/**
+ *  模型
+ */
+@property (nonatomic,strong)PersonModel *personModel;
 
 @end

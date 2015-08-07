@@ -71,9 +71,34 @@
 -(void)setPersonModel:(PersonModel *)personModel
 {
     [self.userImage sd_setImageWithURL:personModel.a_avatarUrl placeholderImage:nil];
-    self.userNameLabel.text = personModel.a_name;
-    self.companyLabel.text = personModel.a_companyName;
-    self.managerLabel.text = personModel.a_duties;
+    
+    if (personModel.a_name.length == 0)
+    {
+        self.userNameLabel.text = @"未填写";
+    }
+    else
+    {
+        self.userNameLabel.text = personModel.a_name;
+    }
+    
+    if (personModel.a_companyName.length == 0)
+    {
+        self.companyLabel.text = @"未填写";
+    }
+    else
+    {
+        self.companyLabel.text = personModel.a_companyName;
+    }
+    
+    if (personModel.a_duties.length == 0)
+    {
+        self.managerLabel.text = @"未填写";
+    }
+    else
+    {
+        self.managerLabel.text = personModel.a_duties;
+    }
+    
 }
 
 -(void)layoutSubviews
