@@ -62,6 +62,8 @@
 		5DAC71A21B70D9CF00B2ED69 /* SearchSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC719C1B70A7EA00B2ED69 /* SearchSqlite.m */; };
 		5DDA3A461B721601008DD88F /* ADScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDA3A441B720F6B008DD88F /* ADScrollView.m */; };
 		5DDA3A471B721601008DD88F /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDA3A401B7208BC008DD88F /* PopoverView.m */; };
+		5DECC9421B73753D005762EB /* MyInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DECC93D1B73753D005762EB /* MyInfoCell.m */; };
+		5DECC9431B73753D005762EB /* MyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DECC93F1B73753D005762EB /* MyModel.m */; };
 		D355958E1B6EFD8B00E4577B /* HomeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D355958A1B6EFD8B00E4577B /* HomeNavigationController.m */; };
 		D355958F1B6EFD8B00E4577B /* MyBuildingTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D355958D1B6EFD8B00E4577B /* MyBuildingTabBarController.m */; };
 		D35595961B6EFF2000E4577B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D35595951B6EFF2000E4577B /* MainViewController.m */; };
@@ -306,6 +308,10 @@
 		5DDA3A401B7208BC008DD88F /* PopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverView.m; sourceTree = "<group>"; };
 		5DDA3A431B720F6B008DD88F /* ADScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADScrollView.h; sourceTree = "<group>"; };
 		5DDA3A441B720F6B008DD88F /* ADScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADScrollView.m; sourceTree = "<group>"; };
+		5DECC93C1B73753D005762EB /* MyInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyInfoCell.h; sourceTree = "<group>"; };
+		5DECC93D1B73753D005762EB /* MyInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyInfoCell.m; sourceTree = "<group>"; };
+		5DECC93E1B73753D005762EB /* MyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyModel.h; sourceTree = "<group>"; };
+		5DECC93F1B73753D005762EB /* MyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyModel.m; sourceTree = "<group>"; };
 		D35595891B6EFD8B00E4577B /* HomeNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeNavigationController.h; sourceTree = "<group>"; };
 		D355958A1B6EFD8B00E4577B /* HomeNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeNavigationController.m; sourceTree = "<group>"; };
 		D355958C1B6EFD8B00E4577B /* MyBuildingTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBuildingTabBarController.h; sourceTree = "<group>"; };
@@ -907,13 +913,13 @@
 			path = HomeNavigationController;
 			sourceTree = "<group>";
 		};
-		D355958B1B6EFD8B00E4577B /* MyBuildingTBVC */ = {
+		D355958B1B6EFD8B00E4577B /* MBTBVC */ = {
 			isa = PBXGroup;
 			children = (
 				D355958C1B6EFD8B00E4577B /* MyBuildingTabBarController.h */,
 				D355958D1B6EFD8B00E4577B /* MyBuildingTabBarController.m */,
 			);
-			name = MyBuildingTBVC;
+			name = MBTBVC;
 			path = MyBuildingTabBarController;
 			sourceTree = "<group>";
 		};
@@ -955,6 +961,10 @@
 		D35595931B6EFEA500E4577B /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				5DECC93C1B73753D005762EB /* MyInfoCell.h */,
+				5DECC93D1B73753D005762EB /* MyInfoCell.m */,
+				5DECC93E1B73753D005762EB /* MyModel.h */,
+				5DECC93F1B73753D005762EB /* MyModel.m */,
 				D35595A01B6EFF6200E4577B /* MineViewController.h */,
 				D35595A11B6EFF6200E4577B /* MineViewController.m */,
 			);
@@ -1251,7 +1261,7 @@
 				D35595921B6EFEA500E4577B /* Main */,
 				D35595931B6EFEA500E4577B /* Mine */,
 				D35595881B6EFD8B00E4577B /* HomeNavigationVC */,
-				D355958B1B6EFD8B00E4577B /* MyBuildingTBVC */,
+				D355958B1B6EFD8B00E4577B /* MBTBVC */,
 				D3E37A7A1B68D19E0073D401 /* Model */,
 				D3E37A231B68BAA20073D401 /* NetWork */,
 				D3DF124F1B6B3D7700DFEE8F /* Tools */,
@@ -1522,6 +1532,7 @@
 				5B814BCE1B722628004A2559 /* RKLabelLabel.m in Sources */,
 				5B863CEF1B71EB1A00AF0D36 /* UIView+ViewKit.m in Sources */,
 				5B863CED1B71EA9D00AF0D36 /* ProductApi.m in Sources */,
+				5DECC9431B73753D005762EB /* MyModel.m in Sources */,
 				5B863CEC1B71EA6800AF0D36 /* SearchVC.m in Sources */,
 				5B863CEB1B71EA5F00AF0D36 /* RKViewFactory.m in Sources */,
 				D3E91F831B72E6A100FD8851 /* RequirementsApi.m in Sources */,
@@ -1639,6 +1650,7 @@
 				D3DF129A1B6B614400DFEE8F /* MJRefreshBackFooter.m in Sources */,
 				D355958F1B6EFD8B00E4577B /* MyBuildingTabBarController.m in Sources */,
 				5B5CA18F1B6F70ED00CC3896 /* RKScrollViewPageController.m in Sources */,
+				5DECC9421B73753D005762EB /* MyInfoCell.m in Sources */,
 				D3E37A631B68BAA20073D401 /* UIRefreshControl+AFNetworking.m in Sources */,
 				5B5CA1891B6F70ED00CC3896 /* RKBaseTableView.m in Sources */,
 				D3A8B4081B70E9B20033457F /* RegisterVC.m in Sources */,
