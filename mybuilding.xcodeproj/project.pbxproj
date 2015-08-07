@@ -176,6 +176,11 @@
 		D3E91F8B1B73428D00FD8851 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		D3E91F8C1B73428D00FD8851 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		D3EB7E8D1B7054D000482BCD /* ProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EB7E8C1B7054D000482BCD /* ProductModel.m */; };
+		D3F24FF61B744C9400E03716 /* CompanyDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F24FF51B744C9400E03716 /* CompanyDetailController.m */; };
+		D3F24FF91B74528600E03716 /* CompanyHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F24FF81B74528600E03716 /* CompanyHeadCell.m */; };
+		D3F24FFC1B745A1800E03716 /* CompanyContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F24FFB1B745A1800E03716 /* CompanyContentCell.m */; };
+		D3F24FFF1B74724500E03716 /* CompanyOtherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F24FFE1B74724500E03716 /* CompanyOtherCell.m */; };
+		D3F250021B747BC800E03716 /* CompanyProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F250011B747BC800E03716 /* CompanyProductCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -522,6 +527,16 @@
 		D3EB7E8C1B7054D000482BCD /* ProductModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductModel.m; sourceTree = "<group>"; };
 		D3EB7E8E1B7054DD00482BCD /* ProductApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductApi.h; sourceTree = "<group>"; };
 		D3EB7E8F1B7054DD00482BCD /* ProductApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductApi.m; sourceTree = "<group>"; };
+		D3F24FF41B744C9400E03716 /* CompanyDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyDetailController.h; sourceTree = "<group>"; };
+		D3F24FF51B744C9400E03716 /* CompanyDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyDetailController.m; sourceTree = "<group>"; };
+		D3F24FF71B74528600E03716 /* CompanyHeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyHeadCell.h; sourceTree = "<group>"; };
+		D3F24FF81B74528600E03716 /* CompanyHeadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyHeadCell.m; sourceTree = "<group>"; };
+		D3F24FFA1B745A1800E03716 /* CompanyContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyContentCell.h; sourceTree = "<group>"; };
+		D3F24FFB1B745A1800E03716 /* CompanyContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyContentCell.m; sourceTree = "<group>"; };
+		D3F24FFD1B74724500E03716 /* CompanyOtherCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyOtherCell.h; sourceTree = "<group>"; };
+		D3F24FFE1B74724500E03716 /* CompanyOtherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyOtherCell.m; sourceTree = "<group>"; };
+		D3F250001B747BC800E03716 /* CompanyProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyProductCell.h; sourceTree = "<group>"; };
+		D3F250011B747BC800E03716 /* CompanyProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyProductCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -553,6 +568,7 @@
 		5B5CA12D1B6F3A1100CC3896 /* Company */ = {
 			isa = PBXGroup;
 			children = (
+				D3F24FF31B744C7F00E03716 /* CompanyDetail */,
 				5BDBE49F1B70853F00459697 /* MainCompanyController.h */,
 				5BDBE4A01B70853F00459697 /* MainCompanyController.m */,
 				D3A1745C1B6F835B00BC6DA1 /* CompanyTableViewCell.h */,
@@ -1419,6 +1435,23 @@
 			path = ProductModel;
 			sourceTree = "<group>";
 		};
+		D3F24FF31B744C7F00E03716 /* CompanyDetail */ = {
+			isa = PBXGroup;
+			children = (
+				D3F24FF41B744C9400E03716 /* CompanyDetailController.h */,
+				D3F24FF51B744C9400E03716 /* CompanyDetailController.m */,
+				D3F24FF71B74528600E03716 /* CompanyHeadCell.h */,
+				D3F24FF81B74528600E03716 /* CompanyHeadCell.m */,
+				D3F24FFA1B745A1800E03716 /* CompanyContentCell.h */,
+				D3F24FFB1B745A1800E03716 /* CompanyContentCell.m */,
+				D3F24FFD1B74724500E03716 /* CompanyOtherCell.h */,
+				D3F24FFE1B74724500E03716 /* CompanyOtherCell.m */,
+				D3F250001B747BC800E03716 /* CompanyProductCell.h */,
+				D3F250011B747BC800E03716 /* CompanyProductCell.m */,
+			);
+			path = CompanyDetail;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1523,6 +1556,7 @@
 			files = (
 				D3E91F8B1B73428D00FD8851 /* (null) in Sources */,
 				D3E91F8C1B73428D00FD8851 /* (null) in Sources */,
+				D3F24FFF1B74724500E03716 /* CompanyOtherCell.m in Sources */,
 				D3E91F871B72EBFD00FD8851 /* ProjectContactModel.m in Sources */,
 				5DAC71A21B70D9CF00B2ED69 /* SearchSqlite.m in Sources */,
 				5DDA3A461B721601008DD88F /* ADScrollView.m in Sources */,
@@ -1534,6 +1568,7 @@
 				5B863CED1B71EA9D00AF0D36 /* ProductApi.m in Sources */,
 				5DECC9431B73753D005762EB /* MyModel.m in Sources */,
 				5B863CEC1B71EA6800AF0D36 /* SearchVC.m in Sources */,
+				D3F24FF91B74528600E03716 /* CompanyHeadCell.m in Sources */,
 				5B863CEB1B71EA5F00AF0D36 /* RKViewFactory.m in Sources */,
 				D3E91F831B72E6A100FD8851 /* RequirementsApi.m in Sources */,
 				5B863CEA1B71EA5400AF0D36 /* RKShadowView.m in Sources */,
@@ -1563,6 +1598,7 @@
 				D3A8B4061B70E9B20033457F /* FindPasswordVC.m in Sources */,
 				D3DF12631B6B412800DFEE8F /* FMDatabaseQueue.m in Sources */,
 				5B5CA18A1B6F70ED00CC3896 /* RKBaseTableViewCell.m in Sources */,
+				D3F250021B747BC800E03716 /* CompanyProductCell.m in Sources */,
 				D3E37A5D1B68BAA20073D401 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				5B5CA19D1B6F70ED00CC3896 /* RKStageAndNumberView.m in Sources */,
 				5B5CA1B51B6F716900CC3896 /* ProjectTableViewCell.m in Sources */,
@@ -1587,6 +1623,7 @@
 				D3E37A5A1B68BAA20073D401 /* ConnectionAvailable.m in Sources */,
 				5B863CD31B71B03000AF0D36 /* RKImageLabel.m in Sources */,
 				5B5CA1991B6F70ED00CC3896 /* RKTestController_6.m in Sources */,
+				D3F24FF61B744C9400E03716 /* CompanyDetailController.m in Sources */,
 				5B5CA1B21B6F713600CC3896 /* ProjectModel.m in Sources */,
 				D3A1746B1B6F96AE00BC6DA1 /* PersonApi.m in Sources */,
 				D3DF12D61B6B7DA000DFEE8F /* SDWebImagePrefetcher.m in Sources */,
@@ -1602,6 +1639,7 @@
 				D3DF12D21B6B7DA000DFEE8F /* SDWebImageDecoder.m in Sources */,
 				D3E37A601B68BAA20073D401 /* UIButton+AFNetworking.m in Sources */,
 				5B5CA19E1B6F70ED00CC3896 /* RKStageChooseView.m in Sources */,
+				D3F24FFC1B745A1800E03716 /* CompanyContentCell.m in Sources */,
 				D3A1746C1B6F96AE00BC6DA1 /* PersonModel.m in Sources */,
 				5BA668B01B7343A200E4A955 /* ProjectImageInfoView.m in Sources */,
 				D3DF129F1B6B614400DFEE8F /* MJRefreshAutoNormalFooter.m in Sources */,
