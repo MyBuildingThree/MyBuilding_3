@@ -12,6 +12,7 @@
 #import "UIScrollView+MJRefresh.h"
 #import "MJRefreshNormalHeader.h"
 #import "MJRefreshBackNormalFooter.h"
+#import "CompanyDetailController.h"
 
 @implementation MainCompanyController
 
@@ -72,5 +73,13 @@
     cell.model = self.models[indexPath.row];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    CompanyModel *model = self.models[indexPath.row];
+    CompanyDetailController *view = [[CompanyDetailController alloc] init];
+    view.companyID = model.a_companyID;
+    view.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:view animated:YES];
 }
 @end
