@@ -15,6 +15,6 @@
  *
  *  @param contents 参数顺序为:暂时不写，设计图有问题，等做完后给需求确认
  */
-- (void)setProjectDataInfoViewContents:(NSArray*)contents;
+- (void)setProjectDataInfoViewContents:(NSArray *)/*NSString*/contents;
 
 @end

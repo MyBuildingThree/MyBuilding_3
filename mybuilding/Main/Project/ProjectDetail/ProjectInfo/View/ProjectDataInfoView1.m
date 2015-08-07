@@ -28,7 +28,7 @@
 
 @property(nonatomic, strong) RKLabelLabel* labelLabel07;
 
-@property(nonatomic, strong) RKLabelLabel* labelLabel08;
+//@property(nonatomic, strong) RKLabelLabel* labelLabel08;
 
 @property(nonatomic, strong) RKLabelLabel* labelLabel09;
 
@@ -46,30 +46,39 @@
 
 @implementation ProjectDataInfoView1
 
-- (instancetype)init{
-    if (self = [super init]) {
-
-    }
-    return self;
-}
-
 - (void)refreshViews{
     CGFloat const topMargin = 10;
     CGFloat const eachArrangeW = 50;
     __block NSArray* arrangeHArr = @[@10, @(153.0 / 375 * kScreenWidth), @(kScreenWidth - 83)];
     
-    [self.labelArr enumerateObjectsUsingBlock:^(RKLabelLabel* labelLabel, NSUInteger idx, BOOL *stop) {
+    NSArray* normalLabelArr = [self.labelArr subarrayWithRange:NSMakeRange(0, self.labelArr.count - 2)];
+    [normalLabelArr enumerateObjectsUsingBlock:^(RKLabelLabel* labelLabel, NSUInteger idx, BOOL *stop) {
         CGFloat originX = [arrangeHArr[idx % 3] doubleValue];
         CGFloat originY = topMargin + eachArrangeW * (idx / 3);
         labelLabel.origin = CGPointMake(originX , originY);
     }];
     
-    UIView* lastLabel = self.labelArr.lastObject;
-    self.size = CGSizeMake(kScreenWidth, lastLabel.maxY + topMargin);
+    //normalLabelArr里的最后一个，用来排版
+    RKLabelLabel* lastLabel = normalLabelArr.lastObject;
+
+    //倒数第二个view
+    RKLabelLabel* lastSecondLabel = [self.labelArr objectAtIndex:self.labelArr.count - 2];
+    lastSecondLabel.maxWidth = kScreenWidth - 2 * 10;
+    lastSecondLabel.origin = CGPointMake(10, lastLabel.maxY + 14);
+    
+    //倒数第一个view，即最后一个
+    RKLabelLabel* lastFirstLabel = [self.labelArr objectAtIndex:self.labelArr.count - 1];
+    lastFirstLabel.maxWidth = kScreenWidth - 2 * 10;
+    lastFirstLabel.origin = CGPointMake(10, lastSecondLabel.maxY + 14);
+    
+    self.size = CGSizeMake(kScreenWidth, lastFirstLabel.maxY + topMargin);
 }
 
 - (void)setProjectDataInfoViewContents:(NSArray *)contents{
-    self.labelLabel00.firstLabel.text = @"12345";
+    [contents enumerateObjectsUsingBlock:^(NSString* content, NSUInteger idx, BOOL *stop) {
+        RKLabelLabel* labelLabel = self.labelArr[idx];
+        labelLabel.firstLabel.text = content;
+    }];
     [self refreshViews];
 }
 
@@ -82,14 +91,14 @@
     labelLabel.firstLabel.font = [UIFont systemFontOfSize:17];
     
     [self addSubview:labelLabel];
-    labelLabel.backgroundColor = [[UIColor alloc] initWithRed:.5 green:.5 blue:.5 alpha:.5];
+//    labelLabel.backgroundColor = [[UIColor alloc] initWithRed:.5 green:.5 blue:.5 alpha:.5];
     
     return labelLabel;
 }
 
 - (NSArray *)labelArr{
     if (!_labelArr) {
-        _labelArr = @[self.labelLabel00,self.labelLabel01,self.labelLabel02,self.labelLabel03,self.labelLabel04,self.labelLabel05,self.labelLabel06,self.labelLabel07,self.labelLabel08,self.labelLabel09,self.labelLabel10];
+        _labelArr = @[self.labelLabel00,self.labelLabel01,self.labelLabel02,self.labelLabel03,self.labelLabel04,self.labelLabel05,self.labelLabel06,self.labelLabel07,/*self.labelLabel08,*/self.labelLabel09,self.labelLabel10];
     }
     return _labelArr;
 }
@@ -150,12 +159,12 @@
     return _labelLabel07;
 }
 
-- (RKLabelLabel *)labelLabel08{
-    if (!_labelLabel08) {
-        _labelLabel08 = [self getRKLabelWithTitle:@"桩基基坑"];
-    }
-    return _labelLabel08;
-}
+//- (RKLabelLabel *)labelLabel08{
+//    if (!_labelLabel08) {
+//        _labelLabel08 = [self getRKLabelWithTitle:@"桩基基坑"];
+//    }
+//    return _labelLabel08;
+//}
 
 - (RKLabelLabel *)labelLabel09{
     if (!_labelLabel09) {

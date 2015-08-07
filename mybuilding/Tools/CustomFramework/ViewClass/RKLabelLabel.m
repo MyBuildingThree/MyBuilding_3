@@ -93,15 +93,10 @@
         CGFloat firstMaxHeight = self.firstMaxHeight;
         CGFloat secondMaxHeight = self.secondMaxHeight;
         
-        if (firstMaxHeight) {
-            [self.firstLabel autosizeWithMaxWidth:maxWidth maxHeight:firstMaxHeight];
-        }
+        [self.firstLabel autosizeWithMaxWidth:maxWidth maxHeight:firstMaxHeight];
+        [self.secondLabel autosizeWithMaxWidth:maxWidth maxHeight:secondMaxHeight];
         
-        if (secondMaxHeight) {
-            [self.secondLabel autosizeWithMaxWidth:maxWidth maxHeight:secondMaxHeight];
-        }
-        
-//        self.height = self.firstMargin + self.firstLabel.height + self.secondMargin + self.secondLabel.height + self.thirdMargin;
+        self.height = firstMargin + self.firstLabel.height + secondMargin + self.secondLabel.height + thirdMargin;
     }
     
     [self.firstLabel setMinY:firstMargin];

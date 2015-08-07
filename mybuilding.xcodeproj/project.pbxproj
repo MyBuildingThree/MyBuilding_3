@@ -34,7 +34,6 @@
 		5B5CA1B51B6F716900CC3896 /* ProjectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CA1B41B6F716900CC3896 /* ProjectTableViewCell.m */; };
 		5B5CA1B91B6F718000CC3896 /* ManageString.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CA1B81B6F718000CC3896 /* ManageString.m */; };
 		5B814BCE1B722628004A2559 /* RKLabelLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B814BCD1B722628004A2559 /* RKLabelLabel.m */; };
-		5B814BD11B722DB7004A2559 /* ProjectDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B814BD01B722DB7004A2559 /* ProjectDetailViewController.m */; };
 		5B863CD01B719F9C00AF0D36 /* UILabel+LabelKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B51B70C11000459697 /* UILabel+LabelKit.m */; };
 		5B863CD31B71B03000AF0D36 /* RKImageLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B863CD21B71B03000AF0D36 /* RKImageLabel.m */; };
 		5B863CD61B71B58E00AF0D36 /* RKImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B863CD51B71B58E00AF0D36 /* RKImageView.m */; };
@@ -50,7 +49,6 @@
 		5B863CEF1B71EB1A00AF0D36 /* UIView+ViewKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B71B70C11000459697 /* UIView+ViewKit.m */; };
 		5B863CF01B71EB3900AF0D36 /* UIImageView+ViewKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B31B70C11000459697 /* UIImageView+ViewKit.m */; };
 		5B863CF11B71EB5700AF0D36 /* NSString+LabelKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B11B70C11000459697 /* NSString+LabelKit.m */; };
-		5DAC71A21B70D9CF00B2ED69 /* SearchSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC719C1B70A7EA00B2ED69 /* SearchSqlite.m */; };
 		5BA668A81B7343A200E4A955 /* ProjectCommentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA668931B7343A200E4A955 /* ProjectCommentController.m */; };
 		5BA668A91B7343A200E4A955 /* ProjectDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA668951B7343A200E4A955 /* ProjectDetailViewController.m */; };
 		5BA668AA1B7343A200E4A955 /* ProjectDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA668981B7343A200E4A955 /* ProjectDetailController.m */; };
@@ -61,6 +59,7 @@
 		5BA668AF1B7343A200E4A955 /* ProjectDataInfoView2.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA668A31B7343A200E4A955 /* ProjectDataInfoView2.m */; };
 		5BA668B01B7343A200E4A955 /* ProjectImageInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA668A51B7343A200E4A955 /* ProjectImageInfoView.m */; };
 		5BA668B11B7343A200E4A955 /* ProjectNameInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA668A71B7343A200E4A955 /* ProjectNameInfoView.m */; };
+		5DAC71A21B70D9CF00B2ED69 /* SearchSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC719C1B70A7EA00B2ED69 /* SearchSqlite.m */; };
 		5DDA3A461B721601008DD88F /* ADScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDA3A441B720F6B008DD88F /* ADScrollView.m */; };
 		5DDA3A471B721601008DD88F /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDA3A401B7208BC008DD88F /* PopoverView.m */; };
 		D355958E1B6EFD8B00E4577B /* HomeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D355958A1B6EFD8B00E4577B /* HomeNavigationController.m */; };
@@ -172,8 +171,8 @@
 		D3E91F861B72E90A00FD8851 /* RequirementsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E91F851B72E90A00FD8851 /* RequirementsTableViewCell.m */; };
 		D3E91F871B72EBFD00FD8851 /* ProjectContactModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DD5DEB1B722A6A00FFF890 /* ProjectContactModel.m */; };
 		D3E91F8A1B73218600FD8851 /* MainRequirementsController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E91F891B73218600FD8851 /* MainRequirementsController.m */; };
-		D3E91F8B1B73428D00FD8851 /* ProjectDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA668421B72F35900E4A955 /* ProjectDetailController.m */; };
-		D3E91F8C1B73428D00FD8851 /* ProjectCommentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA668451B72F36B00E4A955 /* ProjectCommentController.m */; };
+		D3E91F8B1B73428D00FD8851 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		D3E91F8C1B73428D00FD8851 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		D3EB7E8D1B7054D000482BCD /* ProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EB7E8C1B7054D000482BCD /* ProductModel.m */; };
 /* End PBXBuildFile section */
 
@@ -803,14 +802,14 @@
 		5BA668991B7343A200E4A955 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5BA6689A1B7343A200E4A955 /* ProjectAddressInfoView.h */,
-				5BA6689B1B7343A200E4A955 /* ProjectAddressInfoView.m */,
 				5BA6689C1B7343A200E4A955 /* ProjectContactsInfoView.h */,
 				5BA6689D1B7343A200E4A955 /* ProjectContactsInfoView.m */,
 				5BA6689E1B7343A200E4A955 /* ProjectCreatedUserView.h */,
 				5BA6689F1B7343A200E4A955 /* ProjectCreatedUserView.m */,
 				5BA668A01B7343A200E4A955 /* ProjectDataInfoView1.h */,
 				5BA668A11B7343A200E4A955 /* ProjectDataInfoView1.m */,
+				5BA6689A1B7343A200E4A955 /* ProjectAddressInfoView.h */,
+				5BA6689B1B7343A200E4A955 /* ProjectAddressInfoView.m */,
 				5BA668A21B7343A200E4A955 /* ProjectDataInfoView2.h */,
 				5BA668A31B7343A200E4A955 /* ProjectDataInfoView2.m */,
 				5BA668A41B7343A200E4A955 /* ProjectImageInfoView.h */,
@@ -1512,8 +1511,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3E91F8B1B73428D00FD8851 /* ProjectDetailController.m in Sources */,
-				D3E91F8C1B73428D00FD8851 /* ProjectCommentController.m in Sources */,
+				D3E91F8B1B73428D00FD8851 /* (null) in Sources */,
+				D3E91F8C1B73428D00FD8851 /* (null) in Sources */,
 				D3E91F871B72EBFD00FD8851 /* ProjectContactModel.m in Sources */,
 				5DAC71A21B70D9CF00B2ED69 /* SearchSqlite.m in Sources */,
 				5DDA3A461B721601008DD88F /* ADScrollView.m in Sources */,
