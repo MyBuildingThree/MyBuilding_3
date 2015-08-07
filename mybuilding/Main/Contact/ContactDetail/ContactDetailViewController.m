@@ -126,7 +126,7 @@
         }
     }else if(indexPath.section == 3){
         if(self.personModel.a_isWorkHistory){
-            return 66;
+            return [ContactWorkHistoryCell carculateCellHeightWithString:self.personModel.a_workDesc];
         }else{
             return 45;
         }
@@ -165,7 +165,7 @@
         return cell;
     }else if (indexPath.section == 1){
         if(self.personlArr.count == 0){
-            NSString *CellIdentifier = [NSString stringWithFormat:@"ContactFriendsCell"];
+            NSString *CellIdentifier = [NSString stringWithFormat:@"ContactFriendsCell2"];
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
             if (!cell) {
                 cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
@@ -193,7 +193,7 @@
         }
     }else if (indexPath.section == 2){
         if(!self.personModel.a_isCompany){
-            NSString *CellIdentifier = [NSString stringWithFormat:@"ContactCompanyCell"];
+            NSString *CellIdentifier = [NSString stringWithFormat:@"ContactCompanyCell2"];
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
             if (!cell) {
                 cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
@@ -221,7 +221,6 @@
             return cell;
         }
     }else if (indexPath.section == 3){
-        NSLog(@"===>%d",self.personModel.a_isWorkHistory);
         if(self.personModel.a_isWorkHistory){
             NSString *CellIdentifier = [NSString stringWithFormat:@"ContactWorkHistoryCell"];
             ContactWorkHistoryCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -231,7 +230,7 @@
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             return cell;
         }else{
-            NSString *CellIdentifier = [NSString stringWithFormat:@"ContactWorkHistoryCell"];
+            NSString *CellIdentifier = [NSString stringWithFormat:@"ContactWorkHistoryCell2"];
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
             if (!cell) {
                 cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];

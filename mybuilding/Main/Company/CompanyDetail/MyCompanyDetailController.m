@@ -172,7 +172,7 @@
         return cell;
     }else if (indexPath.section == 2){
         if(self.personlArr.count == 0){
-            NSString *CellIdentifier = [NSString stringWithFormat:@"CompanyEmployeeCell"];
+            NSString *CellIdentifier = [NSString stringWithFormat:@"CompanyEmployeeCell2"];
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
             if (!cell) {
                 cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
@@ -200,7 +200,7 @@
         }
     }else if (indexPath.section == 3){
         if(self.productArr.count == 0){
-            NSString *CellIdentifier = [NSString stringWithFormat:@"CompanyProductCell"];
+            NSString *CellIdentifier = [NSString stringWithFormat:@"CompanyProductCell2"];
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
             if (!cell) {
                 cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];

@@ -80,5 +80,14 @@
     
     self.a_productNum = @"0";
     self.a_projectNum = @"0";
+    
+    self.a_startTime = dict[@"startTime"];
+    self.a_endTime = dict[@"endTime"];
+    self.a_workDesc = dict[@"workDesc"];
+    if([dict[@"isWorking"] isEqualToString:@"00"]){
+        self.a_isWorking = YES;
+    }else{
+        self.a_isWorking = NO;
+    }
 }
 @end

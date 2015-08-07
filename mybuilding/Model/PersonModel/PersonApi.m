@@ -12,7 +12,8 @@
 @implementation PersonApi
 + (void)SearchUserWithBlock:(void (^)(NSMutableArray *posts, NSError *error))block keywords:(NSString *)keywords startIndex:(NSInteger)startIndex noNetWork:(void(^)())noNetWork{
     NSString *urlStr = [NSString stringWithFormat:@"api/account/search?keywords=%@&pageIndex=%ld&pageSize=15",keywords,(long)startIndex];
-    [SendRequst sendRequestWithUrlString:urlStr success:^(id responseDic) {
+    NSString * encodedString = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes( kCFAllocatorDefault, (CFStringRef)urlStr, NULL, NULL,  kCFStringEncodingUTF8 ));
+    [SendRequst sendRequestWithUrlString:encodedString success:^(id responseDic) {
         NSLog(@"responseDic = %@",responseDic);
         NSMutableArray *arr = [[NSMutableArray alloc] init];
         for (NSDictionary *item in responseDic[@"data"][@"rows"]) {

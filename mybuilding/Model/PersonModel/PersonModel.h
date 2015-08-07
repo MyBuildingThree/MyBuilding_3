@@ -180,5 +180,25 @@
  */
 @property(nonatomic)BOOL a_isCompany;
 
+/**
+ *  开始工作时间
+ */
+@property(nonatomic,strong)NSString *a_startTime;
+
+/**
+ *  结束工作时间
+ */
+@property(nonatomic,strong)NSString *a_endTime;
+
+/**
+ *  工作介绍
+ */
+@property(nonatomic,strong)NSString *a_workDesc;
+
+/**
+ *  是否还在这家公司
+ */
+@property(nonatomic)BOOL a_isWorking;
+
 @property(nonatomic,strong)NSDictionary *dict;
 @end

@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PersonModel.h"
 
 @interface ContactWorkHistoryCell : UITableViewCell
 @property(nonatomic,strong)UILabel *timeLabel;
+@property(nonatomic,strong)UILabel *companyNameLabel;
+@property(nonatomic,strong)UILabel *workDescLabel;
+@property(nonatomic,strong)UIView *bottomView;
+@property(nonatomic,strong)PersonModel *model;
++(CGFloat)carculateCellHeightWithString:(NSString *)str;
 @end
