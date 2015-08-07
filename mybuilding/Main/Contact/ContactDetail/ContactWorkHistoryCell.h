@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ContactWorkHistoryCell : UITableViewCell
-
+@property(nonatomic,strong)UILabel *timeLabel;
 @end
