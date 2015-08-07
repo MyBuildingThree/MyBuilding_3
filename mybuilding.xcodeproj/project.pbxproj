@@ -59,6 +59,10 @@
 		5BA668AF1B7343A200E4A955 /* ProjectDataInfoView2.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA668A31B7343A200E4A955 /* ProjectDataInfoView2.m */; };
 		5BA668B01B7343A200E4A955 /* ProjectImageInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA668A51B7343A200E4A955 /* ProjectImageInfoView.m */; };
 		5BA668B11B7343A200E4A955 /* ProjectNameInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA668A71B7343A200E4A955 /* ProjectNameInfoView.m */; };
+		5D83CB251B7445A600B76716 /* MyIntegralCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D83CB241B7445A600B76716 /* MyIntegralCell.m */; };
+		5D83CB281B745A2400B76716 /* TemplateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D83CB271B745A2400B76716 /* TemplateCell.m */; };
+		5D83CB2B1B74830200B76716 /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D83CB2A1B74830200B76716 /* MyView.m */; };
+		5D83CB2E1B748A4D00B76716 /* OtherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D83CB2D1B748A4D00B76716 /* OtherCell.m */; };
 		5DAC71A21B70D9CF00B2ED69 /* SearchSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC719C1B70A7EA00B2ED69 /* SearchSqlite.m */; };
 		5DDA3A461B721601008DD88F /* ADScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDA3A441B720F6B008DD88F /* ADScrollView.m */; };
 		5DDA3A471B721601008DD88F /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDA3A401B7208BC008DD88F /* PopoverView.m */; };
@@ -298,6 +302,14 @@
 		5D7A13F11B704701003B7A56 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
 		5D7A13F21B704701003B7A56 /* ResetVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetVC.h; sourceTree = "<group>"; };
 		5D7A13F31B704701003B7A56 /* ResetVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetVC.m; sourceTree = "<group>"; };
+		5D83CB231B7445A600B76716 /* MyIntegralCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyIntegralCell.h; sourceTree = "<group>"; };
+		5D83CB241B7445A600B76716 /* MyIntegralCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyIntegralCell.m; sourceTree = "<group>"; };
+		5D83CB261B745A2400B76716 /* TemplateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateCell.h; sourceTree = "<group>"; };
+		5D83CB271B745A2400B76716 /* TemplateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateCell.m; sourceTree = "<group>"; };
+		5D83CB291B74830200B76716 /* MyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
+		5D83CB2A1B74830200B76716 /* MyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
+		5D83CB2C1B748A4D00B76716 /* OtherCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherCell.h; sourceTree = "<group>"; };
+		5D83CB2D1B748A4D00B76716 /* OtherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherCell.m; sourceTree = "<group>"; };
 		5DAC71941B70511300B2ED69 /* RegisterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterVC.h; sourceTree = "<group>"; };
 		5DAC71951B70511300B2ED69 /* RegisterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterVC.m; sourceTree = "<group>"; };
 		5DAC719B1B70A7EA00B2ED69 /* SearchSqlite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchSqlite.h; sourceTree = "<group>"; };
@@ -963,6 +975,14 @@
 			children = (
 				5DECC93C1B73753D005762EB /* MyInfoCell.h */,
 				5DECC93D1B73753D005762EB /* MyInfoCell.m */,
+				5D83CB231B7445A600B76716 /* MyIntegralCell.h */,
+				5D83CB241B7445A600B76716 /* MyIntegralCell.m */,
+				5D83CB261B745A2400B76716 /* TemplateCell.h */,
+				5D83CB271B745A2400B76716 /* TemplateCell.m */,
+				5D83CB2C1B748A4D00B76716 /* OtherCell.h */,
+				5D83CB2D1B748A4D00B76716 /* OtherCell.m */,
+				5D83CB291B74830200B76716 /* MyView.h */,
+				5D83CB2A1B74830200B76716 /* MyView.m */,
 				5DECC93E1B73753D005762EB /* MyModel.h */,
 				5DECC93F1B73753D005762EB /* MyModel.m */,
 				D35595A01B6EFF6200E4577B /* MineViewController.h */,
@@ -1536,6 +1556,7 @@
 				5B863CEC1B71EA6800AF0D36 /* SearchVC.m in Sources */,
 				5B863CEB1B71EA5F00AF0D36 /* RKViewFactory.m in Sources */,
 				D3E91F831B72E6A100FD8851 /* RequirementsApi.m in Sources */,
+				5D83CB281B745A2400B76716 /* TemplateCell.m in Sources */,
 				5B863CEA1B71EA5400AF0D36 /* RKShadowView.m in Sources */,
 				5B863CE71B71EA4700AF0D36 /* MainProjectController.m in Sources */,
 				5B863CE81B71EA4700AF0D36 /* MainProductController.m in Sources */,
@@ -1646,6 +1667,7 @@
 				D3EB7E8D1B7054D000482BCD /* ProductModel.m in Sources */,
 				5BA668AC1B7343A200E4A955 /* ProjectContactsInfoView.m in Sources */,
 				D3E37A591B68BAA20073D401 /* AFURLSessionManager.m in Sources */,
+				5D83CB251B7445A600B76716 /* MyIntegralCell.m in Sources */,
 				D3A8B4071B70E9B20033457F /* LoginVC.m in Sources */,
 				D3DF129A1B6B614400DFEE8F /* MJRefreshBackFooter.m in Sources */,
 				D355958F1B6EFD8B00E4577B /* MyBuildingTabBarController.m in Sources */,
@@ -1663,6 +1685,8 @@
 				5B5CA1921B6F70ED00CC3896 /* RKPageController.m in Sources */,
 				D3DF12A01B6B614400DFEE8F /* MJRefreshAutoStateFooter.m in Sources */,
 				5B5CA13B1B6F4A1600CC3896 /* MainContactCell.m in Sources */,
+				5D83CB2E1B748A4D00B76716 /* OtherCell.m in Sources */,
+				5D83CB2B1B74830200B76716 /* MyView.m in Sources */,
 				D3DF12D51B6B7DA000DFEE8F /* SDWebImageManager.m in Sources */,
 				D3DF12D31B6B7DA000DFEE8F /* SDWebImageDownloader.m in Sources */,
 				5B5CA1B11B6F713600CC3896 /* ProjectApi.m in Sources */,

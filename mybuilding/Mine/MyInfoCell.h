@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PersonModel.h"
 
 @interface MyInfoCell : UITableViewCell
 
 /**
  *  模型
  */
-@property (nonatomic,strong)NSMutableDictionary *myInfoDict;
+@property (nonatomic,strong)PersonModel *personModel;
 
 @end

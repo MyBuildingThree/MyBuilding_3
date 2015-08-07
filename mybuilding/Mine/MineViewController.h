@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface MineViewController : UIViewController
+#import "ChatBaseViewController.h"
+@interface MineViewController : ChatBaseViewController
 
 @end
