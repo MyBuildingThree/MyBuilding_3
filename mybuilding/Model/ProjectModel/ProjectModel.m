@@ -21,25 +21,16 @@
     self.a_city = dict[@"landCity"];
     self.a_landAddress = dict[@"landAddress"];
     self.a_projectAddress = [NSString stringWithFormat:@"%@%@",dict[@"landDistrict"],dict[@"projectAddress"]];
-    if(![dict[@"landArea"] isEqualToString:@""]){
-        self.a_area = dict[@"landArea"];
-    }else{
-        self.a_area = NODATASTRING;
-    }
+    self.a_area = dict[@"landArea"];
+ 
     self.a_plotRatio = dict[@"landPlotRatio"];
     self.a_usage = dict[@"landUsagesCn"];
-    if(![dict[@"projectDesc"] isEqualToString:@""]){
-        self.a_description = dict[@"projectDesc"];
-    }else{
-        self.a_description = NODATASTRING;
-    }
+    self.a_description = dict[@"projectDesc"];
+
     self.a_exceptStartTime = dict[@"startTime"];
     self.a_exceptFinishTime = dict[@"endTime"];
-    if(![dict[@"investment"] isEqualToString:@""]){
-        self.a_investment = dict[@"investment"];
-    }else{
-        self.a_investment = NODATASTRING;
-    }
+    self.a_investment = dict[@"investment"];
+
     self.a_storeyArea = dict[@"storeyArea"];
     self.a_storeyHeight = dict[@"storeyHeight"];
     self.a_foreignInvestment = dict[@"isForeignIn"];

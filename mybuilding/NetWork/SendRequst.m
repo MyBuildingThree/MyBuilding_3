@@ -82,7 +82,6 @@
     [[AFAppDotNetAPIClient sharedClient] POST:urlString
                                    parameters:postParamDic constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
                                        [imageDataArr enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-                                           NSLog(@"=====>%lu",(unsigned long)idx);
                                            [formData appendPartWithFileData:obj name:@"file" fileName:[NSString stringWithFormat:@"image_%lu.jpg",(unsigned long)idx] mimeType:@"image/jpg"];
                                        }];
                                    }

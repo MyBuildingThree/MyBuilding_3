@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-
 @class RKImageLabel;
 @protocol RKImageLabelDelegate <NSObject>
 
@@ -85,7 +84,6 @@ typedef enum{
  imageLabel.firstMargin = 10;
  imageLabel.secondMargin = 100; //无效
  imageLabel.thirdMargin = 10;
- 
  
  dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
     imageLabel.imageView.frame = CGRectMake(0, 0, 10, 10);

@@ -54,8 +54,18 @@
     return CGPointMake(self.halfWidth, self.halfHeight);
 }
 
+- (CGPoint)origin{
+    return self.frame.origin;
+}
+
 - (CGSize)size{
     return self.frame.size;
+}
+
+- (void)setOrigin:(CGPoint)origin{
+    CGRect frame = self.frame;
+    frame.origin = origin;
+    self.frame = frame;
 }
 
 - (void)setSize:(CGSize)size{
@@ -64,14 +74,12 @@
     self.frame = frame;
 }
 
-- (CGPoint)origin{
-    return self.frame.origin;
-}
-
-- (void)setOrigin:(CGPoint)origin{
+- (CGRect)setHeight:(CGFloat)height{
     CGRect frame = self.frame;
-    frame.origin = origin;
+    frame.size.height = height;
     self.frame = frame;
+    
+    return self.frame;
 }
 
 #pragma 分割线
@@ -90,6 +98,15 @@
     
     return self.frame;
 }
+
+- (CGRect)setMaxX:(CGFloat)maxX{
+    CGRect frame = self.frame;
+    frame.origin.x = maxX - self.width;
+    self.frame = frame;
+    
+    return self.frame;
+}
+
 
 - (CGRect)setMinY:(CGFloat)minY{
     CGRect frame = self.frame;

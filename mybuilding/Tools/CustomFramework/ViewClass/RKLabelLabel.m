@@ -53,27 +53,51 @@
     [self refresh];
 }
 
-//- (void)setSecondMargin:(CGFloat)secondMargin{
-//    _secondMargin = secondMargin;
-//    [self refresh];
-//}
+- (void)setSecondMargin:(CGFloat)secondMargin{
+    _secondMargin = secondMargin;
+    [self refresh];
+}
 
 - (void)setThirdMargin:(CGFloat)thirdMargin{
     _thirdMargin = thirdMargin;
     [self refresh];
 }
 
+- (void)setMaxWidth:(CGFloat)maxWidth{
+    _maxWidth = maxWidth;
+    [self refresh];
+}
+
+- (void)setFirstMaxHeight:(CGFloat)firstMaxHeight{
+    _firstMaxHeight = firstMaxHeight;
+    [self refresh];
+}
+
+- (void)setSecondMaxHeight:(CGFloat)secondMaxHeight{
+    _secondMaxHeight = secondMaxHeight;
+    [self refresh];
+}
+
 - (void)refresh{
     CGFloat firstMargin = self.firstMargin;
-//    CGFloat secondMargin = self.secondMargin;
     CGFloat thirdMargin = self.thirdMargin;
-
-    if (self.firstLabel.width > self.secondLabel.width) {
-        self.secondLabel.width = self.firstLabel.width;
-    }else if (self.firstLabel.width < self.secondLabel.width) {
-        self.firstLabel.width = self.secondLabel.width;
+    CGFloat maxWidth = self.maxWidth;
+    
+    CGFloat longerWidth = MAX(self.firstLabel.width, self.secondLabel.width);
+    self.width = MAX(longerWidth, maxWidth);
+    self.firstLabel.width = self.width;
+    self.secondLabel.width = self.width;
+    
+    if (maxWidth) {
+        CGFloat secondMargin = self.secondMargin;
+        CGFloat firstMaxHeight = self.firstMaxHeight;
+        CGFloat secondMaxHeight = self.secondMaxHeight;
+        
+        [self.firstLabel autosizeWithMaxWidth:maxWidth maxHeight:firstMaxHeight];
+        [self.secondLabel autosizeWithMaxWidth:maxWidth maxHeight:secondMaxHeight];
+        
+        self.height = firstMargin + self.firstLabel.height + secondMargin + self.secondLabel.height + thirdMargin;
     }
-    self.width = MAX(self.firstLabel.width, self.secondLabel.width);
     
     [self.firstLabel setMinY:firstMargin];
     [self.secondLabel setMaxY:self.height - thirdMargin];

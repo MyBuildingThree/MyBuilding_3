@@ -32,4 +32,31 @@
  *  @param noNetWork 没有网络的情况处理
  */
 + (void)GetUserInformationWithBlock:(void (^)(PersonModel *model, NSError *error))block userId:(NSString *)userId noNetWork:(void(^)())noNetWork;
+
+/**
+ *  上传头像接口
+ *
+ *  @param block     接口返回的数据
+ *  @param data      图片的NSData
+ *  @param noNetWork 没有网络的情况处理
+ */
++ (void)AddUserImageWithBlock:(void (^)(NSMutableArray *posts, NSError *error))block data:(NSData *)data noNetWork:(void(^)())noNetWork;
+
+/**
+ *   更新个人信息
+ *
+ *  @param block     接口返回的数据
+ *  @param dic       传给服务器的数据
+ *                   realName      真实姓名，
+ *                   email         邮箱，
+ *                   sex           性别 00男 01女，
+ *                   constel       星座，
+ *                   birthday      生日，
+ *                   bloodType     血型 01 A型,02 B型，03 AB型，04 O型，05 其他，
+ *                   landProvince  省
+ *                   landCity      市
+ *                   landDistrict  区
+ *  @param noNetWork 没有网络的情况处理
+ */
++ (void)PostInformationImprovedWithBlock:(void (^)(NSMutableArray *posts, NSError *error))block dic:(NSMutableDictionary *)dic noNetWork:(void(^)())noNetWork;
 @end

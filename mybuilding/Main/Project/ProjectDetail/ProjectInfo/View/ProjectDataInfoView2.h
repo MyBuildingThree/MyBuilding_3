@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ *  项目详情多字段2号块
+ */
 @interface ProjectDataInfoView2 : UIView
+
+/**
+ *  设置各参数
+ *
+ *  @param contents 参数顺序为:暂时不写，设计图有问题，等做完后给需求确认
+ */
+- (void)setProjectDataInfoViewContents:(NSArray *)/*NSString*/contents;
 
 @end

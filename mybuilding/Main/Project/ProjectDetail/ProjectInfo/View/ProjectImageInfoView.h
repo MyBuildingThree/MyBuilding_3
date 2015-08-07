@@ -8,6 +8,34 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProjectImageInfoView : UIView
+@class ProjectImageInfoView;
+
+@protocol ProjectImageInfoViewDelegate <NSObject>
+
+@optional
+
+/**
+ *  imageInfoView被点击时触发
+ *
+ *  @param imageInfoView 自身
+ */
+- (void)imageInfoViewClicked:(ProjectImageInfoView *)imageInfoView;
+
+@end
+
+/**
+ *  项目详情图片视图
+ */
+@interface ProjectImageInfoView : UIImageView
+
+/**
+ *  设置图片url和图片数量
+ *
+ *  @param imageUrl 图片url
+ *  @param imageNum 图片数量
+ */
+- (void)setImageUrl:(NSURL *)imageUrl imageNum:(NSString *)imageNum;
+
+@property(nonatomic, weak) id<ProjectImageInfoViewDelegate> delegate;
 
 @end

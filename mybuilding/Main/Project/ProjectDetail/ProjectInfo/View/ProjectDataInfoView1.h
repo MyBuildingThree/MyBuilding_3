@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ *  项目详情多字段1号块
+ */
 @interface ProjectDataInfoView1 : UIView
 
 /**
@@ -15,6 +18,6 @@
  *
  *  @param contents 参数顺序为:暂时不写，设计图有问题，等做完后给需求确认
  */
-- (void)setProjectDataInfoViewContents:(NSArray*)contents;
+- (void)setProjectDataInfoViewContents:(NSArray *)/*NSString*/contents;
 
 @end

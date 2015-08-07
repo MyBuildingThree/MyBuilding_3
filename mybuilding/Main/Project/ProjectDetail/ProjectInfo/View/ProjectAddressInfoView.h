@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProjectAddressInfoView : UIView
+/**
+ *  项目详情的地址信息view
+ */
+@interface ProjectAddressInfoView : UIButton
+
+/**
+ *  设置当中的文字内容
+ *
+ *  @param content 内容
+ */
+- (void)setContent:(NSString *)content;
 
 @end

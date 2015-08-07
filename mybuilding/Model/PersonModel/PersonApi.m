@@ -48,4 +48,32 @@
         }
     } noNetWork:noNetWork];
 }
+
++ (void)AddUserImageWithBlock:(void (^)(NSMutableArray *posts, NSError *error))block data:(NSData *)data noNetWork:(void(^)())noNetWork{
+    NSString *urlStr = [NSString stringWithFormat:@"api/account/addUserImage"];
+    [SendRequst postImageRequstWithUrlString:urlStr postParamDic:nil imageDataArr:[NSMutableArray arrayWithObjects:data, nil] success:^(id responseDic) {
+        if(block){
+            block(nil,nil);
+        }
+    } failure:^(NSError *error) {
+        NSLog(@"error===>%@",error);
+        if (block) {
+            block(nil, error);
+        }
+    } noNetWork:noNetWork];
+}
+
++ (void)PostInformationImprovedWithBlock:(void (^)(NSMutableArray *posts, NSError *error))block dic:(NSMutableDictionary *)dic noNetWork:(void(^)())noNetWork{
+    NSString *urlStr = [NSString stringWithFormat:@"api/account/updateInformation"];
+    [SendRequst formRequstWithUrlString:urlStr postParamDic:dic success:^(id responseDic) {
+        if(block){
+            block(nil,nil);
+        }
+    } failure:^(NSError *error) {
+        NSLog(@"error===>%@",error);
+        if (block) {
+            block(nil, error);
+        }
+    } noNetWork:noNetWork];
+}
 @end

@@ -8,7 +8,6 @@
 
 #import "CompanyApi.h"
 #import "SendRequst.h"
-#import "CompanyModel.h"
 
 @implementation CompanyApi
 +(void)GetCompanyListWithBlock:(void (^)(NSMutableArray *posts, NSError *error))block startIndex:(NSInteger)startIndex keyWords:(NSString *)keyWords noNetWork:(void(^)())noNetWork{
@@ -23,6 +22,23 @@
         }
         if(block){
             block(arr,nil);
+        }
+    } failure:^(NSError *error) {
+        NSLog(@"error===>%@",error);
+        if (block) {
+            block(nil, error);
+        }
+    } noNetWork:noNetWork];
+}
+
++ (void)GetCompanyDetailWithBlock:(void (^)(CompanyModel *companyModel, NSError *error))block companyId:(NSString *)companyId noNetWork:(void(^)())noNetWork{
+    NSString *urlStr = [NSString stringWithFormat:@"api/companyInfo/getCompanyBaseInformation?companyId=%@",companyId];
+    [SendRequst sendRequestWithUrlString:urlStr success:^(id responseDic) {
+        NSLog(@"%@",responseDic);
+        CompanyModel *model = [[CompanyModel alloc] init];
+        [model setDict:responseDic[@"data"]];
+        if(block){
+            block(model,nil);
         }
     } failure:^(NSError *error) {
         NSLog(@"error===>%@",error);

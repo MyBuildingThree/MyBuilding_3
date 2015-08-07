@@ -30,12 +30,19 @@
 @implementation ProjectNameInfoView
 
 - (void)setName:(NSString *)name describe:(NSString *)describe favoriteNum:(NSString *)favoriteNum commentNum:(NSString *)commentNum focusNum:(NSString *)focusNum time:(NSString *)time{
-    self.nameLabel.text = name;
-    self.contentLabel.text = describe;
+    BOOL hasName = ![name isEqualToString:@""];
+    BOOL hasContent = ![describe isEqualToString:@""];
+    self.contentLabel.textColor = hasContent ? RGBCOLOR(68, 74, 89) : RGBCOLOR(127, 127, 127);
+    self.nameLabel.textColor = hasName ? RGBCOLOR(51, 51, 51) : RGBCOLOR(127, 127, 127);
+
+    self.nameLabel.text = hasName ? name : @"暂无数据";
+    self.contentLabel.text = hasContent ? describe : @"暂无数据";
     self.favoriteImageLabel.mainLabel.text = favoriteNum;
     self.commentImageLabel.mainLabel.text = commentNum;
     self.focusImageLabel.mainLabel.text = focusNum;
     self.timeImageLabel.mainLabel.text = time;
+    
+
     
     [self.nameLabel autosizeWithMaxWidth:kScreenWidth - 2 * 10];
     [self.contentLabel autosizeWithMaxWidth:kScreenWidth - 2 * 10];
@@ -55,8 +62,7 @@
 - (UILabel *)nameLabel{
     if (!_nameLabel) {
         UILabel* nameLabel = [[UILabel alloc] init];
-        nameLabel.font = [UIFont systemFontOfSize:17];
-        nameLabel.textColor = RGBCOLOR(51, 51, 51);
+        nameLabel.font = [UIFont boldSystemFontOfSize:17];
         [self addSubview:nameLabel];
         
         _nameLabel = nameLabel;
@@ -68,7 +74,6 @@
     if (!_contentLabel) {
         UILabel* contentLabel = [[UILabel alloc] init];
         contentLabel.font = [UIFont systemFontOfSize:16];
-        contentLabel.textColor = RGBCOLOR(68, 74, 89);
         [self addSubview:contentLabel];
         
         _contentLabel = contentLabel;

@@ -26,9 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor], NSForegroundColorAttributeName,[UIFont boldSystemFontOfSize:19], NSFontAttributeName,nil]];
-    
-    self.view.backgroundColor = [UIColor whiteColor];
+    [self initNav];
     MainRecommendController* vc1 = [[MainRecommendController alloc] initWithNavi:self.navigationController];
     MainProjectController* vc2 = [[MainProjectController alloc] initWithNavi:self.navigationController];
     MainCompanyController* vc3 = [[MainCompanyController alloc] initWithNavi:self.navigationController];
@@ -45,6 +43,24 @@
     self.pageController.delegate = self;
     [self.pageController.view setMinY:64];
     [self.view addSubview:self.pageController.view];
+}
+
+-(void)initNav{
+    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor], NSForegroundColorAttributeName,[UIFont boldSystemFontOfSize:19], NSFontAttributeName,nil]];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    UIButton *searchBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 50, 44)];
+    [searchBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [searchBtn setTitle:@"搜索" forState:UIControlStateNormal];
+    UIBarButtonItem *searchItem = [[UIBarButtonItem alloc]initWithCustomView:searchBtn];
+    
+    UIButton *moreBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 50, 44)];
+    [moreBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [moreBtn setTitle:@"更多" forState:UIControlStateNormal];
+    UIBarButtonItem *moreItem = [[UIBarButtonItem alloc]initWithCustomView:moreBtn];
+    
+    self.navigationItem.rightBarButtonItems = @[moreItem,searchItem];
 }
 
 - (void)stageViewPageControllerAssistBtnClicked{

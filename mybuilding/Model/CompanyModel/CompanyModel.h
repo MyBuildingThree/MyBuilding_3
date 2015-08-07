@@ -92,5 +92,15 @@
  */
 @property (nonatomic,strong) NSString *a_reviewStatus;
 
+/**
+ *  所有产品数
+ */
+@property(nonatomic,strong)NSString *a_productNum;
+
+/**
+ *  所有项目数
+ */
+@property(nonatomic,strong)NSString *a_projectNum;
+
 @property (nonatomic, strong) NSDictionary *dict;
 @end

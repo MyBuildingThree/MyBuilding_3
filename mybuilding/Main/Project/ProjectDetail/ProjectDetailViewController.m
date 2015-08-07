@@ -31,16 +31,9 @@ typedef enum{
 
 @implementation ProjectDetailViewController
 
-- (instancetype)init{
-    if (self = [super init]) {
-        [self view];
-        self.view.backgroundColor = [UIColor whiteColor];
-    }
-    return self;
-}
-
 - (void)viewDidLoad{
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     [self detailController];
     [self commentController];
 //    [self showView:ShowDetailView];
@@ -75,11 +68,10 @@ typedef enum{
 - (ProjectDetailController *)detailController{
     if (!_detailController) {
         ProjectDetailController* pageController = [[ProjectDetailController alloc] initWithNavi:self.navigationController];
-        pageController.projectId = self.projectId;
         [pageController.view setMinY:64  height:kScreenHeight - 64];
         pageController.delegate = self;
+        pageController.projectId = self.projectId;
         [self.view addSubview:pageController.view];
-        pageController.tableView.backgroundColor = [UIColor grayColor];
         
         _detailController = pageController;
     }
@@ -98,7 +90,4 @@ typedef enum{
     return _commentController;
 }
 
-- (void)setProjectId:(NSString *)projectId{
-    self.detailController.projectId = projectId;
-}
 @end

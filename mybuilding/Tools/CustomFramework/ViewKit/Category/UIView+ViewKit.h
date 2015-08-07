@@ -79,6 +79,12 @@
 @property(nonatomic, assign) CGPoint origin;
 
 /**
+ *  设置heifht
+ *  @return 设置完之后的view.frame
+ */
+- (CGRect)setHeight:(CGFloat)height;
+
+/**
  *  设置最左的x
  *  @return 设置完之后的view.frame
  */
@@ -89,6 +95,12 @@
  *  @return 设置完之后的view.frame
  */
 - (CGRect)setMidX:(CGFloat)midX;
+
+/**
+ *  设置最右的x
+ *  @return 设置完之后的view.frame
+ */
+- (CGRect)setMaxX:(CGFloat)maxX;
 
 /**
  *  设置最高的y
