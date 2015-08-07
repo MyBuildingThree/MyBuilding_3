@@ -133,15 +133,9 @@
  */
 - (void)btnClick:(UIButton *)btn
 {
-    if (btn.tag == 12)
+    
+    if (btn != self.selectedBtn)
     {
-        [LoginVC loadLoginViewControllerPresentBy:self];
-        
-    }
-    else if (btn != self.selectedBtn)
-    {
-        
-        
         self.selectedBtn.selected = NO;
         btn.selected = YES;
         self.selectedBtn = btn;
