@@ -64,7 +64,15 @@
     return self;
 }
 
-
+/**
+ *  对label的一些属性进行设置
+ *
+ *  @param textStr       文本内容
+ *  @param textAlignment 文本位置
+ *  @param fsize         文字大小
+ *  @param bold          是否粗体
+ *  @param label         对哪个label进行设置
+ */
 - (void)setlabelwithText:(NSString *)textStr textAlignment:(NSTextAlignment)textAlignment fontSize:(CGFloat)fsize bold:(BOOL)bold withObj:(UILabel *)label
 {
     label.text = textStr;
@@ -78,16 +86,15 @@
     
 }
 
+
 - (void)setSubviewsWithNum:(NSMutableArray *)numArray textArray:(NSMutableArray *)textArray title:(NSString *)title
 {
+    self.numArray = numArray;
+    self.textArray = textArray;
+    self.topView.title = title;
     
-    if ((numArray.count != 0)&&(textArray.count != 0))
+    if (numArray.count != 0)
     {
-        self.numArray = numArray;
-        self.textArray = textArray;
-        
-        self.topView.title = title;
-        
         [self setlabelwithText:numArray[0] textAlignment:NSTextAlignmentLeft fontSize:30.f bold:YES withObj:self.onLabel];
         [self setlabelwithText:textArray[0] textAlignment:NSTextAlignmentLeft fontSize:14.f bold:NO withObj:self.otLabel];
         [self setlabelwithText:numArray[1] textAlignment:NSTextAlignmentLeft fontSize:30.f bold:YES withObj:self.tnLabel];
