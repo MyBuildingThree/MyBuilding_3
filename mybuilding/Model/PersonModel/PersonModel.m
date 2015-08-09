@@ -16,9 +16,11 @@
     
     self.a_avatarUrl = [ImageUrlPath getNetWorkImageUrl:dict[@"headImageId"] type:@"login" width:@"180" height:@"180" cut:@""];
     
-    self.a_companyName = dict[@"companyName"];
+    self.a_companyName = dict[@"workHistory"][@"companyName"];
     
-    self.a_duties = dict[@"duties"];
+    self.a_approveCompanyName = dict[@"companyName"];
+    
+    self.a_duties = dict[@"workHistory"][@"duties"];
     
     self.a_isFriend = ![dict[@"isFriend"] isEqualToString:@"0"];
     
@@ -59,5 +61,33 @@
     self.a_email = dict[@"email"];
     
     self.a_loginTel = dict[@"loginTel"];
+    
+    if([dict[@"workHistory"][@"workHistoryId"] isEqualToString:@""]){
+        self.a_isWorkHistory = NO;
+    }else{
+        self.a_isWorkHistory = YES;
+    }
+    
+    if([dict[@"companyId"] isEqualToString:@""]){
+        self.a_isCompany = NO;
+    }else{
+        self.a_isCompany = YES;
+    }
+    
+    self.a_province = dict[@"landProvince"];
+    self.a_city = dict[@"landCity"];
+    self.a_district = dict[@"landDistrict"];
+    
+    self.a_productNum = @"0";
+    self.a_projectNum = @"0";
+    
+    self.a_startTime = dict[@"startTime"];
+    self.a_endTime = dict[@"endTime"];
+    self.a_workDesc = dict[@"workDesc"];
+    if([dict[@"isWorking"] isEqualToString:@"00"]){
+        self.a_isWorking = YES;
+    }else{
+        self.a_isWorking = NO;
+    }
 }
 @end

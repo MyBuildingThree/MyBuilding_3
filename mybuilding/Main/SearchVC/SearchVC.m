@@ -27,6 +27,8 @@
 #import "ProductModel.h"
 #import "MainProductCell.h"
 
+#import "ContactDetailViewController.h"
+
 @interface SearchVC ()<UITextFieldDelegate,UITableViewDataSource,UITableViewDelegate>
 
 //搜索框
@@ -313,7 +315,7 @@
 //UITextField协议
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    [self.searchTf resignFirstResponder];
+    //[self.searchTf resignFirstResponder];
     [SearchSqlite addDataWith:self.classBtn.titleLabel.text content:self.searchTf.text];
     
     [self searchWithApiAndstartIndex:0];
@@ -462,6 +464,30 @@
     {
         self.searchTf.text = self.array[self.array.count-1-indexPath.row];
         [self.searchTf becomeFirstResponder];
+    }else{
+        NSUInteger index = [self.classArray indexOfObject:self.classBtn.titleLabel.text];
+        switch (index) {
+            case 0:
+                NSLog(@"用户");
+            {
+                PersonModel *model = self.array[indexPath.row];
+                ContactDetailViewController *view = [[ContactDetailViewController alloc] init];
+                view.contactID = model.a_id;
+                [self.navigationController pushViewController:view animated:YES];
+            }
+                break;
+            case 1:
+                NSLog(@"企业");
+                break;
+            case 2:
+                NSLog(@"项目");
+                break;
+            case 3:
+                NSLog(@"产品");
+                break;
+            default:
+                break;
+        }
     }
     
 }
