@@ -133,7 +133,9 @@
                 cell = [[TemplateCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Template"];
                 cell.selectionStyle = UITableViewCellSelectionStyleNone;
             }
-            NSMutableArray *array0 = [NSMutableArray arrayWithObjects:self.personModel.a_contractNum_begin,self.personModel.a_contractNum_end,self.personModel.a_contractNum_close, nil];
+
+            
+            NSMutableArray *array0 = [NSMutableArray arrayWithObjects:[self setZeroWithStr: self.personModel.a_contractNum_begin],[self setZeroWithStr: self.personModel.a_contractNum_end],[self setZeroWithStr: self.personModel.a_contractNum_close], nil];
             NSMutableArray *array1 =  [NSMutableArray arrayWithObjects:@"进行中",@"已完成",@"已关闭", nil];
             
             [cell setSubviewsWithNum:array0 textArray:array1 title:@"我的全部合同"];
@@ -148,7 +150,7 @@
                 cell = [[TemplateCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Template2"];
                 cell.selectionStyle = UITableViewCellSelectionStyleNone;
             }
-            NSMutableArray *array00 = [NSMutableArray arrayWithObjects:self.personModel.a_focusProjectNum,self.personModel.a_focusPersonNum,self.personModel.a_focusCompanyNum,self.personModel.a_focusProductNum, nil];
+            NSMutableArray *array00 = [NSMutableArray arrayWithObjects:[self setZeroWithStr: self.personModel.a_focusProjectNum],[self setZeroWithStr: self.personModel.a_focusPersonNum],[self setZeroWithStr: self.personModel.a_focusCompanyNum],[self setZeroWithStr: self.personModel.a_focusProductNum], nil];
             NSMutableArray *array11 =  [NSMutableArray arrayWithObjects:@"关注的项目",@"关注的人",@"关注的公司",@"关注的产品", nil];
             
             [cell setSubviewsWithNum:array00 textArray:array11 title:@"我的全部合同"];
@@ -185,5 +187,13 @@
     } userId:[LoginSqlite getdata:@"userId"] noNetWork:nil];
 }
 
-
+-(NSString *)setZeroWithStr:(NSString *)str
+{
+    if (!str) {
+        return @"0";
+    }else{
+        return str;
+    }
+    
+}
 @end
