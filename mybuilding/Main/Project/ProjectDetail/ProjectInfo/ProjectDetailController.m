@@ -45,6 +45,7 @@
 - (void)setUp{
     [super setUp];
     self.tableView.size = CGSizeMake(kScreenWidth, kScreenHeight - 64);
+    self.tableView.showsVerticalScrollIndicator = NO;
     [self setUpFooterView];
 }
 
@@ -57,9 +58,12 @@
 
 - (void)pageControllerFirstLoad{
     [ProjectApi GetProjectInfoWithBlock:^(ProjectModel *proModel, NSMutableArray *contactArr, NSMutableArray *imageArr, NSError *error) {
-        self.projectModel = proModel;
-        self.imageArr = imageArr;
-        [self refreshData];
+        if (!error) {
+            self.projectModel = proModel;
+            self.imageArr = imageArr;
+            [self refreshData];
+        }
+
     } projectId:self.projectId noNetWork:nil];
 }
 

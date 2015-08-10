@@ -37,14 +37,18 @@
 }
 
 - (void)label:(RKLabel *)label changeText:(NSString *)text{
-    [self.firstLabel autosize];
-    [self.secondLabel autosize];
+    if (!self.maxWidth) {
+        [self.firstLabel autosize];
+        [self.secondLabel autosize];
+    }
     [self refresh];
 }
 
 - (void)label:(RKLabel *)label changeFont:(UIFont *)font{
-    [self.firstLabel autosize];
-    [self.secondLabel autosize];
+    if (!self.maxWidth) {
+        [self.firstLabel autosize];
+        [self.secondLabel autosize];
+    }
     [self refresh];
 }
 
@@ -83,8 +87,11 @@
     CGFloat thirdMargin = self.thirdMargin;
     CGFloat maxWidth = self.maxWidth;
     
-    CGFloat longerWidth = MAX(self.firstLabel.width, self.secondLabel.width);
-    self.width = MAX(longerWidth, maxWidth);
+    if (self.maxWidth) {
+        self.width = maxWidth;
+    }else{
+        self.width = MAX(self.firstLabel.width, self.secondLabel.width);
+    }
     self.firstLabel.width = self.width;
     self.secondLabel.width = self.width;
     
@@ -95,7 +102,7 @@
         
         [self.firstLabel autosizeWithMaxWidth:maxWidth maxHeight:firstMaxHeight];
         [self.secondLabel autosizeWithMaxWidth:maxWidth maxHeight:secondMaxHeight];
-        
+                
         self.height = firstMargin + self.firstLabel.height + secondMargin + self.secondLabel.height + thirdMargin;
     }
     

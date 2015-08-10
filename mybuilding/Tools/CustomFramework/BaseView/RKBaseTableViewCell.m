@@ -7,6 +7,7 @@
 //
 
 #import "RKBaseTableViewCell.h"
+#import "RKImageLabel.h"
 
 @implementation RKBaseTableViewCell
 @synthesize bottomView = _bottomView;
@@ -61,6 +62,19 @@
         [self addSubview:_assistBtn];
     }
     return _assistBtn;
+}
+
+- (RKImageLabel *)imageLabel_1{
+    if (!_imageLabel_1) {
+        _imageLabel_1 = [RKImageLabel imageLabelWithHeight:0];
+        _imageLabel_1.imageView.frame = CGRectMake(0, 0, 12, 12);
+        _imageLabel_1.mainLabel.text = @"时间";
+        _imageLabel_1.secondMargin = 4;
+        _imageLabel_1.mainLabel.textColor = RGBCOLOR(148, 148, 153);
+        _imageLabel_1.mainLabel.font = [UIFont systemFontOfSize:12];
+        [self addSubview:_imageLabel_1];
+    }
+    return _imageLabel_1;
 }
 
 - (UIView *)bottomView{

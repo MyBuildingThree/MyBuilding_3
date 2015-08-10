@@ -27,6 +27,10 @@
     // Override point for customization after application launch.
     [self openSQL];
     [self initTabbar];
+    UIApplication* app = [UIApplication sharedApplication];
+    UIScreen* screen = [UIScreen mainScreen];
+    
+    NSLog(@"screen = %lf",screen.nativeScale);
     return YES;
 }
 

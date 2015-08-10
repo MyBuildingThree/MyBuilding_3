@@ -59,6 +59,18 @@ typedef enum {
 - (void)endLoading;
 
 /**
+ *  开启键盘通知
+ */
+-(void)addKeybordNotification;
+
+/**
+ *  键盘通知开启后的回调方法
+ *
+ *  @param noti 通知
+ */
+-(void)keybordWillChangeFrame:(NSNotification *)noti;
+
+/**
  *  设置下拉和上拉刷新
  */
 - (void)setUpHeaderAndFooterRefresh;

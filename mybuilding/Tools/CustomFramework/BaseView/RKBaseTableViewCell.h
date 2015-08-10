@@ -12,12 +12,15 @@
 - (void)tableViewCellAssistBtnClicked;
 @end
 
+@class RKImageLabel;
 @interface RKBaseTableViewCell : UITableViewCell
 @property(nonatomic, strong) UIImageView* mainImageView;
 @property(nonatomic, strong) UILabel* mainLabel;
 @property(nonatomic, strong) UILabel* subLabel_1;
 @property(nonatomic, strong) UILabel* subLabel_2;
 @property(nonatomic, strong) UIButton* assistBtn;
+
+@property(nonatomic, strong) RKImageLabel* imageLabel_1;
 
 @property(nonatomic, strong) UIView* bottomView;
 

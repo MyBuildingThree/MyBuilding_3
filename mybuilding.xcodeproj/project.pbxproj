@@ -49,6 +49,8 @@
 		5B863CEF1B71EB1A00AF0D36 /* UIView+ViewKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B71B70C11000459697 /* UIView+ViewKit.m */; };
 		5B863CF01B71EB3900AF0D36 /* UIImageView+ViewKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B31B70C11000459697 /* UIImageView+ViewKit.m */; };
 		5B863CF11B71EB5700AF0D36 /* NSString+LabelKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE4B11B70C11000459697 /* NSString+LabelKit.m */; };
+		5B96EC231B74B25D009EE295 /* CommentTabelViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B96EC221B74B25D009EE295 /* CommentTabelViewCell.m */; };
+		5B96EC261B74B31E009EE295 /* CommentSendFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B96EC251B74B31E009EE295 /* CommentSendFieldView.m */; };
 		5BA668A81B7343A200E4A955 /* ProjectCommentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA668931B7343A200E4A955 /* ProjectCommentController.m */; };
 		5BA668A91B7343A200E4A955 /* ProjectDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA668951B7343A200E4A955 /* ProjectDetailViewController.m */; };
 		5BA668AA1B7343A200E4A955 /* ProjectDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA668981B7343A200E4A955 /* ProjectDetailController.m */; };
@@ -275,6 +277,10 @@
 		5B863CD51B71B58E00AF0D36 /* RKImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKImageView.m; sourceTree = "<group>"; };
 		5B863CD71B71D8A900AF0D36 /* RKLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKLabel.h; sourceTree = "<group>"; };
 		5B863CD81B71D8A900AF0D36 /* RKLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKLabel.m; sourceTree = "<group>"; };
+		5B96EC211B74B25D009EE295 /* CommentTabelViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentTabelViewCell.h; sourceTree = "<group>"; };
+		5B96EC221B74B25D009EE295 /* CommentTabelViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentTabelViewCell.m; sourceTree = "<group>"; };
+		5B96EC241B74B31E009EE295 /* CommentSendFieldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentSendFieldView.h; sourceTree = "<group>"; };
+		5B96EC251B74B31E009EE295 /* CommentSendFieldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentSendFieldView.m; sourceTree = "<group>"; };
 		5BA668921B7343A200E4A955 /* ProjectCommentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectCommentController.h; sourceTree = "<group>"; };
 		5BA668931B7343A200E4A955 /* ProjectCommentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectCommentController.m; sourceTree = "<group>"; };
 		5BA668941B7343A200E4A955 /* ProjectDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectDetailViewController.h; sourceTree = "<group>"; };
@@ -769,6 +775,8 @@
 		5B5CA1721B6F70ED00CC3896 /* ViewClass */ = {
 			isa = PBXGroup;
 			children = (
+				5B96EC211B74B25D009EE295 /* CommentTabelViewCell.h */,
+				5B96EC221B74B25D009EE295 /* CommentTabelViewCell.m */,
 				5B5CA1731B6F70ED00CC3896 /* ChatMoreSelectView.h */,
 				5B5CA1741B6F70ED00CC3896 /* ChatMoreSelectView.m */,
 				5B5CA1751B6F70ED00CC3896 /* ChatToolBar.h */,
@@ -781,6 +789,8 @@
 				5B863CD21B71B03000AF0D36 /* RKImageLabel.m */,
 				5B814BCC1B722628004A2559 /* RKLabelLabel.h */,
 				5B814BCD1B722628004A2559 /* RKLabelLabel.m */,
+				5B96EC241B74B31E009EE295 /* CommentSendFieldView.h */,
+				5B96EC251B74B31E009EE295 /* CommentSendFieldView.m */,
 			);
 			path = ViewClass;
 			sourceTree = "<group>";
@@ -1701,7 +1711,7 @@
 				D3E37A511B68BAA20073D401 /* AFHTTPRequestOperation.m in Sources */,
 				D3E91F8A1B73218600FD8851 /* MainRequirementsController.m in Sources */,
 				D3A1745E1B6F835B00BC6DA1 /* CompanyTableViewCell.m in Sources */,
-				D3F250211B7491B200E03716 /* ContactOtherCell.m in Sources */,
+				5B96EC231B74B25D009EE295 /* CommentTabelViewCell.m in Sources */,
 				5B5CA18B1B6F70ED00CC3896 /* RKScrollView.m in Sources */,
 				D3E379FC1B686C9E0073D401 /* ViewController.m in Sources */,
 				5B5CA1381B6F3ED100CC3896 /* MainContactController.m in Sources */,
@@ -1758,6 +1768,7 @@
 				D3DF129D1B6B614400DFEE8F /* MJRefreshHeader.m in Sources */,
 				5BA668AE1B7343A200E4A955 /* ProjectDataInfoView1.m in Sources */,
 				D3E37A551B68BAA20073D401 /* AFSecurityPolicy.m in Sources */,
+				5B96EC261B74B31E009EE295 /* CommentSendFieldView.m in Sources */,
 				D3DF12991B6B614400DFEE8F /* MJRefreshAutoFooter.m in Sources */,
 				D338E36C1B783AC000CDC242 /* ActivesApi.m in Sources */,
 				D3DF12A91B6B614400DFEE8F /* UIScrollView+MJExtension.m in Sources */,
