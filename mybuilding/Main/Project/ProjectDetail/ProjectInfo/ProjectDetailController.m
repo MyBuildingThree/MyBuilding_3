@@ -45,6 +45,7 @@
 - (void)setUp{
     [super setUp];
     self.tableView.size = CGSizeMake(kScreenWidth, kScreenHeight - 64);
+    self.tableView.showsVerticalScrollIndicator = NO;
     [self setUpFooterView];
 }
 

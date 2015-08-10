@@ -11,6 +11,7 @@
 #import "RKLabelLabel.h"
 #import "RKShadowView.h"
 #import "CommentTabelViewCell.h"
+#import "CommentSendFieldView.h"
 
 @interface ProjectCommentController ()
 
@@ -19,6 +20,11 @@
  */
 @property(nonatomic, strong) RKLabelLabel* projectNameInfoView;
 
+/**
+ *  发送评论的view
+ */
+@property(nonatomic, strong) CommentSendFieldView* commentSendView;
+
 @end
 
 @implementation ProjectCommentController
@@ -26,12 +32,15 @@
 - (void)setUp{
     [super setUp];
     self.tableView.size = CGSizeMake(kScreenWidth, kScreenHeight - 64 - 49);
+    self.tableView.showsVerticalScrollIndicator = NO;
+    self.commentSendView.minY = self.tableView.maxY;
+    [self.view addSubview:self.commentSendView];
     [self setUpHeaderView];
+    [self addKeybordNotification];
 }
 
 - (void)setUpHeaderView{
     UIView* bgView = [[UIView alloc] initWithFrame:CGRectZero];
-    bgView.backgroundColor = [[UIColor alloc] initWithRed:.5 green:.5 blue:.5 alpha:.5];
     self.projectNameInfoView.origin = CGPointMake(10, 10);
     self.projectNameInfoView.backgroundColor = [UIColor whiteColor];
     
@@ -85,4 +94,18 @@
     return _projectNameInfoView;
 }
 
+- (CommentSendFieldView *)commentSendView{
+    if (!_commentSendView) {
+        _commentSendView = [CommentSendFieldView commentSendFieldView];
+    }
+    return _commentSendView;
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    [self.view endEditing:YES];
+}
+
+- (void)touchesBeganInRKBaseTableView{
+    [self.view endEditing:YES];
+}
 @end

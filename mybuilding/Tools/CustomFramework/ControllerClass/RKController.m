@@ -105,6 +105,19 @@
     return [RKViewFactory noDataViewWithTop:140];
 }
 
+-(void)addKeybordNotification{
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keybordWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
+}
+
+-(void)keybordWillChangeFrame:(NSNotification *)noti{
+    CGRect endFrame = [noti.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    CGFloat duration = [noti.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    
+    [UIView animateWithDuration:duration animations:^{
+        self.view.transform = CGAffineTransformMakeTranslation(0, CGRectGetMinY(endFrame) - kScreenHeight);
+    }];
+}
+
 - (void)setViewFrame:(CGRect)frame{
     self.view.frame = frame;
     self.tableView.frame = self.view.bounds;

@@ -59,7 +59,7 @@
     [self.mainImageView sd_setImageWithURL:[NSURL URLWithString:@"http://10.1.5.104:8080/server/image/show?imageId=8e90cd89-72ee-49f0-9e08-a258192c9d40&type=project&width=&height=&cut="]];
     self.mainLabel.text = @"用户名哦用户名哦用户名哦用户名哦用户名哦用户名哦dddddddd名哦用户名哦用户名哦用户名哦ddddd";
     self.subLabel_1.text = @"我是内容内容内容我是内容内容内容我是内容内容内容我是内容内容内容我是内容内容内容我是内容内容内容我是内容内容内容我是内容内容内容我是内容内容内容我是内容内容内容我是内容内容内容我是内容内容内容我是内容内容内容";
-    self.imageLabel_1.mainLabel.text = @"20151231232132131321321";
+    self.imageLabel_1.mainLabel.text = @"2015-12-14 12:22";
     
     [self.mainLabel autosizeWithMaxWidth:kScreenWidth - self.mainImageView.maxX - 10 * 2];
     [self.mainLabel setMinX:self.mainImageView.maxX + 10 midY:self.mainImageView.midY];
