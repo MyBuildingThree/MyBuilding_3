@@ -30,4 +30,41 @@
     return self;
 }
 
+-(void)setModel:(PersonModel *)model{
+    
+}
+
+-(void)layoutSubviews{
+    
+}
+
+-(UILabel *)timeLabel{
+    if(!_timeLabel){
+        _timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+        _timeLabel.textAlignment = NSTextAlignmentLeft;
+        _timeLabel.font = [UIFont systemFontOfSize:15];
+    }
+    return _timeLabel;
+}
+
+-(UILabel *)companyNameLabel{
+    if(!_companyNameLabel){
+    
+    }
+    return _companyNameLabel;
+}
+
+-(UILabel *)workDescLabel{
+    if(!_workDescLabel){
+    
+    }
+    return _workDescLabel;
+}
+
+-(UIView *)bottomView{
+    if(!_bottomView){
+        _bottomView = [RKShadowView seperatorLineWithHeight:10 top:0];
+    }
+    return _bottomView;
+}
 @end

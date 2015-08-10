@@ -69,6 +69,10 @@
 		5DDA3A471B721601008DD88F /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDA3A401B7208BC008DD88F /* PopoverView.m */; };
 		5DECC9421B73753D005762EB /* MyInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DECC93D1B73753D005762EB /* MyInfoCell.m */; };
 		5DECC9431B73753D005762EB /* MyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DECC93F1B73753D005762EB /* MyModel.m */; };
+		D338E3621B7836C400CDC242 /* CommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D338E3611B7836C400CDC242 /* CommentModel.m */; };
+		D338E3651B7836D000CDC242 /* CommentApi.m in Sources */ = {isa = PBXBuildFile; fileRef = D338E3641B7836D000CDC242 /* CommentApi.m */; };
+		D338E3691B783AB400CDC242 /* ActivesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D338E3681B783AB400CDC242 /* ActivesModel.m */; };
+		D338E36C1B783AC000CDC242 /* ActivesApi.m in Sources */ = {isa = PBXBuildFile; fileRef = D338E36B1B783AC000CDC242 /* ActivesApi.m */; };
 		D355958E1B6EFD8B00E4577B /* HomeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D355958A1B6EFD8B00E4577B /* HomeNavigationController.m */; };
 		D355958F1B6EFD8B00E4577B /* MyBuildingTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D355958D1B6EFD8B00E4577B /* MyBuildingTabBarController.m */; };
 		D35595961B6EFF2000E4577B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D35595951B6EFF2000E4577B /* MainViewController.m */; };
@@ -341,6 +345,14 @@
 		5DECC93D1B73753D005762EB /* MyInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyInfoCell.m; sourceTree = "<group>"; };
 		5DECC93E1B73753D005762EB /* MyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyModel.h; sourceTree = "<group>"; };
 		5DECC93F1B73753D005762EB /* MyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyModel.m; sourceTree = "<group>"; };
+		D338E3601B7836C400CDC242 /* CommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentModel.h; sourceTree = "<group>"; };
+		D338E3611B7836C400CDC242 /* CommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentModel.m; sourceTree = "<group>"; };
+		D338E3631B7836D000CDC242 /* CommentApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentApi.h; sourceTree = "<group>"; };
+		D338E3641B7836D000CDC242 /* CommentApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentApi.m; sourceTree = "<group>"; };
+		D338E3671B783AB400CDC242 /* ActivesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivesModel.h; sourceTree = "<group>"; };
+		D338E3681B783AB400CDC242 /* ActivesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivesModel.m; sourceTree = "<group>"; };
+		D338E36A1B783AC000CDC242 /* ActivesApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivesApi.h; sourceTree = "<group>"; };
+		D338E36B1B783AC000CDC242 /* ActivesApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivesApi.m; sourceTree = "<group>"; };
 		D35595891B6EFD8B00E4577B /* HomeNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeNavigationController.h; sourceTree = "<group>"; };
 		D355958A1B6EFD8B00E4577B /* HomeNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeNavigationController.m; sourceTree = "<group>"; };
 		D355958C1B6EFD8B00E4577B /* MyBuildingTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBuildingTabBarController.h; sourceTree = "<group>"; };
@@ -962,6 +974,28 @@
 			path = Advertisement;
 			sourceTree = "<group>";
 		};
+		D338E35F1B7836AA00CDC242 /* CommentModel */ = {
+			isa = PBXGroup;
+			children = (
+				D338E3601B7836C400CDC242 /* CommentModel.h */,
+				D338E3611B7836C400CDC242 /* CommentModel.m */,
+				D338E3631B7836D000CDC242 /* CommentApi.h */,
+				D338E3641B7836D000CDC242 /* CommentApi.m */,
+			);
+			path = CommentModel;
+			sourceTree = "<group>";
+		};
+		D338E3661B783AA500CDC242 /* ActivesModel */ = {
+			isa = PBXGroup;
+			children = (
+				D338E3671B783AB400CDC242 /* ActivesModel.h */,
+				D338E3681B783AB400CDC242 /* ActivesModel.m */,
+				D338E36A1B783AC000CDC242 /* ActivesApi.h */,
+				D338E36B1B783AC000CDC242 /* ActivesApi.m */,
+			);
+			path = ActivesModel;
+			sourceTree = "<group>";
+		};
 		D35595881B6EFD8B00E4577B /* HomeNavigationVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -1455,6 +1489,8 @@
 		D3E37A7A1B68D19E0073D401 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D338E3661B783AA500CDC242 /* ActivesModel */,
+				D338E35F1B7836AA00CDC242 /* CommentModel */,
 				D3E91F7D1B72E67B00FD8851 /* RequirementsModel */,
 				D3A8B3DF1B70C2F50033457F /* RecommendModel */,
 				D3EB7E8A1B7054C400482BCD /* ProductModel */,
@@ -1637,6 +1673,7 @@
 				D3F24FFF1B74724500E03716 /* CompanyOtherCell.m in Sources */,
 				D3E91F871B72EBFD00FD8851 /* ProjectContactModel.m in Sources */,
 				5DAC71A21B70D9CF00B2ED69 /* SearchSqlite.m in Sources */,
+				D338E3691B783AB400CDC242 /* ActivesModel.m in Sources */,
 				D3F250181B748DF200E03716 /* ContactFriendsCell.m in Sources */,
 				5DDA3A461B721601008DD88F /* ADScrollView.m in Sources */,
 				D3F250051B7481B800E03716 /* MyCompanyDetailController.m in Sources */,
@@ -1649,6 +1686,7 @@
 				5DECC9431B73753D005762EB /* MyModel.m in Sources */,
 				5B863CEC1B71EA6800AF0D36 /* SearchVC.m in Sources */,
 				D3F24FF91B74528600E03716 /* CompanyHeadCell.m in Sources */,
+				D338E3621B7836C400CDC242 /* CommentModel.m in Sources */,
 				5B863CEB1B71EA5F00AF0D36 /* RKViewFactory.m in Sources */,
 				D3E91F831B72E6A100FD8851 /* RequirementsApi.m in Sources */,
 				5D83CB281B745A2400B76716 /* TemplateCell.m in Sources */,
@@ -1659,6 +1697,7 @@
 				5B863CE61B71EA3300AF0D36 /* MainCompanyController.m in Sources */,
 				5B863CD01B719F9C00AF0D36 /* UILabel+LabelKit.m in Sources */,
 				D3B4DE341B707B36006A20E2 /* ShowView.m in Sources */,
+				D338E3651B7836D000CDC242 /* CommentApi.m in Sources */,
 				D3E37A511B68BAA20073D401 /* AFHTTPRequestOperation.m in Sources */,
 				D3E91F8A1B73218600FD8851 /* MainRequirementsController.m in Sources */,
 				D3A1745E1B6F835B00BC6DA1 /* CompanyTableViewCell.m in Sources */,
@@ -1720,6 +1759,7 @@
 				5BA668AE1B7343A200E4A955 /* ProjectDataInfoView1.m in Sources */,
 				D3E37A551B68BAA20073D401 /* AFSecurityPolicy.m in Sources */,
 				D3DF12991B6B614400DFEE8F /* MJRefreshAutoFooter.m in Sources */,
+				D338E36C1B783AC000CDC242 /* ActivesApi.m in Sources */,
 				D3DF12A91B6B614400DFEE8F /* UIScrollView+MJExtension.m in Sources */,
 				D3DF129C1B6B614400DFEE8F /* MJRefreshFooter.m in Sources */,
 				D3DF12D21B6B7DA000DFEE8F /* SDWebImageDecoder.m in Sources */,
